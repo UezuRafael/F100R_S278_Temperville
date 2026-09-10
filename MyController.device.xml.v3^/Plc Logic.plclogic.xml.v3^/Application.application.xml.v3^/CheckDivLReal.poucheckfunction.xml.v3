@@ -1,0 +1,42 @@
+__V3_META__
+{
+  "objectGuid": "1235dfb4-92e8-4ab3-9e50-e037c58d4a57",
+  "objectTypeGuid": "c3fc9989-e24b-4002-a2c7-827a0a2595f4",
+  "embeddedObjectTypeGuids": [
+    "a9ed5b7e-75c5-4651-af16-d2c27e98cb94",
+    "3b83b776-fb25-43b8-99f2-3c507c9143fc"
+  ],
+  "properties": {
+    "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+  },
+  "subObjects": {}
+}
+__V3_CONTENT__
+<?xml version="1.0" encoding="utf-8"?>
+<Single xml:space="preserve" Type="{c3fc9989-e24b-4002-a2c7-827a0a2595f4}" Method="IArchivable">
+  <Single Name="Implementation" Type="{3b83b776-fb25-43b8-99f2-3c507c9143fc}" Method="IArchivable">
+    <Single Name="TextDocument" Type="{f3878285-8e4f-490b-bb1b-9acbb7eb04db}" Method="IArchivable">
+      <Single Name="TextBlobForSerialisation" Type="string">// Implicitly generated code : Only an Implementation suggestion
+IF divisor = 0 THEN
+	CheckDivLReal:=1;
+ELSE
+	CheckDivLReal:=divisor;
+END_IF;</Single>
+      <Single Name="LineInfoPersistence" Type="string">1235dfb4-92e8-4ab3-9e50-e037c58d4a57_Impl_LineIds</Single>
+    </Single>
+  </Single>
+  <Single Name="Interface" Type="{a9ed5b7e-75c5-4651-af16-d2c27e98cb94}" Method="IArchivable">
+    <Single Name="TextDocument" Type="{f3878285-8e4f-490b-bb1b-9acbb7eb04db}" Method="IArchivable">
+      <Single Name="TextBlobForSerialisation" Type="string">/// Implicitly generated code : DO NOT EDIT
+{attribute 'check_div_real64' := ''}
+{attribute 'no_check' := ''}
+FUNCTION CheckDivLReal : LREAL
+VAR_INPUT
+	divisor: LREAL;
+END_VAR
+</Single>
+      <Single Name="LineInfoPersistence" Type="string">1235dfb4-92e8-4ab3-9e50-e037c58d4a57_Decl_LineIds</Single>
+    </Single>
+  </Single>
+  <Single Name="SpecialFunc" Type="{0db3d7bb-cde0-4416-9a7b-ce49a0124323}">CheckDivReal64</Single>
+</Single>

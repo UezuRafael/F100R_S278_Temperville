@@ -1,0 +1,91 @@
+__V3_META__
+{
+  "objectGuid": "26c04aad-bb47-4d01-bedc-5bd78afc31c7",
+  "objectTypeGuid": "09ecc42e-586d-4a08-932f-5bdcac20bb55",
+  "embeddedObjectTypeGuids": [],
+  "properties": {},
+  "subObjects": {}
+}
+__V3_CONTENT__
+<?xml version="1.0" encoding="utf-8"?>
+<Single xml:space="preserve" Type="{09ecc42e-586d-4a08-932f-5bdcac20bb55}" Method="IArchivable">
+  <Single Name="LMGuids" Type="{3bce4913-f2c1-4b54-84e8-6d7ec1809176}" Method="IArchivable">
+    <Dictionary Type="System.Collections.Hashtable" Name="NamesAndGuids">
+      <Entry>
+        <Key>
+          <Single Type="string">GVL_RECIPEMANAGEMENT_3300</Single>
+        </Key>
+        <Value>
+          <Single Type="System.Guid">8fdee86d-7ca9-4f4c-8628-b9fd2ea1cb6d</Single>
+        </Value>
+      </Entry>
+      <Entry>
+        <Key>
+          <Single Type="string">RECIPEFACTORY</Single>
+        </Key>
+        <Value>
+          <Single Type="System.Guid">67e9259e-5fb2-409e-b8e1-ea650852839b</Single>
+        </Value>
+      </Entry>
+      <Entry>
+        <Key>
+          <Single Type="string">RECIPEFACTORYCREATERECIPE</Single>
+        </Key>
+        <Value>
+          <Single Type="System.Guid">f365d2b3-fa13-4e55-b15a-f846b010a674</Single>
+        </Value>
+      </Entry>
+      <Entry>
+        <Key>
+          <Single Type="string">RECIPEFACTORYFB_INIT</Single>
+        </Key>
+        <Value>
+          <Single Type="System.Guid">d725ba89-6810-49bb-859d-b7c9ec1de76a</Single>
+        </Value>
+      </Entry>
+      <Entry>
+        <Key>
+          <Single Type="string">RECIPEFACTORYFREERECIPE</Single>
+        </Key>
+        <Value>
+          <Single Type="System.Guid">051ea516-998b-45a8-969f-4ab39d829382</Single>
+        </Value>
+      </Entry>
+      <Entry>
+        <Key>
+          <Single Type="string">RECIPEMANAGEMENTINIT</Single>
+        </Key>
+        <Value>
+          <Single Type="System.Guid">2d8192e1-0338-42de-916c-3cf2cb707f46</Single>
+        </Value>
+      </Entry>
+      <Entry>
+        <Key>
+          <Single Type="string">RECIPEMANAGEMENTINITFB_INIT</Single>
+        </Key>
+        <Value>
+          <Single Type="System.Guid">de497f61-521a-4835-851e-55a597ba9d3b</Single>
+        </Value>
+      </Entry>
+      <Entry>
+        <Key>
+          <Single Type="string">RECIPEMANAGEMENTINITFB_REINIT</Single>
+        </Key>
+        <Value>
+          <Single Type="System.Guid">c5036e99-0bbc-438b-bc3d-295d730006b7</Single>
+        </Value>
+      </Entry>
+      <Entry>
+        <Key>
+          <Single Type="string">RECIPEMANAGEMENTINITINITIALIZE</Single>
+        </Key>
+        <Value>
+          <Single Type="System.Guid">fe9ae278-cc86-41ec-8ff0-71c241b8a1b0</Single>
+        </Value>
+      </Entry>
+    </Dictionary>
+  </Single>
+  <Null Name="StorageSettings" />
+  <Single Name="RecipesInPlc" Type="bool">False</Single>
+  <Single Name="RecipesInPlcAssigned" Type="bool">True</Single>
+</Single>

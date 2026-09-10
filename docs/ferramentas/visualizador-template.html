@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Temperville · Diagrama geral de dependências</title>
+<style>
+:root{font:14px/1.45 system-ui,Segoe UI,sans-serif;color:#203248;background:#eef2f7}*{box-sizing:border-box}body{margin:0;overflow:hidden}header{height:114px;background:#102c46;color:white;padding:14px 22px}h1{font-size:21px;font-weight:650;margin:0 0 3px}header p{margin:0;color:#b8cddd;font-size:12px}.bar{display:flex;gap:8px;align-items:center;margin-top:12px;flex-wrap:wrap}input,button,select{font:inherit;border:1px solid #c9d5e1;border-radius:5px;background:#fff;color:#203248;padding:7px 10px}.searchbox{position:relative;width:290px}.searchbox input{width:100%}.suggestions{position:absolute;z-index:30;top:calc(100% + 4px);left:0;width:390px;max-height:330px;overflow:auto;background:#fff;border:1px solid #b8c7d6;border-radius:5px;box-shadow:0 8px 20px #102c4630;padding:4px}.suggestions[hidden]{display:none}.suggestion{display:block;width:100%;border:0;border-radius:3px;text-align:left;white-space:normal;padding:7px 8px;background:#fff}.suggestion:hover,.suggestion.active{background:#e5effa}.suggestion span{display:block;font-size:12px}.suggestion small{display:block;color:#63788c;font-size:10px;overflow-wrap:anywhere}.area-status{position:absolute;z-index:4;left:10px;top:9px;background:#102c46ed;color:#fff;border-radius:4px;padding:6px 10px;font-size:12px;pointer-events:none}.area-status[hidden]{display:none}select{max-width:242px}button{cursor:pointer;white-space:nowrap}button:hover{background:#e5effa}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #f9ba59;outline-offset:2px}.main{height:calc(100vh - 146px);display:grid;grid-template-columns:minmax(0,1fr) 346px;gap:10px;padding:10px}.canvas{position:relative;background:white;border:1px solid #cbd5e1;border-radius:6px;overflow:hidden;touch-action:none;cursor:grab}.canvas:active{cursor:grabbing}#graph{display:block;width:100%!important;height:100%!important;max-width:none;background:white}#graph g.entity{cursor:pointer}#graph g.link{pointer-events:none}#graph .dim{opacity:.11}#graph g.link.dim{opacity:.035}#graph g.entity.selected rect{stroke:#c76b03!important;stroke-width:2.5!important}#graph g.link.highlight path{stroke-width:2!important}aside{background:#fff;border:1px solid #cbd5e1;border-radius:6px;overflow:auto;padding:16px}aside h2{font-size:17px;margin:0 0 8px;overflow-wrap:anywhere}aside h3{font-size:13px;margin:18px 0 6px}aside p{font-size:12px;margin:6px 0 10px;color:#586b7f}.tag{font-size:11px;display:inline-block;padding:2px 7px;border-radius:4px;background:#eaf1f8;color:#345672;margin:0 3px 8px 0}.relation{display:block;width:100%;border:0;border-bottom:1px solid #e9eef4;text-align:left;border-radius:0;padding:8px 2px;background:white;white-space:normal;overflow-wrap:anywhere;font-size:12px}.relation small{display:block;color:#687c90}.sectionlink{display:inline-block;font-size:12px;color:#235d9a;margin:4px 12px 4px 0}.filters{display:flex;flex-wrap:wrap;gap:7px 10px;font-size:11px;padding:9px;background:#f5f8fc;border-radius:5px;margin:10px 0}.filters label{cursor:pointer}.filters input{width:auto;margin:0 4px 0 0;vertical-align:middle}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px}#status{position:absolute;left:10px;bottom:9px;background:#ffffffed;border:1px solid #d7e1ec;border-radius:4px;padding:5px 9px;font-size:11px;pointer-events:none}footer{height:32px;padding:6px 20px;font-size:11px;color:#52677c;background:#e7edf4}footer a{color:#245983;margin-left:10px}details{font-size:11px;color:#607387;margin:8px 0}summary{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:11px/1.4 ui-monospace,monospace}.empty{padding:12px;background:#f5f8fc;border-radius:5px}.mini{font-size:11px;color:#6a7c8f}
+#graph g.link.relation-hidden,#graph g.entity.focus-hidden,#graph g.cluster.focus-hidden{display:none}#graph g.link path{vector-effect:non-scaling-stroke}#graph g.entity.dim{opacity:1}#graph g.entity.dim text{opacity:.5}#graph g.entity.dim rect{fill:#F6F8FB;stroke:#DAE2EB}.relation-mode{display:block;font-size:12px;font-weight:600;margin:14px 0 5px}#relationMode{width:100%;max-width:none;font-size:12px}.description{color:#203248;font-size:13px;line-height:1.55}.responsibilities{padding-left:18px;font-size:12px;color:#445b70}.responsibilities li{margin-bottom:7px}#relationStatus{font-size:11px;color:#607387;margin:7px 0 12px}
+@media(max-width:900px){header{height:155px}.main{height:calc(100vh - 187px);grid-template-columns:minmax(0,1fr) 280px}.searchbox{width:225px}.suggestions{width:330px}.bar select{max-width:210px}.bar{gap:5px}header h1{font-size:18px}}
+</style></head><body>
+<header><h1>Temperville · Diagrama geral de dependências</h1><p>174 POUs · 4 ações · 5 tarefas · 25 objetos de dados · 730 relações · leitura estática de 05/09/2026</p>
+<div class="bar"><div class="searchbox"><input id="search" placeholder="Buscar FC, FB, PRG, tarefa ou GVL…" aria-label="Buscar objeto" aria-autocomplete="list" aria-expanded="false" aria-controls="objectSuggestions"><div class="suggestions" id="objectSuggestions" aria-label="Sugestões de objetos" hidden></div></div>
+<button id="go">Localizar</button><select id="areas" aria-label="Localizar área"><option value="">Localizar uma área…</option></select>
+<button id="fit">Visão geral</button><button id="zoomIn" aria-label="Aumentar zoom">+</button><button id="zoomOut" aria-label="Diminuir zoom">−</button><button id="actual">100%</button><button id="clear">Limpar seleção</button></div></header>
+<div class="main"><section class="canvas" id="canvas">__SVG__<div class="area-status" id="areaStatus" hidden></div><div id="status">Arraste para mover · roda do mouse para zoom · clique em um objeto</div></section>
+<aside><h2>Explorar as relações</h2><p>Cada bloco descreve o que o objeto faz. Os pacotes mostram sua localização no projeto. A seta vai de quem depende para a dependência.</p><label class="relation-mode" for="relationMode">Modo de exibição</label><select id="relationMode"><option value="all">Todas as relações</option><option value="focus">Foco no bloco selecionado</option><option value="none">Ocultar linhas</option></select><div class="filters" id="filters"></div><p id="relationStatus" aria-live="polite">730 de 730 relações visíveis.</p><div id="detail"><p class="empty">Busque um nome ou clique em um bloco para consultar suas dependências. Comece por <button id="start">A_PrincipalOperacao</button>.</p></div></aside></div>
+<footer>Passagem/têmpera integra a mesa de resfriamento. <a href="02-dependencias-geral.svg">SVG</a><a href="02-dependencias-geral.puml">PlantUML</a><a href="../contextos/01-dependencias-geral.md">Critérios e alcance</a></footer>
+<script type="application/json" id="data">__DATA__</script>
+<script>
+'use strict';
+if (!document.getElementById('graph')) {
+  const destination = new URL('../diagramas/02-dependencias-geral.html', window.location.href);
+  const canvas = document.getElementById('canvas');
+  canvas.replaceChildren();
+  canvas.style.padding = '28px';
+  const message = document.createElement('p');
+  message.textContent = 'Abrindo o diagrama completo…';
+  const link = document.createElement('a');
+  link.href = destination.href;
+  link.textContent = 'Clique aqui se o diagrama não abrir automaticamente.';
+  canvas.append(message, link);
+  document.querySelector('.bar').hidden = true;
+  document.querySelector('aside').hidden = true;
+  document.querySelector('.main').style.gridTemplateColumns = '1fr';
+  window.location.replace(destination.href);
+} else {
+const D=JSON.parse(document.getElementById('data').textContent),svg=document.getElementById('graph'),canvas=document.getElementById('canvas'),detail=document.getElementById('detail'),searchInput=document.getElementById('search'),suggestions=document.getElementById('objectSuggestions'),areaStatus=document.getElementById('areaStatus');
+const nodes=new Map(D.nodes.map(n=>[n.id,n])),entities=new Map(),entityPackages=new Map(),domIds=new Map(),links=[],labels={call:'Chama PRG / FC / ação','fb-call':'Chama instância de FB',global:'Usa variáveis globais',declares:'Declara tipo / instância',comment:'Chamada comentada',task:'Executa na tarefa',state:'Acessa estado de POU'},colors={call:'#2762A6','fb-call':'#19816A',global:'#A87732',declares:'#9973AF',comment:'#999999',task:'#243E68',state:'#D35E7D'};
+const enabled=new Set(Object.keys(labels));let selected=null,relationMode=document.getElementById('relationMode').value,box=D.viewbox.slice(),drag=null,dragged=false;
+for(const el of svg.querySelectorAll('g.entity')){const qualified=(el.dataset.qualifiedName||'').split('.'),id=qualified.pop();if(nodes.has(id)){entities.set(id,el);entityPackages.set(id,qualified.pop());domIds.set(el.id,id);el.addEventListener('click',ev=>{ev.preventDefault();ev.stopPropagation();if(!dragged)select(id);});}}
+const edgesByPair=new Map();
+for(const e of D.edges){const key=e.from+'|'+e.to;if(!edgesByPair.has(key))edgesByPair.set(key,[]);edgesByPair.get(key).push(e);}
+for(const el of svg.querySelectorAll('g.link')){
+  const from=el.getAttribute('data-from')||domIds.get(el.getAttribute('data-entity-1')),to=el.getAttribute('data-to')||domIds.get(el.getAttribute('data-entity-2'));
+  const candidates=edgesByPair.get(from+'|'+to)||[],kind=el.getAttribute('data-kind');
+  const index=kind?candidates.findIndex(e=>e.kind===kind):0;
+  if(index>=0&&candidates[index]){const path=el.querySelector('path'),arrow=el.querySelector('polygon');links.push({el,path,arrow,originalPath:path?.getAttribute('d')||'',originalArrow:arrow?.getAttribute('points')||'',edge:candidates.splice(index,1)[0]});}
+}
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function showBox(b){box=b;svg.setAttribute('viewBox',b.join(' '));document.getElementById('status').textContent=Math.round(canvas.clientWidth/b[2]*100)+'% · arraste para mover · roda para zoom'+(selected?' · '+nodes.get(selected).name:'');}
+function centered(cx,cy,w){const h=w*canvas.clientHeight/canvas.clientWidth;showBox([cx-w/2,cy-h/2,w,h]);}
+function fitBounds(b,pad=35){const ratio=canvas.clientWidth/canvas.clientHeight;let w=b.width+2*pad,h=b.height+2*pad;if(w/h<ratio)w=h*ratio;else h=w/ratio;showBox([b.x+b.width/2-w/2,b.y+b.height/2-h/2,w,h]);}
+function focus(id){const b=entities.get(id).getBBox();centered(b.x+b.width/2,b.y+b.height/2,Math.max(750,b.width+180));}
+function directSet(id){const related=new Set(id?[id]:[]);if(id)for(const {edge} of links)if(enabled.has(edge.kind)&&(edge.from===id||edge.to===id)){related.add(edge.from);related.add(edge.to);}return related;}
+function focusDirect(id){const visible=[...directSet(id)].map(key=>entities.get(key)?.getBBox()).filter(Boolean);if(!visible.length)return;const x=Math.min(...visible.map(b=>b.x)),y=Math.min(...visible.map(b=>b.y)),right=Math.max(...visible.map(b=>b.x+b.width)),bottom=Math.max(...visible.map(b=>b.y+b.height)),pad=Math.min(360,80+visible.length*12);fitBounds({x,y,width:right-x,height:bottom-y},pad);}
+function restoreRoutes(){for(const link of links){if(link.path)link.path.setAttribute('d',link.originalPath);if(link.arrow)link.arrow.setAttribute('points',link.originalArrow);link.el.removeAttribute('data-focus-lane');}}
+function focusAnchor(box,side,index,count){const ratio=(index+1)/(count+1);if(side==='left')return{x:box.x,y:box.y+box.height*ratio};if(side==='right')return{x:box.x+box.width,y:box.y+box.height*ratio};if(side==='top')return{x:box.x+box.width*ratio,y:box.y};return{x:box.x+box.width*ratio,y:box.y+box.height};}
+function centerAnchor(box,side){if(side==='left')return{x:box.x,y:box.y+box.height/2};if(side==='right')return{x:box.x+box.width,y:box.y+box.height/2};if(side==='top')return{x:box.x+box.width/2,y:box.y};return{x:box.x+box.width/2,y:box.y+box.height};}
+function routeFocus(id){
+  restoreRoutes();const hub=entities.get(id)?.getBBox();if(!hub)return;
+  const hubCenter={x:hub.x+hub.width/2,y:hub.y+hub.height/2},active=links.filter(({edge})=>enabled.has(edge.kind)&&(edge.from===id||edge.to===id));
+  const groups={left:[],right:[],top:[],bottom:[]};
+  for(const link of active){const otherId=link.edge.from===id?link.edge.to:link.edge.from,box=entities.get(otherId)?.getBBox();if(!box)continue;const center={x:box.x+box.width/2,y:box.y+box.height/2},dx=center.x-hubCenter.x,dy=center.y-hubCenter.y,side=Math.abs(dx)>=Math.abs(dy)?(dx<0?'left':'right'):(dy<0?'top':'bottom');groups[side].push({...link,otherId,box,center,side});}
+  for(const side of Object.keys(groups)){
+    const horizontal=side==='left'||side==='right',opposite={left:'right',right:'left',top:'bottom',bottom:'top'}[side];
+    groups[side].sort((a,b)=>(horizontal?a.center.y-b.center.y:a.center.x-b.center.x)||a.otherId.localeCompare(b.otherId));
+    const count=groups[side].length,spacing=Math.min(72,1300/Math.max(1,count));
+    groups[side].forEach((item,index)=>{
+      const hubPoint=focusAnchor(hub,side,index,count),otherPoint=centerAnchor(item.box,opposite),fromHub=item.edge.from===id;
+      const source=fromHub?hubPoint:otherPoint,target=fromHub?otherPoint:hubPoint,offset=(index-(count-1)/2)*spacing;
+      let c1,c2;
+      if(horizontal){const dx=target.x-source.x;c1={x:source.x+dx*.34,y:source.y+offset};c2={x:target.x-dx*.34,y:target.y+offset};}
+      else{const dy=target.y-source.y;c1={x:source.x+offset,y:source.y+dy*.34};c2={x:target.x+offset,y:target.y-dy*.34};}
+      item.path?.setAttribute('d',`M ${source.x.toFixed(2)},${source.y.toFixed(2)} C ${c1.x.toFixed(2)},${c1.y.toFixed(2)} ${c2.x.toFixed(2)},${c2.y.toFixed(2)} ${target.x.toFixed(2)},${target.y.toFixed(2)}`);
+      if(item.arrow){const vx=target.x-c2.x,vy=target.y-c2.y,length=Math.hypot(vx,vy)||1,ux=vx/length,uy=vy/length,bx=target.x-ux*10,by=target.y-uy*10,px=-uy*4.5,py=ux*4.5;item.arrow.setAttribute('points',`${target.x.toFixed(2)},${target.y.toFixed(2)} ${(bx+px).toFixed(2)},${(by+py).toFixed(2)} ${(bx-px).toFixed(2)},${(by-py).toFixed(2)}`);}
+      item.el.setAttribute('data-focus-lane',`${side}-${index+1}`);
+    });
+  }
+}
+function updateHighlight(){
+  const adjacent=directSet(selected),focusActive=relationMode==='focus'&&!!selected;
+  for(const[id,el]of entities){el.classList.toggle('selected',id===selected);el.classList.remove('dim');el.classList.toggle('focus-hidden',focusActive&&!adjacent.has(id));}
+  const selectedPackage=entityPackages.get(selected);
+  for(const cluster of svg.querySelectorAll('g.cluster'))cluster.classList.toggle('focus-hidden',focusActive&&cluster.dataset.qualifiedName!==selectedPackage);
+  areaStatus.hidden=!focusActive;areaStatus.textContent=focusActive?'Área: '+nodes.get(selected).group:'';
+  let visible=0;
+  for(const{el,edge}of links){
+    const hit=!!selected&&(edge.from===selected||edge.to===selected);
+    const show=enabled.has(edge.kind)&&(relationMode==='all'||(relationMode==='focus'&&hit));
+    el.classList.toggle('relation-hidden',!show);el.classList.remove('dim');el.classList.toggle('highlight',hit);
+    if(show)visible++;
+  }
+  if(focusActive)routeFocus(selected);else restoreRoutes();
+  document.getElementById('relationStatus').textContent=relationMode==='focus'&&!selected?'Selecione um bloco para ativar o foco.':relationMode==='focus'?adjacent.size+' blocos e '+visible+' relações visíveis.':visible+' de '+D.edges.length+' relações visíveis.';
+}
+document.getElementById('relationMode').onchange=e=>{relationMode=e.target.value;updateHighlight();if(relationMode==='focus'&&selected)focusDirect(selected);else if(relationMode==='all')document.getElementById('fit').click();};
+function relationHTML(e,out){const target=nodes.get(out?e.to:e.from);let suffix=labels[e.kind];if(e.kind==='task')suffix+=' · ordem '+e.evidence[0].order;else if(e.kind==='global')suffix+=' · '+e.evidence.length+' variável(is)';else if(e.evidence.length>1)suffix+=' · '+e.evidence.length+' referências';return '<button class="relation" data-id="'+target.id+'"><span class="dot" style="background:'+colors[e.kind]+'"></span>'+esc(target.name)+'<small>'+esc(suffix)+'</small></button>';}
+function select(id,move=true){
+  selected=id;const n=nodes.get(id);
+  searchInput.value=n.name+' ['+n.type+']';hideSuggestions();updateHighlight();
+  const out=D.edges.filter(e=>e.from===id&&enabled.has(e.kind)),inc=D.edges.filter(e=>e.to===id&&enabled.has(e.kind));
+  const source=n.path.split('\\').map(encodeURIComponent).join('/'),extras=D.external.filter(e=>e.from===id);
+  const responsibilities=(n.responsibilities||[]).length?'<details><summary>Responsabilidades observadas</summary><ul class="responsibilities">'+n.responsibilities.map(r=>'<li>'+esc(r)+'</li>').join('')+'</ul></details>':'';
+  detail.innerHTML='<h2>'+esc(n.name)+'</h2><span class="tag">'+esc(n.type)+'</span>'+(n.empty?'<span class="tag">Corpo comentado</span>':'')+'<p>'+esc(n.group)+'</p><p class="description">'+esc(n.description)+'</p>'+responsibilities+'<a class="sectionlink" href="../../'+source+'">Abrir código</a><button class="relation" id="nearby">Enquadrar dependências diretas</button><h3>Depende de ('+out.length+')</h3>'+(out.map(e=>relationHTML(e,true)).join('')||'<p>Nenhuma relação deste tipo identificada.</p>')+'<h3>Usado por ('+inc.length+')</h3>'+(inc.map(e=>relationHTML(e,false)).join('')||'<p>Nenhuma relação explícita identificada.</p>')+(extras.length?'<h3>Bibliotecas / ambiente</h3><p>'+extras.map(e=>esc(e.type)).join('<br>')+'</p>':'')+'<details><summary>Evidências das dependências</summary><pre>'+esc(out.map(e=>nodes.get(e.to).name+' — '+labels[e.kind]+'\n'+e.evidence.map(v=>v.variable||v.expression||v.instance||('ordem '+v.order)).join('\n')).join('\n\n'))+'</pre></details><p class="mini">Chamada fora de comentário pode ser condicional. Referência global não indica a direção do fluxo de dados.</p>';
+  detail.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>select(b.dataset.id));
+  document.getElementById('nearby').onclick=()=>focusDirect(id);
+  if(relationMode==='focus')focusDirect(id);else if(move)focus(id);else showBox(box);
+}
+for(const kind of Object.keys(labels)){if(!D.edges.some(e=>e.kind===kind))continue;const label=document.createElement('label');label.innerHTML='<input type="checkbox" checked data-kind="'+kind+'"><span class="dot" style="background:'+colors[kind]+'"></span>'+esc({call:'Chamadas','fb-call':'FBs',global:'Globais',declares:'Declarações',comment:'Comentários',task:'Tarefas',state:'Estado'}[kind]);document.getElementById('filters').append(label);label.querySelector('input').onchange=ev=>{if(ev.target.checked)enabled.add(kind);else enabled.delete(kind);updateHighlight();if(selected)select(selected,false);};}
+const sortedNodes=[...D.nodes].sort((a,b)=>a.name.localeCompare(b.name,'pt-BR')||a.type.localeCompare(b.type));
+const nodeLabel=n=>n.name+' ['+n.type+']';
+function hideSuggestions(){suggestions.hidden=true;searchInput.setAttribute('aria-expanded','false');}
+function renderSuggestions(showAll=false){
+  const selectedLabel=selected?nodeLabel(nodes.get(selected)):'',raw=searchInput.value.trim(),query=showAll&&raw===selectedLabel?'':raw.toLowerCase();
+  const matches=sortedNodes.filter(n=>!query||nodeLabel(n).toLowerCase().includes(query)||n.group.toLowerCase().includes(query));
+  suggestions.replaceChildren();
+  for(const n of matches){const button=document.createElement('button');button.type='button';button.className='suggestion';button.dataset.id=n.id;button.innerHTML='<span>'+esc(nodeLabel(n))+'</span><small>'+esc(n.group)+'</small>';button.onmousedown=event=>event.preventDefault();button.onclick=()=>{select(n.id);searchInput.focus();searchInput.select();};suggestions.append(button);}
+  suggestions.hidden=!matches.length;searchInput.setAttribute('aria-expanded',String(matches.length>0));
+}
+function search(){const value=searchInput.value.trim().toLowerCase();if(!value)return;const n=D.nodes.find(n=>nodeLabel(n).toLowerCase()===value)||D.nodes.find(n=>n.name.toLowerCase()===value)||D.nodes.find(n=>n.name.toLowerCase().includes(value));if(n)select(n.id);}
+document.getElementById('go').onclick=search;
+searchInput.onfocus=()=>{if(selected&&searchInput.value===nodeLabel(nodes.get(selected)))searchInput.select();renderSuggestions(true);};
+searchInput.onclick=()=>{if(selected&&searchInput.value===nodeLabel(nodes.get(selected)))searchInput.select();renderSuggestions(true);};
+searchInput.oninput=()=>renderSuggestions(false);
+searchInput.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();const first=suggestions.querySelector('.suggestion');if(!suggestions.hidden&&first)select(first.dataset.id);else search();}else if(e.key==='Escape')hideSuggestions();};
+document.addEventListener('pointerdown',e=>{if(!e.target.closest('.searchbox'))hideSuggestions();});
+const groups=[...new Set(D.nodes.map(n=>n.group))].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+groups.forEach((g,i)=>{const option=document.createElement('option');option.value='PK'+i;option.textContent=g;document.getElementById('areas').append(option);});
+document.getElementById('areas').onchange=e=>{const cluster=svg.querySelector('g.cluster[data-qualified-name="'+e.target.value+'"]');if(cluster)fitBounds(cluster.getBBox());};
+document.getElementById('fit').onclick=()=>fitBounds({x:D.viewbox[0],y:D.viewbox[1],width:D.viewbox[2],height:D.viewbox[3]},0);
+function zoom(f){centered(box[0]+box[2]/2,box[1]+box[3]/2,Math.max(160,Math.min(D.viewbox[2]*15,box[2]*f)));}
+document.getElementById('zoomIn').onclick=()=>zoom(.75);document.getElementById('zoomOut').onclick=()=>zoom(1.3333);document.getElementById('actual').onclick=()=>centered(box[0]+box[2]/2,box[1]+box[3]/2,canvas.clientWidth);
+document.getElementById('clear').onclick=()=>{selected=null;searchInput.value='';hideSuggestions();updateHighlight();detail.innerHTML='<p class="empty">Selecione um objeto para consultar suas relações.</p>';document.getElementById('fit').click();};
+const point=e=>new DOMPoint(e.clientX,e.clientY).matrixTransform(svg.getScreenCTM().inverse());
+canvas.addEventListener('wheel',e=>{e.preventDefault();const p=point(e),factor=e.deltaY>0?1.15:1/1.15;let w=Math.max(160,Math.min(D.viewbox[2]*15,box[2]*factor)),f=w/box[2];showBox([p.x-(p.x-box[0])*f,p.y-(p.y-box[1])*f,w,box[3]*f]);},{passive:false});
+canvas.addEventListener('pointerdown',e=>{if(e.button!==0)return;drag={x:e.clientX,y:e.clientY,box:box.slice()};dragged=false;canvas.setPointerCapture(e.pointerId);});
+canvas.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.abs(dx)+Math.abs(dy)>5)dragged=true;if(dragged){const scale=drag.box[2]/canvas.clientWidth;showBox([drag.box[0]-dx*scale,drag.box[1]-dy*scale,drag.box[2],drag.box[3]]);}});
+canvas.addEventListener('pointerup',e=>{if(!drag)return;const didDrag=dragged;drag=null;canvas.releasePointerCapture(e.pointerId);if(!didDrag){const el=document.elementFromPoint(e.clientX,e.clientY)?.closest('g.entity');const id=el&&(el.dataset.qualifiedName||'').split('.').pop();if(id&&nodes.has(id))select(id,false);}setTimeout(()=>dragged=false,0);});
+canvas.addEventListener('pointercancel',()=>{drag=null;});
+document.getElementById('start').onclick=()=>select(D.nodes.find(n=>n.name==='A_PrincipalOperacao').id);
+window.addEventListener('resize',()=>centered(box[0]+box[2]/2,box[1]+box[3]/2,box[2]));
+updateHighlight();
+requestAnimationFrame(()=>{document.getElementById('fit').click();});
+window.diagramQA=()=>({nodes:entities.size,links:links.length,visibleLinks:links.filter(({el})=>getComputedStyle(el).display!=='none').length,visibleNodes:[...entities.values()].filter(el=>getComputedStyle(el).display!=='none').length,visiblePackages:[...svg.querySelectorAll('g.cluster')].filter(el=>getComputedStyle(el).display!=='none').length,describedNodes:D.nodes.filter(n=>n.description).length,selected,relationMode,viewBox:box,enabled:[...enabled]});
+}
+</script></body></html>

@@ -1,0 +1,36 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "819e906b-4ce8-4b91-a0e5-a8eb2f636c73",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {},
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+// Global Status Modbus TCP  IOScaner valores (Não Configurado-1, Stop-3, Operacional-2).	
+ModbusTCP_IOScanner_Gstatus: UINT;	
+// Health Bit dos canais de escrita e leitura das remotas TM3BCEIP 
+TM3BC_ModbusTCP_1_Hb_Ch0 : BOOL;
+TM3BC_ModbusTCP_1_Hb_Ch1 : BOOL;
+TM3BC_ModbusTCP_2_Hb_Ch2 : BOOL;
+TM3BC_ModbusTCP_2_Hb_Ch3 : BOOL;
+TM3BC_ModbusTCP_3_Hb_Ch4 : BOOL;
+TM3BC_ModbusTCP_3_Hb_Ch5 : BOOL;
+TM3BC_ModbusTCP_4_Hb_Ch6 : BOOL;
+TM3BC_ModbusTCP_4_Hb_Ch7 : BOOL;
+// Habilitação dos canais de escrita e leitura das remotas TM3BCEIP
+TM3BC_ModbusTCP_1_En_Ch0 : BOOL;
+TM3BC_ModbusTCP_1_En_Ch1 : BOOL;
+TM3BC_ModbusTCP_2_En_Ch2 : BOOL;
+TM3BC_ModbusTCP_2_En_Ch3 : BOOL;
+TM3BC_ModbusTCP_3_En_Ch4 : BOOL;
+TM3BC_ModbusTCP_3_En_Ch5 : BOOL;
+TM3BC_ModbusTCP_4_En_Ch6 : BOOL;
+TM3BC_ModbusTCP_4_En_Ch7 : BOOL;
+
+END_VAR

@@ -1,0 +1,359 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "426eb2a3-e745-4c1b-b28a-1edba0173388",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {},
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+//GVL IOs
+//Variaveis de E/S relacionadas a E/S do CLP e a dispositivos
+
+//PRAGMAS
+//{attribute 'qualified_only'}  //removido para nao obrigar o uso do nome do gvl "IOs." na frente das variaveis
+{attribute 'linkalways'}
+VAR_GLOBAL
+
+	I_iTemperatura	     		: ARRAY [1..4] OF INT; //Termporares - modulo analogico leitura em inteiro * 0.1°C
+	I_rTemperatura1 			: REAL := 0.0; // Temperatura 1 - [1.0°C]
+	I_rTemperatura2  			: REAL := 0.0; // Temperatura 2 - [1.0°C]
+	I_rTemperatura3 			: REAL := 0.0; // Temperatura 3 - [1.0°C]
+	I_rTemperatura4				: REAL := 0.0; // Temperatura 4 - [1.0°C]
+	I_rTemperatura5				: REAL := 0.0; // 
+	I_rTemperatura6				: REAL := 0.0; // 
+	I_rTemperatura7				: REAL := 0.0; // 
+	I_rTemperatura8				: REAL := 0.0; // 
+	I_rTemperatura9				: REAL := 0.0; // 
+	I_rTemperatura10			: REAL := 0.0; // 
+
+	I_rTemperatura11			: REAL := 0.0; // 
+	I_rTemperatura12			: REAL := 0.0; // 
+	I_rTemperatura13			: REAL := 0.0; // 
+	I_rTemperatura14			: REAL := 0.0; // 
+	I_rTemperatura15			: REAL := 0.0; // 
+	I_rTemperatura16			: REAL := 0.0; // 
+	I_rTemperatura17			: REAL := 0.0; // 
+	I_rTemperatura18			: REAL := 0.0; // 
+	I_rTemperatura19			: REAL := 0.0; // 
+	I_rTemperatura20			: REAL := 0.0; // 
+
+	I_rTemperatura21			: REAL := 0.0; // 
+	I_rTemperatura22			: REAL := 0.0; // 
+	I_rTemperatura23			: REAL := 0.0; // 
+	I_rTemperatura24			: REAL := 0.0; // 
+	I_rTemperatura25			: REAL := 0.0; // 
+	I_rTemperatura26			: REAL := 0.0; // 
+	I_rTemperatura27			: REAL := 0.0; // 
+	I_rTemperatura28			: REAL := 0.0; // 
+	I_rTemperatura29			: REAL := 0.0; // 
+	I_rTemperatura30			: REAL := 0.0; // 
+
+	I_rTemperatura31			: REAL := 0.0; // 
+	I_rTemperatura32			: REAL := 0.0; // 
+	I_rTemperatura33			: REAL := 0.0; // 
+	I_rTemperatura34			: REAL := 0.0; // 
+	I_rTemperatura35			: REAL := 0.0; // 
+	I_rTemperatura36			: REAL := 0.0; // 
+	I_rTemperatura37			: REAL := 0.0; // 
+	I_rTemperatura38			: REAL := 0.0; // 
+	I_rTemperatura39			: REAL := 0.0; // 
+	I_rTemperatura40			: REAL := 0.0; // 
+
+	I_rTemperatura41			: REAL := 0.0; // 
+	I_rTemperatura42			: REAL := 0.0; // 
+	I_rTemperatura43			: REAL := 0.0; // 
+	I_rTemperatura44			: REAL := 0.0; // 
+	I_rTemperatura45			: REAL := 0.0; // 
+	I_rTemperatura46			: REAL := 0.0; // 
+	I_rTemperatura47			: REAL := 0.0; // 
+	I_rTemperatura48			: REAL := 0.0; // 
+	I_rTemperatura49			: REAL := 0.0; // 
+	I_rTemperatura50			: REAL := 0.0; // 
+
+	I_rTemperatura51			: REAL := 0.0; // 
+	I_rTemperatura52			: REAL := 0.0; // 
+	I_rTemperatura53			: REAL := 0.0; // 
+	I_rTemperatura54			: REAL := 0.0; // 
+	I_rTemperatura55			: REAL := 0.0; // 
+	I_rTemperatura56			: REAL := 0.0; // 
+	I_rTemperatura57			: REAL := 0.0; // 
+	I_rTemperatura58			: REAL := 0.0; // 
+	I_rTemperatura59			: REAL := 0.0; // 
+	I_rTemperatura60			: REAL := 0.0; // 
+
+	I_rTemperatura61			: REAL := 0.0; // 
+	I_rTemperatura62			: REAL := 0.0; // 
+	I_rTemperatura63			: REAL := 0.0; // 
+	I_rTemperatura64			: REAL := 0.0; // 
+	I_rTemperatura65			: REAL := 0.0; // 
+	I_rTemperatura66			: REAL := 0.0; // 
+	I_rTemperatura67			: REAL := 0.0; // 
+	I_rTemperatura68			: REAL := 0.0; // 
+	I_rTemperatura69			: REAL := 0.0; // 
+	I_rTemperatura70			: REAL := 0.0; // 
+
+	I_rTemperatura71			: REAL := 0.0; // 
+	I_rTemperatura72			: REAL := 0.0; // 
+	I_rTemperatura73			: REAL := 0.0; // 
+	I_rTemperatura74			: REAL := 0.0; // 
+	I_rTemperatura75			: REAL := 0.0; // 
+	I_rTemperatura76			: REAL := 0.0; // 
+	I_rTemperatura77			: REAL := 0.0; // 
+	I_rTemperatura78			: REAL := 0.0; // 
+	I_rTemperatura79			: REAL := 0.0; // 
+	I_rTemperatura80			: REAL := 0.0; // 
+
+	I_rTemperatura81			: REAL := 0.0; // 
+	I_rTemperatura82			: REAL := 0.0; // 
+	I_rTemperatura83			: REAL := 0.0; // 
+	I_rTemperatura84			: REAL := 0.0; // 
+	I_rTemperatura85			: REAL := 0.0; // 
+	I_rTemperatura86			: REAL := 0.0; // 
+	I_rTemperatura87			: REAL := 0.0; // 
+	I_rTemperatura88			: REAL := 0.0; // 
+	I_rTemperatura89			: REAL := 0.0; // 
+	I_rTemperatura90			: REAL := 0.0; // 
+
+	I_rTemperatura91			: REAL := 0.0; // 
+	I_rTemperatura92			: REAL := 0.0; // 
+	I_rTemperatura93			: REAL := 0.0; // 
+	I_rTemperatura94			: REAL := 0.0; // 
+	I_rTemperatura95			: REAL := 0.0; // 
+	I_rTemperatura96			: REAL := 0.0; // 
+	I_rTemperatura97			: REAL := 0.0; // 
+	I_rTemperatura98			: REAL := 0.0; // 
+	I_rTemperatura99			: REAL := 0.0; // 
+	I_rTemperatura100			: REAL := 0.0; // 
+	
+	I_byStatusTemp				: ARRAY [1..4] OF BYTE; //Status Temperaturas - modulo analogico status das entradas
+	I_byStatusTemp1 			: BYTE := 0; // Status Temperatura 1
+	I_byStatusTemp2  			: BYTE := 0; // Status Temperatura 2
+	I_byStatusTemp3 		  	: BYTE := 0; // Status Temperatura 3
+	I_byStatusTemp4		  		: BYTE := 0; // Status Temperatura 4
+	
+	Q_xAquecimento1				: BOOL := FALSE; //Saida de Aquecimento 1
+	Q_xAquecimento2				: BOOL := FALSE; //Saida de Aquecimento 2
+	Q_xAquecimento3				: BOOL := FALSE; //Saida de Aquecimento 3
+	Q_xAquecimento4				: BOOL := FALSE; //Saida de Aquecimento 4
+	Q_xAquecimento5				: BOOL := FALSE; //Saida de Aquecimento 4
+	Q_xAquecimento6				: BOOL := FALSE; //Saida de Aquecimento 4
+	Q_xAquecimento7				: BOOL := FALSE; //Saida de Aquecimento 4
+	Q_xAquecimento8				: BOOL := FALSE; //Saida de Aquecimento 4
+	Q_xAquecimento9				: BOOL := FALSE; //Saida de Aquecimento 4
+	Q_xAquecimento10			: BOOL := FALSE; 
+	
+	Q_xAquecimento11			: BOOL := FALSE; 
+	Q_xAquecimento12			: BOOL := FALSE; 
+	Q_xAquecimento13			: BOOL := FALSE; 
+	Q_xAquecimento14			: BOOL := FALSE; 
+	Q_xAquecimento15			: BOOL := FALSE; 
+	Q_xAquecimento16			: BOOL := FALSE; 
+	Q_xAquecimento17			: BOOL := FALSE; 
+	Q_xAquecimento18			: BOOL := FALSE; 
+	Q_xAquecimento19			: BOOL := FALSE; 
+	Q_xAquecimento20			: BOOL := FALSE; 
+
+	Q_xAquecimento21			: BOOL := FALSE; 
+	Q_xAquecimento22			: BOOL := FALSE; 
+	Q_xAquecimento23			: BOOL := FALSE; 
+	Q_xAquecimento24			: BOOL := FALSE; 
+	Q_xAquecimento25			: BOOL := FALSE; 
+	Q_xAquecimento26			: BOOL := FALSE; 
+	Q_xAquecimento27			: BOOL := FALSE; 
+	Q_xAquecimento28			: BOOL := FALSE; 
+	Q_xAquecimento29			: BOOL := FALSE; 
+	Q_xAquecimento30			: BOOL := FALSE; 
+
+	Q_xAquecimento31			: BOOL := FALSE; 
+	Q_xAquecimento32			: BOOL := FALSE; 
+	Q_xAquecimento33			: BOOL := FALSE; 
+	Q_xAquecimento34			: BOOL := FALSE; 
+	Q_xAquecimento35			: BOOL := FALSE; 
+	Q_xAquecimento36			: BOOL := FALSE; 
+	Q_xAquecimento37			: BOOL := FALSE; 
+	Q_xAquecimento38			: BOOL := FALSE; 
+	Q_xAquecimento39			: BOOL := FALSE; 
+	Q_xAquecimento40			: BOOL := FALSE; 
+
+	Q_xAquecimento41			: BOOL := FALSE; 
+	Q_xAquecimento42			: BOOL := FALSE; 
+	Q_xAquecimento43			: BOOL := FALSE; 
+	Q_xAquecimento44			: BOOL := FALSE; 
+	Q_xAquecimento45			: BOOL := FALSE; 
+	Q_xAquecimento46			: BOOL := FALSE; 
+	Q_xAquecimento47			: BOOL := FALSE; 
+	Q_xAquecimento48			: BOOL := FALSE; 
+	Q_xAquecimento49			: BOOL := FALSE; 
+	Q_xAquecimento50			: BOOL := FALSE; 
+
+	Q_xAquecimento51			: BOOL := FALSE; 
+	Q_xAquecimento52			: BOOL := FALSE; 
+	Q_xAquecimento53			: BOOL := FALSE; 
+	Q_xAquecimento54			: BOOL := FALSE; 
+	Q_xAquecimento55			: BOOL := FALSE; 
+	Q_xAquecimento56			: BOOL := FALSE; 
+	Q_xAquecimento57			: BOOL := FALSE; 
+	Q_xAquecimento58			: BOOL := FALSE; 
+	Q_xAquecimento59			: BOOL := FALSE; 
+	Q_xAquecimento60			: BOOL := FALSE; 
+
+	Q_xAquecimento61			: BOOL := FALSE; 
+	Q_xAquecimento62			: BOOL := FALSE; 
+	Q_xAquecimento63			: BOOL := FALSE; 
+	Q_xAquecimento64			: BOOL := FALSE; 
+	Q_xAquecimento65			: BOOL := FALSE; 
+	Q_xAquecimento66			: BOOL := FALSE; 
+	Q_xAquecimento67			: BOOL := FALSE; 
+	Q_xAquecimento68			: BOOL := FALSE; 
+	Q_xAquecimento69			: BOOL := FALSE; 
+	Q_xAquecimento70			: BOOL := FALSE; 
+
+	Q_xAquecimento71			: BOOL := FALSE; 
+	Q_xAquecimento72			: BOOL := FALSE; 
+	Q_xAquecimento73			: BOOL := FALSE; 
+	Q_xAquecimento74			: BOOL := FALSE; 
+	Q_xAquecimento75			: BOOL := FALSE; 
+	Q_xAquecimento76			: BOOL := FALSE; 
+	Q_xAquecimento77			: BOOL := FALSE; 
+	Q_xAquecimento78			: BOOL := FALSE; 
+	Q_xAquecimento79			: BOOL := FALSE; 
+	Q_xAquecimento80			: BOOL := FALSE; 
+
+	Q_xAquecimento81			: BOOL := FALSE; 
+	Q_xAquecimento82			: BOOL := FALSE; 
+	Q_xAquecimento83			: BOOL := FALSE; 
+	Q_xAquecimento84			: BOOL := FALSE; 
+	Q_xAquecimento85			: BOOL := FALSE; 
+	Q_xAquecimento86			: BOOL := FALSE; 
+	Q_xAquecimento87			: BOOL := FALSE; 
+	Q_xAquecimento88			: BOOL := FALSE; 
+	Q_xAquecimento89			: BOOL := FALSE; 
+	Q_xAquecimento90			: BOOL := FALSE; 
+
+	Q_xAquecimento91			: BOOL := FALSE; 
+	Q_xAquecimento92			: BOOL := FALSE; 
+	Q_xAquecimento93			: BOOL := FALSE; 
+	Q_xAquecimento94			: BOOL := FALSE; 
+	Q_xAquecimento95			: BOOL := FALSE; 
+	Q_xAquecimento96			: BOOL := FALSE; 
+	Q_xAquecimento97			: BOOL := FALSE; 
+	Q_xAquecimento98			: BOOL := FALSE; 
+	Q_xAquecimento99			: BOOL := FALSE; 
+	Q_xAquecimento100			: BOOL := FALSE; 
+	
+	Q_xAquecimentoPwm1				: BOOL := FALSE; //Saida de Aquecimento 1
+	Q_xAquecimentoPwm2				: BOOL := FALSE; //Saida de Aquecimento 2
+	Q_xAquecimentoPwm3				: BOOL := FALSE; //Saida de Aquecimento 3
+	Q_xAquecimentoPwm4				: BOOL := FALSE; //Saida de Aquecimento 4
+	Q_xAquecimentoPwm5				: BOOL := FALSE; //Saida de Aquecimento 4
+	Q_xAquecimentoPwm6				: BOOL := FALSE; //Saida de Aquecimento 4
+	Q_xAquecimentoPwm7				: BOOL := FALSE; //Saida de Aquecimento 4
+	Q_xAquecimentoPwm8				: BOOL := FALSE; //Saida de Aquecimento 4
+	Q_xAquecimentoPwm9				: BOOL := FALSE; //Saida de Aquecimento 4
+	Q_xAquecimentoPwm10			: BOOL := FALSE; 
+	
+	Q_xAquecimentoPwm11			: BOOL := FALSE; 
+	Q_xAquecimentoPwm12			: BOOL := FALSE; 
+	Q_xAquecimentoPwm13			: BOOL := FALSE; 
+	Q_xAquecimentoPwm14			: BOOL := FALSE; 
+	Q_xAquecimentoPwm15			: BOOL := FALSE; 
+	Q_xAquecimentoPwm16			: BOOL := FALSE; 
+	Q_xAquecimentoPwm17			: BOOL := FALSE; 
+	Q_xAquecimentoPwm18			: BOOL := FALSE; 
+	Q_xAquecimentoPwm19			: BOOL := FALSE; 
+	Q_xAquecimentoPwm20			: BOOL := FALSE; 
+
+	Q_xAquecimentoPwm21			: BOOL := FALSE; 
+	Q_xAquecimentoPwm22			: BOOL := FALSE; 
+	Q_xAquecimentoPwm23			: BOOL := FALSE; 
+	Q_xAquecimentoPwm24			: BOOL := FALSE; 
+	Q_xAquecimentoPwm25			: BOOL := FALSE; 
+	Q_xAquecimentoPwm26			: BOOL := FALSE; 
+	Q_xAquecimentoPwm27			: BOOL := FALSE; 
+	Q_xAquecimentoPwm28			: BOOL := FALSE; 
+	Q_xAquecimentoPwm29			: BOOL := FALSE; 
+	Q_xAquecimentoPwm30			: BOOL := FALSE; 
+
+	Q_xAquecimentoPwm31			: BOOL := FALSE; 
+	Q_xAquecimentoPwm32			: BOOL := FALSE; 
+	Q_xAquecimentoPwm33			: BOOL := FALSE; 
+	Q_xAquecimentoPwm34			: BOOL := FALSE; 
+	Q_xAquecimentoPwm35			: BOOL := FALSE; 
+	Q_xAquecimentoPwm36			: BOOL := FALSE; 
+	Q_xAquecimentoPwm37			: BOOL := FALSE; 
+	Q_xAquecimentoPwm38			: BOOL := FALSE; 
+	Q_xAquecimentoPwm39			: BOOL := FALSE; 
+	Q_xAquecimentoPwm40			: BOOL := FALSE; 
+
+	Q_xAquecimentoPwm41			: BOOL := FALSE; 
+	Q_xAquecimentoPwm42			: BOOL := FALSE; 
+	Q_xAquecimentoPwm43			: BOOL := FALSE; 
+	Q_xAquecimentoPwm44			: BOOL := FALSE; 
+	Q_xAquecimentoPwm45			: BOOL := FALSE; 
+	Q_xAquecimentoPwm46			: BOOL := FALSE; 
+	Q_xAquecimentoPwm47			: BOOL := FALSE; 
+	Q_xAquecimentoPwm48			: BOOL := FALSE; 
+	Q_xAquecimentoPwm49			: BOOL := FALSE; 
+	Q_xAquecimentoPwm50			: BOOL := FALSE; 
+
+	Q_xAquecimentoPwm51			: BOOL := FALSE; 
+	Q_xAquecimentoPwm52			: BOOL := FALSE; 
+	Q_xAquecimentoPwm53			: BOOL := FALSE; 
+	Q_xAquecimentoPwm54			: BOOL := FALSE; 
+	Q_xAquecimentoPwm55			: BOOL := FALSE; 
+	Q_xAquecimentoPwm56			: BOOL := FALSE; 
+	Q_xAquecimentoPwm57			: BOOL := FALSE; 
+	Q_xAquecimentoPwm58			: BOOL := FALSE; 
+	Q_xAquecimentoPwm59			: BOOL := FALSE; 
+	Q_xAquecimentoPwm60			: BOOL := FALSE; 
+
+	Q_xAquecimentoPwm61			: BOOL := FALSE; 
+	Q_xAquecimentoPwm62			: BOOL := FALSE; 
+	Q_xAquecimentoPwm63			: BOOL := FALSE; 
+	Q_xAquecimentoPwm64			: BOOL := FALSE; 
+	Q_xAquecimentoPwm65			: BOOL := FALSE; 
+	Q_xAquecimentoPwm66			: BOOL := FALSE; 
+	Q_xAquecimentoPwm67			: BOOL := FALSE; 
+	Q_xAquecimentoPwm68			: BOOL := FALSE; 
+	Q_xAquecimentoPwm69			: BOOL := FALSE; 
+	Q_xAquecimentoPwm70			: BOOL := FALSE; 
+
+	Q_xAquecimentoPwm71			: BOOL := FALSE; 
+	Q_xAquecimentoPwm72			: BOOL := FALSE; 
+	Q_xAquecimentoPwm73			: BOOL := FALSE; 
+	Q_xAquecimentoPwm74			: BOOL := FALSE; 
+	Q_xAquecimentoPwm75			: BOOL := FALSE; 
+	Q_xAquecimentoPwm76			: BOOL := FALSE; 
+	Q_xAquecimentoPwm77			: BOOL := FALSE; 
+	Q_xAquecimentoPwm78			: BOOL := FALSE; 
+	Q_xAquecimentoPwm79			: BOOL := FALSE; 
+	Q_xAquecimentoPwm80			: BOOL := FALSE; 
+
+	Q_xAquecimentoPwm81			: BOOL := FALSE; 
+	Q_xAquecimentoPwm82			: BOOL := FALSE; 
+	Q_xAquecimentoPwm83			: BOOL := FALSE; 
+	Q_xAquecimentoPwm84			: BOOL := FALSE; 
+	Q_xAquecimentoPwm85			: BOOL := FALSE; 
+	Q_xAquecimentoPwm86			: BOOL := FALSE; 
+	Q_xAquecimentoPwm87			: BOOL := FALSE; 
+	Q_xAquecimentoPwm88			: BOOL := FALSE; 
+	Q_xAquecimentoPwm89			: BOOL := FALSE; 
+	Q_xAquecimentoPwm90			: BOOL := FALSE; 
+
+	Q_xAquecimentoPwm91			: BOOL := FALSE; 
+	Q_xAquecimentoPwm92			: BOOL := FALSE; 
+	Q_xAquecimentoPwm93			: BOOL := FALSE; 
+	Q_xAquecimentoPwm94			: BOOL := FALSE; 
+	Q_xAquecimentoPwm95			: BOOL := FALSE; 
+	Q_xAquecimentoPwm96			: BOOL := FALSE; 
+	Q_xAquecimentoPwm97			: BOOL := FALSE; 
+	Q_xAquecimentoPwm98			: BOOL := FALSE; 
+	Q_xAquecimentoPwm99			: BOOL := FALSE; 
+	Q_xAquecimentoPwm100			: BOOL := FALSE; 
+
+END_VAR

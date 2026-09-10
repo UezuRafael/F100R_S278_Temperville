@@ -1,0 +1,602 @@
+__V3_META__
+{
+  "objectGuid": "c9a661eb-1d1f-48f8-a1cd-997e85f5e9e5",
+  "objectTypeGuid": "261bd6e6-249c-4232-bb6f-84c2fbeef430",
+  "embeddedObjectTypeGuids": [
+    "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+  ],
+  "properties": {},
+  "subObjects": {}
+}
+__V3_CONTENT__
+<?xml version="1.0" encoding="utf-8"?>
+<Single xml:space="preserve" Type="{261bd6e6-249c-4232-bb6f-84c2fbeef430}" Method="IArchivable">
+  <Null Name="persvarlist" />
+  <Single Name="Interface" Type="{a9ed5b7e-75c5-4651-af16-d2c27e98cb94}" Method="IArchivable">
+    <Single Name="TextDocument" Type="{f3878285-8e4f-490b-bb1b-9acbb7eb04db}" Method="IArchivable">
+      <Single Name="TextBlobForSerialisation" Type="string">VAR_GLOBAL PERSISTENT RETAIN
+	// ESCRITA	
+// Parametros de Ajuste Mesa de Entrada
+
+		//Parametos de Velocidade
+		// Vidro Fino
+		//           -&gt; GVL_Velocidades
+		iCorretorCargaEntradaVidroFin: INT;
+		// Vidro Grosso
+		//           -&gt; GVL_Velocidades
+		iCorretorCargaEntrada: INT;
+		//Comum
+		iVelocidadeJogMesaEntrada: INT;
+	
+	
+// Parâmetros de Ajuste Mesa do Forno	
+		//Parâmetros de Posicionamento	
+		iValorVelMinimaFornoVidroFin:INT; //Distancia Restante para o fim do Carregamento (milimetro)
+
+		iValorCargaFornoVidroFin	:INT; //Distancia Percorrida do Sensor até o fim do Carregamento (milimetro)
+		iValorOscilacaoFornoVidroFin:INT; //Distancia do Vai Vem (milimetro)
+		iValorDescargaFornoVidroFin	:INT; //Valor Garantido da Carga Fora do Forno (milimetro)
+		iTamanhoAreaUtilFornoVidroFin:INT;//Tamanho da Area util do Forno (milimetro)
+		iTamanhoCargaMaxFornoVidroFin:INT;//Tamanho Máximo da Carga Aceitavel (milimetro)
+		
+		iTamanahoFornoContratoVidroFin: INT;// Tamanho do Forno no Contrato
+	
+		iValorVelMinimaFornoVidroGro:INT; //Distancia Restante para o fim do Carregamento (milimetro)
+
+		iValorCargaFornoVidroGro	:INT; //Distancia Percorrida do Sensor até o fim do Carregamento (milimetro)
+		iValorOscilacaoFornoVidroGro:INT; //Distancia do Vai Vem (milimetro)
+		iValorDescargaFornoVidroGro	:INT; //Valor Garantido da Carga Fora do Forno (milimetro)
+		iTamanhoAreaUtilFornoVidroGro:INT;//Tamanho da Area util do Forno (milimetro)
+		iTamanhoCargaMaxFornoVidroGro:INT;//Tamanho Máximo da Carga Aceitavel (milimetro)
+		
+		iTamanahoFornoContratoVidroGro: INT;// Tamanho do Forno no Contrato
+		
+		iValDistanciaReferenciaResfriador: INT;// Distancia entre Sensor da mesa de entrada e inicio da M. do Resfriamento
+
+		//Parametros de Velocidade
+		//Vidro Fino
+		iVelocidadeCargaFornoVidroFin:INT;
+		iVelVaiVemFornoVidroFin:INT;
+		iVelDescargaFornoVidroFin:INT;
+		
+		//Vidro Grosso	
+		iVelocidadeCargaForno:INT;
+		iVelVaiVemForno:INT;
+		iVelDescargaForno:INT;
+
+		//Comum
+		iVelMinCargaForno:INT;
+		iVelRetornoCargaForno:INT;
+		iVelocidadeStbForno:INT;
+		
+		//Parametros Convecao
+		iTempoConveccaoAberta: INT;
+		iTempoConveccaoFechada: INT;
+		
+		// Parametros de Rampas
+		dAccMesaFornoVidroFin : DINT;
+		dAccMesaFornoVidroGro : DINT;
+		dDecMesaFornoVidroFin : DINT;
+		dDecMesaFornoVidroGro : DINT;
+		
+// Parâmetros de Ajuste Mesa do Resfriador	
+
+		//Parâmetros de Posicionamento	
+		iValorVelMinimaResfriador:INT; //Distancia Restante para o fim do Carregamento (milimetro)
+
+		iValorCargaResfriadorVidroFin	:INT; //Distancia Percorrida do Sensor até o fim do Carregamento (milimetro)
+		iValorOscilacaoResfriadorVidroFin:INT; //Distancia do Vai Vem (milimetro)
+		iValorDescargaResfriadorVidroFin	:INT; //Valor Garantido da Carga Fora do Forno (milimetro)
+		iTamanhoAreaUtilResfriadorVidroFin:INT;//Tamanho da Area util do Resfriador (milimetro)
+	
+		iValorCargaResfriadorVidroGro	:INT; //Distancia Percorrida do Sensor até o fim do Carregamento (milimetro)
+		iValorOscilacaoResfriadorVidroGro:INT; //Distancia do Vai Vem (milimetro)
+		iValorDescargaResfriadorVidroGro	:INT; //Valor Garantido da Carga Fora do Forno (milimetro)
+		iTamanhoAreaUtilResfriadorVidroGro:INT;//Tamanho da Area util do Resfriador (milimetro)
+		
+		//Parâmetros de Velocidade
+		//Vidro Fino
+		//           -&gt; GVL_Velocidades
+   		iCorretorCargaResfriadorVidroFin: INT;
+		iVelVaiVemResfriadorVidroFin:INT;
+		iVelDescargaResfriadorVidroFin:INT;
+		//Vidro Grosso
+		//           -&gt; GVL_Velocidades
+		iCorretorCargaResfriador: INT;
+		iVelVaiVemResfriador:INT;
+		iVelDescargaResfriador:INT;
+		//Comum
+		iVelMinCargaResfriador:INT;
+
+	
+// Parametros de Ajuste Mesa de Saída	
+	
+		//Parametos de Velocidade
+		//Vidro Fino
+		//           -&gt; GVL_Velocidades
+		iCorretorCargaSaidaVidroFin: INT;
+		//Vidro Grosso
+		//           -&gt; GVL_Velocidades
+		iCorretorCargaSaida: INT;
+		//Comum
+		iVelocidadeJogMesaSaida: INT;
+
+// Parametros de Ajuste Ductos do Resfriamento Inferior 01
+
+		//Parametros de Posicionamento
+		iValEncoToleranciaDuctosInf01: INT;
+		iValEncoAlturaVelMinimaDuctosInf01: INT;
+	
+		//Parametos de Velocidade		
+		iVelocidadeAjusteDuctosResfriadorInf01:INT;
+		iVelocidadeMinimaDuctosResfriadorInf01:INT;
+
+// Parametros de Ajuste Ductos do Resfriamento Superior 01
+
+		//Parametros de Posicionamento
+		iValEncoToleranciaDuctosSup01: INT;
+		iValEncoAlturaVelMinimaDuctosSup01: INT;
+	
+		//Parametos de Velocidade		
+		iVelocidadeAjusteDuctosResfriadorSup01:INT;
+		iVelocidadeMinimaDuctosResfriadorSup01:INT;
+
+// Parametros de Ajuste Ductos do Resfriamento Inferior 02
+
+		//Parametros de Posicionamento
+		iValEncoToleranciaDuctosInf02: INT;
+		iValEncoAlturaVelMinimaDuctosInf02: INT;
+	
+		//Parametos de Velocidade		
+		iVelocidadeAjusteDuctosResfriadorInf02:INT;
+		iVelocidadeMinimaDuctosResfriadorInf02:INT;
+
+// Parametros de Ajuste Ductos do Resfriamento Superior 02
+
+		//Parametros de Posicionamento
+		iValEncoToleranciaDuctosSup02: INT;
+		iValEncoAlturaVelMinimaDuctosSup02: INT;
+	
+		//Parametos de Velocidade		
+		iVelocidadeAjusteDuctosResfriadorSup02:INT;
+		iVelocidadeMinimaDuctosResfriadorSup02:INT;
+
+				
+// Parametros de Ajuste Guilhotina Difusor 01
+
+		//Parametros de Posicionamento
+		iValEncoToleranciaGuilhotina01:INT;
+		iValEncoAlturaVelMinGuilhotina01:INT;
+	
+		//Parametos de Velocidade		
+		iVelocidadeAjusteGuilhotina01:INT;
+		iVelocidadeMinimaGuilhotina01: INT;
+
+// Parametros de Ajuste Guilhotina Superior Difusor 01
+
+		//Parametros de Posicionamento
+		iValEncoToleranciaGuilhotina01Sup:INT;
+		iValEncoAlturaVelMinGuilhotina01Sup:INT;
+	
+		//Parametos de Velocidade		
+		iVelocidadeAjusteGuilhotina01Sup:INT;
+		iVelocidadeMinimaGuilhotina01Sup: INT;
+
+// Parametros de Ajuste Guilhotina Inferior Difusor 01
+
+		//Parametros de Posicionamento
+		iValEncoToleranciaGuilhotina01Inf:INT;
+		iValEncoAlturaVelMinGuilhotina01Inf:INT;
+	
+		//Parametos de Velocidade		
+		iVelocidadeAjusteGuilhotina01Inf:INT;
+		iVelocidadeMinimaGuilhotina01Inf: INT;
+
+
+// Parametros de Ajuste Guilhotina Difusor 02
+
+		//Parametros de Posicionamento
+		iValEncoToleranciaGuilhotina02:INT;
+		iValEncoAlturaVelMinGuilhotina02:INT;
+	
+		//Parametos de Velocidade		
+		iVelocidadeAjusteGuilhotina02	:INT;
+		iVelocidadeMinimaGuilhotina02	:INT;
+		
+// Parametros de Ajuste do Ventilador
+		
+		// Velocidade StandBy
+		iVelocidadeStbVentilador01	:INT;
+		iVelocidadeStbVentilador02	:INT;
+		iVelocidadeStbVentilador03	:INT;
+		iVelocidadeStbVentilador04	:INT;
+		
+		iTempoLigaVentilador01VidroFino	:INT;
+		iTempoLigaVentilador01VidroGros	:INT;
+
+		iTempoLigaVentilador02VidroFino	:INT;
+		iTempoLigaVentilador02VidroGros	:INT;
+		
+		iTempoLigaVentilador03VidroFino	:INT;
+		iTempoLigaVentilador03VidroGros	:INT;
+		
+		iTempoLigaVentilador04VidroFino	:INT;
+		iTempoLigaVentilador04VidroGros	:INT;
+
+		iRefVelocLimpResfr02: INT;
+		iRefVelocMotorCxForno: INT;
+
+		
+
+// Parametros Ventilador Convecção
+
+		iVelocidadeJogVentConvecEnt		: INT;
+		iVelocidadeStbVentConvecEnt		: INT;
+		iSetPointTemperaturaConveccaoEnt: INT;
+	
+		iVelocidadeJogVentConvecSai		: INT;
+		iVelocidadeStbVentConvecSai		: INT;
+		iSetPointTemperaturaConveccaoSai: INT;
+		
+//Parâmetros Termopares
+	PosicaoTermoparSetorInferior: ARRAY [1..60] OF INT;
+	PosicaoTermoparSetorSuperior: ARRAY [1..60] OF INT;
+// Parâmetros Ventilador Painel
+
+	iSpTermoparPainel: INT;
+		
+// Parametros de Energia
+	 
+	PassoIntervalo:INT;
+	PassoIntervaloDia:INT;
+	//Cadastro Horario de Ponta e Fora Ponta 
+	uHoraPonta		: UINT:= 18;
+	uHoraFPonta		: UINT:= 21;
+	uMinutoPonta	: UINT:= 00;
+	uMinutoFPonta	: UINT:= 00;
+	
+	uDiadaLeitura	: UINT:= 1;
+	uDemandaForno	: UINT;
+	
+	rConsumoDiarioInicial_kW: REAL;
+
+
+	//Energia Ativa 
+	 rConsumoInicialPonta_kW		:REAL;
+	 rConsumoFinalPonta_kW			:REAL;
+	 rConsumoInstantaneoPonta_kW	:REAL;
+	 rConsumoPonta_kW				:REAL;	 
+	 rConsumoInstantAcumPonta_kW	:REAL;
+	 rConsumoAcumuladoPonta_kW		:REAL;
+	 
+	 rConsumoInicialFPonta_kW		:REAL;
+	 rConsumoFinalFPonta_kW			:REAL;
+	 rConsumoInstantaneoFPonta_kW	:REAL;
+	 rConsumoFPonta_kW				:REAL;
+	 rConsumoInstantAcumFPonta_kW	:REAL;
+	 rConsumoAcumuladoFPonta_kW		:REAL;
+	 
+	 rConsumoInicialFPonta01	:REAL;
+	 rConsumoFinalFPonta01		:REAL;
+	 rConsumoInstantaneoFPonta01:REAL;
+	 rConsumoFPonta01			:REAL;
+	 
+	 rConsumoInicialFPonta02	:REAL;
+	 rConsumoFinalFPonta02		:REAL;
+	 rConsumoInstantaneoFPonta02:REAL;
+	 rConsumoFPonta02			:REAL;
+	 
+	 rConsumoDiarioFPonta		:REAL;
+	 rConsumoInstantDiarioFPonta:REAL;
+
+	//Energia Reativa 
+	 rConsumoInicialPonta_kVAR		:REAL;
+	 rConsumoFinalPonta_kVAR		:REAL;
+	 rConsumoInstantaneoPonta_kVAR	:REAL;
+	 rConsumoPonta_kVAR				:REAL;	 
+	 rConsumoInstantAcumPonta_kVAR	:REAL;
+	 rConsumoAcumuladoPonta_kVAR	:REAL;
+	 
+	 rConsumoInicialFPonta_kVAR		:REAL;
+	 rConsumoFinalFPonta_kVAR		:REAL;
+	 rConsumoInstantaneoFPonta_kVAR	:REAL;
+	 rConsumoFPonta_kVAR			:REAL;
+	 rConsumoInstantAcumFPonta_kVAR	:REAL;
+	 rConsumoAcumuladoFPonta_kVAR	:REAL;
+	 
+	 //Demanda
+	 rDemandaMaximaPeriodo_kW		:REAL;
+	 rDemandaMaxUltimoPeriodo		:REAL;
+	 rDemandaMaxUltimoIntervalo		:REAL;
+	 
+	 rDemandaMaximaIntervalo		:REAL;
+	 //Dados Fatura
+	 rEnergiaAtivaPonta_kWh			:REAL;
+	 rEnergiaAtivaFPonta_kWh		:REAL;
+	 rEnergiaReativaPonta_kVar		:REAL;
+	 rEnergiaReativaFPonta_kVar		:REAL;
+	 rDemandaEnergia_kW				:REAL;
+
+////////////////////////////////////////
+
+
+ 	divisaotestedivisaoteste	:BOOL;
+	xFechaFatura				: WORD;
+	xFaturaFechada				: WORD;
+	
+// Programação Horaria
+
+	rSetTemperaturaRampa: REAL ;
+	
+	rHorProgramadoDom	: REAL;
+	rMinProgramadoDom	: REAL;
+	rHorProgramadoSeg	: REAL;
+	rMinProgramadoSeg	: REAL;
+	rHorProgramadoTer	: REAL;
+	rMinProgramadoTer	: REAL;
+	rHorProgramadoQua	: REAL;
+	rMinProgramadoQua	: REAL;
+	rHorProgramadoQui	: REAL;
+	rMinProgramadoQui	: REAL;
+	rHorProgramadoSex	: REAL;
+	rMinProgramadoSex	: REAL;
+	rHorProgramadoSab	: REAL;
+	rMinProgramadoSab	: REAL;
+	uSegProgramado		: UINT;
+
+	rHoraRampaAux 	: REAL;
+	rMinRampaAux 	: REAL;
+
+	rRampaPrincipal : REAL;
+	rRampaDomingo	: REAL ;
+	rRampaSegunda	: REAL ;
+	rRampaTerca		: REAL ;
+	rRampaQuarta	: REAL ;
+	rRampaQuinta	: REAL ;
+	rRampaSexta		: REAL ;
+	rRampaSabado	: REAL ;
+	
+	bDomingo : BOOL;
+	bSegunda : BOOL;
+	bTerca : BOOL;
+	bQuarta : BOOL;
+	bQuinta : BOOL;
+	bSexta : BOOL;
+	bSabado : BOOL;
+	
+	
+
+	// Programação Tempo/Bloq
+	
+	uAnoProgTrv : UINT;
+	uMesProgTrv	: UINT;
+	uDiaProgTrv	: UINT;
+	uHorProgTrv	: UINT;
+	uMinProgTrv	: UINT;
+	uSegProgTrv	: UINT;
+	xBloqueioHabilitado	: BOOL;
+	xSeguranca		: BOOL;
+	
+	// Parametros StandBy Temperatura
+	
+	rSetPointInferiorStandby	: REAL ;
+	rSetPointSuperiorStandby	: REAL ;
+	iTempoIniStdByTemperatura	: INT ;
+	
+	iValorIncremento : INT;
+	
+	//Parametros permanentes do supervisório agrupados
+	iLimitePotenciaGeral : INT;
+	iLimiteTemperaturaGeral : INT;
+	iNumeroResistencias : INT;
+	iEspessuraMinima :INT;
+	iEspessuraMaxima :INT;
+	rVelMesaEntrada25 : REAL;
+	rVelMesaEntrada35 : REAL;
+	rVelMesaEntrada45 : REAL;
+	iVelMesaForno25 : UINT;
+	iVelMesaForno35 : UINT;
+	iVelMesaForno45 : UINT;
+	rVelMesaPassagem25 : REAL;
+	rVelMesaPassagem35 : REAL;
+	rVelMesaPassagem45 : REAL;
+	rVelMesaResfriamento25 : REAL;
+	rVelMesaResfriamento35 : REAL;
+	rVelMesaResfriamento45 : REAL;
+	rVelMesaSaida25 : REAL;
+	rVelMesaSaida35 : REAL;
+	rVelMesaSaida45 : REAL;
+
+	rVelResfSup01 : REAL;
+	rVelResfInf01 : REAL;
+	rVelResfSup02 : REAL;
+	rVelResfInf02 : REAL;
+
+	rVelGuilhotina01 : REAL;
+	rVelGuilhotina01Sup : REAL;
+	rVelGuilhotina01Inf : REAL;
+	rVelGuilhotina02 : REAL;
+
+	rVelVentilador01 :REAL;
+	rVelVentilador02 :REAL;
+	rVelVentilador03 :REAL;
+
+	rOffSetResfSup01 : REAL;
+	rOffSetResfInf01 : REAL;
+	rOffSetResfSup02 : REAL;
+	rOffSetResfInf02 : REAL;
+	
+	//Parametros teste nobreak
+	
+	xDiaUltimoTeste : BOOL;
+	xNobreakHabilitado: BOOL ;
+	
+	//--------- GESTÃO ENERGÉTICA -------------\\
+	
+	rAquecendoMensal : REAL;
+	rTrabalhandoMensal : REAL;
+	rDesligadoMensal : REAL;
+	rOciosoMensal : REAL;
+	rTestandoMensal : REAL;
+	
+	rBufferAquecendoMensal : REAL;
+	rBufferTrabalhandoMensal : REAL;
+	rBufferDesligadoMensal : REAL;
+	rBufferOciosoMensal : REAL;
+	rBufferTestandoMensal : REAL;
+	
+	rAquecendoDiario : REAL;
+	rTrabalhandoDiario : REAL;
+	rDesligadoDiario : REAL;
+	rOciosoDiario : REAL;
+	rTestandoDiario : REAL;
+	
+	rBufferAquecendoDiario : REAL;
+	rBufferTrabalhandoDiario : REAL;
+	rBufferDesligadoDiario : REAL;
+	rBufferOciosoDiario : REAL;
+	rBufferTestandoDiario : REAL;
+	
+	uMesReferencia : UINT;
+	uDiaReferencia : UINT;
+	rConsumoInicialDiario : REAL;
+	bGravaBancoE3 : BOOL;
+	
+	//Parâmetros de ajuste das meses
+	
+	iCorretorCargaMesaEntrada: INT;
+	iCorretorCargaMesaPassagem : INT;
+	iCorretorCargaMesaResfriador: INT;
+	iCorretorCargaMesaSaida: INT;
+	
+	
+// heatcontrol
+
+	// GVL PERSISTENT VARS
+// PARAMETROS RETENTIVOS
+
+// USAR PREFIXO "P_" PARA IDENTIFICACAO NO PROGRAMA AO CRIAR NOVAS VARIAVEIS
+
+// VALORES INICIAIS DEFINIDOS NAS VARIAVEIS SAO CARREGADOS APENAS NO 1º DOWNLOAD OU SE INICIALIZAR AS VARIAVEIS PERSISTENTES 
+
+		
+	//parametros de ajuste do controle de temperatura
+	//estrutura ST_PID:
+	//Kp ganho proporcional (0...10000)
+	//Tn tempo integral (0...60000)
+	//Tv tempo derivada (0...60000)
+	//Td damping time derivada  (min tempo de ciclo da tarefa...60000) 
+	{warning 'Definir valores iniciais dos parametros de PID de controle de temperatura - a serem ajustados apos autotune'}
+	P_stPid1		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 1
+	P_stPid2		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 2
+	P_stPid3		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 3
+	P_stPid4		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid5		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid6		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid7		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid8		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid9		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid10		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid11		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 1
+	P_stPid12		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 2
+	P_stPid13		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 3
+	P_stPid14		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid15		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid16		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid17		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid18		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid19		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid20		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid21		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 1
+	P_stPid22		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 2
+	P_stPid23		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 3
+	P_stPid24		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid25		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid26		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid27		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid28		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid29		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid30		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid31		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 1
+	P_stPid32		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 2
+	P_stPid33		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 3
+	P_stPid34		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid35		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid36		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid37		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid38		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid39		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid40		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid41		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 1
+	P_stPid42		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 2
+	P_stPid43		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 3
+	P_stPid44		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid45		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid46		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid47		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid48		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid49		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid50		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid51		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 1
+	P_stPid52		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 2
+	P_stPid53		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 3
+	P_stPid54		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid55		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid56		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid57		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid58		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid59		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid60		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid61		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 1
+	P_stPid62		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 2
+	P_stPid63		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 3
+	P_stPid64		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid65		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid66		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid67		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid68		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid69		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid70		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid71		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 1
+	P_stPid72		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 2
+	P_stPid73		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 3
+	P_stPid74		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid75		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid76		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid77		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid78		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid79		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid80		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid81		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 1
+	P_stPid82		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 2
+	P_stPid83		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 3
+	P_stPid84		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid85		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid86		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid87		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid88		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid89		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid90		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid91		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 1
+	P_stPid92		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 2
+	P_stPid93		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 3
+	P_stPid94		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid95		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid96		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid97		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid98		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid99		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+	P_stPid100		: SE_CTBX.ST_PID := (rKp := 2.0, rTn := 200.0);	//IHM parametro - parametros PID 4
+		
+END_VAR
+
+
+	</Single>
+      <Single Name="LineInfoPersistence" Type="string">c9a661eb-1d1f-48f8-a1cd-997e85f5e9e5_Decl_LineIds</Single>
+    </Single>
+  </Single>
+  <Null Name="NetVarProperties" />
+  <Single Name="guidinit" Type="System.Guid">5063e3fd-7b59-40a9-a102-ff541b312426</Single>
+  <Single Name="guidcyclic" Type="System.Guid">7088d327-1630-4389-9f7d-2f984f6a0757</Single>
+  <Single Name="dymmattributecount" Type="int">5</Single>
+</Single>

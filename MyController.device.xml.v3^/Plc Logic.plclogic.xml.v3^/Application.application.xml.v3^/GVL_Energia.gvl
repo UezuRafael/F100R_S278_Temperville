@@ -1,0 +1,132 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "ba79839d-d949-4c76-a2e1-ed7f6697dc97",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	///Parametros de leituras Instantaneas Reais do PM710 para o Supervisório
+	rConsumoEnergiaReal_kWh: REAL;
+	rConsumoEnergiaAparente_kVAh: REAL;
+	rConsumoEnergiaReativa_kVARh: REAL;
+	rPotenciaTotalReal_kW: REAL;
+	rPotenciaTotalAparente_kVA: REAL;
+	rPotenciaTotalReativa_kVAR: REAL;
+	rFatorDePotenciaTotal: REAL;
+	rTensaoFFMedia_V: REAL;
+	rTensaoFNMedia_V: REAL;
+	rCorrenteMedia_V: REAL;
+	rFrequencia_Hz: REAL;
+	rDemandaTotalReal_kW: REAL;
+	rDemandaTotalAparente_kVA: REAL;
+	rDemandaTotalReativa_kVAR: REAL;
+	rDemandaMaximaReal_kW: REAL;
+	rDemandaMaximaAparente_kVA: REAL;
+	rDemandaMaximaReativa_kVAR: REAL;
+	rCorrenteInstantFaseA_Amp: REAL;
+	rCorrenteInstantFaseB_Amp: REAL;
+	rCorrenteInstantFaseC_Amp: REAL;
+	rCorrenteInstantNeutro_Amp: REAL;
+	rCorrenteDemandaFaseA_Amp: REAL;
+	rCorrenteDemandaFaseB_Amp: REAL;
+	rCorrenteDemandaFaseC_Amp: REAL;
+	rCorrenteMaximaDemandaFaseA_Amp: REAL;
+	rCorrenteMaximaDemandaFaseB_Amp: REAL;
+	rCorrenteMaximaDemandaFaseC_Amp: REAL;
+	rTensaoFaseAB_V: REAL;
+	rTensaoFaseBC_V: REAL;
+	rTensaoFaseAC_V: REAL;
+	rTensaoFaseAN_V: REAL;
+	rTensaoFaseBN_V: REAL;
+	rTensaoFaseCN_V: REAL;
+	rPotenciaRealFaseA_kW: REAL;
+	rPotenciaRealFaseB_kW: REAL;
+	rPotenciaRealFaseC_kW: REAL;
+	rPotenciaAparenteFaseA_kVA: REAL;
+	rPotenciaAparenteFaseB_kVA: REAL;
+	rPotenciaAparenteFaseC_kVA: REAL;
+	rPotenciaReativaFaseA_kVAR: REAL;
+	rPotenciaReativaFaseB_kVAR: REAL;
+	rPotenciaReativaFaseC_kVAR: REAL;
+	rCorrenteTHDFaseA: REAL;
+	rCorrenteTHDFaseB: REAL;
+	rCorrenteTHDFaseC: REAL;
+	rCorrenteTHDNeutro: REAL;
+	rTensaoTHDFaseAN: REAL;
+	rTensaoTHDFaseBN: REAL;
+	rTensaoTHDFaseCN: REAL;
+	rTensaoTHDFaseAB: REAL;
+	rTensaoTHDFaseBC: REAL;
+	rTensaoTHDFaseAC: REAL;
+	/// Valores minimos
+	rPotenciaTotalRealMinima_kW: REAL;
+	rPotenciaTotalAparenteMinima_kVA: REAL;
+	rPotenciaTotalReativaMinima_kVAR: REAL;
+	rFatorDePotenciaTotalMinima: REAL;
+	rFrequenciaMinima_Hz: REAL;
+	rCorrenteMinimaFaseA_Amp: REAL;
+	rCorrenteMinimaFaseB_Amp: REAL;
+	rCorrenteMinimaFaseC_Amp: REAL;
+	rCorrenteMinimaNeutro_Amp: REAL;
+	rTensaoMinimaFaseAN_V: REAL;
+	rTensaoMinimaFaseBN_V: REAL;
+	rTensaoMinimaFaseCN_V: REAL;
+	rTensaoMinimaFaseAB_V: REAL;
+	rTensaoMinimaFaseBC_V: REAL;
+	rTensaoMinimaFaseAC_V: REAL;
+	rCorrenteTHDMinimoFaseA: REAL;
+	rCorrenteTHDMinimoFaseB: REAL;
+	rCorrenteTHDMinimoFaseC: REAL;
+	rCorrenteTHDMinimoNeutro: REAL;
+	rTensaoTHDMinimoFaseAN: REAL;
+	rTensaoTHDMinimoFaseBN: REAL;
+	rTensaoTHDMinimoFaseCN: REAL;
+	rTensaoTHDMinimoFaseAB: REAL;
+	rTensaoTHDMinimoFaseBC: REAL;
+	rTensaoTHDMinimoFaseAC: REAL;
+	/// Valores Maximos
+	rPotenciaTotalRealMaximo_kW: REAL;
+	rPotenciaTotalAparenteMaximo_kVA: REAL;
+	rPotenciaTotalReativaMaximo_kVAR: REAL;
+	rFatorDePotenciaTotalMaximo: REAL;
+	rFrequenciaMaxima_Hz: REAL;
+	rCorrenteMaximoFaseA_Amp: REAL;
+	rCorrenteMaximoFaseB_Amp: REAL;
+	rCorrenteMaximoFaseC_Amp: REAL;
+	rCorrenteMaximoNeutro_Amp: REAL;
+	rTensaoMaximoFaseAN_V: REAL;
+	rTensaoMaximoFaseBN_V: REAL;
+	rTensaoMaximoFaseCN_V: REAL;
+	rTensaoMaximoFaseAB_V: REAL;
+	rTensaoMaximoFaseBC_V: REAL;
+	rTensaoMaximoFaseAC_V: REAL;
+	rCorrenteTHDMaximoFaseA: REAL;
+	rCorrenteTHDMaximoFaseB: REAL;
+	rCorrenteTHDMaximoFaseC: REAL;
+	rCorrenteTHDMaximoNeutro: REAL;
+	rTensaoTHDMaximoFaseAN: REAL;
+	rTensaoTHDMaximoFaseBN: REAL;
+	rTensaoTHDMaximoFaseCN: REAL;
+	rTensaoTHDMaximoFaseAB: REAL;
+	rTensaoTHDMaximoFaseBC: REAL;
+	rTensaoTHDMaximoFaseAC: REAL;
+	/// // // // // // // // // 
+	uMesFatura: UINT;
+	uAnoFatura: UINT;
+	bZeraAcumulado: BOOL;
+	xCmdResetGeralPm: BOOL;
+	// // // // // // // // // 
+
+	
+	
+	
+END_VAR

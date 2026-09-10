@@ -1,0 +1,1914 @@
+__V3_META__
+{
+  "objectGuid": "7fbc98bd-55ad-498f-a48b-304737554c66",
+  "objectTypeGuid": "225bfe47-7336-4dbc-9419-4105a7c831fa",
+  "embeddedObjectTypeGuids": [],
+  "properties": {
+    "_3S.CoDeSys.DeviceObject.DeviceProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{cdadfc2b-8598-4621-ad56-5b1df7db910f}\" Method=\"IArchivable\"><Single Name=\"DeviceIdentification\" Type=\"{959f677a-b4e4-4930-8d88-b3b6b116d4d6}\" Method=\"IArchivable\"><Single Name=\"ModuleId\" Type=\"string\">DIG_IN</Single><Single Name=\"Type\" Type=\"int\">4096</Single><Single Name=\"Id\" Type=\"string\">101a 0810</Single><Single Name=\"Version\" Type=\"string\">5.5.11.9</Single><Null Name=\"BaseName\" /></Single></Single>",
+    "schneider.Automation.OEM.MSDIOManager.IOHarmonizationProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{275991af-8cbe-452b-ad98-cb6842331ae4}\" Method=\"IArchivable\"><Single Name=\"InitialModuleName\" Type=\"string\">DI</Single><Single Name=\"InitialTemplate\" Type=\"string\">#X#T#D_#C</Single></Single>",
+    "schneiderAutomation.Platform.Core.ObjectProperty.AlreadyHandledObjectProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{f34a3cea-eaf7-46ee-9371-24d10b0ab1d5}\" Method=\"IArchivable\"><List2 Name=\"PropertyList\"><Single Type=\"string\">IOHarmonizationService</Single><Single Type=\"string\">LibDiagnosticService</Single></List2></Single>",
+    "schneiderElectric.CtrlIo.Diagnostic.plugin.AddedLibraryProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{6979e330-d689-4b4f-94da-a58b29003f3a}\" Method=\"IArchivable\"><Single Name=\"FBName\" Type=\"string\">_status</Single><Single Name=\"FBType\" Type=\"string\">FB_Diagnostic</Single><Single Name=\"InitMethodName\" Type=\"string\">Initialize</Single><Single Name=\"CyclicMethodName\" Type=\"string\">Cyclic</Single><Single Name=\"CyclicCall\" Type=\"string\">BeforeReadInputs</Single><Single Name=\"LibName\" Type=\"string\">Diagnostic Device Support</Single><Single Name=\"FBDiagType\" Type=\"string\"></Single><Single Name=\"CyclicTask\" Type=\"string\">MAST</Single><Single Name=\"parameterId\" Type=\"string\">0</Single></Single>"
+  },
+  "subObjects": {}
+}
+__V3_CONTENT__
+<?xml version="1.0" encoding="utf-8"?>
+<Single xml:space="preserve" Type="{225bfe47-7336-4dbc-9419-4105a7c831fa}" Method="IArchivable">
+  <Single Name="UniqueIdGenerator" Type="string">4272</Single>
+  <Null Name="TypeList" />
+  <Single Name="NeedsBusCycle" Type="bool">False</Single>
+  <Single Name="Id" Type="{959f677a-b4e4-4930-8d88-b3b6b116d4d6}" Method="IArchivable">
+    <Single Name="ModuleId" Type="string">DIG_IN</Single>
+    <Single Name="Type" Type="int">4096</Single>
+    <Single Name="Id" Type="string">101a 0810</Single>
+    <Single Name="Version" Type="string">5.5.11.9</Single>
+    <Null Name="BaseName" />
+  </Single>
+  <Single Name="DefaultDeviceInfo" Type="{59a90934-c888-40db-a9df-306fcf36d75c}" Method="IArchivable">
+    <Single Name="Name" Type="string">Digital Inputs</Single>
+    <Single Name="Description" Type="string"></Single>
+    <Single Name="Vendor" Type="string">Schneider Electric</Single>
+    <Single Name="OrderNumber" Type="string">-</Single>
+    <Array Name="Categories" Type="int" />
+    <Array Name="Families" Type="string" />
+    <Single Name="Custom" Type="string"></Single>
+    <Null Name="DefaultInstanceName" />
+  </Single>
+  <Single Name="DeviceParameterSet" Type="{abc12bfe-e34e-4b2c-a058-42c6e7e03a13}" Method="IArchivable">
+    <List2 Name="Params" />
+    <Single Name="LmGuid" Type="System.Guid">46c14c92-e43f-5dd6-b1a7-6f01a39aa04c</Single>
+    <Null Name="Sections" />
+    <Single Name="InitOnOnlineChange" Type="bool">False</Single>
+    <Single Name="AlwaysMapping" Type="bool">False</Single>
+    <Null Name="EditorName" />
+    <Single Name="AlwaysMappingMode" Type="{9d1b24fb-5845-4978-8458-564ca7830fec}">OnlyIfUnused</Single>
+    <Single Name="CreateBitChannels" Type="bool">False</Single>
+  </Single>
+  <Single Name="Disable" Type="bool">False</Single>
+  <Single Name="Exclude" Type="bool">False</Single>
+  <List Name="Connectors" Type="System.Collections.ArrayList" />
+  <Single Name="ConnectorList" Type="{52a6325f-063a-4748-86b6-ec8aa02d3232}" Method="IArchivable">
+    <List Name="InnerList" Type="System.Collections.ArrayList">
+      <Single Type="{850f737d-2abf-45f4-89c1-63ed6b29593d}" Method="IArchivable">
+        <Single Name="VisibleInterfaceName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+          <Single Name="Namespace" Type="string">local</Single>
+          <Single Name="Identifier" Type="string">dummy</Single>
+        </Single>
+        <Single Name="ConnectorObjectGuid" Type="System.Guid">00000000-0000-0000-0000-000000000000</Single>
+        <Single Name="IsExplicit" Type="bool">False</Single>
+        <Single Name="ModuleType" Type="ushort">45001</Single>
+        <Single Name="Interface" Type="string">MSD.M2XX</Single>
+        <Single Name="Role" Type="{6827a808-5967-49c4-a827-10f6c446e075}">Child</Single>
+        <Single Name="ConnectorId" Type="int">1</Single>
+        <Single Name="Hostpath" Type="int">-1</Single>
+        <Single Name="Adapters" Type="{1da2f14a-1c63-4268-9171-3b6869b8ccd6}" Method="IArchivable">
+          <List Name="Adapters" Type="System.Collections.ArrayList">
+            <Single Type="{6d49a564-d0d1-4914-86ee-4465387ab144}" Method="IArchivable">
+              <Single Name="AllowEmptySlot" Type="bool">True</Single>
+              <Null Name="DefaultModules" />
+              <Array Name="Modules" Type="System.Guid">
+                <Single Type="System.Guid">dcd3f972-eca4-4840-a503-38082058416e</Single>
+              </Array>
+              <Single Name="IncludeSlotNumber" Type="bool">False</Single>
+              <Single Name="StartSlotNumber" Type="uint">0</Single>
+              <Null Name="SlotNames" />
+              <Single Name="HiddenSlot" Type="bool">False</Single>
+            </Single>
+          </List>
+        </Single>
+        <Single Name="HostParameterSet" Type="{abc12bfe-e34e-4b2c-a058-42c6e7e03a13}" Method="IArchivable">
+          <List2 Name="Params">
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">0</Single>
+              <Single Name="OfflineAccess" Type="{f7a1fdea-1444-4931-82ab-fdb68bf81bcf}">None</Single>
+              <Single Name="OnlineAccess" Type="{f7a1fdea-1444-4931-82ab-fdb68bf81bcf}">None</Single>
+              <Single Name="DalaElement" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                <Single Name="OfflineAccess" Type="{f7a1fdea-1444-4931-82ab-fdb68bf81bcf}">None</Single>
+                <Single Name="OnlineAccess" Type="{f7a1fdea-1444-4931-82ab-fdb68bf81bcf}">None</Single>
+                <Single Name="PositionId" Type="long">4221</Single>
+                <Single Name="EditorPositionId" Type="long">4222</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">DiagnosticInstance</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">0</Single>
+                <Single Name="Type" Type="string">__XWORD</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">std:__XWORD</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">1000</Single>
+              <Single Name="ChannelType" Type="{abf9b454-3972-4b82-88a2-feef15a02f10}">Input</Single>
+              <Single Name="DalaElement" Type="{bd387d12-7a68-42ff-9fa4-1e4e26e0dc37}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{1944b378-8867-41f4-b1f4-6e5b1e6547ba}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4225</Single>
+                      <Single Name="EditorPositionId" Type="long">4226</Single>
+                      <Single Name="IoMapping" Type="{d6d934cf-5ec0-42c3-b628-2a7aea7d364c}" Method="IArchivable">
+                        <Single Name="Mappings" Type="{8a62c05c-4fee-4b4a-8600-a677aedc92c7}" Method="IArchivable">
+                          <List2 Name="Mappings">
+                            <Single Type="{47edf8ea-3f84-452c-b998-e18f878578d3}" Method="IArchivable">
+                              <Single Name="Id" Type="long">4225</Single>
+                              <Single Name="Variable" Type="string">Application.GVL_EntradasSaidas.xM0_1_DI0</Single>
+                            </Single>
+                          </List2>
+                        </Single>
+                      </Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Channels.Base.FastInput.Description</Single>
+                        <Single Name="Default" Type="string">Fast input, Sink/Source</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Default" Type="string">I0</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Bit0</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Channels.Base.FastInput.Description</Single>
+                          <Single Name="Default" Type="string">Fast input, Sink/Source</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Default" Type="string">I0</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">Bit0</Single>
+                        <Single Name="Type" Type="string">BOOL</Single>
+                      </Single>
+                      <Single Name="Type" Type="string">BOOL</Single>
+                    </Single>
+                    <Single Type="{1944b378-8867-41f4-b1f4-6e5b1e6547ba}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4227</Single>
+                      <Single Name="EditorPositionId" Type="long">4228</Single>
+                      <Single Name="IoMapping" Type="{d6d934cf-5ec0-42c3-b628-2a7aea7d364c}" Method="IArchivable">
+                        <Single Name="Mappings" Type="{8a62c05c-4fee-4b4a-8600-a677aedc92c7}" Method="IArchivable">
+                          <List2 Name="Mappings">
+                            <Single Type="{47edf8ea-3f84-452c-b998-e18f878578d3}" Method="IArchivable">
+                              <Single Name="Id" Type="long">4227</Single>
+                              <Single Name="Variable" Type="string">Application.GVL_EntradasSaidas.xM0_1_DI1</Single>
+                            </Single>
+                          </List2>
+                        </Single>
+                      </Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Channels.Base.FastInput.Description</Single>
+                        <Single Name="Default" Type="string">Fast input, Sink/Source</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Default" Type="string">I1</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Bit1</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Channels.Base.FastInput.Description</Single>
+                          <Single Name="Default" Type="string">Fast input, Sink/Source</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Default" Type="string">I1</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">Bit1</Single>
+                        <Single Name="Type" Type="string">BOOL</Single>
+                      </Single>
+                      <Single Name="Type" Type="string">BOOL</Single>
+                    </Single>
+                    <Single Type="{1944b378-8867-41f4-b1f4-6e5b1e6547ba}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4229</Single>
+                      <Single Name="EditorPositionId" Type="long">4230</Single>
+                      <Single Name="IoMapping" Type="{d6d934cf-5ec0-42c3-b628-2a7aea7d364c}" Method="IArchivable">
+                        <Single Name="Mappings" Type="{8a62c05c-4fee-4b4a-8600-a677aedc92c7}" Method="IArchivable">
+                          <List2 Name="Mappings">
+                            <Single Type="{47edf8ea-3f84-452c-b998-e18f878578d3}" Method="IArchivable">
+                              <Single Name="Id" Type="long">4229</Single>
+                              <Single Name="Variable" Type="string">Application.GVL_EntradasSaidas.xM0_1_DI2</Single>
+                            </Single>
+                          </List2>
+                        </Single>
+                      </Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Channels.Base.FastInput.Description</Single>
+                        <Single Name="Default" Type="string">Fast input, Sink/Source</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Default" Type="string">I2</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Bit2</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Channels.Base.FastInput.Description</Single>
+                          <Single Name="Default" Type="string">Fast input, Sink/Source</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Default" Type="string">I2</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">Bit2</Single>
+                        <Single Name="Type" Type="string">BOOL</Single>
+                      </Single>
+                      <Single Name="Type" Type="string">BOOL</Single>
+                    </Single>
+                    <Single Type="{1944b378-8867-41f4-b1f4-6e5b1e6547ba}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4231</Single>
+                      <Single Name="EditorPositionId" Type="long">4232</Single>
+                      <Single Name="IoMapping" Type="{d6d934cf-5ec0-42c3-b628-2a7aea7d364c}" Method="IArchivable">
+                        <Single Name="Mappings" Type="{8a62c05c-4fee-4b4a-8600-a677aedc92c7}" Method="IArchivable">
+                          <List2 Name="Mappings">
+                            <Single Type="{47edf8ea-3f84-452c-b998-e18f878578d3}" Method="IArchivable">
+                              <Single Name="Id" Type="long">4231</Single>
+                              <Single Name="Variable" Type="string">Application.GVL_EntradasSaidas.xM0_1_DI3</Single>
+                            </Single>
+                          </List2>
+                        </Single>
+                      </Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Channels.Base.FastInput.Description</Single>
+                        <Single Name="Default" Type="string">Fast input, Sink/Source</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Default" Type="string">I3</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Bit3</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Channels.Base.FastInput.Description</Single>
+                          <Single Name="Default" Type="string">Fast input, Sink/Source</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Default" Type="string">I3</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">Bit3</Single>
+                        <Single Name="Type" Type="string">BOOL</Single>
+                      </Single>
+                      <Single Name="Type" Type="string">BOOL</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Null Name="FilterFlags" />
+                <Single Name="PositionId" Type="long">4223</Single>
+                <Single Name="EditorPositionId" Type="long">4224</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Namespace" Type="string">local</Single>
+                  <Single Name="Identifier" Type="string">dummy</Single>
+                  <Single Name="Default" Type="string">IB0</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">1000</Single>
+                <Single Name="BaseType" Type="string">BYTE</Single>
+              </Single>
+              <Single Name="SectionId" Type="int">0</Single>
+              <Single Name="ParamType" Type="string">localTypes:M2xx.LocalIOs.Inputs.Channels.Base</Single>
+              <Single Name="AlwaysMapping" Type="bool">True</Single>
+              <Single Name="IndexInDevDesc" Type="long">0</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">1001</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{4322e2a3-55e5-4e47-9fcd-b70eb1e6bfee}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4235</Single>
+                      <Single Name="EditorPositionId" Type="long">4236</Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Description</Single>
+                        <Single Name="Default" Type="string">Latching allows incoming pulses with amplitude widths shorter than the controller scan time to be captured and recorded</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Name</Single>
+                        <Single Name="Default" Type="string">Latch</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">latch</Single>
+                      <Single Name="TypeName" Type="string">M2xx.EnumYesNo</Single>
+                      <Single Name="LmEnumTypeGuid" Type="System.Guid">2aeadc35-f7b8-5655-b593-f1d36800ccf9</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="PositionId" Type="long">4115</Single>
+                        <Single Name="EditorPositionId" Type="long">4116</Single>
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Description</Single>
+                          <Single Name="Default" Type="string">Latching allows incoming pulses with amplitude widths shorter than the controller scan time to be captured and recorded</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Name</Single>
+                          <Single Name="Default" Type="string">Latch</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">latch</Single>
+                        <Single Name="Value" Type="string">0</Single>
+                        <Single Name="Type" Type="string">BYTE</Single>
+                        <Single Name="Default" Type="string">0</Single>
+                      </Single>
+                      <Array Name="Values" Type="{b955cc99-aa13-473b-b43f-7c76a865c138}">
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.EnumYesNo.No</Single>
+                            <Single Name="Default" Type="string">No</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">No</Single>
+                          <Single Name="Value" Type="string">0</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.EnumYesNo.Yes</Single>
+                            <Single Name="Default" Type="string">Yes</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">Yes</Single>
+                          <Single Name="Value" Type="string">1</Single>
+                        </Single>
+                      </Array>
+                    </Single>
+                    <Single Type="{4322e2a3-55e5-4e47-9fcd-b70eb1e6bfee}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4237</Single>
+                      <Single Name="EditorPositionId" Type="long">4238</Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Description</Single>
+                        <Single Name="Default" Type="string">Event detection</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Name</Single>
+                        <Single Name="Default" Type="string">Event</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">event</Single>
+                      <Single Name="TypeName" Type="string">M2xx.LocalIOs.Inputs.EnumEvent</Single>
+                      <Single Name="LmEnumTypeGuid" Type="System.Guid">89b33a84-4ae8-5d5f-ba82-bc314b9fcc66</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="PositionId" Type="long">4117</Single>
+                        <Single Name="EditorPositionId" Type="long">4118</Single>
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Description</Single>
+                          <Single Name="Default" Type="string">Event detection</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Name</Single>
+                          <Single Name="Default" Type="string">Event</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">event</Single>
+                        <Single Name="Value" Type="string">0</Single>
+                        <Single Name="Type" Type="string">BYTE</Single>
+                        <Single Name="Default" Type="string">0</Single>
+                      </Single>
+                      <Array Name="Values" Type="{b955cc99-aa13-473b-b43f-7c76a865c138}">
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.No</Single>
+                            <Single Name="Default" Type="string">No</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">No</Single>
+                          <Single Name="Value" Type="string">0</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.RisingEdge</Single>
+                            <Single Name="Default" Type="string">Rising edge</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">RisingEdge</Single>
+                          <Single Name="Value" Type="string">1</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.FallingEdge</Single>
+                            <Single Name="Default" Type="string">Falling edge</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">FallingEdge</Single>
+                          <Single Name="Value" Type="string">2</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.BothEdge</Single>
+                            <Single Name="Default" Type="string">Both edges</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">BothEdge</Single>
+                          <Single Name="Value" Type="string">3</Single>
+                        </Single>
+                      </Array>
+                    </Single>
+                    <Single Type="{4322e2a3-55e5-4e47-9fcd-b70eb1e6bfee}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4239</Single>
+                      <Single Name="EditorPositionId" Type="long">4240</Single>
+                      <Single Name="Unit" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Unit</Single>
+                        <Single Name="Default" Type="string">ms</Single>
+                      </Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Description</Single>
+                        <Single Name="Default" Type="string">Integrator filtering value reduces the effect of noise on a controller input</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Name</Single>
+                        <Single Name="Default" Type="string">Filter</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">filter</Single>
+                      <Single Name="TypeName" Type="string">M2xx.Inputs.Filter.Enum</Single>
+                      <Single Name="LmEnumTypeGuid" Type="System.Guid">f8a30e09-f167-5bde-893a-99379a3c7774</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="PositionId" Type="long">4119</Single>
+                        <Single Name="EditorPositionId" Type="long">4120</Single>
+                        <Single Name="Unit" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Unit</Single>
+                          <Single Name="Default" Type="string">ms</Single>
+                        </Single>
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Description</Single>
+                          <Single Name="Default" Type="string">Integrator filtering value reduces the effect of noise on a controller input</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Name</Single>
+                          <Single Name="Default" Type="string">Filter</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">filter</Single>
+                        <Single Name="Value" Type="string">12</Single>
+                        <Single Name="Type" Type="string">BYTE</Single>
+                        <Single Name="Default" Type="string">12</Single>
+                      </Single>
+                      <Array Name="Values" Type="{b955cc99-aa13-473b-b43f-7c76a865c138}">
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.000</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.000</Single>
+                          <Single Name="Value" Type="string">0</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.001</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.001</Single>
+                          <Single Name="Value" Type="string">2</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.002</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.002</Single>
+                          <Single Name="Value" Type="string">3</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.005</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.005</Single>
+                          <Single Name="Value" Type="string">4</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.01</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.010</Single>
+                          <Single Name="Value" Type="string">5</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.05</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.05</Single>
+                          <Single Name="Value" Type="string">7</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.1</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.1</Single>
+                          <Single Name="Value" Type="string">8</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.5</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.5</Single>
+                          <Single Name="Value" Type="string">10</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">1</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_1</Single>
+                          <Single Name="Value" Type="string">11</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">4</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_4</Single>
+                          <Single Name="Value" Type="string">12</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">12</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_12</Single>
+                          <Single Name="Value" Type="string">13</Single>
+                        </Single>
+                      </Array>
+                    </Single>
+                  </List2>
+                </Single>
+                <Null Name="FilterFlags" />
+                <List Name="CustomItems" Type="{7d23305a-7bb9-46e6-b58b-01ea5694add1}">
+                  <Single Type="{dd6be685-9be1-40f4-855e-c5c0352a5200}" Method="IArchivable">
+                    <Single Name="Name" Type="string">se:ParameterConstraints</Single>
+                    <Single Name="Data" Type="string">&lt;se:ParameterConstraints xmlns:se="http://www.schneider-electric.com/schemas/OEMcCustom.xsd"&gt;&lt;se:VisibleConstraint SubElementId="latch" Visible="false" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="0" /&gt;&lt;se:ParameterValueStatement ParameterId="1001" SubElementId="event" Value="0" LogicalNegation="true" /&gt;&lt;/se:VisibleConstraint&gt;&lt;se:VisibleConstraint SubElementId="event" Visible="false" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="0" /&gt;&lt;se:ParameterValueStatement ParameterId="1001" SubElementId="latch" Value="0" LogicalNegation="true" /&gt;&lt;/se:VisibleConstraint&gt;&lt;se:ValueConstraint SubElementId="filter" Value="3" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1001" SubElementId="latch" Value="1" /&gt;&lt;se:ParameterValueStatement ParameterId="1001" SubElementId="event" Value="0" LogicalNegation="true" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="filter" Value="12" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1001" SubElementId="latch" Value="0" Operator="And"&gt;&lt;se:ParameterValueStatement ParameterId="1001" SubElementId="event" Value="0" /&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="0" LogicalNegation="true" /&gt;&lt;/se:ParameterValueStatement&gt;&lt;se:ParameterValueStatement ParameterId="12346" Value="SCRIPT(tmp = &amp;quot;#12346#&amp;quot;.replace(&amp;quot;'&amp;quot;,&amp;quot;&amp;quot;)&amp;#xD;&amp;#xA;split = tmp.split()&amp;#xD;&amp;#xA;extractedOldValue = int(split[0][4:len(split[0])])&amp;#xD;&amp;#xA;if (extractedOldValue == 0):&amp;#xD;&amp;#xA;    result = &amp;quot;#12346#&amp;quot;&amp;#xD;&amp;#xA;else:&amp;#xD;&amp;#xA;    result = &amp;quot;&amp;quot;&amp;#xD;&amp;#xA;result)" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="filter" Value="13"&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="0" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="latch" Value="0" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1001" SubElementId="event" Value="0" LogicalNegation="true" /&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="0" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="event" Value="0" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1001" SubElementId="latch" Value="1" /&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="0" /&gt;&lt;/se:ValueConstraint&gt;&lt;/se:ParameterConstraints&gt;</Single>
+                  </Single>
+                </List>
+                <Single Name="PositionId" Type="long">4233</Single>
+                <Single Name="EditorPositionId" Type="long">4234</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Namespace" Type="string">local</Single>
+                  <Single Name="Identifier" Type="string">dummy</Single>
+                  <Single Name="Default" Type="string">I0</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">1001</Single>
+                <Single Name="TypeName" Type="string">M2xx.LocalIOs.Inputs.FastInput</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">49644d55-dcd6-5946-9358-8f9ad534bc7e</Single>
+              </Single>
+              <Single Name="SectionId" Type="int">2</Single>
+              <Single Name="ParamType" Type="string">localTypes:M2xx.LocalIOs.Inputs.FastInput</Single>
+              <Single Name="IndexInDevDesc" Type="long">4</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">1002</Single>
+              <Single Name="ChannelType" Type="{abf9b454-3972-4b82-88a2-feef15a02f10}">Input</Single>
+              <Single Name="DalaElement" Type="{bd387d12-7a68-42ff-9fa4-1e4e26e0dc37}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{1944b378-8867-41f4-b1f4-6e5b1e6547ba}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4243</Single>
+                      <Single Name="EditorPositionId" Type="long">4244</Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Channels.Inputs.RearmingOutput.Bit0.Description</Single>
+                        <Single Name="Default" Type="string">Diagnostic of the outputs, default detected (if true)</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Default" Type="string">I0</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Bit0</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Channels.Inputs.RearmingOutput.Bit0.Description</Single>
+                          <Single Name="Default" Type="string">Diagnostic of the outputs, default detected (if true)</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Default" Type="string">I0</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">Bit0</Single>
+                        <Single Name="Type" Type="string">BOOL</Single>
+                      </Single>
+                      <Single Name="Type" Type="string">BOOL</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Null Name="FilterFlags" />
+                <Single Name="PositionId" Type="long">4241</Single>
+                <Single Name="EditorPositionId" Type="long">4242</Single>
+                <Single Name="IoMapping" Type="{d6d934cf-5ec0-42c3-b628-2a7aea7d364c}" Method="IArchivable">
+                  <Single Name="Mappings" Type="{8a62c05c-4fee-4b4a-8600-a677aedc92c7}" Method="IArchivable">
+                    <List2 Name="Mappings">
+                      <Single Type="{47edf8ea-3f84-452c-b998-e18f878578d3}" Method="IArchivable">
+                        <Single Name="Id" Type="long">4241</Single>
+                        <Single Name="CreateVariable" Type="bool">True</Single>
+                        <Single Name="Variable" Type="string">ibDI_IB1</Single>
+                      </Single>
+                    </List2>
+                  </Single>
+                </Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Namespace" Type="string">local</Single>
+                  <Single Name="Identifier" Type="string">dummy</Single>
+                  <Single Name="Default" Type="string">IB1</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">1002</Single>
+                <Single Name="BaseType" Type="string">BYTE</Single>
+              </Single>
+              <Single Name="SectionId" Type="int">0</Single>
+              <Single Name="ParamType" Type="string">localTypes:M2xx.LocalIOs.Inputs.Channels.RearmingOutput</Single>
+              <Single Name="AlwaysMapping" Type="bool">True</Single>
+              <Single Name="IndexInDevDesc" Type="long">1</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">1011</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{4322e2a3-55e5-4e47-9fcd-b70eb1e6bfee}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4247</Single>
+                      <Single Name="EditorPositionId" Type="long">4248</Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Description</Single>
+                        <Single Name="Default" Type="string">Latching allows incoming pulses with amplitude widths shorter than the controller scan time to be captured and recorded</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Name</Single>
+                        <Single Name="Default" Type="string">Latch</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">latch</Single>
+                      <Single Name="TypeName" Type="string">M2xx.EnumYesNo</Single>
+                      <Single Name="LmEnumTypeGuid" Type="System.Guid">bccf5f29-32e7-57aa-ad17-a64a8466d90a</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="PositionId" Type="long">4127</Single>
+                        <Single Name="EditorPositionId" Type="long">4128</Single>
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Description</Single>
+                          <Single Name="Default" Type="string">Latching allows incoming pulses with amplitude widths shorter than the controller scan time to be captured and recorded</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Name</Single>
+                          <Single Name="Default" Type="string">Latch</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">latch</Single>
+                        <Single Name="Value" Type="string">0</Single>
+                        <Single Name="Type" Type="string">BYTE</Single>
+                        <Single Name="Default" Type="string">0</Single>
+                      </Single>
+                      <Array Name="Values" Type="{b955cc99-aa13-473b-b43f-7c76a865c138}">
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.EnumYesNo.No</Single>
+                            <Single Name="Default" Type="string">No</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">No</Single>
+                          <Single Name="Value" Type="string">0</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.EnumYesNo.Yes</Single>
+                            <Single Name="Default" Type="string">Yes</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">Yes</Single>
+                          <Single Name="Value" Type="string">1</Single>
+                        </Single>
+                      </Array>
+                    </Single>
+                    <Single Type="{4322e2a3-55e5-4e47-9fcd-b70eb1e6bfee}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4249</Single>
+                      <Single Name="EditorPositionId" Type="long">4250</Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Description</Single>
+                        <Single Name="Default" Type="string">Event detection</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Name</Single>
+                        <Single Name="Default" Type="string">Event</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">event</Single>
+                      <Single Name="TypeName" Type="string">M2xx.LocalIOs.Inputs.EnumEvent</Single>
+                      <Single Name="LmEnumTypeGuid" Type="System.Guid">07eac700-3324-5413-9aea-e35a93c317b9</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="PositionId" Type="long">4129</Single>
+                        <Single Name="EditorPositionId" Type="long">4130</Single>
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Description</Single>
+                          <Single Name="Default" Type="string">Event detection</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Name</Single>
+                          <Single Name="Default" Type="string">Event</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">event</Single>
+                        <Single Name="Value" Type="string">0</Single>
+                        <Single Name="Type" Type="string">BYTE</Single>
+                        <Single Name="Default" Type="string">0</Single>
+                      </Single>
+                      <Array Name="Values" Type="{b955cc99-aa13-473b-b43f-7c76a865c138}">
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.No</Single>
+                            <Single Name="Default" Type="string">No</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">No</Single>
+                          <Single Name="Value" Type="string">0</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.RisingEdge</Single>
+                            <Single Name="Default" Type="string">Rising edge</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">RisingEdge</Single>
+                          <Single Name="Value" Type="string">1</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.FallingEdge</Single>
+                            <Single Name="Default" Type="string">Falling edge</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">FallingEdge</Single>
+                          <Single Name="Value" Type="string">2</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.BothEdge</Single>
+                            <Single Name="Default" Type="string">Both edges</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">BothEdge</Single>
+                          <Single Name="Value" Type="string">3</Single>
+                        </Single>
+                      </Array>
+                    </Single>
+                    <Single Type="{4322e2a3-55e5-4e47-9fcd-b70eb1e6bfee}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4251</Single>
+                      <Single Name="EditorPositionId" Type="long">4252</Single>
+                      <Single Name="Unit" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Unit</Single>
+                        <Single Name="Default" Type="string">ms</Single>
+                      </Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Description</Single>
+                        <Single Name="Default" Type="string">Integrator filtering value reduces the effect of noise on a controller input</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Name</Single>
+                        <Single Name="Default" Type="string">Filter</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">filter</Single>
+                      <Single Name="TypeName" Type="string">M2xx.Inputs.Filter.Enum</Single>
+                      <Single Name="LmEnumTypeGuid" Type="System.Guid">ebe12fb6-be54-578b-b22c-fff9224576a7</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="PositionId" Type="long">4131</Single>
+                        <Single Name="EditorPositionId" Type="long">4132</Single>
+                        <Single Name="Unit" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Unit</Single>
+                          <Single Name="Default" Type="string">ms</Single>
+                        </Single>
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Description</Single>
+                          <Single Name="Default" Type="string">Integrator filtering value reduces the effect of noise on a controller input</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Name</Single>
+                          <Single Name="Default" Type="string">Filter</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">filter</Single>
+                        <Single Name="Value" Type="string">12</Single>
+                        <Single Name="Type" Type="string">BYTE</Single>
+                        <Single Name="Default" Type="string">12</Single>
+                      </Single>
+                      <Array Name="Values" Type="{b955cc99-aa13-473b-b43f-7c76a865c138}">
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.000</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.000</Single>
+                          <Single Name="Value" Type="string">0</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.001</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.001</Single>
+                          <Single Name="Value" Type="string">2</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.002</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.002</Single>
+                          <Single Name="Value" Type="string">3</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.005</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.005</Single>
+                          <Single Name="Value" Type="string">4</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.01</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.010</Single>
+                          <Single Name="Value" Type="string">5</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.05</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.05</Single>
+                          <Single Name="Value" Type="string">7</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.1</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.1</Single>
+                          <Single Name="Value" Type="string">8</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.5</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.5</Single>
+                          <Single Name="Value" Type="string">10</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">1</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_1</Single>
+                          <Single Name="Value" Type="string">11</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">4</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_4</Single>
+                          <Single Name="Value" Type="string">12</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">12</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_12</Single>
+                          <Single Name="Value" Type="string">13</Single>
+                        </Single>
+                      </Array>
+                    </Single>
+                  </List2>
+                </Single>
+                <Null Name="FilterFlags" />
+                <List Name="CustomItems" Type="{7d23305a-7bb9-46e6-b58b-01ea5694add1}">
+                  <Single Type="{dd6be685-9be1-40f4-855e-c5c0352a5200}" Method="IArchivable">
+                    <Single Name="Name" Type="string">se:ParameterConstraints</Single>
+                    <Single Name="Data" Type="string">&lt;se:ParameterConstraints xmlns:se="http://www.schneider-electric.com/schemas/OEMcCustom.xsd"&gt;&lt;se:VisibleConstraint SubElementId="latch" Visible="false" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="1" /&gt;&lt;se:ParameterValueStatement ParameterId="1011" SubElementId="event" Value="0" LogicalNegation="true" /&gt;&lt;/se:VisibleConstraint&gt;&lt;se:VisibleConstraint SubElementId="event" Visible="false" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="1" /&gt;&lt;se:ParameterValueStatement ParameterId="1011" SubElementId="latch" Value="0" LogicalNegation="true" /&gt;&lt;/se:VisibleConstraint&gt;&lt;se:ValueConstraint SubElementId="filter" Value="3" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1011" SubElementId="latch" Value="1" /&gt;&lt;se:ParameterValueStatement ParameterId="1011" SubElementId="event" Value="0" LogicalNegation="true" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="filter" Value="12" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1011" SubElementId="latch" Value="0" Operator="And"&gt;&lt;se:ParameterValueStatement ParameterId="1011" SubElementId="event" Value="0" /&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="1" LogicalNegation="true" /&gt;&lt;/se:ParameterValueStatement&gt;&lt;se:ParameterValueStatement ParameterId="12346" Value="SCRIPT(tmp = &amp;quot;#12346#&amp;quot;.replace(&amp;quot;'&amp;quot;,&amp;quot;&amp;quot;)&amp;#xD;&amp;#xA;split = tmp.split()&amp;#xD;&amp;#xA;extractedOldValue = int(split[0][4:len(split[0])])&amp;#xD;&amp;#xA;if (extractedOldValue == 1):&amp;#xD;&amp;#xA;    result = &amp;quot;#12346#&amp;quot;&amp;#xD;&amp;#xA;else:&amp;#xD;&amp;#xA;    result = &amp;quot;&amp;quot;&amp;#xD;&amp;#xA;result)" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="filter" Value="13"&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="1" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="latch" Value="0" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1011" SubElementId="event" Value="0" LogicalNegation="true" /&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="1" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="event" Value="0" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1011" SubElementId="latch" Value="1" /&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="1" /&gt;&lt;/se:ValueConstraint&gt;&lt;/se:ParameterConstraints&gt;</Single>
+                  </Single>
+                </List>
+                <Single Name="PositionId" Type="long">4245</Single>
+                <Single Name="EditorPositionId" Type="long">4246</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Namespace" Type="string">local</Single>
+                  <Single Name="Identifier" Type="string">dummy</Single>
+                  <Single Name="Default" Type="string">I1</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">1011</Single>
+                <Single Name="TypeName" Type="string">M2xx.LocalIOs.Inputs.FastInput</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">08a4b20b-083b-5623-a73f-d62ac8dfeb57</Single>
+              </Single>
+              <Single Name="SectionId" Type="int">2</Single>
+              <Single Name="ParamType" Type="string">localTypes:M2xx.LocalIOs.Inputs.FastInput</Single>
+              <Single Name="IndexInDevDesc" Type="long">5</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">1021</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{4322e2a3-55e5-4e47-9fcd-b70eb1e6bfee}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4255</Single>
+                      <Single Name="EditorPositionId" Type="long">4256</Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Description</Single>
+                        <Single Name="Default" Type="string">Latching allows incoming pulses with amplitude widths shorter than the controller scan time to be captured and recorded</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Name</Single>
+                        <Single Name="Default" Type="string">Latch</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">latch</Single>
+                      <Single Name="TypeName" Type="string">M2xx.EnumYesNo</Single>
+                      <Single Name="LmEnumTypeGuid" Type="System.Guid">01c9f7e8-c015-517b-a743-96ae7543bdc9</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="PositionId" Type="long">4135</Single>
+                        <Single Name="EditorPositionId" Type="long">4136</Single>
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Description</Single>
+                          <Single Name="Default" Type="string">Latching allows incoming pulses with amplitude widths shorter than the controller scan time to be captured and recorded</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Name</Single>
+                          <Single Name="Default" Type="string">Latch</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">latch</Single>
+                        <Single Name="Value" Type="string">0</Single>
+                        <Single Name="Type" Type="string">BYTE</Single>
+                        <Single Name="Default" Type="string">0</Single>
+                      </Single>
+                      <Array Name="Values" Type="{b955cc99-aa13-473b-b43f-7c76a865c138}">
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.EnumYesNo.No</Single>
+                            <Single Name="Default" Type="string">No</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">No</Single>
+                          <Single Name="Value" Type="string">0</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.EnumYesNo.Yes</Single>
+                            <Single Name="Default" Type="string">Yes</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">Yes</Single>
+                          <Single Name="Value" Type="string">1</Single>
+                        </Single>
+                      </Array>
+                    </Single>
+                    <Single Type="{4322e2a3-55e5-4e47-9fcd-b70eb1e6bfee}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4257</Single>
+                      <Single Name="EditorPositionId" Type="long">4258</Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Description</Single>
+                        <Single Name="Default" Type="string">Event detection</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Name</Single>
+                        <Single Name="Default" Type="string">Event</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">event</Single>
+                      <Single Name="TypeName" Type="string">M2xx.LocalIOs.Inputs.EnumEvent</Single>
+                      <Single Name="LmEnumTypeGuid" Type="System.Guid">97bdc073-0942-56f8-a9fc-0e44a87d62f0</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="PositionId" Type="long">4137</Single>
+                        <Single Name="EditorPositionId" Type="long">4138</Single>
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Description</Single>
+                          <Single Name="Default" Type="string">Event detection</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Name</Single>
+                          <Single Name="Default" Type="string">Event</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">event</Single>
+                        <Single Name="Value" Type="string">0</Single>
+                        <Single Name="Type" Type="string">BYTE</Single>
+                        <Single Name="Default" Type="string">0</Single>
+                      </Single>
+                      <Array Name="Values" Type="{b955cc99-aa13-473b-b43f-7c76a865c138}">
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.No</Single>
+                            <Single Name="Default" Type="string">No</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">No</Single>
+                          <Single Name="Value" Type="string">0</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.RisingEdge</Single>
+                            <Single Name="Default" Type="string">Rising edge</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">RisingEdge</Single>
+                          <Single Name="Value" Type="string">1</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.FallingEdge</Single>
+                            <Single Name="Default" Type="string">Falling edge</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">FallingEdge</Single>
+                          <Single Name="Value" Type="string">2</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.BothEdge</Single>
+                            <Single Name="Default" Type="string">Both edges</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">BothEdge</Single>
+                          <Single Name="Value" Type="string">3</Single>
+                        </Single>
+                      </Array>
+                    </Single>
+                    <Single Type="{4322e2a3-55e5-4e47-9fcd-b70eb1e6bfee}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4259</Single>
+                      <Single Name="EditorPositionId" Type="long">4260</Single>
+                      <Single Name="Unit" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Unit</Single>
+                        <Single Name="Default" Type="string">ms</Single>
+                      </Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Description</Single>
+                        <Single Name="Default" Type="string">Integrator filtering value reduces the effect of noise on a controller input</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Name</Single>
+                        <Single Name="Default" Type="string">Filter</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">filter</Single>
+                      <Single Name="TypeName" Type="string">M2xx.Inputs.Filter.Enum</Single>
+                      <Single Name="LmEnumTypeGuid" Type="System.Guid">c60cb3b4-7a98-540e-a6b2-a017fd104e1a</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="PositionId" Type="long">4139</Single>
+                        <Single Name="EditorPositionId" Type="long">4140</Single>
+                        <Single Name="Unit" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Unit</Single>
+                          <Single Name="Default" Type="string">ms</Single>
+                        </Single>
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Description</Single>
+                          <Single Name="Default" Type="string">Integrator filtering value reduces the effect of noise on a controller input</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Name</Single>
+                          <Single Name="Default" Type="string">Filter</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">filter</Single>
+                        <Single Name="Value" Type="string">12</Single>
+                        <Single Name="Type" Type="string">BYTE</Single>
+                        <Single Name="Default" Type="string">12</Single>
+                      </Single>
+                      <Array Name="Values" Type="{b955cc99-aa13-473b-b43f-7c76a865c138}">
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.000</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.000</Single>
+                          <Single Name="Value" Type="string">0</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.001</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.001</Single>
+                          <Single Name="Value" Type="string">2</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.002</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.002</Single>
+                          <Single Name="Value" Type="string">3</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.005</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.005</Single>
+                          <Single Name="Value" Type="string">4</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.01</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.010</Single>
+                          <Single Name="Value" Type="string">5</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.05</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.05</Single>
+                          <Single Name="Value" Type="string">7</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.1</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.1</Single>
+                          <Single Name="Value" Type="string">8</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.5</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.5</Single>
+                          <Single Name="Value" Type="string">10</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">1</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_1</Single>
+                          <Single Name="Value" Type="string">11</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">4</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_4</Single>
+                          <Single Name="Value" Type="string">12</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">12</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_12</Single>
+                          <Single Name="Value" Type="string">13</Single>
+                        </Single>
+                      </Array>
+                    </Single>
+                  </List2>
+                </Single>
+                <Null Name="FilterFlags" />
+                <List Name="CustomItems" Type="{7d23305a-7bb9-46e6-b58b-01ea5694add1}">
+                  <Single Type="{dd6be685-9be1-40f4-855e-c5c0352a5200}" Method="IArchivable">
+                    <Single Name="Name" Type="string">se:ParameterConstraints</Single>
+                    <Single Name="Data" Type="string">&lt;se:ParameterConstraints xmlns:se="http://www.schneider-electric.com/schemas/OEMcCustom.xsd"&gt;&lt;se:VisibleConstraint SubElementId="latch" Visible="false" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="2" /&gt;&lt;se:ParameterValueStatement ParameterId="1021" SubElementId="event" Value="0" LogicalNegation="true" /&gt;&lt;/se:VisibleConstraint&gt;&lt;se:VisibleConstraint SubElementId="event" Visible="false" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="2" /&gt;&lt;se:ParameterValueStatement ParameterId="1021" SubElementId="latch" Value="0" LogicalNegation="true" /&gt;&lt;/se:VisibleConstraint&gt;&lt;se:ValueConstraint SubElementId="filter" Value="3" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1021" SubElementId="latch" Value="1" /&gt;&lt;se:ParameterValueStatement ParameterId="1021" SubElementId="event" Value="0" LogicalNegation="true" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="filter" Value="12" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1021" SubElementId="latch" Value="0" Operator="And"&gt;&lt;se:ParameterValueStatement ParameterId="1021" SubElementId="event" Value="0" /&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="2" LogicalNegation="true" /&gt;&lt;/se:ParameterValueStatement&gt;&lt;se:ParameterValueStatement ParameterId="12346" Value="SCRIPT(tmp = &amp;quot;#12346#&amp;quot;.replace(&amp;quot;'&amp;quot;,&amp;quot;&amp;quot;)&amp;#xD;&amp;#xA;split = tmp.split()&amp;#xD;&amp;#xA;extractedOldValue = int(split[0][4:len(split[0])])&amp;#xD;&amp;#xA;if (extractedOldValue == 2):&amp;#xD;&amp;#xA;    result = &amp;quot;#12346#&amp;quot;&amp;#xD;&amp;#xA;else:&amp;#xD;&amp;#xA;    result = &amp;quot;&amp;quot;&amp;#xD;&amp;#xA;result)" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="filter" Value="13"&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="2" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="latch" Value="0" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1021" SubElementId="event" Value="0" LogicalNegation="true" /&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="2" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="event" Value="0" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1021" SubElementId="latch" Value="1" /&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="2" /&gt;&lt;/se:ValueConstraint&gt;&lt;/se:ParameterConstraints&gt;</Single>
+                  </Single>
+                </List>
+                <Single Name="PositionId" Type="long">4253</Single>
+                <Single Name="EditorPositionId" Type="long">4254</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Namespace" Type="string">local</Single>
+                  <Single Name="Identifier" Type="string">dummy</Single>
+                  <Single Name="Default" Type="string">I2</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">1021</Single>
+                <Single Name="TypeName" Type="string">M2xx.LocalIOs.Inputs.FastInput</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">f48dffad-77cc-5015-bc33-9c212c5f74d6</Single>
+              </Single>
+              <Single Name="SectionId" Type="int">2</Single>
+              <Single Name="ParamType" Type="string">localTypes:M2xx.LocalIOs.Inputs.FastInput</Single>
+              <Single Name="IndexInDevDesc" Type="long">6</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">1031</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{4322e2a3-55e5-4e47-9fcd-b70eb1e6bfee}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4263</Single>
+                      <Single Name="EditorPositionId" Type="long">4264</Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Description</Single>
+                        <Single Name="Default" Type="string">Latching allows incoming pulses with amplitude widths shorter than the controller scan time to be captured and recorded</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Name</Single>
+                        <Single Name="Default" Type="string">Latch</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">latch</Single>
+                      <Single Name="TypeName" Type="string">M2xx.EnumYesNo</Single>
+                      <Single Name="LmEnumTypeGuid" Type="System.Guid">b3797877-9b7c-5f5c-aca7-311b528e89af</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="PositionId" Type="long">4143</Single>
+                        <Single Name="EditorPositionId" Type="long">4144</Single>
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Description</Single>
+                          <Single Name="Default" Type="string">Latching allows incoming pulses with amplitude widths shorter than the controller scan time to be captured and recorded</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Latch.Name</Single>
+                          <Single Name="Default" Type="string">Latch</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">latch</Single>
+                        <Single Name="Value" Type="string">0</Single>
+                        <Single Name="Type" Type="string">BYTE</Single>
+                        <Single Name="Default" Type="string">0</Single>
+                      </Single>
+                      <Array Name="Values" Type="{b955cc99-aa13-473b-b43f-7c76a865c138}">
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.EnumYesNo.No</Single>
+                            <Single Name="Default" Type="string">No</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">No</Single>
+                          <Single Name="Value" Type="string">0</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.EnumYesNo.Yes</Single>
+                            <Single Name="Default" Type="string">Yes</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">Yes</Single>
+                          <Single Name="Value" Type="string">1</Single>
+                        </Single>
+                      </Array>
+                    </Single>
+                    <Single Type="{4322e2a3-55e5-4e47-9fcd-b70eb1e6bfee}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4265</Single>
+                      <Single Name="EditorPositionId" Type="long">4266</Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Description</Single>
+                        <Single Name="Default" Type="string">Event detection</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Name</Single>
+                        <Single Name="Default" Type="string">Event</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">event</Single>
+                      <Single Name="TypeName" Type="string">M2xx.LocalIOs.Inputs.EnumEvent</Single>
+                      <Single Name="LmEnumTypeGuid" Type="System.Guid">c4ece447-3da5-5437-b7c1-b87675514f44</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="PositionId" Type="long">4145</Single>
+                        <Single Name="EditorPositionId" Type="long">4146</Single>
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Description</Single>
+                          <Single Name="Default" Type="string">Event detection</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Event.Name</Single>
+                          <Single Name="Default" Type="string">Event</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">event</Single>
+                        <Single Name="Value" Type="string">0</Single>
+                        <Single Name="Type" Type="string">BYTE</Single>
+                        <Single Name="Default" Type="string">0</Single>
+                      </Single>
+                      <Array Name="Values" Type="{b955cc99-aa13-473b-b43f-7c76a865c138}">
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.No</Single>
+                            <Single Name="Default" Type="string">No</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">No</Single>
+                          <Single Name="Value" Type="string">0</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.RisingEdge</Single>
+                            <Single Name="Default" Type="string">Rising edge</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">RisingEdge</Single>
+                          <Single Name="Value" Type="string">1</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.FallingEdge</Single>
+                            <Single Name="Default" Type="string">Falling edge</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">FallingEdge</Single>
+                          <Single Name="Value" Type="string">2</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Namespace" Type="string">localStrings</Single>
+                            <Single Name="Identifier" Type="string">M2xx.InputParameter.EnumEvent.BothEdge</Single>
+                            <Single Name="Default" Type="string">Both edges</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">BothEdge</Single>
+                          <Single Name="Value" Type="string">3</Single>
+                        </Single>
+                      </Array>
+                    </Single>
+                    <Single Type="{4322e2a3-55e5-4e47-9fcd-b70eb1e6bfee}" Method="IArchivable">
+                      <Null Name="FilterFlags" />
+                      <Single Name="PositionId" Type="long">4267</Single>
+                      <Single Name="EditorPositionId" Type="long">4268</Single>
+                      <Single Name="Unit" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Unit</Single>
+                        <Single Name="Default" Type="string">ms</Single>
+                      </Single>
+                      <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Description</Single>
+                        <Single Name="Default" Type="string">Integrator filtering value reduces the effect of noise on a controller input</Single>
+                      </Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Name</Single>
+                        <Single Name="Default" Type="string">Filter</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">filter</Single>
+                      <Single Name="TypeName" Type="string">M2xx.Inputs.Filter.Enum</Single>
+                      <Single Name="LmEnumTypeGuid" Type="System.Guid">6081dff9-27fd-5017-a333-e40f86678385</Single>
+                      <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                        <Null Name="FilterFlags" />
+                        <Single Name="PositionId" Type="long">4147</Single>
+                        <Single Name="EditorPositionId" Type="long">4148</Single>
+                        <Single Name="Unit" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Unit</Single>
+                          <Single Name="Default" Type="string">ms</Single>
+                        </Single>
+                        <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Description</Single>
+                          <Single Name="Default" Type="string">Integrator filtering value reduces the effect of noise on a controller input</Single>
+                        </Single>
+                        <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                          <Single Name="Namespace" Type="string">localStrings</Single>
+                          <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Filter.Name</Single>
+                          <Single Name="Default" Type="string">Filter</Single>
+                        </Single>
+                        <Single Name="Identifier" Type="string">filter</Single>
+                        <Single Name="Value" Type="string">12</Single>
+                        <Single Name="Type" Type="string">BYTE</Single>
+                        <Single Name="Default" Type="string">12</Single>
+                      </Single>
+                      <Array Name="Values" Type="{b955cc99-aa13-473b-b43f-7c76a865c138}">
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.000</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.000</Single>
+                          <Single Name="Value" Type="string">0</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.001</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.001</Single>
+                          <Single Name="Value" Type="string">2</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.002</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.002</Single>
+                          <Single Name="Value" Type="string">3</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.005</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.005</Single>
+                          <Single Name="Value" Type="string">4</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.01</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.010</Single>
+                          <Single Name="Value" Type="string">5</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.05</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.05</Single>
+                          <Single Name="Value" Type="string">7</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.1</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.1</Single>
+                          <Single Name="Value" Type="string">8</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">0.5</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_0.5</Single>
+                          <Single Name="Value" Type="string">10</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">1</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_1</Single>
+                          <Single Name="Value" Type="string">11</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">4</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_4</Single>
+                          <Single Name="Value" Type="string">12</Single>
+                        </Single>
+                        <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                          <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                            <Single Name="Default" Type="string">12</Single>
+                          </Single>
+                          <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                          <Single Name="Identifier" Type="string">E_12</Single>
+                          <Single Name="Value" Type="string">13</Single>
+                        </Single>
+                      </Array>
+                    </Single>
+                  </List2>
+                </Single>
+                <Null Name="FilterFlags" />
+                <List Name="CustomItems" Type="{7d23305a-7bb9-46e6-b58b-01ea5694add1}">
+                  <Single Type="{dd6be685-9be1-40f4-855e-c5c0352a5200}" Method="IArchivable">
+                    <Single Name="Name" Type="string">se:ParameterConstraints</Single>
+                    <Single Name="Data" Type="string">&lt;se:ParameterConstraints xmlns:se="http://www.schneider-electric.com/schemas/OEMcCustom.xsd"&gt;&lt;se:VisibleConstraint SubElementId="latch" Visible="false" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="3" /&gt;&lt;se:ParameterValueStatement ParameterId="1031" SubElementId="event" Value="0" LogicalNegation="true" /&gt;&lt;/se:VisibleConstraint&gt;&lt;se:VisibleConstraint SubElementId="event" Visible="false" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="3" /&gt;&lt;se:ParameterValueStatement ParameterId="1031" SubElementId="latch" Value="0" LogicalNegation="true" /&gt;&lt;/se:VisibleConstraint&gt;&lt;se:ValueConstraint SubElementId="filter" Value="3" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1031" SubElementId="latch" Value="1" /&gt;&lt;se:ParameterValueStatement ParameterId="1031" SubElementId="event" Value="0" LogicalNegation="true" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="filter" Value="12" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1031" SubElementId="latch" Value="0" Operator="And"&gt;&lt;se:ParameterValueStatement ParameterId="1031" SubElementId="event" Value="0" /&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="3" LogicalNegation="true" /&gt;&lt;/se:ParameterValueStatement&gt;&lt;se:ParameterValueStatement ParameterId="12346" Value="SCRIPT(tmp = &amp;quot;#12346#&amp;quot;.replace(&amp;quot;'&amp;quot;,&amp;quot;&amp;quot;)&amp;#xD;&amp;#xA;split = tmp.split()&amp;#xD;&amp;#xA;extractedOldValue = int(split[0][4:len(split[0])])&amp;#xD;&amp;#xA;if (extractedOldValue == 3):&amp;#xD;&amp;#xA;    result = &amp;quot;#12346#&amp;quot;&amp;#xD;&amp;#xA;else:&amp;#xD;&amp;#xA;    result = &amp;quot;&amp;quot;&amp;#xD;&amp;#xA;result)" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="filter" Value="13"&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="3" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="latch" Value="0" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1031" SubElementId="event" Value="0" LogicalNegation="true" /&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="3" /&gt;&lt;/se:ValueConstraint&gt;&lt;se:ValueConstraint SubElementId="event" Value="0" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1031" SubElementId="latch" Value="1" /&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="3" /&gt;&lt;/se:ValueConstraint&gt;&lt;/se:ParameterConstraints&gt;</Single>
+                  </Single>
+                </List>
+                <Single Name="PositionId" Type="long">4261</Single>
+                <Single Name="EditorPositionId" Type="long">4262</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Namespace" Type="string">local</Single>
+                  <Single Name="Identifier" Type="string">dummy</Single>
+                  <Single Name="Default" Type="string">I3</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">1031</Single>
+                <Single Name="TypeName" Type="string">M2xx.LocalIOs.Inputs.FastInput</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">77b9f784-054c-5b63-ac8e-f549a6030de4</Single>
+              </Single>
+              <Single Name="SectionId" Type="int">2</Single>
+              <Single Name="ParamType" Type="string">localTypes:M2xx.LocalIOs.Inputs.FastInput</Single>
+              <Single Name="IndexInDevDesc" Type="long">7</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">12345</Single>
+              <Single Name="DalaElement" Type="{4322e2a3-55e5-4e47-9fcd-b70eb1e6bfee}" Method="IArchivable">
+                <Null Name="FilterFlags" />
+                <List Name="CustomItems" Type="{7d23305a-7bb9-46e6-b58b-01ea5694add1}">
+                  <Single Type="{dd6be685-9be1-40f4-855e-c5c0352a5200}" Method="IArchivable">
+                    <Single Name="Name" Type="string">se:ShowMessage</Single>
+                    <Single Name="Data" Type="string">&lt;se:ShowMessage xmlns:se="http://www.schneider-electric.com/schemas/OEMcCustom.xsd"&gt;&lt;se:MessageCondition Value="0" Operator="And"&gt;&lt;se:ParameterValueStatement ParameterId="1001" SubElementId="Filter" Type="List" Value="{0,100}" LogicalNegation="true" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1001" SubElementId="Latch" Value="0" LogicalNegation="true" /&gt;&lt;se:ParameterValueStatement ParameterId="1001" SubElementId="Event" Value="0" LogicalNegation="true" /&gt;&lt;/se:ParameterValueStatement&gt;&lt;se:Messages Name="M2xx.LocalIOs.Inputs.DisabledParameters" Default="The settings of the input {0} will be disabled"&gt;&lt;se:MessageParameters Name="local:dummy" Default="I0" /&gt;&lt;/se:Messages&gt;&lt;/se:MessageCondition&gt;&lt;se:MessageCondition Value="1" Operator="And"&gt;&lt;se:ParameterValueStatement ParameterId="1011" SubElementId="Filter" Type="List" Value="{0,100}" LogicalNegation="true" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1011" SubElementId="Latch" Value="0" LogicalNegation="true" /&gt;&lt;se:ParameterValueStatement ParameterId="1011" SubElementId="Event" Value="0" LogicalNegation="true" /&gt;&lt;/se:ParameterValueStatement&gt;&lt;se:Messages Name="M2xx.LocalIOs.Inputs.DisabledParameters" Default="The settings of the input {0} will be disabled"&gt;&lt;se:MessageParameters Name="local:dummy" Default="I1" /&gt;&lt;/se:Messages&gt;&lt;/se:MessageCondition&gt;&lt;se:MessageCondition Value="2" Operator="And"&gt;&lt;se:ParameterValueStatement ParameterId="1021" SubElementId="Filter" Type="List" Value="{0,100}" LogicalNegation="true" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1021" SubElementId="Latch" Value="0" LogicalNegation="true" /&gt;&lt;se:ParameterValueStatement ParameterId="1021" SubElementId="Event" Value="0" LogicalNegation="true" /&gt;&lt;/se:ParameterValueStatement&gt;&lt;se:Messages Name="M2xx.LocalIOs.Inputs.DisabledParameters" Default="The settings of the input {0} will be disabled"&gt;&lt;se:MessageParameters Name="local:dummy" Default="I2" /&gt;&lt;/se:Messages&gt;&lt;/se:MessageCondition&gt;&lt;se:MessageCondition Value="3" Operator="And"&gt;&lt;se:ParameterValueStatement ParameterId="1031" SubElementId="Filter" Type="List" Value="{0,100}" LogicalNegation="true" Operator="Or"&gt;&lt;se:ParameterValueStatement ParameterId="1031" SubElementId="Latch" Value="0" LogicalNegation="true" /&gt;&lt;se:ParameterValueStatement ParameterId="1031" SubElementId="Event" Value="0" LogicalNegation="true" /&gt;&lt;/se:ParameterValueStatement&gt;&lt;se:Messages Name="M2xx.LocalIOs.Inputs.DisabledParameters" Default="The settings of the input {0} will be disabled"&gt;&lt;se:MessageParameters Name="local:dummy" Default="I3" /&gt;&lt;/se:Messages&gt;&lt;/se:MessageCondition&gt;&lt;/se:ShowMessage&gt;</Single>
+                  </Single>
+                </List>
+                <Single Name="PositionId" Type="long">4269</Single>
+                <Single Name="EditorPositionId" Type="long">4270</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Namespace" Type="string">localStrings</Single>
+                  <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.RunStopInput.Name</Single>
+                  <Single Name="Default" Type="string">Run/Stop Input</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">12345</Single>
+                <Single Name="TypeName" Type="string">M2xx.LocalIOs.Inputs.Configuration.RunStopInput</Single>
+                <Single Name="LmEnumTypeGuid" Type="System.Guid">59cffbae-a1f1-5b75-963b-f7ebddbc82b2</Single>
+                <Single Name="BaseType" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                  <Null Name="FilterFlags" />
+                  <Single Name="PositionId" Type="long">4149</Single>
+                  <Single Name="EditorPositionId" Type="long">4150</Single>
+                  <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                    <Single Name="Namespace" Type="string">localStrings</Single>
+                    <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.RunStopInput.Name</Single>
+                    <Single Name="Default" Type="string">Run/Stop Input</Single>
+                  </Single>
+                  <Single Name="Identifier" Type="string">12345</Single>
+                  <Single Name="Value" Type="string">255</Single>
+                  <Single Name="Type" Type="string">BYTE</Single>
+                  <Single Name="Default" Type="string">255</Single>
+                </Single>
+                <Array Name="Values" Type="{b955cc99-aa13-473b-b43f-7c76a865c138}">
+                  <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                    <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                      <Single Name="Namespace" Type="string">localStrings</Single>
+                      <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.RunStopInput.None</Single>
+                      <Single Name="Default" Type="string">None</Single>
+                    </Single>
+                    <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                    <Single Name="Identifier" Type="string">RunStop_None</Single>
+                    <Single Name="Value" Type="string">255</Single>
+                  </Single>
+                  <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                    <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                      <Single Name="Namespace" Type="string">local</Single>
+                      <Single Name="Identifier" Type="string">dummy</Single>
+                      <Single Name="Default" Type="string">I0</Single>
+                    </Single>
+                    <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                    <Single Name="Identifier" Type="string">RunStop_I0</Single>
+                    <Single Name="Value" Type="string">0</Single>
+                  </Single>
+                  <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                    <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                      <Single Name="Namespace" Type="string">local</Single>
+                      <Single Name="Identifier" Type="string">dummy</Single>
+                      <Single Name="Default" Type="string">I1</Single>
+                    </Single>
+                    <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                    <Single Name="Identifier" Type="string">RunStop_I1</Single>
+                    <Single Name="Value" Type="string">1</Single>
+                  </Single>
+                  <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                    <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                      <Single Name="Namespace" Type="string">local</Single>
+                      <Single Name="Identifier" Type="string">dummy</Single>
+                      <Single Name="Default" Type="string">I2</Single>
+                    </Single>
+                    <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                    <Single Name="Identifier" Type="string">RunStop_I2</Single>
+                    <Single Name="Value" Type="string">2</Single>
+                  </Single>
+                  <Single Type="{b955cc99-aa13-473b-b43f-7c76a865c138}" Method="IArchivable">
+                    <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                      <Single Name="Namespace" Type="string">local</Single>
+                      <Single Name="Identifier" Type="string">dummy</Single>
+                      <Single Name="Default" Type="string">I3</Single>
+                    </Single>
+                    <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+                    <Single Name="Identifier" Type="string">RunStop_I3</Single>
+                    <Single Name="Value" Type="string">3</Single>
+                  </Single>
+                </Array>
+              </Single>
+              <Single Name="SectionId" Type="int">1</Single>
+              <Single Name="ParamType" Type="string">localTypes:M2xx.LocalIOs.Inputs.Configuration.RunStopInput</Single>
+              <Single Name="IndexInDevDesc" Type="long">2</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">12346</Single>
+              <Single Name="OfflineAccess" Type="{f7a1fdea-1444-4931-82ab-fdb68bf81bcf}">Write</Single>
+              <Single Name="OnlineAccess" Type="{f7a1fdea-1444-4931-82ab-fdb68bf81bcf}">None</Single>
+              <Single Name="Download" Type="bool">False</Single>
+              <Single Name="DalaElement" Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                <Null Name="FilterFlags" />
+                <Single Name="OfflineAccess" Type="{f7a1fdea-1444-4931-82ab-fdb68bf81bcf}">Write</Single>
+                <Single Name="OnlineAccess" Type="{f7a1fdea-1444-4931-82ab-fdb68bf81bcf}">None</Single>
+                <List Name="CustomItems" Type="{7d23305a-7bb9-46e6-b58b-01ea5694add1}">
+                  <Single Type="{dd6be685-9be1-40f4-855e-c5c0352a5200}" Method="IArchivable">
+                    <Single Name="Name" Type="string">se:ParameterConstraints</Single>
+                    <Single Name="Data" Type="string">&lt;se:ParameterConstraints xmlns:se="http://www.schneider-electric.com/schemas/OEMcCustom.xsd"&gt;&lt;se:ValueConstraint Value="SCRIPT(tmp = &amp;quot;#12346#&amp;quot;.replace(&amp;quot;'&amp;quot;,&amp;quot;&amp;quot;)&amp;#xD;&amp;#xA;split = tmp.split()&amp;#xD;&amp;#xA;extractedOldValue = int(split[0][4:len(split[0])])&amp;#xD;&amp;#xA;extractedNewValue = int(split[1][4:len(split[1])])&amp;#xD;&amp;#xA;result = &amp;quot;'old={0} new={1}'&amp;quot;.format(extractedNewValue, #12345#)&amp;#xD;&amp;#xA;result)"&gt;&lt;se:ParameterValueStatement ParameterId="12345" Value="-1" LogicalNegation="true" /&gt;&lt;/se:ValueConstraint&gt;&lt;/se:ParameterConstraints&gt;</Single>
+                  </Single>
+                </List>
+                <Single Name="PositionId" Type="long">4271</Single>
+                <Single Name="EditorPositionId" Type="long">4272</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Namespace" Type="string">local</Single>
+                  <Single Name="Identifier" Type="string">dummy</Single>
+                  <Single Name="Default" Type="string">Run/Stop Input History</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">12346</Single>
+                <Single Name="Value" Type="string">'old=255 new=255'</Single>
+                <Single Name="Type" Type="string">STRING</Single>
+                <Single Name="Default" Type="string">'old=255 new=255'</Single>
+              </Single>
+              <Single Name="SectionId" Type="int">1</Single>
+              <Single Name="ParamType" Type="string">std:STRING</Single>
+              <Single Name="IndexInDevDesc" Type="long">3</Single>
+            </Single>
+          </List2>
+          <Single Name="LmGuid" Type="System.Guid">0fc1fefe-a540-5cf8-9eb4-da202fb885b4</Single>
+          <List2 Name="Sections">
+            <Single Type="{33f58abf-62ae-4277-a80b-74c57ea00c50}" Method="IArchivable">
+              <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                <Single Name="Namespace" Type="string">localStrings</Single>
+                <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Channels.Section</Single>
+                <Single Name="Default" Type="string">Inputs</Single>
+              </Single>
+              <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+              <Single Name="ParentId" Type="int">-1</Single>
+              <Single Name="SectionId" Type="int">0</Single>
+              <Null Name="SubSections" />
+              <Null Name="CustomItems" />
+            </Single>
+            <Single Type="{33f58abf-62ae-4277-a80b-74c57ea00c50}" Method="IArchivable">
+              <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                <Single Name="Namespace" Type="string">localStrings</Single>
+                <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.General.Section</Single>
+                <Single Name="Default" Type="string">General Parameters</Single>
+              </Single>
+              <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+              <Single Name="ParentId" Type="int">-1</Single>
+              <Single Name="SectionId" Type="int">1</Single>
+              <Null Name="SubSections" />
+              <Null Name="CustomItems" />
+            </Single>
+            <Single Type="{33f58abf-62ae-4277-a80b-74c57ea00c50}" Method="IArchivable">
+              <Single Name="Name" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                <Single Name="Namespace" Type="string">localStrings</Single>
+                <Single Name="Identifier" Type="string">M2xx.LocalIOs.Inputs.Configuration.Base.Section</Single>
+                <Single Name="Default" Type="string">Inputs Parameters</Single>
+              </Single>
+              <Single Name="Description" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable" />
+              <Single Name="ParentId" Type="int">-1</Single>
+              <Single Name="SectionId" Type="int">2</Single>
+              <Null Name="SubSections" />
+              <Null Name="CustomItems" />
+            </Single>
+          </List2>
+          <Single Name="InitOnOnlineChange" Type="bool">False</Single>
+          <Single Name="AlwaysMapping" Type="bool">False</Single>
+          <Null Name="EditorName" />
+          <Single Name="AlwaysMappingMode" Type="{9d1b24fb-5845-4978-8458-564ca7830fec}">OnlyIfUnused</Single>
+          <Single Name="CreateBitChannels" Type="bool">False</Single>
+        </Single>
+        <Single Name="BusCycleTaskGuid" Type="System.Guid">00000000-0000-0000-0000-000000000000</Single>
+        <Single Name="DriverInfo" Type="{4f958885-8d0a-4b58-83b6-29cfd1c9cfca}" Method="IArchivable">
+          <List Name="RequiredLibs" Type="System.Collections.ArrayList">
+            <Single Type="{94d8f601-f8e4-4aaa-8f48-f3c3ec33bec1}" Method="IArchivable">
+              <Single Name="LibName" Type="string">Diagnostic Device Support</Single>
+              <Single Name="Vendor" Type="string">Schneider Electric</Single>
+              <Single Name="Version" Type="string">*</Single>
+              <Single Name="Identifier" Type="string">Diagnostic Device Support</Single>
+              <List Name="FbInstances" Type="System.Collections.ArrayList">
+                <Single Type="{1a6d9caa-30e2-4c6c-aa84-7bcee3627153}" Method="IArchivable">
+                  <Single Name="FbName" Type="string">FB_Diagnostic(paramId:=0)</Single>
+                  <Single Name="BaseName" Type="string">$(DeviceName)_status</Single>
+                  <Single Name="Instance" Type="{47edf8ea-3f84-452c-b998-e18f878578d3}" Method="IArchivable">
+                    <Single Name="CreateVariable" Type="bool">True</Single>
+                    <Single Name="Variable" Type="string">DI_status</Single>
+                  </Single>
+                  <Single Name="InitMethod" Type="string">Initialize</Single>
+                  <List Name="CyclicCalls" Type="System.Collections.ArrayList">
+                    <Single Type="{58ff2753-3af6-4814-bcc4-9ed585515754}" Method="IArchivable">
+                      <Single Name="MethodName" Type="string">Cyclic</Single>
+                      <Single Name="WhenToCall" Type="string">BeforeReadInputs</Single>
+                      <Single Name="Task" Type="string">MAST</Single>
+                    </Single>
+                  </List>
+                  <Single Name="Location" Type="{4da2c5bd-5291-436b-b8b0-6a4480112db7}">GVL</Single>
+                  <Single Name="FbNameDiag" Type="string"></Single>
+                  <Single Name="PositionId" Type="long">4220</Single>
+                </Single>
+              </List>
+              <Single Name="PlaceHolderLib" Type="string">Diagnostic Device Support</Single>
+              <Single Name="loadAsSystemLibrary" Type="bool">True</Single>
+              <Single Name="IsDiagnosisLib" Type="bool">False</Single>
+              <Single Name="AddedByAP" Type="bool">True</Single>
+              <Single Name="Client" Type="string"></Single>
+            </Single>
+          </List>
+          <Null Name="RequiredTasks" />
+          <Single Name="NeedsBusCycle" Type="bool">False</Single>
+          <Single Name="BusCycleTask" Type="string"></Single>
+          <Single Name="IoApp" Type="System.Guid">00000000-0000-0000-0000-000000000000</Single>
+          <Single Name="IoAppSet" Type="bool">False</Single>
+          <Array Name="PositionIds" Type="long">eRAAAAAAAAB6EAAAAAAAAHsQAAAAAAAA</Array>
+          <Single Name="UseSlowestTask" Type="bool">False</Single>
+          <Single Name="NeedsBusCycleBeforeRead" Type="bool">False</Single>
+          <Single Name="GenerateForceVariables" Type="bool">False</Single>
+          <Single Name="EnableDiagnosis" Type="bool">False</Single>
+          <Single Name="AdditionalParameterSetting" Type="uint">0</Single>
+          <Single Name="ShowWarningsAsErrors" Type="bool">False</Single>
+          <Single Name="DiagnosisCheckboxMode" Type="{96a7290c-b036-44e1-a965-c279cddf134b}">Enabled</Single>
+          <Single Name="SkipOverlapCheck" Type="bool">False</Single>
+          <Single Name="SymbolicAccessMode" Type="{866ccdec-84a7-4590-aeab-383c7bd79437}">Disabled</Single>
+          <Single Name="DeviceScanSupported" Type="bool">False</Single>
+          <Single Name="DeviceNominateSupported" Type="bool">False</Single>
+          <Single Name="DeviceIdentifySupported" Type="bool">False</Single>
+          <Single Name="DeviceUploadDescriptionSupported" Type="bool">False</Single>
+          <Single Name="UpdateIOsInStop" Type="bool">False</Single>
+          <Single Name="StopResetBehaviourSetting" Type="{f333ad6d-dc68-4baa-a3a3-20be74eb2e18}">KeepCurrentValues</Single>
+          <Single Name="StopResetBehaviourUserProgram" Type="string"></Single>
+          <Single Name="BusCycleTaskGuid" Type="System.Guid">00000000-0000-0000-0000-000000000000</Single>
+          <Single Name="PlcAlwaysMapping" Type="bool">False</Single>
+          <Single Name="PlCAlwaysMappingMode" Type="{9d1b24fb-5845-4978-8458-564ca7830fec}">OnlyIfUnused</Single>
+        </Single>
+        <List Name="CustomItems" Type="{7d23305a-7bb9-46e6-b58b-01ea5694add1}">
+          <Single Type="{dd6be685-9be1-40f4-855e-c5c0352a5200}" Method="IArchivable">
+            <Single Name="Name" Type="string">se:SchneiderEditor</Single>
+            <Single Name="Data" Type="string">&lt;se:SchneiderEditor editorVersion="2.0.0.0" xmlns:se="http://www.schneider-electric.com/schemas/OEMcCustom.xsd" /&gt;</Single>
+          </Single>
+        </List>
+        <Single Name="ModuleId" Type="int">-1</Single>
+        <Null Name="IoUpdateTask" />
+        <List Name="AdditionalInterfaces" Type="System.Collections.ArrayList" />
+        <List Name="Constraints" Type="System.Collections.ArrayList" />
+        <Single Name="hideInStatusPage" Type="bool">False</Single>
+        <Single Name="updateAllowed" Type="bool">True</Single>
+        <Single Name="fixedInputAddress" Type="string"></Single>
+        <Single Name="fixedOutputAddress" Type="string"></Single>
+        <Single Name="DownloadParamsDevDescOrder" Type="bool">False</Single>
+        <List Name="AllowOnlyDevices" Type="System.Collections.ArrayList" />
+        <Single Name="InitialStatusFlag" Type="uint">1</Single>
+        <Single Name="UseBlobInitConst" Type="bool">False</Single>
+        <Single Name="AlwaysMappingMode" Type="{9d1b24fb-5845-4978-8458-564ca7830fec}">OnlyIfUnused</Single>
+        <Single Name="ConnectorGroup" Type="uint">0</Single>
+        <Array Name="AllowedPages" Type="string">
+          <Single Type="string">IOMappingEditor</Single>
+          <Single Type="string">MxxxIOConfigurationEditor</Single>
+        </Array>
+        <Single Name="AlwaysMapping" Type="bool">True</Single>
+        <Single Name="Client" Type="string"></Single>
+        <Single Name="MaxInputSize" Type="uint">0</Single>
+        <Single Name="MaxOutputSize" Type="uint">0</Single>
+        <Single Name="MaxInOutputSize" Type="uint">0</Single>
+        <Single Name="ClientTypeGuid" Type="System.Guid">00000000-0000-0000-0000-000000000000</Single>
+        <Single Name="ClientConnectorInterface" Type="string"></Single>
+        <Single Name="ClientConnectorId" Type="int">-1</Single>
+        <Single Name="AlwaysMappingDisabled" Type="bool">True</Single>
+      </Single>
+    </List>
+  </Single>
+  <Single Name="Attributes" Type="{1fdbedd8-b518-4ebd-99df-805f2f77c071}" Method="IArchivable">
+    <Dictionary Type="System.Collections.Hashtable" Name="Attributes" />
+  </Single>
+  <Single Name="CommunicationSettings" Type="{58f2b04d-505d-4589-9fcf-0ec83491f9b2}" Method="IArchivable">
+    <Single Name="SaveLocally" Type="bool">False</Single>
+    <Single Name="CommunicationSettingFilter" Type="int">1</Single>
+    <Single Name="CommunicationSettingSorting" Type="int">0</Single>
+    <Single Name="TrackingMode" Type="int">5</Single>
+    <Single Name="GatewayGuid" Type="System.Guid">00000000-0000-0000-0000-000000000000</Single>
+    <Null Name="Address" />
+    <Single Name="PromptAtLogin" Type="bool">False</Single>
+    <Single Name="SimulationMode" Type="bool">False</Single>
+    <Single Name="SecureOnlineMode" Type="bool">False</Single>
+    <Single Name="SecureOnlineModeExplicitelySet" Type="bool">False</Single>
+    <Single Name="Name" Type="string"></Single>
+    <Single Name="MonitoringIntervalMsec" Type="int">200</Single>
+    <Null Name="ScanInformation" />
+    <Single Name="IsCommunicationEncrypted" Type="bool">True</Single>
+    <Single Name="IsDefaultNameTrackingFromScanActive" Type="bool">False</Single>
+  </Single>
+  <Single Name="IoProviderBase" Type="{848f25ec-eecf-4290-8329-7f6500fd2e0f}" Method="IArchivable">
+    <Array Name="UserBaseAddress" Type="string">
+      <Null />
+      <Null />
+      <Null />
+    </Array>
+  </Single>
+  <Single Name="GuidBusCycleTask" Type="System.Guid">00000000-0000-0000-0000-000000000000</Single>
+  <Single Name="DriverInfo" Type="{4f958885-8d0a-4b58-83b6-29cfd1c9cfca}" Method="IArchivable">
+    <List Name="RequiredLibs" Type="System.Collections.ArrayList" />
+    <Null Name="RequiredTasks" />
+    <Single Name="NeedsBusCycle" Type="bool">False</Single>
+    <Single Name="BusCycleTask" Type="string"></Single>
+    <Single Name="IoApp" Type="System.Guid">00000000-0000-0000-0000-000000000000</Single>
+    <Single Name="IoAppSet" Type="bool">False</Single>
+    <Array Name="PositionIds" Type="long">dhAAAAAAAAB3EAAAAAAAAHgQAAAAAAAA</Array>
+    <Single Name="UseSlowestTask" Type="bool">False</Single>
+    <Single Name="NeedsBusCycleBeforeRead" Type="bool">False</Single>
+    <Single Name="GenerateForceVariables" Type="bool">False</Single>
+    <Single Name="EnableDiagnosis" Type="bool">False</Single>
+    <Single Name="AdditionalParameterSetting" Type="uint">0</Single>
+    <Single Name="ShowWarningsAsErrors" Type="bool">False</Single>
+    <Single Name="DiagnosisCheckboxMode" Type="{96a7290c-b036-44e1-a965-c279cddf134b}">Enabled</Single>
+    <Single Name="SkipOverlapCheck" Type="bool">False</Single>
+    <Single Name="SymbolicAccessMode" Type="{866ccdec-84a7-4590-aeab-383c7bd79437}">Disabled</Single>
+    <Single Name="DeviceScanSupported" Type="bool">False</Single>
+    <Single Name="DeviceNominateSupported" Type="bool">False</Single>
+    <Single Name="DeviceIdentifySupported" Type="bool">False</Single>
+    <Single Name="DeviceUploadDescriptionSupported" Type="bool">False</Single>
+    <Single Name="UpdateIOsInStop" Type="bool">False</Single>
+    <Single Name="StopResetBehaviourSetting" Type="{f333ad6d-dc68-4baa-a3a3-20be74eb2e18}">KeepCurrentValues</Single>
+    <Single Name="StopResetBehaviourUserProgram" Type="string"></Single>
+    <Single Name="BusCycleTaskGuid" Type="System.Guid">00000000-0000-0000-0000-000000000000</Single>
+    <Single Name="PlcAlwaysMapping" Type="bool">False</Single>
+    <Single Name="PlCAlwaysMappingMode" Type="{9d1b24fb-5845-4978-8458-564ca7830fec}">OnlyIfUnused</Single>
+  </Single>
+  <List Name="CustomItems" Type="{7d23305a-7bb9-46e6-b58b-01ea5694add1}">
+    <Single Type="{dd6be685-9be1-40f4-855e-c5c0352a5200}" Method="IArchivable">
+      <Single Name="Name" Type="string">se:IOManager</Single>
+      <Single Name="Data" Type="string">&lt;se:IOManager DefaultNamingModule="false" AutoIOMapping="true" xmlns:se="http://www.schneider-electric.com/schemas/OEMcCustom.xsd" /&gt;</Single>
+    </Single>
+    <Single Type="{dd6be685-9be1-40f4-855e-c5c0352a5200}" Method="IArchivable">
+      <Single Name="Name" Type="string">se:BuildAnalyserRules</Single>
+      <Single Name="Data" Type="string">&lt;se:BuildAnalyserRules xmlns:se="http://www.schneider-electric.com/schemas/OEMcCustom.xsd"&gt;{30561227-8713-4842-9D7C-5B4D20FE49B6}&lt;/se:BuildAnalyserRules&gt;</Single>
+    </Single>
+  </List>
+  <Single Name="IoConfigGlobalsGuid" Type="System.Guid">735d72a8-9991-5d57-80e4-a09c48942f70</Single>
+  <Single Name="IoConfigGlobalsMappingGuid" Type="System.Guid">bc8e190a-7568-5ea3-899c-43c56db82da0</Single>
+  <Single Name="IoConfigVarConfigGuid" Type="System.Guid">f3f7c5e0-dbc2-5262-96d4-fe2c8563aaeb</Single>
+  <Single Name="IoConfigErrorPouGuid" Type="System.Guid">64d8d60d-3fce-56f9-a81d-ce4a26934d31</Single>
+  <Single Name="ModuleId" Type="int">-1</Single>
+  <Null Name="IoUpdateTask" />
+  <Array Name="FunctionalChildren" Type="System.Guid" />
+  <Null Name="UserManagement" />
+  <Null Name="RightsManagement" />
+  <Single Name="showParamsInDevDescOrder" Type="bool">False</Single>
+  <Single Name="fixedInputAddress" Type="string"></Single>
+  <Single Name="fixedOutputAddress" Type="string"></Single>
+  <Single Name="HostObjectGuid" Type="System.Guid">dcd3f972-eca4-4840-a503-38082058416e</Single>
+  <Single Name="DownloadParamsDevDescOrder" Type="bool">False</Single>
+  <Single Name="CreateBitChannels" Type="bool">False</Single>
+  <Null Name="AdditionalStringTable" />
+  <Null Name="OnlineHelpUrl" />
+  <Single Name="InteractiveLoginMode" Type="int">-1</Single>
+  <Single Name="UseDeviceApplicationStructure" Type="bool">False</Single>
+  <Single Name="AllowSymbolicVarAccessInSyncWithIecCycle" Type="bool">False</Single>
+  <Single Name="LogicalDeviceList" Type="{ec1f8a3a-98c6-404c-883e-ce9e54b42542}" Method="IArchivable">
+    <List Name="InnerList" Type="System.Collections.ArrayList" />
+  </Single>
+  <Single Name="LogicalLanguageModelPositionId" Type="long">-1</Single>
+  <List Name="SupportedLogicalBusSystems" Type="System.Collections.ArrayList" />
+  <Single Name="MappingPossible" Type="bool">False</Single>
+  <Single Name="HidePropertiesDialog" Type="bool">False</Single>
+  <Null Name="PlaceholderResolution" />
+  <Null Name="RedirectedPlaceholderResolution" />
+</Single>

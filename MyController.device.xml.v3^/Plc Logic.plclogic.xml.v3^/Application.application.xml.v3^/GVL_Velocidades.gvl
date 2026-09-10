@@ -1,0 +1,43 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "bde9c42e-7841-4f07-bb50-1f62ebf11838",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	///Velocidade Sem corretor
+	iVelCargaMesaEntradaVidroFin: INT;
+	///Velodidade Aplicada Com Corretor
+	iVelCargaMeEntradaVidroFin: INT;
+	///Velocidade Sem corretor
+	iVelCargaMesaEntrada: INT;
+	///Velodidade Aplicada Com Corretor
+	iVelCargaMeEntrada: INT;
+	///Comum
+	iVelRetornoMesaEntrada: INT;
+	///Velocidade Sem corretor
+	iVelCargaResfriadorVidroFin: INT;
+	///Velodidade Aplicada Com Corretor
+	iVelCargaMeResfriadorVidroFin: INT;
+	///Velocidade Sem corretor
+	iVelCargaResfriador: INT;
+	///Velodidade Aplicada Com Corretor
+	iVelCargaMeResfriador: INT;
+	///Velocidade Sem corretor
+	iVelCargaMesaSaidaVidroFin: INT;
+	///Velodidade Aplicada Com Corretor
+	iVelCargaMeSaidaVidroFin: INT;
+	///Velocidade Sem corretor
+	iVelCargaMesaSaida: INT;
+	///Velodidade Aplicada Com Corretor
+	iVelCargaMeSaida: INT;
+END_VAR

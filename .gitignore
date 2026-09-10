@@ -1,0 +1,5 @@
+**/.auxiliaries
+**/.sidecars
+
+# Intermediários reproduzíveis da documentação (mantidos dentro do projeto).
+/docs/.geracao/

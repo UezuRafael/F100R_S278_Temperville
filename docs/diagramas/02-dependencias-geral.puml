@@ -1,0 +1,1034 @@
+@startuml
+' Gerado a partir dos arquivos da aplicação. Este é um único diagrama geral.
+' Relações resumidas por par de objetos; evidências e nomes de instâncias no JSON acompanhante.
+!pragma layout smetana
+left to right direction
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam roundcorner 6
+skinparam nodesep 22
+skinparam ranksep 90
+skinparam packageStyle rectangle
+skinparam ArrowFontSize 9
+skinparam ArrowThickness 0.7
+skinparam linetype polyline
+skinparam svgLinkTarget _top
+skinparam package {
+  BackgroundColor #FBFCFE
+  BorderColor #B8C5D3
+  FontColor #17324D
+}
+skinparam rectangle {
+  BorderColor #62758A
+  FontColor #182C40
+}
+title F100R S278 Temperville · Pertencimento e dependências\n174 POUs + 4 ações · 5 tarefas · 23 GVLs + persistência + DUT
+caption Leitura estática · 05/09/2026 · seta: dependente → dependência · pacotes: localização no projeto
+legend left
+|= Cor / traço |= Relação |
+| <color:#2762A6>━━▶</color> | Chamada de PRG, FC ou ação fora de comentário |
+| <color:#19816A>━━▶</color> | Chamada de instância de FB → tipo do FB |
+| <color:#A87732>┄┄▶</color> | Referência a variáveis globais (uso; não indica leitura/escrita) |
+| <color:#9973AF>┄┄▶</color> | Declara instância ou variável de um tipo local |
+| <color:#AAAAAA>┄┄▶</color> | Chamada comentada, sem chamada ativa equivalente no mesmo objeto |
+| <color:#243E68>━━▶</color> | Tarefa → programa (número indica a ordem na tarefa) |
+| Fundo cinza | Implementação ST sem instruções fora de comentários |
+endlegend
+
+package "00_FB · Blocos e funções de apoio" as PK0 {
+rectangle "<b>AlarmeEncoder</b>\nFB · ST\n\n<size:11><color:#465C70>Detecta ausência de alternância nos canais</color></size>\n<size:11><color:#465C70>digitais A e B de um encoder.</color></size>" as N30 [[../contextos/pous/00-fbs-fcs.md#alarmeencoder{Detecta ausência de alternância nos canais digitais A e B de um encoder.}]] #E8F6EF
+rectangle "<b>AlarmeMotor</b>\nFB · ST\n\n<size:11><color:#465C70>Compara comando de motor com retorno de</color></size>\n<size:11><color:#465C70>funcionamento.</color></size>" as N31 [[../contextos/pous/00-fbs-fcs.md#alarmemotor{Compara comando de motor com retorno de funcionamento.}]] #E8F6EF
+rectangle "<b>AlarmeMotorParado</b>\nFB · ST\n\n<size:11><color:#465C70>Temporiza uma condição externa que representa</color></size>\n<size:11><color:#465C70>motor parado indevidamente.</color></size>" as N32 [[../contextos/pous/00-fbs-fcs.md#alarmemotorparado{Temporiza uma condição externa que representa motor parado indevidamente.}]] #E8F6EF
+rectangle "<b>AlarmeRelesSsr</b>\nFB · ST\n\n<size:11><color:#465C70>Detecta divergências entre o comando e o</color></size>\n<size:11><color:#465C70>retorno de um SSR.</color></size>" as N33 [[../contextos/pous/00-fbs-fcs.md#alarmerelesssr{Detecta divergências entre o comando e o retorno de um SSR.}]] #E8F6EF
+rectangle "<b>AlarmeResistencia</b>\nFB · ST\n\n<size:11><color:#465C70>Trata o sinal de resistência rompida recebido</color></size>\n<size:11><color:#465C70>de outro ponto da aplicação.</color></size>" as N34 [[../contextos/pous/00-fbs-fcs.md#alarmeresistencia{Trata o sinal de resistência rompida recebido de outro ponto da aplicação.}]] #E8F6EF
+rectangle "<b>AlarmeTemperatura</b>\nFB · ST\n\n<size:11><color:#465C70>Monitora uma leitura em relação ao limite</color></size>\n<size:11><color:#465C70>máximo de temperatura.</color></size>" as N35 [[../contextos/pous/00-fbs-fcs.md#alarmetemperatura{Monitora uma leitura em relação ao limite máximo de temperatura.}]] #E8F6EF
+rectangle "<b>AlarmeTermopar</b>\nFB · ST\n\n<size:11><color:#465C70>Converte um sinal de falha de termopar em</color></size>\n<size:11><color:#465C70>alarme memorizado.</color></size>" as N36 [[../contextos/pous/00-fbs-fcs.md#alarmetermopar{Converte um sinal de falha de termopar em alarme memorizado.}]] #E8F6EF
+rectangle "<b>AlarmeTM3TI8T</b>\nFB · ST\n\n<size:11><color:#465C70>Decodifica os bytes de diagnóstico de oito</color></size>\n<size:11><color:#465C70>canais de temperatura.</color></size>" as N37 [[../contextos/pous/00-fbs-fcs.md#alarmetm3ti8t{Decodifica os bytes de diagnóstico de oito canais de temperatura.}]] #E8F6EF
+rectangle "<b>AlarmeTM5SAI6TH</b>\nFB · ST\n\n<size:11><color:#465C70>Decodifica dois bytes de diagnóstico em</color></size>\n<size:11><color:#465C70>estados de seis termopares.</color></size>" as N38 [[../contextos/pous/00-fbs-fcs.md#alarmetm5sai6th{Decodifica dois bytes de diagnóstico em estados de seis termopares.}]] #E8F6EF
+rectangle "<b>AlarmeValvula1v</b>\nFB · ST\n\n<size:11><color:#465C70>Supervisiona a chegada de uma válvula às</color></size>\n<size:11><color:#465C70>posições aberta e fechada.</color></size>" as N39 [[../contextos/pous/00-fbs-fcs.md#alarmevalvula1v{Supervisiona a chegada de uma válvula às posições aberta e fechada.}]] #E8F6EF
+rectangle "<b>AlarmeValvula1vNeg</b>\nFB · ST\n\n<size:11><color:#465C70>Supervisiona uma válvula cuja lógica de</color></size>\n<size:11><color:#465C70>comando é invertida.</color></size>" as N40 [[../contextos/pous/00-fbs-fcs.md#alarmevalvula1vneg{Supervisiona uma válvula cuja lógica de comando é invertida.}]] #E8F6EF
+rectangle "<b>BlocoSelecaoEspessura</b>\nFB · ST\n\n<size:11><color:#465C70>Seleciona simultaneamente dez parâmetros entre</color></size>\n<size:11><color:#465C70>dois conjuntos.</color></size>" as N41 [[../contextos/pous/00-fbs-fcs.md#blocoselecaoespessura{Seleciona simultaneamente dez parâmetros entre dois conjuntos.}]] #E8F6EF
+rectangle "<b>CalculosForno</b>\nFB · ST\n\n<size:11><color:#465C70>Calcula posições de referência para o</color></size>\n<size:11><color:#465C70>transporte da carga no forno.</color></size>" as N42 [[../contextos/pous/00-fbs-fcs.md#calculosforno{Calcula posições de referência para o transporte da carga no forno.}]] #E8F6EF
+rectangle "<b>CalculosResfriador</b>\nFB · ST\n\n<size:11><color:#465C70>Calcula posições de referência para a mesa de</color></size>\n<size:11><color:#465C70>resfriamento.</color></size>" as N43 [[../contextos/pous/00-fbs-fcs.md#calculosresfriador{Calcula posições de referência para a mesa de resfriamento.}]] #E8F6EF
+rectangle "<b>ComprimentoCarga</b>\nFB · ST\n\n<size:11><color:#465C70>Registra a contagem do encoder associada às</color></size>\n<size:11><color:#465C70>mudanças do sensor durante uma medição.</color></size>" as N44 [[../contextos/pous/00-fbs-fcs.md#comprimentocarga{Registra a contagem do encoder associada às mudanças do sensor durante uma medição.}]] #E8F6EF
+rectangle "<b>ContadorUpDown</b>\nFB · ST\n\n<size:11><color:#465C70>Mantém um contador inteiro bidirecional</color></size>\n<size:11><color:#465C70>acionado por bordas.</color></size>" as N45 [[../contextos/pous/00-fbs-fcs.md#contadorupdown{Mantém um contador inteiro bidirecional acionado por bordas.}]] #E8F6EF
+rectangle "<b>ConverLintReal</b>\nFB · CFC\n\n<size:11><color:#465C70>Combina duas entradas DINT por conversão e</color></size>\n<size:11><color:#465C70>máscaras de bits, expondo resultados LINT e</color></size>\n<size:11><color:#465C70>REAL.</color></size>" as N46 [[../contextos/pous/00-fbs-fcs.md#converlintreal{Combina duas entradas DINT por conversão e máscaras de bits, expondo resultados LINT e REAL.}]] #E8F6EF
+rectangle "<b>EncoderBlocoExpert</b>\nFB · ST\n\n<size:11><color:#465C70>Produz uma posição relativa a partir de uma</color></size>\n<size:11><color:#465C70>contagem absoluta.</color></size>" as N47 [[../contextos/pous/00-fbs-fcs.md#encoderblocoexpert{Produz uma posição relativa a partir de uma contagem absoluta.}]] #E8F6EF
+rectangle "<b>EquacaoDaReta</b>\nFB · ST\n\n<size:11><color:#465C70>Transforma um valor Y em X pela reta definida</color></size>\n<size:11><color:#465C70>por dois pontos.</color></size>" as N48 [[../contextos/pous/00-fbs-fcs.md#equacaodareta{Transforma um valor Y em X pela reta definida por dois pontos.}]] #E8F6EF
+rectangle "<b>GetDateAndTime</b>\nFB · CFC\n\n<size:11><color:#465C70>Lê o relógio do controlador e decompõe a data</color></size>\n<size:11><color:#465C70>e a hora.</color></size>" as N49 [[../contextos/pous/00-fbs-fcs.md#getdateandtime{Lê o relógio do controlador e decompõe a data e a hora.}]] #E8F6EF
+rectangle "<b>Grade</b>\nFB · ST\n\n<size:11><color:#465C70>Mantém o estado de comando de uma grade com</color></size>\n<size:11><color:#465C70>alternância e comandos diretos.</color></size>" as N50 [[../contextos/pous/00-fbs-fcs.md#grade{Mantém o estado de comando de uma grade com alternância e comandos diretos.}]] #E8F6EF
+rectangle "<b>HabilitaDesabilita</b>\nFB · ST\n\n<size:11><color:#465C70>Implementa uma memória de habilitação com</color></size>\n<size:11><color:#465C70>alternância por pulso.</color></size>" as N51 [[../contextos/pous/00-fbs-fcs.md#habilitadesabilita{Implementa uma memória de habilitação com alternância por pulso.}]] #E8F6EF
+rectangle "<b>HabilitaDesabilitaSB</b>\nFB · ST\n\n<size:11><color:#465C70>Implementa a mesma memória de habilitação com</color></size>\n<size:11><color:#465C70>consumo do comando de entrada.</color></size>" as N52 [[../contextos/pous/00-fbs-fcs.md#habilitadesabilitasb{Implementa a mesma memória de habilitação com consumo do comando de entrada.}]] #E8F6EF
+rectangle "<b>MmConversorPulso</b>\nFB · ST\n\n<size:11><color:#465C70>Converte até vinte distâncias em milímetros</color></size>\n<size:11><color:#465C70>para contagens de encoder.</color></size>" as N53 [[../contextos/pous/00-fbs-fcs.md#mmconversorpulso{Converte até vinte distâncias em milímetros para contagens de encoder.}]] #E8F6EF
+rectangle "<b>MonitoraEncoder</b>\nFB · ST\n\n<size:11><color:#465C70>Detecta movimento insuficiente pela comparação</color></size>\n<size:11><color:#465C70>periódica da contagem de encoder.</color></size>" as N54 [[../contextos/pous/00-fbs-fcs.md#monitoraencoder{Detecta movimento insuficiente pela comparação periódica da contagem de encoder.}]] #E8F6EF
+rectangle "<b>Patamar</b>\nFB · ST\n\n<size:11><color:#465C70>Executa uma etapa temporizada de manutenção de</color></size>\n<size:11><color:#465C70>temperatura.</color></size>" as N55 [[../contextos/pous/00-fbs-fcs.md#patamar{Executa uma etapa temporizada de manutenção de temperatura.}]] #E8F6EF
+rectangle "<b>PidPwm</b>\nFB · ST\n\n<size:11><color:#465C70>Converte uma demanda de controle PID em</color></size>\n<size:11><color:#465C70>acionamento temporal de resistência.</color></size>" as N57 [[../contextos/pous/00-fbs-fcs.md#pidpwm{Converte uma demanda de controle PID em acionamento temporal de resistência.}]] #E8F6EF
+rectangle "<b>PidPwm_ONOFF</b>\nFB · ST\n\n<size:11><color:#465C70>Aciona a resistência por comparação de</color></size>\n<size:11><color:#465C70>temperatura combinada com temporização</color></size>\n<size:11><color:#465C70>percentual.</color></size>" as N56 [[../contextos/pous/00-fbs-fcs.md#pidpwm_onoff{Aciona a resistência por comparação de temperatura combinada com temporização percentual.}]] #E8F6EF
+rectangle "<b>PulsoConversorMm</b>\nFB · ST\n\n<size:11><color:#465C70>Converte até vinte contagens de encoder para</color></size>\n<size:11><color:#465C70>milímetros.</color></size>" as N58 [[../contextos/pous/00-fbs-fcs.md#pulsoconversormm{Converte até vinte contagens de encoder para milímetros.}]] #E8F6EF
+rectangle "<b>PulsoNegativo</b>\nFB · ST\n\n<size:11><color:#465C70>Detecta a transição de verdadeiro para falso</color></size>\n<size:11><color:#465C70>de uma entrada.</color></size>" as N59 [[../contextos/pous/00-fbs-fcs.md#pulsonegativo{Detecta a transição de verdadeiro para falso de uma entrada.}]] #E8F6EF
+rectangle "<b>PulsoPositivo</b>\nFB · ST\n\n<size:11><color:#465C70>Detecta a transição de falso para verdadeiro</color></size>\n<size:11><color:#465C70>de uma entrada.</color></size>" as N60 [[../contextos/pous/00-fbs-fcs.md#pulsopositivo{Detecta a transição de falso para verdadeiro de uma entrada.}]] #E8F6EF
+rectangle "<b>Rampa</b>\nFB · ST\n\n<size:11><color:#465C70>Executa uma aproximação progressiva da</color></size>\n<size:11><color:#465C70>temperatura até um patamar.</color></size>" as N61 [[../contextos/pous/00-fbs-fcs.md#rampa{Executa uma aproximação progressiva da temperatura até um patamar.}]] #E8F6EF
+rectangle "<b>RampaCiclo</b>\nFB · ST\n\n<size:11><color:#465C70>Gera uma referência térmica progressiva</color></size>\n<size:11><color:#465C70>vinculada ao ciclo de uma carga.</color></size>" as N62 [[../contextos/pous/00-fbs-fcs.md#rampaciclo{Gera uma referência térmica progressiva vinculada ao ciclo de uma carga.}]] #E8F6EF
+rectangle "<b>Registrador</b>\nFB · ST\n\n<size:11><color:#465C70>Captura e mantém um valor inteiro por comando</color></size>\n<size:11><color:#465C70>de registro.</color></size>" as N63 [[../contextos/pous/00-fbs-fcs.md#registrador{Captura e mantém um valor inteiro por comando de registro.}]] #E8F6EF
+rectangle "<b>RegistradorMedia</b>\nFB · ST\n\n<size:11><color:#465C70>Filtra uma leitura REAL por média móvel de dez</color></size>\n<size:11><color:#465C70>amostras.</color></size>" as N64 [[../contextos/pous/00-fbs-fcs.md#registradormedia{Filtra uma leitura REAL por média móvel de dez amostras.}]] #E8F6EF
+rectangle "<b>SelecaoEspessura</b>\nFB · ST\n\n<size:11><color:#465C70>Seleciona um valor inteiro entre duas</color></size>\n<size:11><color:#465C70>alternativas.</color></size>" as N65 [[../contextos/pous/00-fbs-fcs.md#selecaoespessura{Seleciona um valor inteiro entre duas alternativas.}]] #E8F6EF
+rectangle "<b>SetDateAndTime</b>\nFB · CFC\n\n<size:11><color:#465C70>Ajusta o relógio do controlador a partir de</color></size>\n<size:11><color:#465C70>campos de data e hora.</color></size>" as N66 [[../contextos/pous/00-fbs-fcs.md#setdateandtime{Ajusta o relógio do controlador a partir de campos de data e hora.}]] #E8F6EF
+rectangle "<b>Sr10</b>\nFB · ST\n\n<size:11><color:#465C70>Agrupa dez registradores inteiros com comandos</color></size>\n<size:11><color:#465C70>comuns.</color></size>" as N67 [[../contextos/pous/00-fbs-fcs.md#sr10{Agrupa dez registradores inteiros com comandos comuns.}]] #E8F6EF
+rectangle "<b>StatCircuitoResist</b>\nFB · ST\n\n<size:11><color:#465C70>Classifica o estado de um circuito de</color></size>\n<size:11><color:#465C70>resistência por corrente, comando e retorno.</color></size>" as N68 [[../contextos/pous/00-fbs-fcs.md#statcircuitoresist{Classifica o estado de um circuito de resistência por corrente, comando e retorno.}]] #E8F6EF
+rectangle "<b>Temporizador</b>\nFB · ST\n\n<size:11><color:#465C70>Gerencia uma contagem de tempo de processo em</color></size>\n<size:11><color:#465C70>segundos.</color></size>" as N69 [[../contextos/pous/00-fbs-fcs.md#temporizador{Gerencia uma contagem de tempo de processo em segundos.}]] #E8F6EF
+rectangle "<b>TimerGeneration</b>\nFB · ST\n\n<size:11><color:#465C70>Gera um sinal booleano periódico com dois TON</color></size>\n<size:11><color:#465C70>encadeados.</color></size>" as N70 [[../contextos/pous/00-fbs-fcs.md#timergeneration{Gera um sinal booleano periódico com dois TON encadeados.}]] #E8F6EF
+rectangle "<b>TimerGenerationPorc</b>\nFB · ST\n\n<size:11><color:#465C70>Gera pulsos temporizados com tratamentos</color></size>\n<size:11><color:#465C70>especiais do percentual.</color></size>" as N71 [[../contextos/pous/00-fbs-fcs.md#timergenerationporc{Gera pulsos temporizados com tratamentos especiais do percentual.}]] #E8F6EF
+rectangle "<b>TrocaValor</b>\nFB · ST\n\n<size:11><color:#465C70>Detecta mudança de um valor REAL.</color></size>" as N72 [[../contextos/pous/00-fbs-fcs.md#trocavalor{Detecta mudança de um valor REAL.}]] #E8F6EF
+rectangle "<b>Valor_Float</b>\nFC · ST\n\n<size:11><color:#465C70>Interpreta dois WORD como sinal, expoente e</color></size>\n<size:11><color:#465C70>mantissa de um valor de ponto flutuante.</color></size>" as N73 [[../contextos/pous/00-fbs-fcs.md#valor_float{Interpreta dois WORD como sinal, expoente e mantissa de um valor de ponto flutuante.}]] #FFF3D6
+rectangle "<b>WordBit</b>\nFB · ST\n\n<size:11><color:#465C70>Expõe individualmente os dezesseis bits de uma</color></size>\n<size:11><color:#465C70>entrada UINT.</color></size>" as N74 [[../contextos/pous/00-fbs-fcs.md#wordbit{Expõe individualmente os dezesseis bits de uma entrada UINT.}]] #E8F6EF
+}
+
+package "01_Inicialização · Inicialização e comunicação" as PK1 {
+rectangle "<b>A_Inicializacao</b>\nPRG · ST\n\n<size:11><color:#465C70>Define a quantidade de resistências por metade</color></size>\n<size:11><color:#465C70>do forno.</color></size>" as N75 [[../contextos/pous/01-inicializacao.md#a_inicializacao{Define a quantidade de resistências por metade do forno.}]] #EDF4FC
+rectangle "<b>B_Emergencia</b>\nPRG · ST\n\n<size:11><color:#465C70>Consolida os sinais físicos de emergência e de</color></size>\n<size:11><color:#465C70>reconhecimento sonoro.</color></size>" as N76 [[../contextos/pous/01-inicializacao.md#b_emergencia{Consolida os sinais físicos de emergência e de reconhecimento sonoro.}]] #EDF4FC
+rectangle "<b>ComunicacaoOpc</b>\nPRG · ST\n\n<size:11><color:#465C70>Executa a troca de sinais usada como indicação</color></size>\n<size:11><color:#465C70>de comunicação entre supervisório e PLC.</color></size>" as N77 [[../contextos/pous/01-inicializacao.md#comunicacaoopc{Executa a troca de sinais usada como indicação de comunicação entre supervisório e PLC.}]] #EDF4FC
+rectangle "<b>StatusCanOpenDevice</b>\nPRG · CFC\n\n<size:11><color:#465C70>Consulta os estados de comunicação dos</color></size>\n<size:11><color:#465C70>acionamentos representados no CFC.</color></size>" as N78 [[../contextos/pous/01-inicializacao.md#statuscanopendevice{Consulta os estados de comunicação dos acionamentos representados no CFC.}]] #EDF4FC
+rectangle "<b>StatusRemotasModTcpIP</b>\nPRG · ST\n\n<size:11><color:#465C70>Monitora o estado do scanner e dos canais das</color></size>\n<size:11><color:#465C70>remotas.</color></size>" as N79 [[../contextos/pous/01-inicializacao.md#statusremotasmodtcpip{Monitora o estado do scanner e dos canais das remotas.}]] #EDF4FC
+}
+
+package "02_Operação · Processo e equipamentos" as PK2 {
+rectangle "<b>A_EncoderCpu</b>\nPRG · ST\n\n<size:11><color:#465C70>Ajusta as contagens dos encoders principais</color></size>\n<size:11><color:#465C70>para uso nas coordenadas da aplicação.</color></size>" as N80 [[../contextos/pous/02-operacao.md#a_encodercpu{Ajusta as contagens dos encoders principais para uso nas coordenadas da aplicação.}]] #EDF4FC
+rectangle "<b>A_PrincipalOperacao</b>\nPRG · ST\n\n<size:11><color:#465C70>Organiza a sequência cíclica das rotinas de</color></size>\n<size:11><color:#465C70>operação da máquina.</color></size>" as N81 [[../contextos/pous/02-operacao.md#a_principaloperacao{Organiza a sequência cíclica das rotinas de operação da máquina.}]] #EDF4FC
+rectangle "<b>B_Receita</b>\nPRG · ST\n\n<size:11><color:#465C70>Recebe os parâmetros de receita e prepara os</color></size>\n<size:11><color:#465C70>buffers usados pelos módulos.</color></size>" as N82 [[../contextos/pous/02-operacao.md#b_receita{Recebe os parâmetros de receita e prepara os buffers usados pelos módulos.}]] #EDF4FC
+rectangle "<b>B_Velocidades</b>\nPRG · ST\n\n<size:11><color:#465C70>Converte as referências de receita em</color></size>\n<size:11><color:#465C70>velocidades coordenadas entre mesas.</color></size>" as N83 [[../contextos/pous/02-operacao.md#b_velocidades{Converte as referências de receita em velocidades coordenadas entre mesas.}]] #EDF4FC
+rectangle "<b>C_ComandosOperacao</b>\nPRG · ST\n\n<size:11><color:#465C70>Gerencia os modos de operação e a autorização</color></size>\n<size:11><color:#465C70>e finalização do ciclo.</color></size>" as N84 [[../contextos/pous/02-operacao.md#c_comandosoperacao{Gerencia os modos de operação e a autorização e finalização do ciclo.}]] #EDF4FC
+rectangle "<b>D_SensoresEntrada</b>\nPRG · ST\n\n<size:11><color:#465C70>Consolida a detecção de vidro na entrada do</color></size>\n<size:11><color:#465C70>forno.</color></size>" as N85 [[../contextos/pous/02-operacao.md#d_sensoresentrada{Consolida a detecção de vidro na entrada do forno.}]] #EDF4FC
+rectangle "<b>E_MesaEntrada</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla o posicionamento da carga na entrada</color></size>\n<size:11><color:#465C70>e sua entrega ao forno.</color></size>" as N86 [[../contextos/pous/02-operacao.md#e_mesaentrada{Controla o posicionamento da carga na entrada e sua entrega ao forno.}]] #EDF4FC
+rectangle "<b>EncoderMForno</b>\nPRG · CFC\n\n<size:11><color:#465C70>Aplica uma referência relativa à contagem do</color></size>\n<size:11><color:#465C70>encoder da mesa do forno.</color></size>" as N87 [[../contextos/pous/02-operacao.md#encodermforno{Aplica uma referência relativa à contagem do encoder da mesa do forno.}]] #EDF4FC
+rectangle "<b>EncoderModulo01</b>\nPRG · CFC\n\n<size:11><color:#465C70>Faz a interface CFC com os contadores rápidos</color></size>\n<size:11><color:#465C70>do forno e da mesa de resfriamento.</color></size>" as N88 [[../contextos/pous/02-operacao.md#encodermodulo01{Faz a interface CFC com os contadores rápidos do forno e da mesa de resfriamento.}]] #EDF4FC
+rectangle "<b>EncoderModulo02</b>\nPRG · CFC\n\n<size:11><color:#465C70>Faz a interface CFC com os contadores rápidos</color></size>\n<size:11><color:#465C70>do duto superior 02 e da guilhotina 02.</color></size>" as N89 [[../contextos/pous/02-operacao.md#encodermodulo02{Faz a interface CFC com os contadores rápidos do duto superior 02 e da guilhotina 02.}]] #EDF4FC
+rectangle "<b>EncoderModulo03</b>\nPRG · CFC\n\n<size:11><color:#465C70>Contém uma variante de aquisição dos encoders</color></size>\n<size:11><color:#465C70>das guilhotinas 01 e 02.</color></size>" as N90 [[../contextos/pous/02-operacao.md#encodermodulo03{Contém uma variante de aquisição dos encoders das guilhotinas 01 e 02.}]] #EDF4FC
+rectangle "<b>EncoderMResfr</b>\nPRG · CFC\n\n<size:11><color:#465C70>Aplica uma referência relativa ao encoder da</color></size>\n<size:11><color:#465C70>mesa de resfriamento.</color></size>" as N91 [[../contextos/pous/02-operacao.md#encodermresfr{Aplica uma referência relativa ao encoder da mesa de resfriamento.}]] #EDF4FC
+rectangle "<b>EncoderResfriInf01</b>\nPRG · CFC\n\n<size:11><color:#465C70>Aplica a referência relativa ao encoder do</color></size>\n<size:11><color:#465C70>duto inferior 01.</color></size>" as N92 [[../contextos/pous/02-operacao.md#encoderresfriinf01{Aplica a referência relativa ao encoder do duto inferior 01.}]] #EDF4FC
+rectangle "<b>EncoderResfriInf02</b>\nPRG · CFC\n\n<size:11><color:#465C70>Aplica a referência relativa ao encoder do</color></size>\n<size:11><color:#465C70>duto inferior 02.</color></size>" as N93 [[../contextos/pous/02-operacao.md#encoderresfriinf02{Aplica a referência relativa ao encoder do duto inferior 02.}]] #EDF4FC
+rectangle "<b>EncoderResfriSup01</b>\nPRG · CFC\n\n<size:11><color:#465C70>Aplica a referência relativa ao encoder do</color></size>\n<size:11><color:#465C70>duto superior 01.</color></size>" as N94 [[../contextos/pous/02-operacao.md#encoderresfrisup01{Aplica a referência relativa ao encoder do duto superior 01.}]] #EDF4FC
+rectangle "<b>EncoderResfriSup02</b>\nPRG · CFC\n\n<size:11><color:#465C70>Aplica a referência relativa ao encoder do</color></size>\n<size:11><color:#465C70>duto superior 02.</color></size>" as N95 [[../contextos/pous/02-operacao.md#encoderresfrisup02{Aplica a referência relativa ao encoder do duto superior 02.}]] #EDF4FC
+rectangle "<b>F_BufferForno</b>\nPRG · ST\n\n<size:11><color:#465C70>Aplica ao forno a receita recebida e prepara</color></size>\n<size:11><color:#465C70>os dados da próxima etapa.</color></size>" as N96 [[../contextos/pous/02-operacao.md#f_bufferforno{Aplica ao forno a receita recebida e prepara os dados da próxima etapa.}]] #EDF4FC
+rectangle "<b>F_MesaForno</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla a movimentação do vidro durante</color></size>\n<size:11><color:#465C70>carga, permanência e descarga do forno.</color></size>" as N97 [[../contextos/pous/02-operacao.md#f_mesaforno{Controla a movimentação do vidro durante carga, permanência e descarga do forno.}]] #EDF4FC
+rectangle "<b>G_BufferResfriamento</b>\nPRG · ST\n\n<size:11><color:#465C70>Aplica os parâmetros do forno ao resfriamento</color></size>\n<size:11><color:#465C70>quando este pode recebê-los.</color></size>" as N98 [[../contextos/pous/02-operacao.md#g_bufferresfriamento{Aplica os parâmetros do forno ao resfriamento quando este pode recebê-los.}]] #EDF4FC
+rectangle "<b>G_BufferTemperaPass</b>\nPRG · ST\n\n<size:11><color:#465C70>Atualiza os parâmetros de ventilação</color></size>\n<size:11><color:#465C70>associados à lógica de passagem/têmpera.</color></size>" as N99 [[../contextos/pous/02-operacao.md#g_buffertemperapass{Atualiza os parâmetros de ventilação associados à lógica de passagem/têmpera.}]] #EDF4FC
+rectangle "<b>H_MesaPassagem</b>\nPRG · ST\n\n<size:11><color:#465C70>Sequencia os comandos da mesa lógica chamada</color></size>\n<size:11><color:#465C70>Passagem durante a transferência.</color></size>" as N100 [[../contextos/pous/02-operacao.md#h_mesapassagem{Sequencia os comandos da mesa lógica chamada Passagem durante a transferência.}]] #EDF4FC
+rectangle "<b>H_MesaResfriador</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla a recepção, oscilação e descarga da</color></size>\n<size:11><color:#465C70>carga no conjunto físico de</color></size>\n<size:11><color:#465C70>têmpera/resfriamento.</color></size>" as N101 [[../contextos/pous/02-operacao.md#h_mesaresfriador{Controla a recepção, oscilação e descarga da carga no conjunto físico de têmpera/resfriamento.}]] #EDF4FC
+rectangle "<b>H1_Dutos_Oscilantes</b>\nPRG · ST\n\n<size:11><color:#465C70>Comanda os motores de oscilação dos dutos</color></size>\n<size:11><color:#465C70>superior e inferior 02.</color></size>" as N102 [[../contextos/pous/02-operacao.md#h1_dutos_oscilantes{Comanda os motores de oscilação dos dutos superior e inferior 02.}]] #EDF4FC
+rectangle "<b>I_MesaSaida</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla a recepção da carga resfriada e sua</color></size>\n<size:11><color:#465C70>movimentação para retirada.</color></size>" as N103 [[../contextos/pous/02-operacao.md#i_mesasaida{Controla a recepção da carga resfriada e sua movimentação para retirada.}]] #EDF4FC
+rectangle "<b>J_DuctosResfriadorInf01</b>\nPRG · ST\n\n<size:11><color:#465C70>Sequencia a referência e o ajuste de altura do</color></size>\n<size:11><color:#465C70>duto inferior 01.</color></size>" as N104 [[../contextos/pous/02-operacao.md#j_ductosresfriadorinf01{Sequencia a referência e o ajuste de altura do duto inferior 01.}]] #EDF4FC
+rectangle "<b>J_DuctosResfriadorInf02</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla a referência e o ajuste de altura do</color></size>\n<size:11><color:#465C70>duto inferior 02.</color></size>" as N105 [[../contextos/pous/02-operacao.md#j_ductosresfriadorinf02{Controla a referência e o ajuste de altura do duto inferior 02.}]] #EDF4FC
+rectangle "<b>J_DuctosResfriadorSup01</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla a referência e o ajuste de altura do</color></size>\n<size:11><color:#465C70>duto superior 01.</color></size>" as N106 [[../contextos/pous/02-operacao.md#j_ductosresfriadorsup01{Controla a referência e o ajuste de altura do duto superior 01.}]] #EDF4FC
+rectangle "<b>J_DuctosResfriadorSup02</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla a referência, a altura e a abertura</color></size>\n<size:11><color:#465C70>local do duto superior 02.</color></size>" as N107 [[../contextos/pous/02-operacao.md#j_ductosresfriadorsup02{Controla a referência, a altura e a abertura local do duto superior 02.}]] #EDF4FC
+rectangle "<b>K_Guilhotina01</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla a referência e a posição da</color></size>\n<size:11><color:#465C70>guilhotina 01.</color></size>" as N108 [[../contextos/pous/02-operacao.md#k_guilhotina01{Controla a referência e a posição da guilhotina 01.}]] #EDF4FC
+rectangle "<b>K_Guilhotina01Inf</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla a variante de guilhotina 01 inferior.</color></size>" as N109 [[../contextos/pous/02-operacao.md#k_guilhotina01inf{Controla a variante de guilhotina 01 inferior.}]] #EDF4FC
+rectangle "<b>K_Guilhotina01Sup</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla a variante de guilhotina 01 superior.</color></size>" as N110 [[../contextos/pous/02-operacao.md#k_guilhotina01sup{Controla a variante de guilhotina 01 superior.}]] #EDF4FC
+rectangle "<b>K_Guilhotina02</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla a referência e a posição da</color></size>\n<size:11><color:#465C70>guilhotina 02.</color></size>" as N111 [[../contextos/pous/02-operacao.md#k_guilhotina02{Controla a referência e a posição da guilhotina 02.}]] #EDF4FC
+rectangle "<b>L_EstagiosResfriador</b>\nPRG · ST\n\n<size:11><color:#465C70>Sequencia os três estágios do resfriamento.</color></size>" as N112 [[../contextos/pous/02-operacao.md#l_estagiosresfriador{Sequencia os três estágios do resfriamento.}]] #EDF4FC
+rectangle "<b>M_Ventilador01</b>\nPRG · ST\n\n<size:11><color:#465C70>Sequencia a ventilação 01 associada à</color></size>\n<size:11><color:#465C70>passagem/têmpera integrada ao resfriamento.</color></size>" as N113 [[../contextos/pous/02-operacao.md#m_ventilador01{Sequencia a ventilação 01 associada à passagem/têmpera integrada ao resfriamento.}]] #EDF4FC
+rectangle "<b>M_Ventilador02</b>\nPRG · ST\n\n<size:11><color:#465C70>Sequencia a variante de ventilação 02 da</color></size>\n<size:11><color:#465C70>passagem/têmpera.</color></size>" as N114 [[../contextos/pous/02-operacao.md#m_ventilador02{Sequencia a variante de ventilação 02 da passagem/têmpera.}]] #EDF4FC
+rectangle "<b>M_Ventilador03</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla a ventilação 03 do processo de</color></size>\n<size:11><color:#465C70>resfriamento.</color></size>" as N115 [[../contextos/pous/02-operacao.md#m_ventilador03{Controla a ventilação 03 do processo de resfriamento.}]] #EDF4FC
+rectangle "<b>M_Ventilador04</b>\nPRG · ST\n\n<size:11><color:#465C70>Sequencia a variante de ventilação 04 do</color></size>\n<size:11><color:#465C70>resfriamento.</color></size>" as N116 [[../contextos/pous/02-operacao.md#m_ventilador04{Sequencia a variante de ventilação 04 do resfriamento.}]] #EDF4FC
+rectangle "<b>N_Grades</b>\nPRG · ST\n\n<size:11><color:#465C70>Gerencia o acionamento das grades de entrada e</color></size>\n<size:11><color:#465C70>saída.</color></size>" as N117 [[../contextos/pous/02-operacao.md#n_grades{Gerencia o acionamento das grades de entrada e saída.}]] #EDF4FC
+rectangle "<b>N_MesaBasculante</b>\nPRG · ST\n\n<size:11><color:#465C70>Sequencia os atuadores da mesa basculante de</color></size>\n<size:11><color:#465C70>entrada.</color></size>" as N118 [[../contextos/pous/02-operacao.md#n_mesabasculante{Sequencia os atuadores da mesa basculante de entrada.}]] #EDF4FC
+rectangle "<b>O_Portas</b>\nPRG · ST\n\n<size:11><color:#465C70>Combina os pedidos automáticos e de abertura</color></size>\n<size:11><color:#465C70>forçada das portas do forno.</color></size>" as N119 [[../contextos/pous/02-operacao.md#o_portas{Combina os pedidos automáticos e de abertura forçada das portas do forno.}]] #EDF4FC
+rectangle "<b>P_ComandosEventos</b>\nPRG · ST\n\n<size:11><color:#465C70>Transforma transições de sinais em indicadores</color></size>\n<size:11><color:#465C70>de eventos para registro externo.</color></size>" as N120 [[../contextos/pous/02-operacao.md#p_comandoseventos{Transforma transições de sinais em indicadores de eventos para registro externo.}]] #EDF4FC
+rectangle "<b>Q_Conveccao</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla a variante de convecção por abertura</color></size>\n<size:11><color:#465C70>e fechamento temporizado de válvula.</color></size>" as N121 [[../contextos/pous/02-operacao.md#q_conveccao{Controla a variante de convecção por abertura e fechamento temporizado de válvula.}]] #EDF4FC
+rectangle "<b>R_ManometroDifusor</b>\nPRG · ST\n\n<size:11><color:#465C70>Filtra e converte duas leituras de pressão dos</color></size>\n<size:11><color:#465C70>difusores.</color></size>" as N122 [[../contextos/pous/02-operacao.md#r_manometrodifusor{Filtra e converte duas leituras de pressão dos difusores.}]] #EDF4FC
+rectangle "<b>R_Pressostato</b>\nPRG · ST\n\n<size:11><color:#465C70>Classifica e supervisiona a pressão da rede a</color></size>\n<size:11><color:#465C70>partir de dois sinais digitais.</color></size>" as N123 [[../contextos/pous/02-operacao.md#r_pressostato{Classifica e supervisiona a pressão da rede a partir de dois sinais digitais.}]] #EDF4FC
+rectangle "<b>R_PressostatoAnal</b>\nPRG · ST\n\n<size:11><color:#465C70>Filtra e converte as leituras analógicas de</color></size>\n<size:11><color:#465C70>pressão da rede e da máquina.</color></size>" as N124 [[../contextos/pous/02-operacao.md#r_pressostatoanal{Filtra e converte as leituras analógicas de pressão da rede e da máquina.}]] #EDF4FC
+rectangle "<b>R_SensorVibracao</b>\nPRG · ST\n\n<size:11><color:#465C70>Filtra e escala dois sinais de vibração</color></size>\n<size:11><color:#465C70>associados aos ventiladores.</color></size>" as N125 [[../contextos/pous/02-operacao.md#r_sensorvibracao{Filtra e escala dois sinais de vibração associados aos ventiladores.}]] #EDF4FC
+rectangle "<b>S_ElevacaoForno</b>\nPRG · ST\n\n<size:11><color:#465C70>Trata os comandos de elevação e descida da</color></size>\n<size:11><color:#465C70>caixa do forno.</color></size>" as N126 [[../contextos/pous/02-operacao.md#s_elevacaoforno{Trata os comandos de elevação e descida da caixa do forno.}]] #EDF4FC
+rectangle "<b>T_Damper</b>\nPRG · ST\n\n<size:11><color:#465C70>Aplica a seleção de damper quando o</color></size>\n<size:11><color:#465C70>resfriamento não está em ciclo.</color></size>" as N127 [[../contextos/pous/02-operacao.md#t_damper{Aplica a seleção de damper quando o resfriamento não está em ciclo.}]] #EDF4FC
+rectangle "<b>T_VenezianaDutPass</b>\nPRG · ST\n\n<size:11><color:#465C70>Reconhece os comandos de abertura e fechamento</color></size>\n<size:11><color:#465C70>da veneziana do duto.</color></size>" as N128 [[../contextos/pous/02-operacao.md#t_venezianadutpass{Reconhece os comandos de abertura e fechamento da veneziana do duto.}]] #EDF4FC
+rectangle "<b>T_VenezianaVentInfPass</b>\nPRG · ST\n\n<size:11><color:#465C70>Mantém uma rotina de veneziana da ventilação</color></size>\n<size:11><color:#465C70>inferior de passagem com implementação</color></size>\n<size:11><color:#465C70>comentada.</color></size>\n<color:#777777>corpo comentado</color>" as N129 [[../contextos/pous/02-operacao.md#t_venezianaventinfpass{Mantém uma rotina de veneziana da ventilação inferior de passagem com implementação comentada.}]] #EEEEEE
+rectangle "<b>U_Encoder</b>\nPRG · ST\n\n<size:11><color:#465C70>Mantém uma rotina de encoder com implementação</color></size>\n<size:11><color:#465C70>inteiramente comentada.</color></size>\n<color:#777777>corpo comentado</color>" as N130 [[../contextos/pous/02-operacao.md#u_encoder{Mantém uma rotina de encoder com implementação inteiramente comentada.}]] #EEEEEE
+rectangle "<b>V_VentilacaoPainel</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla a ventilação do painel e a ventilação</color></size>\n<size:11><color:#465C70>dos SSRs.</color></size>" as N131 [[../contextos/pous/02-operacao.md#v_ventilacaopainel{Controla a ventilação do painel e a ventilação dos SSRs.}]] #EDF4FC
+rectangle "<b>X_LimpaResfriador02</b>\nPRG · ST\n\n<size:11><color:#465C70>Trata os comandos e o diagnóstico de posição</color></size>\n<size:11><color:#465C70>do mecanismo de limpeza do resfriador 02.</color></size>" as N132 [[../contextos/pous/02-operacao.md#x_limparesfriador02{Trata os comandos e o diagnóstico de posição do mecanismo de limpeza do resfriador 02.}]] #EDF4FC
+}
+
+package "03_Geral · Diagnóstico e apresentação" as PK3 {
+rectangle "<b>A_PrincipalGeral</b>\nPRG · ST\n\n<size:11><color:#465C70>Organiza a execução das rotinas gerais de</color></size>\n<size:11><color:#465C70>diagnóstico e apresentação.</color></size>" as N133 [[../contextos/pous/03-geral.md#a_principalgeral{Organiza a execução das rotinas gerais de diagnóstico e apresentação.}]] #EDF4FC
+rectangle "<b>B_Imagens</b>\nPRG · ST\n\n<size:11><color:#465C70>Reúne sinais de campo e de controle em</color></size>\n<size:11><color:#465C70>conjuntos usados na representação visual da</color></size>\n<size:11><color:#465C70>máquina.</color></size>" as N134 [[../contextos/pous/03-geral.md#b_imagens{Reúne sinais de campo e de controle em conjuntos usados na representação visual da máquina.}]] #EDF4FC
+rectangle "<b>C_Alarmes</b>\nPRG · ST\n\n<size:11><color:#465C70>Consolida alarmes da aplicação e comanda a</color></size>\n<size:11><color:#465C70>sinalização geral.</color></size>" as N135 [[../contextos/pous/03-geral.md#c_alarmes{Consolida alarmes da aplicação e comanda a sinalização geral.}]] #EDF4FC
+rectangle "<b>D_AnimaGeralResistencias</b>\nPRG · ST\n\n<size:11><color:#465C70>Converte os estados dos setores de aquecimento</color></size>\n<size:11><color:#465C70>em códigos de apresentação.</color></size>" as N136 [[../contextos/pous/03-geral.md#d_animageralresistencias{Converte os estados dos setores de aquecimento em códigos de apresentação.}]] #EDF4FC
+rectangle "<b>E_AnimaTesteGeralResistencias</b>\nPRG · ST\n\n<size:11><color:#465C70>Prepara os estados visuais dos setores durante</color></size>\n<size:11><color:#465C70>o teste de resistências.</color></size>" as N137 [[../contextos/pous/03-geral.md#e_animatestegeralresistencias{Prepara os estados visuais dos setores durante o teste de resistências.}]] #EDF4FC
+rectangle "<b>F_AnimaAlmMotValv</b>\nPRG · ST\n\n<size:11><color:#465C70>Prepara os códigos de apresentação de motores</color></size>\n<size:11><color:#465C70>e válvulas.</color></size>" as N138 [[../contextos/pous/03-geral.md#f_animaalmmotvalv{Prepara os códigos de apresentação de motores e válvulas.}]] #EDF4FC
+rectangle "<b>F_MensagemErroMotor</b>\nPRG · ST\n\n<size:11><color:#465C70>Traduz códigos conhecidos de falha dos</color></size>\n<size:11><color:#465C70>acionamentos em textos curtos.</color></size>" as N139 [[../contextos/pous/03-geral.md#f_mensagemerromotor{Traduz códigos conhecidos de falha dos acionamentos em textos curtos.}]] #EDF4FC
+rectangle "<b>F_SerialNumber</b>\nPRG · ST\n\n<size:11><color:#465C70>Publica dados de identificação e manutenção do</color></size>\n<size:11><color:#465C70>controlador.</color></size>" as N140 [[../contextos/pous/03-geral.md#f_serialnumber{Publica dados de identificação e manutenção do controlador.}]] #EDF4FC
+rectangle "<b>O_VelocidadesMotores</b>\nPRG · ST\n\n<size:11><color:#465C70>Calcula referências de velocidade relacionadas</color></size>\n<size:11><color:#465C70>à espessura e à calibração das mesas.</color></size>" as N141 [[../contextos/pous/03-geral.md#o_velocidadesmotores{Calcula referências de velocidade relacionadas à espessura e à calibração das mesas.}]] #EDF4FC
+rectangle "<b>P_StatusOnline</b>\nPRG · ST\n\n<size:11><color:#465C70>Codifica os estados de operação para</color></size>\n<size:11><color:#465C70>acompanhamento pelo supervisório.</color></size>" as N142 [[../contextos/pous/03-geral.md#p_statusonline{Codifica os estados de operação para acompanhamento pelo supervisório.}]] #EDF4FC
+rectangle "<b>Q_MonitoraEncoder</b>\nPRG · ST\n\n<size:11><color:#465C70>Instancia a supervisão de movimento dos</color></size>\n<size:11><color:#465C70>encoders usados nesta configuração.</color></size>" as N143 [[../contextos/pous/03-geral.md#q_monitoraencoder{Instancia a supervisão de movimento dos encoders usados nesta configuração.}]] #EDF4FC
+rectangle "<b>R_MonitoraMotores</b>\nPRG · ST\n\n<size:11><color:#465C70>Detecta parada inesperada dos movimentos do</color></size>\n<size:11><color:#465C70>forno e do resfriamento.</color></size>" as N144 [[../contextos/pous/03-geral.md#r_monitoramotores{Detecta parada inesperada dos movimentos do forno e do resfriamento.}]] #EDF4FC
+rectangle "<b>S_Termocamera</b>\nPRG · ST\n\n<size:11><color:#465C70>Filtra e calcula relações numéricas a partir</color></size>\n<size:11><color:#465C70>de um valor bruto associado à termocâmera.</color></size>" as N145 [[../contextos/pous/03-geral.md#s_termocamera{Filtra e calcula relações numéricas a partir de um valor bruto associado à termocâmera.}]] #EDF4FC
+}
+
+package "04_PID · Controle térmico, rampa e convecção" as PK4 {
+rectangle "<b>A_PincipalRampa</b>\nPRG · ST\n\n<size:11><color:#465C70>Organiza a execução do aquecimento por</color></size>\n<size:11><color:#465C70>rampa/patamar e por receita.</color></size>" as N146 [[../contextos/pous/04-controle-termico.md#a_pincipalrampa{Organiza a execução do aquecimento por rampa/patamar e por receita.}]] #EDF4FC
+rectangle "<b>A_PrincipalPid</b>\nPRG · ST\n\n<size:11><color:#465C70>Organiza o controle dos setores de aquecimento</color></size>\n<size:11><color:#465C70>e das convecções.</color></size>" as N147 [[../contextos/pous/04-controle-termico.md#a_principalpid{Organiza o controle dos setores de aquecimento e das convecções.}]] #EDF4FC
+rectangle "<b>A_SecundariaPid</b>\nPRG · ST\n\n<size:11><color:#465C70>Contém uma estrutura de chamada secundária de</color></size>\n<size:11><color:#465C70>PID inteiramente comentada.</color></size>\n<color:#777777>corpo comentado</color>" as N148 [[../contextos/pous/04-controle-termico.md#a_secundariapid{Contém uma estrutura de chamada secundária de PID inteiramente comentada.}]] #EEEEEE
+rectangle "<b>A_TemperaturaGeral</b>\nPRG · ST\n\n<size:11><color:#465C70>Distribui ajustes térmicos gerais entre os</color></size>\n<size:11><color:#465C70>setores.</color></size>" as N149 [[../contextos/pous/04-controle-termico.md#a_temperaturageral{Distribui ajustes térmicos gerais entre os setores.}]] #EDF4FC
+rectangle "<b>B_RampaPatamar</b>\nPRG · ST\n\n<size:11><color:#465C70>Sequencia o aquecimento do forno por rampa e</color></size>\n<size:11><color:#465C70>manutenção em patamar.</color></size>" as N150 [[../contextos/pous/04-controle-termico.md#b_rampapatamar{Sequencia o aquecimento do forno por rampa e manutenção em patamar.}]] #EDF4FC
+rectangle "<b>C_AquecimentoReceita</b>\nPRG · ST\n\n<size:11><color:#465C70>Gerencia o aquecimento inicial até as</color></size>\n<size:11><color:#465C70>temperaturas definidas pela receita.</color></size>" as N151 [[../contextos/pous/04-controle-termico.md#c_aquecimentoreceita{Gerencia o aquecimento inicial até as temperaturas definidas pela receita.}]] #EDF4FC
+rectangle "<b>C_StandByTemperaturas</b>\nPRG · ST\n\n<size:11><color:#465C70>Reduz os setpoints para a condição de espera</color></size>\n<size:11><color:#465C70>após o intervalo configurado.</color></size>" as N152 [[../contextos/pous/04-controle-termico.md#c_standbytemperaturas{Reduz os setpoints para a condição de espera após o intervalo configurado.}]] #EDF4FC
+rectangle "<b>D_ConvecVentEnt</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla a ventilação e o aquecimento da</color></size>\n<size:11><color:#465C70>convecção identificada como entrada.</color></size>" as N153 [[../contextos/pous/04-controle-termico.md#d_convecventent{Controla a ventilação e o aquecimento da convecção identificada como entrada.}]] #EDF4FC
+rectangle "<b>D_ConvecVentSai</b>\nPRG · ST\n\n<size:11><color:#465C70>Controla a ventilação e o aquecimento da</color></size>\n<size:11><color:#465C70>convecção identificada como saída.</color></size>" as N154 [[../contextos/pous/04-controle-termico.md#d_convecventsai{Controla a ventilação e o aquecimento da convecção identificada como saída.}]] #EDF4FC
+rectangle "<b>D_CtrlResist</b>\nPRG · ST\n\n<size:11><color:#465C70>Coordena habilitações, pausas e dados comuns</color></size>\n<size:11><color:#465C70>do controle das resistências.</color></size>" as N155 [[../contextos/pous/04-controle-termico.md#d_ctrlresist{Coordena habilitações, pausas e dados comuns do controle das resistências.}]] #EDF4FC
+rectangle "<b>D_CtrlResistInferiores</b>\nPRG · ST\n\n<size:11><color:#465C70>Executa os controles dos cinquenta setores</color></size>\n<size:11><color:#465C70>inferiores previstos no código.</color></size>" as N156 [[../contextos/pous/04-controle-termico.md#d_ctrlresistinferiores{Executa os controles dos cinquenta setores inferiores previstos no código.}]] #EDF4FC
+rectangle "<b>D_CtrlResistSuperiores</b>\nPRG · ST\n\n<size:11><color:#465C70>Executa os controles dos cinquenta setores</color></size>\n<size:11><color:#465C70>superiores previstos no código.</color></size>" as N157 [[../contextos/pous/04-controle-termico.md#d_ctrlresistsuperiores{Executa os controles dos cinquenta setores superiores previstos no código.}]] #EDF4FC
+rectangle "<b>E_Termperaturas</b>\nPRG · ST\n\n<size:11><color:#465C70>Atualiza os valores apresentados de</color></size>\n<size:11><color:#465C70>temperatura sem executar o controle por setor.</color></size>" as N158 [[../contextos/pous/04-controle-termico.md#e_termperaturas{Atualiza os valores apresentados de temperatura sem executar o controle por setor.}]] #EDF4FC
+}
+
+package "HEAT · Dados" as PK5 {
+rectangle "<b>IOs</b>\nGVL · ST\n\n<size:11><color:#465C70>Reúne entradas de temperatura e sinais de</color></size>\n<size:11><color:#465C70>saída utilizados pelo controle HEAT.</color></size>" as N159 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/04_PID/HEAT/IOs.gvl{Abrir IOs}]] #FDEEE4
+}
+
+package "HEAT / 00_Main · Integração" as PK6 {
+rectangle "<b>SR_Main</b>\nPRG · ST\n\n<size:11><color:#465C70>Integra o conjunto HEAT às variáveis de</color></size>\n<size:11><color:#465C70>aquecimento do restante da aplicação.</color></size>" as N160 [[../contextos/pous/04-heat.md#sr_main{Integra o conjunto HEAT às variáveis de aquecimento do restante da aplicação.}]] #EDF4FC
+}
+
+package "HEAT / 10_Temperatura · Controle e ações" as PK7 {
+rectangle "<b>_00_EntradasHc</b>\nAÇÃO · ST\n\n<size:11><color:#465C70>Copia as leituras dos setores para as entradas</color></size>\n<size:11><color:#465C70>do conjunto HEAT.</color></size>" as N164 [[../contextos/pous/04-heat.md#_00_entradashc{Copia as leituras dos setores para as entradas do conjunto HEAT.}]] #F2ECFA
+rectangle "<b>_10_Alarmes</b>\nAÇÃO · ST\n\n<size:11><color:#465C70>Reserva uma ação de alarmes do conjunto HEAT,</color></size>\n<size:11><color:#465C70>sem instruções ativas.</color></size>\n<color:#777777>corpo comentado</color>" as N165 [[../contextos/pous/04-heat.md#_10_alarmes{Reserva uma ação de alarmes do conjunto HEAT, sem instruções ativas.}]] #EEEEEE
+rectangle "<b>_20_Parametros</b>\nAÇÃO · ST\n\n<size:11><color:#465C70>Atualiza os parâmetros padrão de PID usados</color></size>\n<size:11><color:#465C70>pelas malhas HEAT.</color></size>" as N166 [[../contextos/pous/04-heat.md#_20_parametros{Atualiza os parâmetros padrão de PID usados pelas malhas HEAT.}]] #F2ECFA
+rectangle "<b>_30_AutoTunning</b>\nAÇÃO · ST\n\n<size:11><color:#465C70>Seleciona e conserva o conjunto de parâmetros</color></size>\n<size:11><color:#465C70>obtido pelo autotuning de cada malha HEAT.</color></size>" as N167 [[../contextos/pous/04-heat.md#_30_autotunning{Seleciona e conserva o conjunto de parâmetros obtido pelo autotuning de cada malha HEAT.}]] #F2ECFA
+rectangle "<b>InterfaceHeat</b>\nGVL · ST\n\n<size:11><color:#465C70>Compartilha sinais de habilitação e reset dos</color></size>\n<size:11><color:#465C70>controles de temperatura HEAT.</color></size>" as N161 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/04_PID/HEAT/10_Temperatura/InterfaceHeat.gvl{Abrir InterfaceHeat}]] #FDEEE4
+rectangle "<b>SR_ControleTemperatura</b>\nPRG · ST\n\n<size:11><color:#465C70>Coordena cem malhas de aquecimento com</color></size>\n<size:11><color:#465C70>FB_HeatingControl e modulação PWM.</color></size>" as N162 [[../contextos/pous/04-heat.md#sr_controletemperatura{Coordena cem malhas de aquecimento com FB_HeatingControl e modulação PWM.}]] #EDF4FC
+rectangle "<b>TEMP</b>\nGVL · ST\n\n<size:11><color:#465C70>Reúne estados, erros, saídas e comandos de</color></size>\n<size:11><color:#465C70>ajuste dos controles térmicos HEAT.</color></size>" as N163 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/04_PID/HEAT/10_Temperatura/TEMP.gvl{Abrir TEMP}]] #FDEEE4
+}
+
+package "05_TEMPERATURA · Aquisição e diagnóstico" as PK8 {
+rectangle "<b>A_PincipalTemperatura</b>\nPRG · ST\n\n<size:11><color:#465C70>Organiza a aquisição e os diagnósticos dos</color></size>\n<size:11><color:#465C70>circuitos de temperatura.</color></size>" as N168 [[../contextos/pous/05-temperatura.md#a_pincipaltemperatura{Organiza a aquisição e os diagnósticos dos circuitos de temperatura.}]] #EDF4FC
+rectangle "<b>B_Termopares</b>\nPRG · ST\n\n<size:11><color:#465C70>Adquire, organiza e supervisiona os sinais de</color></size>\n<size:11><color:#465C70>termopares.</color></size>" as N169 [[../contextos/pous/05-temperatura.md#b_termopares{Adquire, organiza e supervisiona os sinais de termopares.}]] #EDF4FC
+rectangle "<b>C_HabDesabResistencias</b>\nPRG · ST\n\n<size:11><color:#465C70>Gerencia a habilitação dos setores de</color></size>\n<size:11><color:#465C70>aquecimento.</color></size>" as N170 [[../contextos/pous/05-temperatura.md#c_habdesabresistencias{Gerencia a habilitação dos setores de aquecimento.}]] #EDF4FC
+rectangle "<b>D_Resistencias</b>\nPRG · ST\n\n<size:11><color:#465C70>Diagnostica ruptura dos circuitos de</color></size>\n<size:11><color:#465C70>resistência.</color></size>" as N171 [[../contextos/pous/05-temperatura.md#d_resistencias{Diagnostica ruptura dos circuitos de resistência.}]] #EDF4FC
+rectangle "<b>E_RelesEstadoSolido</b>\nPRG · ST\n\n<size:11><color:#465C70>Diagnostica inconsistências entre o comando de</color></size>\n<size:11><color:#465C70>aquecimento e o retorno dos circuitos.</color></size>" as N172 [[../contextos/pous/05-temperatura.md#e_relesestadosolido{Diagnostica inconsistências entre o comando de aquecimento e o retorno dos circuitos.}]] #EDF4FC
+rectangle "<b>F_PosicaoTermopares</b>\nPRG · ST\n\n<size:11><color:#465C70>Associa cada setor lógico de aquecimento ao</color></size>\n<size:11><color:#465C70>termopar físico configurado.</color></size>" as N173 [[../contextos/pous/05-temperatura.md#f_posicaotermopares{Associa cada setor lógico de aquecimento ao termopar físico configurado.}]] #EDF4FC
+rectangle "<b>G_CircuitoResistencia</b>\nPRG · ST\n\n<size:11><color:#465C70>Atualiza os estados dos circuitos de</color></size>\n<size:11><color:#465C70>resistência com os retornos dos SSRs.</color></size>" as N174 [[../contextos/pous/05-temperatura.md#g_circuitoresistencia{Atualiza os estados dos circuitos de resistência com os retornos dos SSRs.}]] #EDF4FC
+rectangle "<b>H_Pirometro</b>\nPRG · ST\n\n<size:11><color:#465C70>Processa os pirômetros e uma lógica específica</color></size>\n<size:11><color:#465C70>de rampa térmica.</color></size>" as N175 [[../contextos/pous/05-temperatura.md#h_pirometro{Processa os pirômetros e uma lógica específica de rampa térmica.}]] #EDF4FC
+}
+
+package "06_Relógio · Programação temporal" as PK9 {
+rectangle "<b>A_PrincipalRelogio</b>\nPRG · ST\n\n<size:11><color:#465C70>Organiza as rotinas de data, hora e</color></size>\n<size:11><color:#465C70>programação temporal.</color></size>" as N176 [[../contextos/pous/06-relogio.md#a_principalrelogio{Organiza as rotinas de data, hora e programação temporal.}]] #EDF4FC
+rectangle "<b>B_DataHora</b>\nPRG · ST\n\n<size:11><color:#465C70>Faz a interface entre o relógio do controlador</color></size>\n<size:11><color:#465C70>e os comandos de ajuste da aplicação.</color></size>" as N177 [[../contextos/pous/06-relogio.md#b_datahora{Faz a interface entre o relógio do controlador e os comandos de ajuste da aplicação.}]] #EDF4FC
+rectangle "<b>C_ProgramacaoHoraria</b>\nPRG · ST\n\n<size:11><color:#465C70>Gera o acionamento da programação de</color></size>\n<size:11><color:#465C70>aquecimento por dia da semana.</color></size>" as N178 [[../contextos/pous/06-relogio.md#c_programacaohoraria{Gera o acionamento da programação de aquecimento por dia da semana.}]] #EDF4FC
+rectangle "<b>D_ProgramacaoTempo</b>\nPRG · ST\n\n<size:11><color:#465C70>Gerencia um bloqueio programado por data e</color></size>\n<size:11><color:#465C70>horário.</color></size>" as N179 [[../contextos/pous/06-relogio.md#d_programacaotempo{Gerencia um bloqueio programado por data e horário.}]] #EDF4FC
+}
+
+package "07_Energia · Medição e alimentação" as PK10 {
+rectangle "<b>A_PrincipalEnergia</b>\nPRG · ST\n\n<size:11><color:#465C70>Organiza a leitura, o tratamento e os</color></size>\n<size:11><color:#465C70>diagnósticos de energia.</color></size>" as N180 [[../contextos/pous/07-energia.md#a_principalenergia{Organiza a leitura, o tratamento e os diagnósticos de energia.}]] #EDF4FC
+rectangle "<b>C_ComposicaoFatura</b>\nPRG · ST\n\n<size:11><color:#465C70>Separa e acumula consumo e demanda segundo</color></size>\n<size:11><color:#465C70>horários e períodos de leitura.</color></size>" as N181 [[../contextos/pous/07-energia.md#c_composicaofatura{Separa e acumula consumo e demanda segundo horários e períodos de leitura.}]] #EDF4FC
+rectangle "<b>D_ZeramentoMedidor</b>\nPRG · ST\n\n<size:11><color:#465C70>Sequencia os comandos de zeramento do medidor</color></size>\n<size:11><color:#465C70>e dos acumuladores internos.</color></size>" as N182 [[../contextos/pous/07-energia.md#d_zeramentomedidor{Sequencia os comandos de zeramento do medidor e dos acumuladores internos.}]] #EDF4FC
+rectangle "<b>E_Nobreak</b>\nPRG · ST\n\n<size:11><color:#465C70>Supervisiona a indicação de funcionamento do</color></size>\n<size:11><color:#465C70>nobreak.</color></size>" as N183 [[../contextos/pous/07-energia.md#e_nobreak{Supervisiona a indicação de funcionamento do nobreak.}]] #EDF4FC
+rectangle "<b>Energia</b>\nPRG · ST\n\n<size:11><color:#465C70>Publica grandezas elétricas e de consumo</color></size>\n<size:11><color:#465C70>usadas pela aplicação.</color></size>" as N184 [[../contextos/pous/07-energia.md#energia{Publica grandezas elétricas e de consumo usadas pela aplicação.}]] #EDF4FC
+rectangle "<b>F_FaltaFase</b>\nPRG · ST\n\n<size:11><color:#465C70>Detecta condição de tensão insuficiente nas</color></size>\n<size:11><color:#465C70>fases monitoradas.</color></size>" as N185 [[../contextos/pous/07-energia.md#f_faltafase{Detecta condição de tensão insuficiente nas fases monitoradas.}]] #EDF4FC
+rectangle "<b>G_Disjuntores</b>\nPRG · ST\n\n<size:11><color:#465C70>Supervisiona os retornos dos disjuntores geral</color></size>\n<size:11><color:#465C70>e de aquecimento.</color></size>" as N186 [[../contextos/pous/07-energia.md#g_disjuntores{Supervisiona os retornos dos disjuntores geral e de aquecimento.}]] #EDF4FC
+rectangle "<b>H_CircuitoCC</b>\nPRG · ST\n\n<size:11><color:#465C70>Interpreta as chaves do circuito de corrente</color></size>\n<size:11><color:#465C70>contínua.</color></size>" as N187 [[../contextos/pous/07-energia.md#h_circuitocc{Interpreta as chaves do circuito de corrente contínua.}]] #EDF4FC
+rectangle "<b>PM5300</b>\nPRG · ST\n\n<size:11><color:#465C70>Converte o conteúdo dos registradores do</color></size>\n<size:11><color:#465C70>medidor para os tipos usados no programa.</color></size>" as N188 [[../contextos/pous/07-energia.md#pm5300{Converte o conteúdo dos registradores do medidor para os tipos usados no programa.}]] #EDF4FC
+rectangle "<b>TesteEnergia</b>\nPRG · ST\n\n<size:11><color:#465C70>Simula a evolução de grandezas e acumuladores</color></size>\n<size:11><color:#465C70>de energia.</color></size>" as N189 [[../contextos/pous/07-energia.md#testeenergia{Simula a evolução de grandezas e acumuladores de energia.}]] #EDF4FC
+}
+
+package "08_Testes · Testes" as PK11 {
+rectangle "<b>A_PrincipalTeste</b>\nPRG · ST\n\n<size:11><color:#465C70>Seleciona e chama as rotinas de teste e</color></size>\n<size:11><color:#465C70>diagnóstico de parada.</color></size>" as N190 [[../contextos/pous/08-testes.md#a_principalteste{Seleciona e chama as rotinas de teste e diagnóstico de parada.}]] #EDF4FC
+rectangle "<b>B_TesteResistencias</b>\nPRG · ST\n\n<size:11><color:#465C70>Executa a verificação automática ou o</color></size>\n<size:11><color:#465C70>acionamento manual dos circuitos de</color></size>\n<size:11><color:#465C70>aquecimento.</color></size>" as N191 [[../contextos/pous/08-testes.md#b_testeresistencias{Executa a verificação automática ou o acionamento manual dos circuitos de aquecimento.}]] #EDF4FC
+rectangle "<b>C_Teste_Entradas_Saidas</b>\nPRG · ST\n\n<size:11><color:#465C70>Oferece a imagem das entradas e aplica os</color></size>\n<size:11><color:#465C70>comandos de teste às saídas físicas.</color></size>" as N192 [[../contextos/pous/08-testes.md#c_teste_entradas_saidas{Oferece a imagem das entradas e aplica os comandos de teste às saídas físicas.}]] #EDF4FC
+rectangle "<b>D_Teste_Nobreak</b>\nPRG · ST\n\n<size:11><color:#465C70>Acompanha um teste de sustentação da máquina</color></size>\n<size:11><color:#465C70>pelo nobreak.</color></size>" as N193 [[../contextos/pous/08-testes.md#d_teste_nobreak{Acompanha um teste de sustentação da máquina pelo nobreak.}]] #EDF4FC
+rectangle "<b>TesteSTOP</b>\nPRG · ST\n\n<size:11><color:#465C70>Disponibiliza o motivo da última parada do</color></size>\n<size:11><color:#465C70>controlador.</color></size>" as N194 [[../contextos/pous/08-testes.md#testestop{Disponibiliza o motivo da última parada do controlador.}]] #EDF4FC
+}
+
+package "09_RedeCanOpen · Acionamentos" as PK12 {
+rectangle "<b>A_PirncipalRede</b>\nPRG · ST\n\n<size:11><color:#465C70>Chama a rotina de integração dos acionamentos.</color></size>" as N195 [[../contextos/pous/09-acionamentos.md#a_pirncipalrede{Chama a rotina de integração dos acionamentos.}]] #EDF4FC
+rectangle "<b>O_Motores</b>\nPRG · ST\n\n<size:11><color:#465C70>Integra os estados dos inversores às variáveis</color></size>\n<size:11><color:#465C70>de operação da máquina.</color></size>" as N196 [[../contextos/pous/09-acionamentos.md#o_motores{Integra os estados dos inversores às variáveis de operação da máquina.}]] #EDF4FC
+}
+
+package "10_EntradasSaidas · I/O" as PK13 {
+rectangle "<b>A_Principal_IO</b>\nPRG · ST\n\n<size:11><color:#465C70>Seleciona o espelhamento normal das entradas e</color></size>\n<size:11><color:#465C70>saídas.</color></size>" as N197 [[../contextos/pous/10-entradas-saidas.md#a_principal_io{Seleciona o espelhamento normal das entradas e saídas.}]] #EDF4FC
+rectangle "<b>B_EspelhoEntradas</b>\nPRG · ST\n\n<size:11><color:#465C70>Associa canais físicos de entrada aos nomes</color></size>\n<size:11><color:#465C70>funcionais da aplicação.</color></size>" as N198 [[../contextos/pous/10-entradas-saidas.md#b_espelhoentradas{Associa canais físicos de entrada aos nomes funcionais da aplicação.}]] #EDF4FC
+rectangle "<b>C_EspelhoSaida</b>\nPRG · ST\n\n<size:11><color:#465C70>Transfere os comandos lógicos para as saídas</color></size>\n<size:11><color:#465C70>digitais mapeadas.</color></size>" as N199 [[../contextos/pous/10-entradas-saidas.md#c_espelhosaida{Transfere os comandos lógicos para as saídas digitais mapeadas.}]] #EDF4FC
+}
+
+package "11_GestaoEnergetica · Acumuladores" as PK14 {
+rectangle "<b>A_PricipalGestao</b>\nPRG · ST\n\n<size:11><color:#465C70>Organiza a contabilização de energia por</color></size>\n<size:11><color:#465C70>condição de funcionamento e por data.</color></size>" as N200 [[../contextos/pous/11-gestao-energetica.md#a_pricipalgestao{Organiza a contabilização de energia por condição de funcionamento e por data.}]] #EDF4FC
+rectangle "<b>B_Acumuladores</b>\nPRG · ST\n\n<size:11><color:#465C70>Atualiza acumuladores de consumo associados</color></size>\n<size:11><color:#465C70>aos estados da máquina.</color></size>" as N201 [[../contextos/pous/11-gestao-energetica.md#b_acumuladores{Atualiza acumuladores de consumo associados aos estados da máquina.}]] #EDF4FC
+rectangle "<b>C_GerenciadorDatas</b>\nPRG · ST\n\n<size:11><color:#465C70>Trata a troca de dia e de mês para os</color></size>\n<size:11><color:#465C70>acumuladores de energia.</color></size>" as N202 [[../contextos/pous/11-gestao-energetica.md#c_gerenciadordatas{Trata a troca de dia e de mês para os acumuladores de energia.}]] #EDF4FC
+}
+
+package "Dados globais e tipos" as PK15 {
+rectangle "<b>GVL_Alarmes</b>\nGVL · ST\n\n<size:11><color:#465C70>Reúne os estados de alarme de motores,</color></size>\n<size:11><color:#465C70>válvulas, encoders e condições gerais.</color></size>" as N8 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_Alarmes.gvl{Abrir GVL_Alarmes}]] #FDEEE4
+rectangle "<b>GVL_ClpSuper</b>\nGVL · ST\n\n<size:11><color:#465C70>Reúne dados do processo disponibilizados pelo</color></size>\n<size:11><color:#465C70>PLC ao supervisório.</color></size>" as N9 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_ClpSuper.gvl{Abrir GVL_ClpSuper}]] #FDEEE4
+rectangle "<b>GVL_Encoder</b>\nGVL · ST\n\n<size:11><color:#465C70>Compartilha contagens e referências dos</color></size>\n<size:11><color:#465C70>encoders da máquina.</color></size>" as N10 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_Encoder.gvl{Abrir GVL_Encoder}]] #FDEEE4
+rectangle "<b>GVL_Energia</b>\nGVL · ST\n\n<size:11><color:#465C70>Reúne grandezas elétricas e valores de consumo</color></size>\n<size:11><color:#465C70>de energia.</color></size>" as N11 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_Energia.gvl{Abrir GVL_Energia}]] #FDEEE4
+rectangle "<b>GVL_EntradasSaidas</b>\nGVL · ST\n\n<size:11><color:#465C70>Declara sinais de entradas e saídas usados</color></size>\n<size:11><color:#465C70>pelos equipamentos e controles.</color></size>" as N12 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_EntradasSaidas.gvl{Abrir GVL_EntradasSaidas}]] #FDEEE4
+rectangle "<b>GVL_Eventos</b>\nGVL · ST\n\n<size:11><color:#465C70>Reúne sinais de eventos e mudanças de estado</color></size>\n<size:11><color:#465C70>da operação.</color></size>" as N13 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_Eventos.gvl{Abrir GVL_Eventos}]] #FDEEE4
+rectangle "<b>GVL_Imagens</b>\nGVL · ST\n\n<size:11><color:#465C70>Agrupa estados de equipamentos e retornos para</color></size>\n<size:11><color:#465C70>representação visual.</color></size>" as N14 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_Imagens.gvl{Abrir GVL_Imagens}]] #FDEEE4
+rectangle "<b>GVL_Interface</b>\nGVL · ST\n\n<size:11><color:#465C70>Compartilha sinais de coordenação, estados e</color></size>\n<size:11><color:#465C70>parâmetros entre rotinas do processo.</color></size>" as N15 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_Interface.gvl{Abrir GVL_Interface}]] #FDEEE4
+rectangle "<b>GVL_InterfaceEnergia</b>\nGVL · ST\n\n<size:11><color:#465C70>Reúne os registros de comunicação usados na</color></size>\n<size:11><color:#465C70>aquisição das grandezas elétricas.</color></size>" as N16 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_InterfaceEnergia.gvl{Abrir GVL_InterfaceEnergia}]] #FDEEE4
+rectangle "<b>GVL_InterfacePid</b>\nGVL · ST\n\n<size:11><color:#465C70>Compartilha instâncias e variáveis dos</color></size>\n<size:11><color:#465C70>controles térmicos por setor.</color></size>" as N17 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_InterfacePid.gvl{Abrir GVL_InterfacePid}]] #FDEEE4
+rectangle "<b>GVL_Inversores</b>\nGVL · ST\n\n<size:11><color:#465C70>Declara as estruturas de comando e retorno dos</color></size>\n<size:11><color:#465C70>inversores da máquina.</color></size>" as N18 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_Inversores.gvl{Abrir GVL_Inversores}]] #FDEEE4
+rectangle "<b>GVL_Motores</b>\nGVL · ST\n\n<size:11><color:#465C70>Reúne indicações de corrente e frequência dos</color></size>\n<size:11><color:#465C70>acionamentos.</color></size>" as N19 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_Motores.gvl{Abrir GVL_Motores}]] #FDEEE4
+rectangle "<b>GVL_ReadStatusOnline</b>\nGVL · ST\n\n<size:11><color:#465C70>Disponibiliza estados de operação, habilitação</color></size>\n<size:11><color:#465C70>e emergência da máquina.</color></size>" as N20 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_ReadStatusOnline.gvl{Abrir GVL_ReadStatusOnline}]] #FDEEE4
+rectangle "<b>GVL_Receita</b>\nGVL · ST\n\n<size:11><color:#465C70>Reúne parâmetros e sinais de solicitação,</color></size>\n<size:11><color:#465C70>confirmação e falha de escrita de receitas.</color></size>" as N21 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_Receita.gvl{Abrir GVL_Receita}]] #FDEEE4
+rectangle "<b>GVL_Relogio</b>\nGVL · ST\n\n<size:11><color:#465C70>Compartilha os campos de data, hora e ajuste</color></size>\n<size:11><color:#465C70>do relógio.</color></size>" as N22 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_Relogio.gvl{Abrir GVL_Relogio}]] #FDEEE4
+rectangle "<b>GVL_StatCanOpenDevice</b>\nGVL · ST\n\n<size:11><color:#465C70>Reúne estados e indicações de disponibilidade</color></size>\n<size:11><color:#465C70>dos dispositivos CANopen.</color></size>" as N23 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_StatCanOpenDevice.gvl{Abrir GVL_StatCanOpenDevice}]] #FDEEE4
+rectangle "<b>GVL_StatModTcpDevice</b>\nGVL · ST\n\n<size:11><color:#465C70>Reúne estados do scanner e dos dispositivos de</color></size>\n<size:11><color:#465C70>comunicação Modbus TCP.</color></size>" as N24 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_StatModTcpDevice.gvl{Abrir GVL_StatModTcpDevice}]] #FDEEE4
+rectangle "<b>GVL_SuperClp</b>\nGVL · ST\n\n<size:11><color:#465C70>Reúne comandos e parâmetros enviados pelo</color></size>\n<size:11><color:#465C70>supervisório ao PLC.</color></size>" as N25 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_SuperClp.gvl{Abrir GVL_SuperClp}]] #FDEEE4
+rectangle "<b>GVL_Velocidades</b>\nGVL · ST\n\n<size:11><color:#465C70>Compartilha valores de velocidade utilizados</color></size>\n<size:11><color:#465C70>no transporte das cargas.</color></size>" as N26 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_Velocidades.gvl{Abrir GVL_Velocidades}]] #FDEEE4
+rectangle "<b>GVL_WriteComandos</b>\nGVL · ST\n\n<size:11><color:#465C70>Reúne comandos de operação, ciclo e</color></size>\n<size:11><color:#465C70>movimentação solicitados pela interface.</color></size>" as N27 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/GVL_WriteComandos.gvl{Abrir GVL_WriteComandos}]] #FDEEE4
+rectangle "<b>Inversor</b>\nDUT · ST\n\n<size:11><color:#465C70>Define os campos de comando, referência,</color></size>\n<size:11><color:#465C70>corrente, frequência e estado de um inversor.</color></size>" as N28 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/Inversor.struct{Abrir Inversor}]] #FDEEE4
+rectangle "<b>ParametrosPermanentes</b>\nPERSISTÊNCIA · ST\n\n<size:11><color:#465C70>Mantém parâmetros persistentes de</color></size>\n<size:11><color:#465C70>configuração, calibração e operação.</color></size>" as N29 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/ParametrosPermanentes.varpersistent.xml.v3{Abrir ParametrosPermanentes}]] #FCE7D8
+}
+
+package "Tarefas de execução" as PK16 {
+rectangle "<b>GestaoEnergetica</b>\nTAREFA\n1000 ms · prioridade 18\n\n<size:11><color:#465C70>Executa 1 programa na sequência configurada</color></size>\n<size:11><color:#465C70>para esta tarefa.</color></size>" as N203 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/Task%20Configuration.taskconfig.xml.v3%5E/GestaoEnergetica.task.xml.v3{Abrir GestaoEnergetica}]] #DBEAFE
+rectangle "<b>MAST</b>\nTAREFA\n20 ms · prioridade 15\n\n<size:11><color:#465C70>Executa 11 programas na sequência configurada</color></size>\n<size:11><color:#465C70>para esta tarefa.</color></size>" as N204 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/Task%20Configuration.taskconfig.xml.v3%5E/MAST.task.xml.v3{Abrir MAST}]] #DBEAFE
+rectangle "<b>PidInferior</b>\nTAREFA\n101 ms · prioridade 16\n\n<size:11><color:#465C70>Executa 1 programa na sequência configurada</color></size>\n<size:11><color:#465C70>para esta tarefa.</color></size>" as N205 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/Task%20Configuration.taskconfig.xml.v3%5E/PidInferior.task.xml.v3{Abrir PidInferior}]] #DBEAFE
+rectangle "<b>PidSuperior</b>\nTAREFA\n110 ms · prioridade 17\n\n<size:11><color:#465C70>Executa 1 programa na sequência configurada</color></size>\n<size:11><color:#465C70>para esta tarefa.</color></size>" as N206 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/Task%20Configuration.taskconfig.xml.v3%5E/PidSuperior.task.xml.v3{Abrir PidSuperior}]] #DBEAFE
+rectangle "<b>Rampa</b>\nTAREFA\n30 ms · prioridade 6\n\n<size:11><color:#465C70>Executa 3 programas na sequência configurada</color></size>\n<size:11><color:#465C70>para esta tarefa.</color></size>" as N207 [[../../MyController.device.xml.v3%5E/Plc%20Logic.plclogic.xml.v3%5E/Application.application.xml.v3%5E/Task%20Configuration.taskconfig.xml.v3%5E/Rampa.task.xml.v3{Abrir Rampa}]] #DBEAFE
+}
+
+package "Verificações implícitas" as PK17 {
+rectangle "<b>CheckBounds</b>\nFC · ST\n\n<size:11><color:#465C70>Limita um índice aos limites inferior e</color></size>\n<size:11><color:#465C70>superior informados.</color></size>" as N0 [[../contextos/pous/12-funcoes-implicitas.md#checkbounds{Limita um índice aos limites inferior e superior informados.}]] #FFF3D6
+rectangle "<b>CheckDivDInt</b>\nFC · ST\n\n<size:11><color:#465C70>Ajusta o divisor do tipo DINT usado na</color></size>\n<size:11><color:#465C70>verificação implícita de divisão.</color></size>" as N1 [[../contextos/pous/12-funcoes-implicitas.md#checkdivdint{Ajusta o divisor do tipo DINT usado na verificação implícita de divisão.}]] #FFF3D6
+rectangle "<b>CheckDivLInt</b>\nFC · ST\n\n<size:11><color:#465C70>Ajusta o divisor do tipo LINT usado na</color></size>\n<size:11><color:#465C70>verificação implícita de divisão.</color></size>" as N2 [[../contextos/pous/12-funcoes-implicitas.md#checkdivlint{Ajusta o divisor do tipo LINT usado na verificação implícita de divisão.}]] #FFF3D6
+rectangle "<b>CheckDivLReal</b>\nFC · ST\n\n<size:11><color:#465C70>Ajusta o divisor do tipo LREAL usado na</color></size>\n<size:11><color:#465C70>verificação implícita de divisão.</color></size>" as N3 [[../contextos/pous/12-funcoes-implicitas.md#checkdivlreal{Ajusta o divisor do tipo LREAL usado na verificação implícita de divisão.}]] #FFF3D6
+rectangle "<b>CheckDivReal</b>\nFC · ST\n\n<size:11><color:#465C70>Ajusta o divisor do tipo REAL usado na</color></size>\n<size:11><color:#465C70>verificação implícita de divisão.</color></size>" as N4 [[../contextos/pous/12-funcoes-implicitas.md#checkdivreal{Ajusta o divisor do tipo REAL usado na verificação implícita de divisão.}]] #FFF3D6
+rectangle "<b>CheckPointer</b>\nFC · ST\n\n<size:11><color:#465C70>Devolve o ponteiro recebido pela função de</color></size>\n<size:11><color:#465C70>verificação implícita.</color></size>" as N5 [[../contextos/pous/12-funcoes-implicitas.md#checkpointer{Devolve o ponteiro recebido pela função de verificação implícita.}]] #FFF3D6
+rectangle "<b>CheckRangeSigned</b>\nFC · ST\n\n<size:11><color:#465C70>Limita um valor com sinal ao intervalo</color></size>\n<size:11><color:#465C70>informado.</color></size>" as N6 [[../contextos/pous/12-funcoes-implicitas.md#checkrangesigned{Limita um valor com sinal ao intervalo informado.}]] #FFF3D6
+rectangle "<b>CheckRangeUnsigned</b>\nFC · ST\n\n<size:11><color:#465C70>Limita um valor sem sinal ao intervalo</color></size>\n<size:11><color:#465C70>informado.</color></size>" as N7 [[../contextos/pous/12-funcoes-implicitas.md#checkrangeunsigned{Limita um valor sem sinal ao intervalo informado.}]] #FFF3D6
+}
+
+N17 .[#9973AF].> N56
+N17 .[#9973AF].> N69
+N18 .[#9973AF].> N28
+N41 -[#19816A]-> N65
+N44 -[#19816A]-> N59
+N44 -[#19816A]-> N60
+N45 -[#19816A]-> N60
+N50 -[#19816A]-> N60
+N51 -[#19816A]-> N60
+N52 -[#19816A]-> N60
+N56 -[#19816A]-> N71
+N62 -[#19816A]-> N70
+N62 -[#19816A]-> N60
+N62 .[#A87732].> N20
+N62 .[#A87732].> N9
+N62 .[#A87732].> N25
+N63 -[#19816A]-> N60
+N64 -[#19816A]-> N70
+N64 -[#19816A]-> N60
+N67 -[#19816A]-> N63
+N75 .[#A87732].> N15
+N75 .[#A87732].> N29
+N76 .[#A87732].> N12
+N78 .[#A87732].> N23
+N79 .[#A87732].> N24
+N79 .[#A87732].> N22
+N80 .[#A87732].> N15
+N80 .[#A87732].> N10
+N80 .[#A87732].> N12
+N81 -[#2762A6]-> N88
+N81 -[#2762A6]-> N89
+N81 -[#2762A6]-> N80
+N81 -[#2762A6]-> N82
+N81 -[#2762A6]-> N83
+N81 -[#2762A6]-> N84
+N81 -[#2762A6]-> N85
+N81 -[#2762A6]-> N86
+N81 -[#2762A6]-> N96
+N81 -[#2762A6]-> N97
+N81 -[#2762A6]-> N98
+N81 -[#2762A6]-> N99
+N81 -[#2762A6]-> N100
+N81 -[#2762A6]-> N101
+N81 -[#2762A6]-> N102
+N81 -[#2762A6]-> N103
+N81 -[#2762A6]-> N112
+N81 -[#2762A6]-> N113
+N81 -[#2762A6]-> N115
+N81 -[#2762A6]-> N117
+N81 -[#2762A6]-> N119
+N81 -[#2762A6]-> N120
+N81 -[#2762A6]-> N123
+N81 -[#2762A6]-> N124
+N81 -[#2762A6]-> N122
+N81 -[#2762A6]-> N125
+N81 -[#2762A6]-> N126
+N81 -[#2762A6]-> N128
+N81 -[#2762A6]-> N129
+N81 -[#2762A6]-> N131
+N81 -[#19816A]-> N51
+N81 -[#2762A6]-> N107
+N81 -[#2762A6]-> N111
+N81 .[#AAAAAA].> N87
+N81 .[#AAAAAA].> N91
+N81 .[#AAAAAA].> N92
+N81 .[#AAAAAA].> N94
+N81 .[#AAAAAA].> N93
+N81 .[#AAAAAA].> N95
+N81 .[#AAAAAA].> N90
+N81 .[#AAAAAA].> N104
+N81 .[#AAAAAA].> N106
+N81 .[#AAAAAA].> N105
+N81 .[#AAAAAA].> N108
+N81 .[#AAAAAA].> N110
+N81 .[#AAAAAA].> N109
+N81 .[#AAAAAA].> N114
+N81 .[#AAAAAA].> N116
+N81 .[#AAAAAA].> N118
+N81 .[#AAAAAA].> N121
+N81 .[#AAAAAA].> N127
+N81 .[#AAAAAA].> N132
+N81 .[#A87732].> N27
+N81 .[#A87732].> N9
+N81 .[#A87732].> N20
+N82 .[#A87732].> N21
+N82 .[#A87732].> N15
+N82 .[#A87732].> N9
+N82 .[#A87732].> N25
+N83 -[#19816A]-> N48
+N83 .[#A87732].> N25
+N83 .[#A87732].> N15
+N83 .[#A87732].> N29
+N84 -[#19816A]-> N70
+N84 -[#19816A]-> N60
+N84 .[#A87732].> N20
+N84 .[#A87732].> N12
+N84 .[#A87732].> N15
+N84 .[#A87732].> N9
+N84 .[#A87732].> N21
+N84 .[#A87732].> N17
+N84 .[#A87732].> N27
+N85 .[#A87732].> N12
+N86 -[#19816A]-> N60
+N86 -[#19816A]-> N59
+N86 -[#19816A]-> N69
+N86 -[#19816A]-> N70
+N86 .[#A87732].> N12
+N86 .[#A87732].> N20
+N86 .[#A87732].> N15
+N86 .[#A87732].> N9
+N86 .[#A87732].> N25
+N86 .[#A87732].> N29
+N86 .[#A87732].> N19
+N86 .[#A87732].> N23
+N86 .[#A87732].> N18
+N87 -[#19816A]-> N47
+N87 .[#A87732].> N10
+N87 .[#A87732].> N12
+N88 .[#A87732].> N15
+N88 .[#A87732].> N12
+N89 .[#A87732].> N15
+N89 .[#A87732].> N12
+N90 .[#A87732].> N15
+N90 .[#A87732].> N12
+N91 -[#19816A]-> N47
+N91 .[#A87732].> N10
+N91 .[#A87732].> N12
+N92 -[#19816A]-> N47
+N92 .[#A87732].> N10
+N92 .[#A87732].> N12
+N93 -[#19816A]-> N47
+N93 .[#A87732].> N10
+N93 .[#A87732].> N12
+N94 -[#19816A]-> N47
+N94 .[#A87732].> N10
+N94 .[#A87732].> N12
+N95 -[#19816A]-> N47
+N95 .[#A87732].> N10
+N95 .[#A87732].> N12
+N96 .[#A87732].> N9
+N96 .[#A87732].> N20
+N96 .[#A87732].> N25
+N96 .[#A87732].> N15
+N96 .[#A87732].> N29
+N97 -[#19816A]-> N41
+N97 -[#19816A]-> N42
+N97 -[#19816A]-> N53
+N97 -[#19816A]-> N60
+N97 -[#19816A]-> N44
+N97 -[#19816A]-> N69
+N97 -[#19816A]-> N58
+N97 .[#A87732].> N15
+N97 .[#A87732].> N29
+N97 .[#A87732].> N20
+N97 .[#A87732].> N12
+N97 .[#A87732].> N10
+N97 .[#A87732].> N9
+N97 .[#A87732].> N23
+N97 .[#A87732].> N25
+N97 .[#A87732].> N11
+N97 .[#A87732].> N27
+N97 .[#A87732].> N18
+N97 .[#A87732].> N22
+N98 .[#A87732].> N9
+N98 .[#A87732].> N20
+N98 .[#A87732].> N25
+N98 .[#A87732].> N29
+N98 .[#A87732].> N15
+N98 .[#A87732].> N12
+N99 .[#A87732].> N9
+N99 .[#A87732].> N15
+N99 .[#A87732].> N25
+N100 .[#A87732].> N15
+N100 .[#A87732].> N20
+N100 .[#A87732].> N12
+N100 .[#A87732].> N18
+N101 .[#9973AF].> N58
+N101 -[#19816A]-> N41
+N101 -[#19816A]-> N43
+N101 -[#19816A]-> N53
+N101 -[#19816A]-> N69
+N101 .[#A87732].> N15
+N101 .[#A87732].> N29
+N101 .[#A87732].> N25
+N101 .[#A87732].> N20
+N101 .[#A87732].> N10
+N101 .[#A87732].> N9
+N101 .[#A87732].> N23
+N101 .[#A87732].> N27
+N101 .[#A87732].> N12
+N101 .[#A87732].> N18
+N101 .[#A87732].> N22
+N102 -[#19816A]-> N31
+N102 .[#A87732].> N12
+N102 .[#A87732].> N20
+N102 .[#A87732].> N15
+N103 -[#19816A]-> N60
+N103 -[#19816A]-> N59
+N103 .[#A87732].> N12
+N103 .[#A87732].> N20
+N103 .[#A87732].> N15
+N103 .[#A87732].> N23
+N103 .[#A87732].> N18
+N103 .[#A87732].> N29
+N104 -[#19816A]-> N53
+N104 -[#19816A]-> N58
+N104 .[#A87732].> N29
+N104 .[#A87732].> N25
+N104 .[#A87732].> N12
+N104 .[#A87732].> N20
+N104 .[#A87732].> N15
+N104 .[#A87732].> N10
+N104 .[#A87732].> N9
+N105 -[#19816A]-> N53
+N105 -[#19816A]-> N60
+N105 -[#19816A]-> N59
+N105 -[#19816A]-> N58
+N105 .[#A87732].> N29
+N105 .[#A87732].> N25
+N105 .[#A87732].> N15
+N105 .[#A87732].> N12
+N105 .[#A87732].> N20
+N105 .[#A87732].> N10
+N105 .[#A87732].> N23
+N105 .[#A87732].> N18
+N105 .[#A87732].> N9
+N106 .[#9973AF].> N60
+N106 .[#9973AF].> N59
+N106 -[#19816A]-> N53
+N106 -[#19816A]-> N58
+N106 .[#AAAAAA].> N60
+N106 .[#AAAAAA].> N59
+N106 .[#A87732].> N29
+N106 .[#A87732].> N25
+N106 .[#A87732].> N12
+N106 .[#A87732].> N20
+N106 .[#A87732].> N15
+N106 .[#A87732].> N10
+N106 .[#A87732].> N23
+N106 .[#A87732].> N18
+N106 .[#A87732].> N9
+N107 -[#19816A]-> N53
+N107 -[#19816A]-> N60
+N107 -[#19816A]-> N59
+N107 -[#19816A]-> N58
+N107 .[#A87732].> N29
+N107 .[#A87732].> N25
+N107 .[#A87732].> N12
+N107 .[#A87732].> N15
+N107 .[#A87732].> N20
+N107 .[#A87732].> N10
+N107 .[#A87732].> N23
+N107 .[#A87732].> N18
+N107 .[#A87732].> N9
+N108 .[#9973AF].> N45
+N108 -[#19816A]-> N53
+N108 -[#19816A]-> N58
+N108 .[#A87732].> N25
+N108 .[#A87732].> N15
+N108 .[#A87732].> N9
+N108 .[#A87732].> N20
+N108 .[#A87732].> N12
+N108 .[#A87732].> N10
+N108 .[#A87732].> N23
+N108 .[#A87732].> N29
+N108 .[#A87732].> N18
+N108 .[#A87732].> N27
+N109 -[#19816A]-> N53
+N109 -[#19816A]-> N58
+N109 .[#A87732].> N25
+N109 .[#A87732].> N15
+N109 .[#A87732].> N9
+N109 .[#A87732].> N20
+N109 .[#A87732].> N12
+N109 .[#A87732].> N10
+N109 .[#A87732].> N23
+N109 .[#A87732].> N29
+N109 .[#A87732].> N18
+N110 -[#19816A]-> N53
+N110 -[#19816A]-> N58
+N110 .[#A87732].> N25
+N110 .[#A87732].> N15
+N110 .[#A87732].> N9
+N110 .[#A87732].> N20
+N110 .[#A87732].> N12
+N110 .[#A87732].> N10
+N110 .[#A87732].> N23
+N110 .[#A87732].> N29
+N110 .[#A87732].> N18
+N111 .[#9973AF].> N45
+N111 -[#19816A]-> N53
+N111 -[#19816A]-> N58
+N111 .[#A87732].> N25
+N111 .[#A87732].> N15
+N111 .[#A87732].> N9
+N111 .[#A87732].> N20
+N111 .[#A87732].> N12
+N111 .[#A87732].> N10
+N111 .[#A87732].> N23
+N111 .[#A87732].> N29
+N111 .[#A87732].> N18
+N111 .[#A87732].> N27
+N112 -[#19816A]-> N69
+N112 .[#A87732].> N15
+N112 .[#A87732].> N20
+N112 .[#A87732].> N25
+N112 .[#A87732].> N9
+N113 -[#19816A]-> N60
+N113 .[#A87732].> N25
+N113 .[#A87732].> N15
+N113 .[#A87732].> N9
+N113 .[#A87732].> N29
+N113 .[#A87732].> N20
+N113 .[#A87732].> N12
+N113 .[#A87732].> N19
+N114 -[#19816A]-> N60
+N114 .[#A87732].> N15
+N114 .[#A87732].> N9
+N114 .[#A87732].> N29
+N114 .[#A87732].> N20
+N114 .[#A87732].> N25
+N114 .[#A87732].> N19
+N115 -[#19816A]-> N60
+N115 .[#A87732].> N15
+N115 .[#A87732].> N9
+N115 .[#A87732].> N29
+N115 .[#A87732].> N20
+N115 .[#A87732].> N25
+N115 .[#A87732].> N23
+N115 .[#A87732].> N12
+N115 .[#A87732].> N18
+N115 .[#A87732].> N19
+N116 -[#19816A]-> N60
+N116 .[#A87732].> N15
+N116 .[#A87732].> N9
+N116 .[#A87732].> N29
+N116 .[#A87732].> N20
+N116 .[#A87732].> N25
+N116 .[#A87732].> N19
+N117 -[#19816A]-> N50
+N117 .[#A87732].> N20
+N117 .[#A87732].> N12
+N117 .[#A87732].> N15
+N118 .[#A87732].> N12
+N118 .[#A87732].> N20
+N119 -[#19816A]-> N51
+N119 .[#A87732].> N27
+N119 .[#A87732].> N20
+N119 .[#A87732].> N9
+N119 .[#A87732].> N12
+N119 .[#A87732].> N15
+N120 -[#19816A]-> N60
+N120 -[#19816A]-> N59
+N120 .[#A87732].> N12
+N120 .[#A87732].> N20
+N120 .[#A87732].> N15
+N120 .[#A87732].> N27
+N120 .[#A87732].> N9
+N120 .[#A87732].> N25
+N120 .[#A87732].> N13
+N121 -[#19816A]-> N51
+N121 -[#19816A]-> N70
+N121 .[#A87732].> N9
+N121 .[#A87732].> N25
+N121 .[#A87732].> N29
+N121 .[#A87732].> N15
+N121 .[#A87732].> N20
+N121 .[#A87732].> N27
+N121 .[#A87732].> N12
+N122 -[#19816A]-> N64
+N122 .[#A87732].> N12
+N122 .[#A87732].> N9
+N123 .[#A87732].> N12
+N123 .[#A87732].> N20
+N123 .[#A87732].> N15
+N124 -[#19816A]-> N64
+N124 .[#A87732].> N12
+N124 .[#A87732].> N9
+N125 -[#19816A]-> N64
+N125 .[#A87732].> N12
+N125 .[#A87732].> N9
+N126 -[#19816A]-> N70
+N126 .[#A87732].> N27
+N126 .[#A87732].> N9
+N126 .[#A87732].> N12
+N126 .[#A87732].> N15
+N127 -[#19816A]-> N60
+N127 .[#A87732].> N12
+N127 .[#A87732].> N15
+N127 .[#A87732].> N20
+N128 .[#A87732].> N25
+N128 .[#A87732].> N12
+N131 -[#19816A]-> N51
+N131 .[#A87732].> N27
+N131 .[#A87732].> N9
+N131 .[#A87732].> N29
+N131 .[#A87732].> N12
+N131 .[#A87732].> N20
+N132 .[#A87732].> N12
+N132 .[#A87732].> N15
+N133 -[#2762A6]-> N134
+N133 -[#2762A6]-> N135
+N133 -[#2762A6]-> N136
+N133 -[#2762A6]-> N137
+N133 -[#2762A6]-> N138
+N133 -[#2762A6]-> N139
+N133 -[#2762A6]-> N140
+N133 -[#2762A6]-> N141
+N133 -[#2762A6]-> N142
+N133 -[#2762A6]-> N143
+N133 -[#2762A6]-> N144
+N133 -[#2762A6]-> N145
+N134 .[#A87732].> N14
+N134 .[#A87732].> N15
+N134 .[#A87732].> N12
+N134 .[#A87732].> N9
+N135 -[#19816A]-> N40
+N135 -[#19816A]-> N39
+N135 -[#19816A]-> N70
+N135 .[#A87732].> N15
+N135 .[#A87732].> N8
+N135 .[#A87732].> N25
+N135 .[#A87732].> N12
+N135 .[#A87732].> N23
+N135 .[#A87732].> N20
+N135 .[#A87732].> N9
+N136 .[#A87732].> N15
+N136 .[#A87732].> N9
+N136 .[#A87732].> N8
+N137 .[#A87732].> N15
+N137 .[#A87732].> N9
+N137 .[#A87732].> N8
+N138 .[#A87732].> N8
+N138 .[#A87732].> N14
+N138 .[#A87732].> N9
+N139 .[#A87732].> N15
+N141 -[#19816A]-> N48
+N141 -[#19816A]-> N41
+N141 .[#A87732].> N29
+N141 .[#A87732].> N26
+N141 .[#A87732].> N15
+N142 .[#A87732].> N20
+N142 .[#A87732].> N15
+N142 .[#A87732].> N12
+N143 -[#19816A]-> N54
+N143 .[#A87732].> N15
+N143 .[#A87732].> N12
+N143 .[#A87732].> N10
+N144 -[#19816A]-> N54
+N144 -[#19816A]-> N32
+N144 -[#19816A]-> N70
+N144 .[#A87732].> N15
+N144 .[#A87732].> N12
+N144 .[#A87732].> N20
+N144 .[#A87732].> N9
+N145 -[#19816A]-> N64
+N145 .[#A87732].> N12
+N145 .[#A87732].> N9
+N146 -[#2762A6]-> N150
+N146 -[#2762A6]-> N151
+N146 -[#2762A6]-> N158
+N146 .[#A87732].> N9
+N147 -[#2762A6]-> N156
+N147 -[#2762A6]-> N157
+N147 -[#2762A6]-> N158
+N147 -[#2762A6]-> N155
+N147 -[#2762A6]-> N152
+N147 -[#2762A6]-> N149
+N147 -[#2762A6]-> N153
+N147 -[#2762A6]-> N154
+N147 .[#AAAAAA].> N160
+N147 .[#A87732].> N9
+N148 .[#AAAAAA].> N157
+N148 .[#AAAAAA].> N158
+N149 .[#A87732].> N15
+N149 .[#A87732].> N25
+N149 .[#A87732].> N9
+N150 -[#19816A]-> N60
+N150 -[#19816A]-> N61
+N150 -[#19816A]-> N55
+N150 .[#A87732].> N27
+N150 .[#A87732].> N9
+N150 .[#A87732].> N20
+N150 .[#A87732].> N15
+N150 .[#A87732].> N29
+N150 .[#A87732].> N11
+N150 .[#A87732].> N12
+N150 .[#A87732].> N21
+N151 -[#19816A]-> N35
+N151 -[#19816A]-> N60
+N151 .[#A87732].> N27
+N151 .[#A87732].> N15
+N151 .[#A87732].> N20
+N151 .[#A87732].> N9
+N151 .[#A87732].> N25
+N151 .[#A87732].> N12
+N152 .[#A87732].> N25
+N152 .[#A87732].> N15
+N152 .[#A87732].> N9
+N152 .[#A87732].> N29
+N152 .[#A87732].> N20
+N153 .[#9973AF].> N51
+N153 -[#19816A]-> N57
+N153 -[#19816A]-> N33
+N153 .[#AAAAAA].> N51
+N153 .[#A87732].> N9
+N153 .[#A87732].> N29
+N153 .[#A87732].> N15
+N153 .[#A87732].> N23
+N153 .[#A87732].> N12
+N153 .[#A87732].> N18
+N153 .[#A87732].> N20
+N153 .[#A87732].> N25
+N153 .[#A87732].> N8
+N154 .[#9973AF].> N51
+N154 -[#19816A]-> N57
+N154 -[#19816A]-> N33
+N154 .[#AAAAAA].> N51
+N154 .[#A87732].> N9
+N154 .[#A87732].> N29
+N154 .[#A87732].> N15
+N154 .[#A87732].> N23
+N154 .[#A87732].> N12
+N154 .[#A87732].> N18
+N154 .[#A87732].> N20
+N154 .[#A87732].> N25
+N154 .[#A87732].> N8
+N155 -[#19816A]-> N69
+N155 .[#A87732].> N17
+N155 .[#A87732].> N15
+N155 .[#A87732].> N25
+N155 .[#A87732].> N9
+N155 .[#A87732].> N20
+N156 -[#19816A]-> N56
+N156 .[#A87732].> N17
+N156 .[#A87732].> N9
+N156 .[#A87732].> N15
+N156 .[#A87732].> N25
+N156 .[#A87732].> N12
+N157 -[#19816A]-> N56
+N157 .[#A87732].> N17
+N157 .[#A87732].> N9
+N157 .[#A87732].> N15
+N157 .[#A87732].> N25
+N157 .[#A87732].> N12
+N158 .[#A87732].> N15
+N158 .[#A87732].> N9
+N158 .[#A87732].> N12
+N160 -[#2762A6]-> N162
+N160 .[#A87732].> N17
+N160 .[#A87732].> N12
+N160 .[#A87732].> N159
+N162 -[#2762A6]-> N164
+N162 -[#2762A6]-> N166
+N162 -[#19816A]-> N62
+N162 -[#2762A6]-> N167
+N162 .[#A87732].> N161
+N162 .[#A87732].> N17
+N162 .[#A87732].> N15
+N162 .[#A87732].> N159
+N162 .[#A87732].> N163
+N162 .[#A87732].> N25
+N164 .[#A87732].> N159
+N164 .[#A87732].> N17
+N166 .[#A87732].> N161
+N166 .[#A87732].> N17
+N166 .[#A87732].> N29
+N167 .[#A87732].> N163
+N167 .[#A87732].> N29
+N168 -[#2762A6]-> N169
+N168 -[#2762A6]-> N170
+N168 -[#2762A6]-> N171
+N168 -[#2762A6]-> N172
+N168 -[#2762A6]-> N174
+N168 -[#19816A]-> N51
+N168 -[#2762A6]-> N173
+N168 -[#2762A6]-> N175
+N168 .[#A87732].> N25
+N168 .[#A87732].> N9
+N169 -[#19816A]-> N37
+N169 -[#19816A]-> N36
+N169 -[#19816A]-> N35
+N169 .[#A87732].> N15
+N169 .[#A87732].> N12
+N169 .[#A87732].> N8
+N169 .[#A87732].> N9
+N170 .[#9973AF].> N51
+N170 .[#AAAAAA].> N51
+N170 .[#A87732].> N9
+N170 .[#A87732].> N20
+N170 .[#A87732].> N15
+N170 .[#A87732].> N25
+N171 -[#19816A]-> N34
+N171 .[#A87732].> N15
+N171 .[#A87732].> N12
+N171 .[#A87732].> N8
+N172 -[#19816A]-> N33
+N172 .[#A87732].> N15
+N172 .[#A87732].> N12
+N172 .[#A87732].> N8
+N173 .[#A87732].> N15
+N173 .[#A87732].> N29
+N173 .[#A87732].> N12
+N174 .[#9973AF].> N68
+N174 .[#AAAAAA].> N68
+N174 .[#A87732].> N15
+N174 .[#A87732].> N12
+N175 -[#19816A]-> N70
+N175 -[#19816A]-> N60
+N175 .[#A87732].> N9
+N175 .[#A87732].> N15
+N175 .[#A87732].> N12
+N175 .[#A87732].> N20
+N175 .[#A87732].> N25
+N175 .[#A87732].> N17
+N176 -[#2762A6]-> N177
+N176 -[#2762A6]-> N178
+N176 -[#2762A6]-> N179
+N177 -[#19816A]-> N66
+N177 -[#19816A]-> N49
+N177 .[#A87732].> N9
+N177 .[#A87732].> N22
+N178 .[#9973AF].> N51
+N178 .[#A87732].> N22
+N178 .[#A87732].> N29
+N178 .[#A87732].> N9
+N178 .[#A87732].> N15
+N179 .[#A87732].> N25
+N179 .[#A87732].> N29
+N179 .[#A87732].> N22
+N180 -[#2762A6]-> N184
+N180 -[#2762A6]-> N181
+N180 -[#2762A6]-> N182
+N180 -[#2762A6]-> N183
+N180 -[#2762A6]-> N185
+N180 -[#2762A6]-> N186
+N180 -[#2762A6]-> N187
+N180 -[#2762A6]-> N188
+N180 .[#AAAAAA].> N189
+N181 -[#19816A]-> N60
+N181 .[#A87732].> N29
+N181 .[#A87732].> N22
+N181 .[#A87732].> N11
+N181 .[#A87732].> N9
+N182 .[#A87732].> N11
+N182 .[#A87732].> N29
+N183 .[#A87732].> N15
+N183 .[#A87732].> N12
+N183 .[#A87732].> N29
+N184 .[#A87732].> N11
+N184 .[#A87732].> N16
+N185 .[#A87732].> N11
+N185 .[#A87732].> N9
+N185 .[#A87732].> N15
+N186 .[#A87732].> N12
+N186 .[#A87732].> N15
+N186 .[#A87732].> N20
+N187 .[#A87732].> N9
+N187 .[#A87732].> N12
+N187 .[#A87732].> N20
+N188 -[#19816A]-> N46
+N188 -[#2762A6]-> N73
+N188 .[#A87732].> N16
+N189 .[#A87732].> N29
+N190 .[#9973AF].> N52
+N190 .[#9973AF].> N51
+N190 -[#2762A6]-> N191
+N190 -[#2762A6]-> N192
+N190 -[#2762A6]-> N193
+N190 -[#2762A6]-> N194
+N190 .[#AAAAAA].> N52
+N190 .[#AAAAAA].> N51
+N190 .[#A87732].> N9
+N191 .[#9973AF].> N51
+N191 .[#AAAAAA].> N51
+N191 .[#A87732].> N9
+N191 .[#A87732].> N25
+N191 .[#A87732].> N15
+N191 .[#A87732].> N12
+N191 .[#A87732].> N11
+N191 .[#A87732].> N8
+N192 .[#A87732].> N12
+N192 .[#A87732].> N10
+N193 -[#19816A]-> N49
+N193 .[#A87732].> N9
+N193 .[#A87732].> N20
+N193 .[#A87732].> N29
+N193 .[#A87732].> N12
+N193 .[#A87732].> N15
+N195 -[#2762A6]-> N196
+N196 .[#A87732].> N15
+N196 .[#A87732].> N18
+N196 .[#A87732].> N19
+N196 .[#A87732].> N12
+N196 .[#A87732].> N23
+N196 .[#A87732].> N29
+N197 -[#2762A6]-> N198
+N197 -[#2762A6]-> N199
+N197 .[#A87732].> N9
+N198 .[#A87732].> N12
+N198 .[#A87732].> N15
+N198 .[#A87732].> N10
+N199 .[#A87732].> N12
+N199 .[#A87732].> N15
+N200 -[#2762A6]-> N201
+N200 -[#2762A6]-> N202
+N201 .[#A87732].> N20
+N201 .[#A87732].> N29
+N201 .[#A87732].> N11
+N201 .[#A87732].> N9
+N202 .[#A87732].> N22
+N202 .[#A87732].> N29
+N202 .[#A87732].> N11
+N203 -[#243E68,thickness=2]-> N200 : 1
+N204 -[#243E68,thickness=2]-> N81 : 1
+N204 -[#243E68,thickness=2]-> N133 : 2
+N204 -[#243E68,thickness=2]-> N168 : 3
+N204 -[#243E68,thickness=2]-> N176 : 4
+N204 -[#243E68,thickness=2]-> N180 : 5
+N204 -[#243E68,thickness=2]-> N190 : 6
+N204 -[#243E68,thickness=2]-> N195 : 7
+N204 -[#243E68,thickness=2]-> N76 : 8
+N204 -[#243E68,thickness=2]-> N78 : 9
+N204 -[#243E68,thickness=2]-> N75 : 10
+N204 -[#243E68,thickness=2]-> N79 : 11
+N205 -[#243E68,thickness=2]-> N147 : 1
+N206 -[#243E68,thickness=2]-> N148 : 1
+N207 -[#243E68,thickness=2]-> N77 : 1
+N207 -[#243E68,thickness=2]-> N197 : 2
+N207 -[#243E68,thickness=2]-> N146 : 3
+
+note "Os pacotes representam a organização atual dos arquivos.\nPassagem/têmpera integra fisicamente a mesa de resfriamento.\nChamadas fora de comentários podem depender de IF/CASE; não comprovam execução.\nCheck... são pontos de verificação implícita: não foram inventadas chamadas do compilador.\nDependências externas de biblioteca/hardware estão relacionadas no JSON;\no desenho expande os objetos definidos nesta aplicação." as NOTAS
+@enduml

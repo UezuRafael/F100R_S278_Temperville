@@ -1,0 +1,237 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "8f055bd9-e150-43dd-adba-096f0904df5c",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	/// Parametros Buffer 01
+	/// Parametros do Forno
+	rBufferSetTemperaturaInferiorGeral: REAL;
+	rBufferSetTemperaturaSuperiorGeral: REAL;
+	rBufferSetPorcentagemInferiorGeral: REAL;
+	rBufferSetPorcentagemSuperiorGeral: REAL;
+	rBufferSetTemperaturaInferior: ARRAY[1..60] OF REAL;
+	rBufferSetTemperaturaSuperior: ARRAY[1..60] OF REAL;
+	rBufferSetPorcentagemInferior: ARRAY[1..60] OF REAL;
+	rBufferSetPorcentagemSuperior: ARRAY[1..60] OF REAL;
+	iBufferTempoPausaResistInf: INT;
+	iBufferTempoPausaResistSup: INT;
+	iBufferTempoPausa02ResistSup: INT;
+	iBufferTempoInicioPausa02ResistSup: INT;
+	iBufferTempoConveccao: INT;
+	iBufferTempoDelayCarga: INT;
+	iBufferTempoPausaRoletes: INT;
+	iBufferTempoAquecimForno: INT;
+	iBufferTempoPosicaoForno: INT;
+	iBufferTempoVelocidadeForno: INT;
+	iBufferVelocidade01Vaivem: INT;
+	iBufferVelocidade02Vaivem: INT;
+	iBufferVelocidade03Vaivem: INT;
+	iBufferVelocidadeCargaMesadoForno: INT;
+	iBufferVelocidadeDescargaMesadoForno: INT;
+	iBufferCorretorCargaMesaEntrada: INT;
+	///Parametros do Resfriamento
+	iBufferTempoResfriamento: INT;
+	iBufferValAltura01ResfriadorInf01: INT;
+	iBufferValAltura02ResfriadorInf01: INT;
+	iBufferValAltura03ResfriadorInf01: INT;
+	iBufferValAltura01ResfriadorSup01: INT;
+	iBufferValAltura02ResfriadorSup01: INT;
+	iBufferValAltura03ResfriadorSup01: INT;
+	iBufferValAltura01ResfriadorInf02: INT;
+	iBufferValAltura02ResfriadorInf02: INT;
+	iBufferValAltura03ResfriadorInf02: INT;
+	iBufferValAltura01ResfriadorSup02: INT;
+	iBufferValAltura02ResfriadorSup02: INT;
+	iBufferValAltura03ResfriadorSup02: INT;
+	iBufferAlturaGhilhotina01: INT;
+	iBufferAlturaGhilhotina01Sup: INT;
+	iBufferAlturaGhilhotina01Inf: INT;
+	iBufferAlturaGhilhotina02: INT;
+	iBufferVelocidade01Ventilador01: INT;
+	iBufferVelocidade02Ventilador01: INT;
+	iBufferVelocidade03Ventilador01: INT;
+	iBufferVelocidade01Ventilador02: INT;
+	iBufferVelocidade02Ventilador02: INT;
+	iBufferVelocidade03Ventilador02: INT;
+	iBufferVelocidade01Ventilador03: INT;
+	iBufferVelocidade02Ventilador03: INT;
+	iBufferVelocidade03Ventilador03: INT;
+	iBufferVelocidade01Ventilador04: INT;
+	iBufferVelocidade02Ventilador04: INT;
+	iBufferVelocidade03Ventilador04: INT;
+	iBufferTempoTrocaEstagioResfriamento: INT;
+	iBufferTempoTrocaEstagio02Resfriamento: INT;
+	iBufferCorretorCargaMesaResfriador: INT;
+	iBufferVelocidadeVaiVemResfriador: INT;
+	iBufferVelocidadeDescargaMesadoResfriador: INT;
+	iBufferCorretorCargaMesaSaida: INT;
+	iBufferVeneziana: INT;
+	iBufferPassagem: INT;
+	rBufferEmissividade	: REAL;
+	/// Parametros Buffer 02
+	///Parametros do Resfriamento
+	iBuffer02TempoResfriamento: INT;
+	iBuffer02ValAltura01ResfriadorInf01: INT;
+	iBuffer02ValAltura02ResfriadorInf01: INT;
+	iBuffer02ValAltura03ResfriadorInf01: INT;
+	iBuffer02ValAltura01ResfriadorSup01: INT;
+	iBuffer02ValAltura02ResfriadorSup01: INT;
+	iBuffer02ValAltura03ResfriadorSup01: INT;
+	iBuffer02ValAltura01ResfriadorInf02: INT;
+	iBuffer02ValAltura02ResfriadorInf02: INT;
+	iBuffer02ValAltura03ResfriadorInf02: INT;
+	iBuffer02ValAltura01ResfriadorSup02: INT;
+	iBuffer02ValAltura02ResfriadorSup02: INT;
+	iBuffer02ValAltura03ResfriadorSup02: INT;
+	iBuffer02AlturaGhilhotina01: INT;
+	iBuffer02AlturaGhilhotina01Sup: INT;
+	iBuffer02AlturaGhilhotina01Inf: INT;
+	iBuffer02AlturaGhilhotina02: INT;
+	iBuffer02Velocidade01Ventilador01: INT;
+	iBuffer02Velocidade02Ventilador01: INT;
+	iBuffer02Velocidade03Ventilador01: INT;
+	iBuffer02Velocidade01Ventilador02: INT;
+	iBuffer02Velocidade02Ventilador02: INT;
+	iBuffer02Velocidade03Ventilador02: INT;
+	iBuffer02Velocidade01Ventilador03: INT;
+	iBuffer02Velocidade02Ventilador03: INT;
+	iBuffer02Velocidade03Ventilador03: INT;
+	iBuffer02Velocidade01Ventilador04: INT;
+	iBuffer02Velocidade02Ventilador04: INT;
+	iBuffer02Velocidade03Ventilador04: INT;
+	iBuffer02TempoTrocaEstagioResfriamento: INT;
+	iBuffer02TempoTrocaEstagio02Resfriamento: INT;
+	iBuffer02CorretorCargaMesaResfriador: INT;
+	iBuffer02VelocidadeVaiVemResfriador: INT;
+	iBuffer02VelocidadeDescargaMesadoResfriador: INT;
+	iBuffer02CorretorCargaMesaSaida: INT;
+	iBuffer02Veneziana: INT;
+	iBuffer02Passagem: INT;
+	rBuffer02Emissividade:REAL;
+	/// ESCRITA - LEITURA	
+	///Parâmetros On-line	
+	/// Parâmetros Forno pós Buffer01
+	rSetTemperaturaInferiorGeral: REAL;
+	rSetTemperaturaSuperiorGeral: REAL;
+	rSetPorcentagemInferiorGeral: REAL;
+	rSetPorcentagemSuperiorGeral: REAL;
+	rSetTemperaturaInferior: ARRAY[1..60] OF REAL;
+	rSetTemperaturaSuperior: ARRAY[1..60] OF REAL;
+	rSetPorcentagemInferior: ARRAY[1..60] OF REAL;
+	rSetPorcentagemSuperior: ARRAY[1..60] OF REAL;
+	iTempoPausaResistInf: INT;
+	iTempoPausaResistSup: INT;
+	iTempoPausa02ResistSup: INT;
+	iTempoInicioPausa02ResistSup: INT;
+	iTempoConveccao: INT;
+	iTempoDelayCarga: INT;
+	iTempoPausaRoletes: INT;
+	iTempoAquecimForno: INT;
+	iTempoPosicaoForno: INT;
+	iTempoVelocidadeForno: INT;
+	iVelocidade01Vaivem: INT;
+	iVelocidade02Vaivem: INT;
+	iVelocidade03Vaivem: INT;
+	iVelocidadeCargaMesadoForno: INT;
+	iVelocidadeDescargaMesadoForno: INT;
+	
+	/// Parâmetros Resfriamento
+	/// Parametros Resfriamento pós Buffer 02
+	iTempoResfriamento: INT;
+	iValAltura01ResfriadorInf01: INT;
+	iValAltura02ResfriadorInf01: INT;
+	iValAltura03ResfriadorInf01: INT;
+	iValAltura01ResfriadorSup01: INT;
+	iValAltura02ResfriadorSup01: INT;
+	iValAltura03ResfriadorSup01: INT;
+	iValAltura01ResfriadorInf02: INT;
+	iValAltura02ResfriadorInf02: INT;
+	iValAltura03ResfriadorInf02: INT;
+	iValAltura01ResfriadorSup02: INT;
+	iValAltura02ResfriadorSup02: INT;
+	iValAltura03ResfriadorSup02: INT;
+	iAlturaGhilhotina01: INT;
+	iAlturaGhilhotina01Sup: INT;
+	iAlturaGhilhotina01Inf: INT;
+	iAlturaGhilhotina02: INT;
+	iVelocidade01Ventilador01: INT;
+	iVelocidade02Ventilador01: INT;
+	iVelocidade03Ventilador01: INT;
+	iVelocidade01Ventilador02: INT;
+	iVelocidade02Ventilador02: INT;
+	iVelocidade03Ventilador02: INT;
+	iVelocidade01Ventilador03: INT;
+	iVelocidade02Ventilador03: INT;
+	iVelocidade03Ventilador03: INT;
+	iVelocidade01Ventilador04: INT;
+	iVelocidade02Ventilador04: INT;
+	iVelocidade03Ventilador04: INT;
+	iTempoTrocaEstagioResfriamento: INT;
+	iTempoTrocaEstagio02Resfriamento: INT;
+	
+	iVelocidadeVaiVemResfriador: INT;
+	iVelocidadeDescargaMesadoResfriador: INT;
+	
+	iVeneziana: INT;
+	iPassagem: INT;
+	BtParamMesaForno: BOOL;
+	BtParamMesaResfriador: BOOL;
+	BtParamDuctosResfriadorInf01: BOOL;
+	BtParamDuctosResfriadorSup01: BOOL;
+	BtParamDuctosResfriadorInf02: BOOL;
+	BtParamDuctosResfriadorSup02: BOOL;
+	BtParamGuilhotina01: BOOL;
+	BtParamGuilhotina01Sup: BOOL;
+	BtParamGuilhotina01Inf: BOOL;
+	BtParamGuilhotina02: BOOL;
+	xIniciaHomeDuctosInf01: BOOL;
+	xIniciaHomeDuctosSup01: BOOL;
+	xIniciaHomeDuctosInf02: BOOL;
+	xIniciaHomeDuctosSup02: BOOL;
+	xIniciaHomeGuilhotina01: BOOL;
+	xIniciaHomeGuilhotina01Sup: BOOL;
+	xIniciaHomeGuilhotina01Inf: BOOL;
+	xIniciaHomeGuilhotina02: BOOL;
+	BtHabDesabBloqueio: BOOL;
+	BtDesbloqueio: BOOL;
+	BtAbreVeneziana: BOOL;
+	BtFechaVeneziana: BOOL;
+	BtAbreVenezVentInfPass: BOOL;
+	BtFechVenezVentInfPass: BOOL;
+	BtHabilitaResistenciasGeralInferior: BOOL;
+	BtDesabilitaResistenciasGeralInferior: BOOL;
+	BtHabilitaResistenciasGeralSuperior: BOOL;
+	BtDesabilitaResistenciasGeralSuperior: BOOL;
+	BtHabilitaResistenciaInferior: ARRAY[1..60] OF BOOL;
+	BtHabilitaResistenciaSuperior: ARRAY[1..60] OF BOOL;
+	BtHabDesabResistConveccaoEnt: BOOL;
+	BtHabDesabResistConveccaoSai: BOOL;
+	bIniciaTesteResistencias: BOOL;
+	bAbortaTesteResistencias: BOOL;
+	bResetTesteResistencias: BOOL;
+	BtForceResistenciaInferior: ARRAY[1..60] OF BOOL;
+	BtForceResistenciaSuperior: ARRAY[1..60] OF BOOL;
+	BtTesteResistencias: BOOL;
+	BtTesteResistenciaAutomatico: BOOL;
+	BtTesteResistenciaManual: BOOL;
+	BtTesteEntradaSaidas: BOOL;
+	BtSelecaoTermopares: BOOL;
+	BtResetAlarmesGerais: BOOL;
+	BtRestart: BOOL;
+	BtAbortaStandByCiclo: BOOL;
+	xBtHabIncremento: BOOL;
+	xBtIniciaTesteNobreak: BOOL;
+	
+	rEmissividade	: REAL;
+END_VAR

@@ -1,0 +1,49 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "d0b10adc-4342-4bd6-9464-e15017fb235e",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	dValorEncoderForno: DINT;
+	dValorEncoderResfriador: DINT;
+	dValorEncoderDuctosResfriadorInf01: DINT;
+	dValorEncoderDuctosResfriadorSup01: DINT;
+	dValorEncoderDuctosResfriadorInf02: DINT;
+	dValorEncoderDuctosResfriadorSup02: DINT;
+	dValorEncoderGuilhotinaResfriador01: DINT;
+	dValorEncoderGuilhotinaResfriador02: DINT;
+
+	dValorEncoderGuilhotinaResfriador01Inf: DINT;
+	dValorEncoderGuilhotinaResfriador01Sup: DINT;
+	
+	xHomeEncoderForno: BOOL;
+	xHomeEncoderResfriador: BOOL;
+	xHomeEncoderDuctosResfriadorInf01: BOOL;
+	xHomeEncoderDuctosResfriadorSup01: BOOL;
+	xHomeEncoderDuctosResfriadorInf02: BOOL;
+	xHomeEncoderDuctosResfriadorSup02: BOOL;
+	xHomeEncoderGuilhotinaResfriador01: BOOL;
+	xHomeEncoderGuilhotinaResfriador02: BOOL;
+	xHomeEncoderGuilhotinaResfriador01Sup: BOOL;
+	xHomeEncoderGuilhotinaResfriador01Inf: BOOL;
+
+		
+	xEncoderFornoOk: BOOL;
+	xEncoderResfriadorOk: BOOL;
+	xEncoderDuctosResfriadorInf01Ok: BOOL;
+	xEncoderDuctosResfriadorSup01Ok: BOOL;
+	xEncoderDuctosResfriadorInf02Ok: BOOL;
+	xEncoderDuctosResfriadorSup02Ok: BOOL;
+	xEncoderGuilhotinaResfriador01Ok: BOOL;
+	xEncoderGuilhotinaResfriador02Ok: BOOL;
+END_VAR

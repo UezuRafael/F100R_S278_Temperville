@@ -1,0 +1,229 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "b51eb333-058c-4674-bdb6-0016d68f2889",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	/// LEITURA	
+	///Parâmetros On-line	
+	sEntradaNomedaReceita: STRING;
+	sFornoNomedaReceita: STRING;
+	sResfriamentoNomedaReceita: STRING;
+	iEntradaEspessuraVidro: INT;
+	iFornoEspessuraVidro: INT;
+	iResfriamentoEspessuraVidro: INT;
+	xEntradaReenvioRec: BOOL;
+	xFornoReenvioRec: BOOL;
+	xResfriamentoReenvioRec: BOOL;
+	xPassagemReenvioRec: BOOL;
+	rTemperaturaInferiorAtual: ARRAY[1..50] OF REAL;
+	rTemperaturaSuperiorAtual: ARRAY[1..50] OF REAL;
+	iTemperaturaPainel: INT;
+	rMediaLogiaTempInferior: REAL;
+	rMediaLogiaTempSuperior: REAL;
+	rMediaLogicaTemperaturaTotal: REAL;
+	iTempoDelayCargaDecorrido: INT;
+	iTempoPausaRoleteDecorrido: INT;
+	iTempoPausaRoleteRestante: INT;
+	iTempoAquecFornoDecorrido: INT;
+	iTempoAquecFornoRestante: INT;
+	iTempoTrocaVelocidadeDecorrido: INT;
+	///////////////////
+	iTempoTrocaPosicaoDecorrido: INT;
+	//////////////////
+	iTempoTesteNobreak: TON;
+	iTempoTesteNobreakRestante: INT;
+	iTempoPausaResistInfDecorrido: INT;
+	iTempoPausaResistSupDecorrido: INT;
+	iTempoPausa02ResistSupDecorrido: INT;
+	iTempoParaInicioPausaDecor: INT;
+	iTempoConveccaoDecorrido: INT;
+	iTempoResfriamentoDecorrido: INT;
+	iTempoResfriamentoRestante: INT;
+	iTempoTrocaEstagioDecorrido: INT;
+	iTempoTrocaEstagio02Decorrido: INT;
+	iAlturaAtualDuctosResfriadorInf01: INT;
+	iAlturaAtualDuctosResfriadorSup01: INT;
+	iAlturaAtualDuctosResfriadorInf02: INT;
+	iAlturaAtualDuctosResfriadorSup02: INT;
+	iAlturaAtualGuilhotina01: INT;
+	iAlturaAtualGuilhotina01Sup: INT;
+	iAlturaAtualGuilhotina01Inf: INT;
+	iAlturaAtualGuilhotina02: INT;
+	rTemperaturaPirometroInferior: REAL;
+	rTemperaturaPirometroSuperior: REAL;
+	iTempoStdByTemperDecorrido: INT;
+	iTempoPassoSemEnerg	: INT ;
+	rValorPressaoRedeMpa: REAL;
+	rValorPressaoRedeBar: REAL;
+	rValorPressaoRedePsi: REAL;
+	///Polegada de Mercurio
+	rValorPressaoRedeInHg: REAL;
+	///Centimetro de Mercurio
+	rValorPressaoRedeCmHg: REAL;
+	///Milimetro de Mercurio
+	rValorPressaoRedeMmHg: REAL;
+	///Milimetro de Coluna d´agua
+	rValorPressaoRedeMmCa: REAL;
+	rValorPressaoMaqMpa: REAL;
+	rValorPressaoMaqBar: REAL;
+	rValorPressaoMaqPsi: REAL;
+	///Polegada de Mercurio
+	rValorPressaoMaqInHg: REAL;
+	///Centimetro de Mercurio
+	rValorPressaoMaqCmHg: REAL;
+	///Milimetro de Mercurio
+	rValorPressaoMaqMmHg: REAL;
+	///Milimetro de Coluna d´agua
+	rValorPressaoMaqMmCa: REAL;
+	rTemperaturaTermocamera: REAL;
+	rTemperaturaConveccaoEnt: REAL;
+	rTemperaturaConveccaoSai: REAL;
+	rValorLeituraPressaoDifusor01MBar: REAL;
+	rValorLeituraPressaoDifusor01Bar: REAL;
+	rValorLeituraPressaoDifusor01Psi: REAL;
+	///Polegada de Mercurio
+	rValorLeituraPressaoDifusor01InHg: REAL;
+	///Centimetro de Mercurio
+	rValorLeituraPressaoDifusor01CmHg: REAL;
+	///Milimetro de Mercurio
+	rValorLeituraPressaoDifusor01MmHg: REAL;
+	///Milimetro de Coluna d´agua
+	rValorLeituraPressaoDifusor01MmCa: REAL;
+	rValorLeituraPressaoDifusor02MBar: REAL;
+	rValorLeituraPressaoDifusor02Bar: REAL;
+	rValorLeituraPressaoDifusor02Psi: REAL;
+	///Polegada de Mercurio
+	rValorLeituraPressaoDifusor02InHg: REAL;
+	///Centimetro de Mercurio
+	rValorLeituraPressaoDifusor02CmHg: REAL;
+	///Milimetro de Mercurio
+	rValorLeituraPressaoDifusor02MmHg: REAL;
+	///Milimetro de Coluna d´agua
+	rValorLeituraPressaoDifusor02MmCa: REAL;
+	rValorVibracaoVent01: REAL;
+	rValorVibracaoVent02: REAL;
+	rValorVibracaoVent03: REAL;
+	xResistenciaHabilitadaInferior: ARRAY[1..50] OF BOOL;
+	xResistenciaHabilitadaSuperior: ARRAY[1..50] OF BOOL;
+	xResistenciaHabilitada: ARRAY[1..50] OF BOOL;
+	xResistenciaForcadaInferior: ARRAY[1..50] OF BOOL;
+	xResistenciaForcadaSuperior: ARRAY[1..50] OF BOOL;
+	xForceLigConvecEntVent: BOOL;
+	xForceLigConvecSaiVent: BOOL;
+	xGeralResistenciaForcada: BOOL;
+	xTesteResistencias: BOOL;
+	xTesteResistenciaAutomatico: BOOL;
+	xTesteResistenciaManual: BOOL;
+	xTesteEntradaSaidas: BOOL;
+	xSelecaoTermopares: BOOL;
+	xPortaEntradaFornoForce: BOOL;
+	xPortaSaidaFornoForce: BOOL;
+	xForceConveccao: BOOL;
+	xConveccaoHabilitado: BOOL;
+	xSubindoForno: BOOL;
+	xDescendoForno: BOOL;
+	xLigaVentiPainelManual: BOOL;
+	xStdByTemperaturaHabilitado: BOOL;
+	xStdByTemperaturaDesabilit: BOOL;
+	xHabDesabResistConveccaoEnt: BOOL;
+	xHabDesabResistConveccaoSai: BOOL;
+	xAqueceRampaPatamar: BOOL;
+	xAqueceReceita: BOOL;
+	xAqueceRapido: BOOL;
+	xAqueceLento: BOOL;
+	xFimAquecimento: BOOL;
+	xDuctosInf01CheckOk: BOOL;
+	xDuctosSup01CheckOk: BOOL;
+	xDuctosInf02CheckOk: BOOL;
+	xDuctosSup02CheckOk: BOOL;
+	xGuilhotina01CheckOk: BOOL;
+	xGuilhotina01SupCheckOk: BOOL;
+	xGuilhotina01InfCheckOk: BOOL;
+	xGuilhotina02CheckOk: BOOL;
+	xDuctosInf01Enable: BOOL;
+	xDuctosSup01Enable: BOOL;
+	xDuctosInf02Enable: BOOL;
+	xDuctosSup02Enable: BOOL;
+	xGuilhotina01Enable: BOOL;
+	xGuilhotina01SupEnable: BOOL;
+	xGuilhotina01InfEnable: BOOL;
+	xGuilhotina02Enable: BOOL;
+	xEnergiaOk: BOOL;
+	xSemEnergia: BOOL;
+	xbRestart: BOOL;
+	xTesteNobreakOK: BOOL;
+	xIniciaTesteNobreak: BOOL;
+	xResistenciaInferiorOn: BOOL;
+	xResistenciaSuperiorOn: BOOL;
+	xTesteResistenciasIniciado: BOOL;
+	xFimTesteResistencias: BOOL;
+	
+	xImgSetTempStandByCiclo: BOOL;
+	
+	xCircuitoEmergenciaCC : BOOL;
+	xAlertaPosChCircCC	: BOOL ;
+	xHabDesabCircuitoCC	: BOOL ;
+
+	
+	ValorAmperagemResistenciaInferior: ARRAY[1..50] OF REAL;
+	ValorAmperagemResistenciaSuperior: ARRAY[1..50] OF REAL;
+	xTestandoResistenciaInferior: ARRAY[1..50] OF BOOL;
+	xTestandoResistenciaSuperior: ARRAY[1..50] OF BOOL;
+	xFaseReleInferior: ARRAY[1..50] OF STRING;
+	xFaseReleSuperior: ARRAY[1..50] OF STRING;
+	iAnimaResistenciaInferior: ARRAY[1..50] OF INT;
+	iAnimaResistenciaSuperior: ARRAY[1..50] OF INT;
+	iAnimaResistenciaSsr01ConvecEnt: INT;
+	iAnimaResistenciaSsr02ConvecEnt: INT;
+	iAnimaResistenciaSsr03ConvecEnt: INT;
+	iAnimaResistenciaSsr01ConvecSai: INT;
+	iAnimaResistenciaSsr02ConvecSai: INT;
+	iAnimaResistenciaSsr03ConvecSai: INT;
+	iAnimaStatusTesteResistencias: INT;
+	iAnimaTesteResistenciaInferior: ARRAY[1..50] OF INT;
+	iAnimaTesteResistenciaSuperior: ARRAY[1..50] OF INT;
+	iAnimaAlarmesMotores: ARRAY[1..25] OF INT;
+	iAnimaAlarmesValvulas: ARRAY[1..12] OF INT;
+	xTemperaturaInfeirorOk: ARRAY[1..50] OF BOOL;
+	xTemperaturaSupeirorOk: ARRAY[1..50] OF BOOL;
+	///Numero de cargas que sairam do resfriamento por dia
+	iContaCargasResfriamento: INT;
+	/// Tags Relatório de Produção 	
+	xIniciaRelatorioProd: BOOL;
+	xFinalizaRelatorioProd: BOOL;
+	uNumeroCargaRel: UINT;
+	rConsumoCargaRel: REAL;
+	rConsumoAquecRel: REAL;
+	rConsumoDiario: REAL;
+	rConsumoDiarioRel: REAL;
+	xGrvRelatorioEnerg: BOOL;
+	iTamanhoCargaRel: INT;
+	/// Tags acerta relógio
+	xAcertaRelogio: BOOL;
+	xRelogioAcertado: BOOL;
+	/// Relatório Aquecimento
+	xIniciaRelatorioAquecRampa: BOOL;
+	xFinalizaRelatorioAquecRampa: BOOL;
+	xIniciaRelatorioAquecRec: BOOL;
+	xFinalizaRelatorioAquecRec: BOOL;
+	///Tags lógica incremento
+	rIncrementoTemperSup: INT;
+	rIncrementoTemperInf: INT;
+	rIncrementoPotenciaSup: INT;
+	rIncrementoPotenciaInf: INT;
+	///Tags rampas 
+	rTempoRampa01: REAL;
+	rTempoRampa02: REAL;
+	rTempoRampa03: REAL;
+END_VAR

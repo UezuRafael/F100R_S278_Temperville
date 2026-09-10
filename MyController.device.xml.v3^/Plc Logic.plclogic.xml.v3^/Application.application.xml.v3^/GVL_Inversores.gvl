@@ -1,0 +1,37 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "70bbdafd-f8fe-4048-8f3d-208921e13269",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	InversorMesaEntrada: Inversor;
+	InversorMesaForno: Inversor;
+	InversorMesaPass: Inversor;
+	InversorMesaResfri: Inversor;
+	InversorMesaSaida: Inversor;
+	InversorResfSup01: Inversor;
+	InversorResfInf01: Inversor;
+	InversorResfSup02: Inversor;
+	InversorResfInf02: Inversor;
+	InversorGuilhot01: Inversor;
+	InversorGuilhot02: Inversor;
+	InversorVentila01: Inversor;
+	InversorVentila02: Inversor;
+	InversorVentila03: Inversor;
+	InversorVentila04: Inversor;
+	InversorConvecEnt: Inversor;
+	InversorConvecSai: Inversor;
+	InversorSobeDesceForno : Inversor;
+	InversorGuilhot01Sup: Inversor;
+	InversorGuilhot01Inf: Inversor;
+END_VAR

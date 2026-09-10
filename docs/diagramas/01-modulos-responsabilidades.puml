@@ -1,0 +1,99 @@
+@startuml
+!pragma layout smetana
+' Fonte de verdade do desenho. Responsabilidades funcionais do projeto atual.
+' Os elementos não representam classes nem módulos já encapsulados no código.
+' As setas tracejadas são relações funcionais agregadas, não chamadas de POUs.
+
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundcorner 10
+skinparam nodesep 28
+skinparam ranksep 38
+skinparam packageStyle rectangle
+skinparam ArrowColor #526579
+skinparam ArrowFontSize 12
+skinparam rectangle {
+  BackgroundColor #F0F6FC
+  BorderColor #38658B
+  FontColor #17324D
+}
+skinparam package {
+  BackgroundColor #FBFCFE
+  BorderColor #B5C3D0
+  FontColor #17324D
+}
+skinparam note {
+  BackgroundColor #FFF8E8
+  BorderColor #D6AC54
+  FontColor #594721
+}
+
+title Forno de têmpera de vidros\nMódulos e responsabilidades
+caption F100R S278 Temperville · visão funcional revisada · 06/09/2026
+
+rectangle "<b>M05 · Mesa de controle / supervisório</b>\nOperação, receitas e ajustes\nComandos físicos e apresentação de estados\n<font size=11>Contexto físico informado pelo usuário</font>" as CONTROLE #E8F4F0
+
+package "Aplicação no PLC · agrupamentos para o estudo" as PLC {
+  package "Coordenação do processo" as COORD {
+    rectangle "<b>T01 · Modos e ciclo</b>\nManual / automático\nInício, pausa e retomada\nCondições para movimentação" as MODOS
+    rectangle "<b>T02 · Receitas e parâmetros</b>\nReceber parâmetros\nTransferir buffers entre etapas\nTempos, velocidades e ajustes térmicos" as RECEITAS
+    MODOS -[hidden]right-> RECEITAS
+  }
+
+  package "Módulos associados ao percurso da carga" as LINHA {
+    rectangle "<b>M01 · Entrada</b>\nPosicionar e agendar carga\nTransferir ao forno\nCoordenar medição / retorno" as ENTRADA
+    rectangle "<b>M02 · Aquecimento</b>\nReceber, oscilar e descarregar\nControlar setores superior / inferior\nPortas e elevação do forno" as FORNO
+    rectangle "<b>M03 · Resfriamento</b>\nPassagem / têmpera integrada\nReceber, oscilar e descarregar\nTrês estágios de processo\nVentilação, veneziana, dutos e guilhotina\n<font size=11>Uma única mesa física</font>" as RESFRIAMENTO
+    rectangle "<b>M04 · Saída</b>\nReceber a carga processada\nMovimentar para retirada\nJog e grade de saída" as SAIDA
+
+    ENTRADA -[#287FC0,bold]right-> FORNO
+    FORNO -[#287FC0,bold]right-> RESFRIAMENTO
+    RESFRIAMENTO -[#287FC0,bold]right-> SAIDA
+  }
+
+  package "Funções compartilhadas e suporte" as SUPORTE {
+    rectangle "<b>T03 · Alarmes e diagnóstico</b>\nConsolidar falhas / estados\nMonitorar motores e encoders\nPreparar sinalização" as ALARMES
+    rectangle "<b>T04 · Energia</b>\nNobreak, fases e disjuntores\nMedição e acumuladores\nComposição de consumo / fatura" as ENERGIA
+    rectangle "<b>T05 · Relógio e agenda</b>\nData e hora\nProgramação horária\nProgramação por tempo" as RELOGIO
+    rectangle "<b>T06 · Testes</b>\nResistências\nEntradas e saídas\nNobreak e rotina STOP" as TESTES
+    rectangle "<b>T07 · I/O e comunicação</b>\nEspelhos de entradas / saídas\nAcionamentos e redes\nTroca de estados com supervisório" as IO
+    rectangle "<b>T08 · Blocos e dados comuns</b>\nTemporização e cálculos\nPulsos, conversões e alarmes\nGVLs e parâmetros persistentes" as BASE
+
+    ALARMES -[hidden]right-> ENERGIA
+    ENERGIA -[hidden]right-> RELOGIO
+    TESTES -[hidden]right-> IO
+    IO -[hidden]right-> BASE
+    ALARMES -[hidden]down-> TESTES
+    ENERGIA -[hidden]down-> IO
+    RELOGIO -[hidden]down-> BASE
+  }
+
+  COORD .down.> LINHA : comandos e parâmetros
+  LINHA .down.> SUPORTE : utiliza funções e dados compartilhados
+}
+
+CONTROLE .down.> COORD : solicitações e ajustes
+
+rectangle "<b>M06 · Painel elétrico e interface com o campo</b>\nPLC, remotas e acionamentos no painel\nSensores e atuadores distribuídos na máquina\nPressão, alimentação e sinalizadores\n<font size=11>Topologia não detalhada nesta visão</font>" as CAMPO #E8F4F0
+IO .down.> CAMPO : leitura e acionamento
+
+note bottom of CAMPO
+  <b>Proteção térmica independente — relato do usuário</b>
+  Circuito externo ao controle do PLC corta o comando dos SSRs.
+  A existência física foi informada; o circuito não foi auditado.
+end note
+
+legend bottom
+  <b>Como ler</b>
+  Seta azul: transferência da carga entre módulos físicos.
+  Passagem / têmpera integra a mesa de resfriamento, conforme confirmação do usuário.
+  Seta tracejada: relação funcional agregada; não representa ordem de execução.
+  Dependências entre POUs e dados estão no diagrama geral 02.
+  Caixas azuis: agrupamentos para o estudo, com dados e lógica hoje distribuídos.
+  Caixas verdes: contexto físico / interface com a máquina.
+  <b>Variantes informadas:</b> pré-aquecimento e pós-resfriamento / pré-saída.
+  A presença dessas variantes nesta configuração ainda não foi confirmada.
+endlegend
+@enduml

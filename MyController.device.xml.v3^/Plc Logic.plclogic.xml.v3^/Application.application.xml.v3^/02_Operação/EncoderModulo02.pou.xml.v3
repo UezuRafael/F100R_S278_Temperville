@@ -1,0 +1,1787 @@
+__V3_META__
+{
+  "objectGuid": "c6e97a5d-2eba-4dc2-8701-4583ddb06f48",
+  "objectTypeGuid": "6f9dac99-8de1-4efc-8465-68ac443b7d08",
+  "embeddedObjectTypeGuids": [
+    "a9ed5b7e-75c5-4651-af16-d2c27e98cb94",
+    "32d3375e-c010-41e2-9e43-b2fbf4f2b374"
+  ],
+  "properties": {
+    "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+  },
+  "subObjects": {}
+}
+__V3_CONTENT__
+<?xml version="1.0" encoding="utf-8"?>
+<Single xml:space="preserve" Type="{6f9dac99-8de1-4efc-8465-68ac443b7d08}" Method="IArchivable">
+  <Single Name="SpecialFunc" Type="{0db3d7bb-cde0-4416-9a7b-ce49a0124323}">None</Single>
+  <Single Name="Implementation" Type="{32d3375e-c010-41e2-9e43-b2fbf4f2b374}" Method="IArchivable">
+    <Single Name="Items" Type="{cd57ba20-558b-4b98-96c1-73c6000c3087}" Method="IArchivable">
+      <List2 Name="InnerList">
+        <Single Type="{5ae2e111-ecff-4a21-b647-2d4da63f8db7}" Method="IArchivable">
+          <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="SourcePinId" Type="long">31</Single>
+          <Single Name="DestPinId" Type="long">150</Single>
+          <Single Name="Id" Type="long">152</Single>
+        </Single>
+        <Single Type="{5ae2e111-ecff-4a21-b647-2d4da63f8db7}" Method="IArchivable">
+          <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="SourcePinId" Type="long">20</Single>
+          <Single Name="DestPinId" Type="long">4</Single>
+          <Single Name="Id" Type="long">75</Single>
+        </Single>
+        <Single Type="{5ae2e111-ecff-4a21-b647-2d4da63f8db7}" Method="IArchivable">
+          <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="SourcePinId" Type="long">72</Single>
+          <Single Name="DestPinId" Type="long">14</Single>
+          <Single Name="Id" Type="long">74</Single>
+        </Single>
+        <Single Type="{d51129f5-df27-4886-99d1-c564d2e2c1f6}" Method="IArchivable">
+          <Single Name="Output" Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Negated" Type="bool">False</Single>
+            <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+            <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+            <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+            <Single Name="Id" Type="long">72</Single>
+          </Single>
+          <Single Name="Text" Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Text" Type="string">xPresetEncoResfrSup02</Single>
+            <Single Name="Modifiable" Type="bool">True</Single>
+            <Single Name="Id" Type="long">73</Single>
+          </Single>
+          <Single Name="PageArea" Type="int">0</Single>
+          <Single Name="Bounds" Type="string">1, 13, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="OwningPageId" Type="long">-1</Single>
+          <Single Name="Id" Type="long">71</Single>
+        </Single>
+        <Single Type="{5ae2e111-ecff-4a21-b647-2d4da63f8db7}" Method="IArchivable">
+          <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="SourcePinId" Type="long">68</Single>
+          <Single Name="DestPinId" Type="long">13</Single>
+          <Single Name="Id" Type="long">70</Single>
+        </Single>
+        <Single Type="{d51129f5-df27-4886-99d1-c564d2e2c1f6}" Method="IArchivable">
+          <Single Name="Output" Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Negated" Type="bool">False</Single>
+            <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+            <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+            <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+            <Single Name="Id" Type="long">303</Single>
+          </Single>
+          <Single Name="Text" Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Text" Type="string">TRUE</Single>
+            <Single Name="Modifiable" Type="bool">True</Single>
+            <Single Name="Id" Type="long">304</Single>
+          </Single>
+          <Single Name="PageArea" Type="int">3</Single>
+          <Single Name="Bounds" Type="string">6, 29, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="OwningPageId" Type="long">-1</Single>
+          <Single Name="Id" Type="long">302</Single>
+        </Single>
+        <Single Type="{d51129f5-df27-4886-99d1-c564d2e2c1f6}" Method="IArchivable">
+          <Single Name="Output" Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Negated" Type="bool">False</Single>
+            <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+            <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+            <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+            <Single Name="Id" Type="long">306</Single>
+          </Single>
+          <Single Name="Text" Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Text" Type="string">xPresetEncoGuilhotina02</Single>
+            <Single Name="Modifiable" Type="bool">True</Single>
+            <Single Name="Id" Type="long">307</Single>
+          </Single>
+          <Single Name="PageArea" Type="int">3</Single>
+          <Single Name="Bounds" Type="string">0, 30, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="OwningPageId" Type="long">-1</Single>
+          <Single Name="Id" Type="long">305</Single>
+        </Single>
+        <Single Type="{d51129f5-df27-4886-99d1-c564d2e2c1f6}" Method="IArchivable">
+          <Single Name="Output" Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Negated" Type="bool">False</Single>
+            <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+            <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+            <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+            <Single Name="Id" Type="long">68</Single>
+          </Single>
+          <Single Name="Text" Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Text" Type="string">true</Single>
+            <Single Name="Modifiable" Type="bool">True</Single>
+            <Single Name="Id" Type="long">69</Single>
+          </Single>
+          <Single Name="PageArea" Type="int">0</Single>
+          <Single Name="Bounds" Type="string">6, 12, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="OwningPageId" Type="long">-1</Single>
+          <Single Name="Id" Type="long">67</Single>
+        </Single>
+        <Single Type="{5ae2e111-ecff-4a21-b647-2d4da63f8db7}" Method="IArchivable">
+          <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="SourcePinId" Type="long">64</Single>
+          <Single Name="DestPinId" Type="long">8</Single>
+          <Single Name="Id" Type="long">66</Single>
+        </Single>
+        <Single Type="{d51129f5-df27-4886-99d1-c564d2e2c1f6}" Method="IArchivable">
+          <Single Name="Output" Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Negated" Type="bool">False</Single>
+            <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+            <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+            <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+            <Single Name="Id" Type="long">64</Single>
+          </Single>
+          <Single Name="Text" Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Text" Type="string">true</Single>
+            <Single Name="Modifiable" Type="bool">True</Single>
+            <Single Name="Id" Type="long">65</Single>
+          </Single>
+          <Single Name="PageArea" Type="int">0</Single>
+          <Single Name="Bounds" Type="string">6, 7, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="OwningPageId" Type="long">-1</Single>
+          <Single Name="Id" Type="long">63</Single>
+        </Single>
+        <Single Type="{5ae2e111-ecff-4a21-b647-2d4da63f8db7}" Method="IArchivable">
+          <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="SourcePinId" Type="long">60</Single>
+          <Single Name="DestPinId" Type="long">7</Single>
+          <Single Name="Id" Type="long">62</Single>
+        </Single>
+        <Single Type="{d51129f5-df27-4886-99d1-c564d2e2c1f6}" Method="IArchivable">
+          <Single Name="Output" Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Negated" Type="bool">False</Single>
+            <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+            <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+            <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+            <Single Name="Id" Type="long">60</Single>
+          </Single>
+          <Single Name="Text" Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Text" Type="string">EncoderResfrSup02</Single>
+            <Single Name="Modifiable" Type="bool">True</Single>
+            <Single Name="Id" Type="long">61</Single>
+          </Single>
+          <Single Name="PageArea" Type="int">0</Single>
+          <Single Name="Bounds" Type="string">2, 6, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="OwningPageId" Type="long">-1</Single>
+          <Single Name="Id" Type="long">59</Single>
+        </Single>
+        <Single Type="{f5becf35-b1f3-4274-b411-81d4b63a1516}" Method="IArchivable">
+          <Single Name="Inputs" Type="{cd57ba20-558b-4b98-96c1-73c6000c3087}" Method="IArchivable">
+            <List2 Name="InnerList">
+              <Single Type="{1570565e-4cd5-490e-9211-f9985790d5db}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">-1, 20, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">250</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">-1, 20, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">251</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">252</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">253</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">254</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">255</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">-1, 20, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">256</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">-1, 20, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">257</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">258</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">259</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">260</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">261</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">262</Single>
+              </Single>
+            </List2>
+          </Single>
+          <Single Name="Outputs" Type="{cd57ba20-558b-4b98-96c1-73c6000c3087}" Method="IArchivable">
+            <List2 Name="InnerList">
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">-1, 20, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">263</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">264</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">265</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">266</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">267</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">268</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">269</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">270</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">271</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">272</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">273</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">-1, 20, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">274</Single>
+              </Single>
+            </List2>
+          </Single>
+          <Single Name="Texts" Type="{cd57ba20-558b-4b98-96c1-73c6000c3087}" Method="IArchivable">
+            <List2 Name="InnerList">
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">HSC_REF_TM3</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">275</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">EN_Enable</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">276</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">EN_Preset</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">277</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">EN_Cap</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">278</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">EN_Compare</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">279</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">EN_Out</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">280</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">F_Enable</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">281</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">F_Preset</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">282</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">F_Out</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">283</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">ACK_Modulo</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">284</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">ACK_Preset</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">285</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">ACK_Cap</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">286</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">SuspendCompare</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">287</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Run</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">288</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Valid</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">289</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Error</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">290</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">ErrorId</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">291</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Thresholds</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">292</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Modulo_Flag</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">293</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Preset_Flag</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">294</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Cap_Flag</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">295</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Reflex</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">296</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Out</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">297</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">CapturedValue</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">298</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">CurrentValue</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">299</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">HSCMain_TM3</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">300</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">HSCMainEncoGuilhotina02</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">301</Single>
+              </Single>
+            </List2>
+          </Single>
+          <Single Name="Parameters" Type="{cd57ba20-558b-4b98-96c1-73c6000c3087}" Method="IArchivable">
+            <List2 Name="InnerList" />
+          </Single>
+          <Null Name="PreparedParameters" />
+          <Single Name="PageArea" Type="int">0</Single>
+          <Single Name="Bounds" Type="string">17, 21, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="EnEno" Type="bool">False</Single>
+          <Single Name="KindOfCall" Type="{77f43dfe-ca6a-4869-828f-7609d8ed6ea6}">FunctionBlock</Single>
+          <Single Name="ContainsExtensibleInputs" Type="bool">False</Single>
+          <Single Name="Forced" Type="bool">False</Single>
+          <Single Name="IsFeedbackStart" Type="bool">False</Single>
+          <Single Name="OwningPageId" Type="long">-1</Single>
+          <Single Name="Id" Type="long">249</Single>
+        </Single>
+        <Single Type="{d51129f5-df27-4886-99d1-c564d2e2c1f6}" Method="IArchivable">
+          <Single Name="Output" Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Negated" Type="bool">False</Single>
+            <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+            <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+            <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+            <Single Name="Id" Type="long">247</Single>
+          </Single>
+          <Single Name="Text" Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Text" Type="string">EncoderGuilhotina02</Single>
+            <Single Name="Modifiable" Type="bool">True</Single>
+            <Single Name="Id" Type="long">248</Single>
+          </Single>
+          <Single Name="PageArea" Type="int">3</Single>
+          <Single Name="Bounds" Type="string">0, 23, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="OwningPageId" Type="long">-1</Single>
+          <Single Name="Id" Type="long">246</Single>
+        </Single>
+        <Single Type="{8d9e2b78-3efe-4fe4-8160-f3a7381ddd8f}" Method="IArchivable">
+          <Single Name="Input" Type="{5c3476a8-05c5-430e-861c-9cfa51d68ca8}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="ProcessValue" Type="string"></Single>
+            <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+            <Single Name="Negated" Type="bool">False</Single>
+            <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+            <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+            <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+            <Single Name="Id" Type="long">241</Single>
+          </Single>
+          <Single Name="Text" Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Text" Type="string">xRunEncoGuilhotina02</Single>
+            <Single Name="Modifiable" Type="bool">True</Single>
+            <Single Name="Id" Type="long">242</Single>
+          </Single>
+          <Single Name="PageArea" Type="int">4</Single>
+          <Single Name="Bounds" Type="string">35, 23, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="OwningPageId" Type="long">-1</Single>
+          <Single Name="Id" Type="long">240</Single>
+        </Single>
+        <Single Type="{d51129f5-df27-4886-99d1-c564d2e2c1f6}" Method="IArchivable">
+          <Single Name="Output" Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Negated" Type="bool">False</Single>
+            <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+            <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+            <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+            <Single Name="Id" Type="long">244</Single>
+          </Single>
+          <Single Name="Text" Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Text" Type="string">TRUE</Single>
+            <Single Name="Modifiable" Type="bool">True</Single>
+            <Single Name="Id" Type="long">245</Single>
+          </Single>
+          <Single Name="PageArea" Type="int">3</Single>
+          <Single Name="Bounds" Type="string">6, 24, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="OwningPageId" Type="long">-1</Single>
+          <Single Name="Id" Type="long">243</Single>
+        </Single>
+        <Single Type="{f5becf35-b1f3-4274-b411-81d4b63a1516}" Method="IArchivable">
+          <Single Name="Inputs" Type="{cd57ba20-558b-4b98-96c1-73c6000c3087}" Method="IArchivable">
+            <List2 Name="InnerList">
+              <Single Type="{1570565e-4cd5-490e-9211-f9985790d5db}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">7</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">8</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">9</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">10</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">11</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">12</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">13</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">14</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">15</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">16</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">17</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">18</Single>
+              </Single>
+              <Single Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="IsExtensiblePin" Type="bool">False</Single>
+                <Single Name="ProcessValue" Type="string"></Single>
+                <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">19</Single>
+              </Single>
+            </List2>
+          </Single>
+          <Single Name="Outputs" Type="{cd57ba20-558b-4b98-96c1-73c6000c3087}" Method="IArchivable">
+            <List2 Name="InnerList">
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">20</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">21</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">22</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">23</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">24</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">25</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">26</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">27</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">28</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">29</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">30</Single>
+              </Single>
+              <Single Type="{65582d84-cf18-4ca0-be59-bf5a3d00b8f8}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Negated" Type="bool">False</Single>
+                <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+                <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+                <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+                <Single Name="Id" Type="long">31</Single>
+              </Single>
+            </List2>
+          </Single>
+          <Single Name="Texts" Type="{cd57ba20-558b-4b98-96c1-73c6000c3087}" Method="IArchivable">
+            <List2 Name="InnerList">
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">HSC_REF_TM3</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">32</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">EN_Enable</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">33</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">EN_Preset</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">34</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">EN_Cap</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">35</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">EN_Compare</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">36</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">EN_Out</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">37</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">F_Enable</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">38</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">F_Preset</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">39</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">F_Out</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">40</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">ACK_Modulo</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">41</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">ACK_Preset</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">42</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">ACK_Cap</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">43</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">SuspendCompare</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">44</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Run</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">45</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Valid</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">46</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Error</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">47</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">ErrorId</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">48</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Thresholds</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">49</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Modulo_Flag</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">50</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Preset_Flag</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">51</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Cap_Flag</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">52</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Reflex</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">53</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">Out</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">54</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">CapturedValue</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">55</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">CurrentValue</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">56</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">HSCMain_TM3</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">57</Single>
+              </Single>
+              <Single Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+                <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+                <Null Name="ElementGroupId" />
+                <Single Name="Text" Type="string">HSCMainEncoResfrSup02</Single>
+                <Single Name="Modifiable" Type="bool">True</Single>
+                <Single Name="Id" Type="long">58</Single>
+              </Single>
+            </List2>
+          </Single>
+          <Single Name="Parameters" Type="{cd57ba20-558b-4b98-96c1-73c6000c3087}" Method="IArchivable">
+            <List2 Name="InnerList" />
+          </Single>
+          <Null Name="PreparedParameters" />
+          <Single Name="PageArea" Type="int">0</Single>
+          <Single Name="Bounds" Type="string">14, 4, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="EnEno" Type="bool">False</Single>
+          <Single Name="KindOfCall" Type="{77f43dfe-ca6a-4869-828f-7609d8ed6ea6}">FunctionBlock</Single>
+          <Single Name="ContainsExtensibleInputs" Type="bool">False</Single>
+          <Single Name="Forced" Type="bool">False</Single>
+          <Single Name="IsFeedbackStart" Type="bool">False</Single>
+          <Single Name="OwningPageId" Type="long">-1</Single>
+          <Single Name="Id" Type="long">6</Single>
+        </Single>
+        <Single Type="{8d9e2b78-3efe-4fe4-8160-f3a7381ddd8f}" Method="IArchivable">
+          <Single Name="Input" Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="IsExtensiblePin" Type="bool">False</Single>
+            <Single Name="ProcessValue" Type="string"></Single>
+            <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+            <Single Name="Negated" Type="bool">False</Single>
+            <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+            <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+            <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+            <Single Name="Id" Type="long">4</Single>
+          </Single>
+          <Single Name="Text" Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Text" Type="string">xRunEncoResfrSup02</Single>
+            <Single Name="Modifiable" Type="bool">True</Single>
+            <Single Name="Id" Type="long">5</Single>
+          </Single>
+          <Single Name="PageArea" Type="int">0</Single>
+          <Single Name="Bounds" Type="string">30, 6, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="OwningPageId" Type="long">-1</Single>
+          <Single Name="Id" Type="long">3</Single>
+        </Single>
+        <Single Type="{8d9e2b78-3efe-4fe4-8160-f3a7381ddd8f}" Method="IArchivable">
+          <Single Name="Input" Type="{5c3476a8-05c5-430e-861c-9cfa51d68ca8}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="ProcessValue" Type="string"></Single>
+            <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+            <Single Name="Negated" Type="bool">False</Single>
+            <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+            <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+            <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+            <Single Name="Id" Type="long">309</Single>
+          </Single>
+          <Single Name="Text" Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Text" Type="string">dValorEncoderGuilhoResfr02Entrada</Single>
+            <Single Name="Modifiable" Type="bool">True</Single>
+            <Single Name="Id" Type="long">310</Single>
+          </Single>
+          <Single Name="PageArea" Type="int">4</Single>
+          <Single Name="Bounds" Type="string">35, 34, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="OwningPageId" Type="long">-1</Single>
+          <Single Name="Id" Type="long">308</Single>
+        </Single>
+        <Single Type="{8d9e2b78-3efe-4fe4-8160-f3a7381ddd8f}" Method="IArchivable">
+          <Single Name="Input" Type="{c994f6e0-311a-4a1c-bc38-75fe34892406}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="IsExtensiblePin" Type="bool">False</Single>
+            <Single Name="ProcessValue" Type="string"></Single>
+            <Single Name="Access" Type="{88453c7d-d652-4a27-a1b0-a1953be49a5c}">None</Single>
+            <Single Name="Negated" Type="bool">False</Single>
+            <Single Name="SetReset" Type="{24449d48-c96a-49c4-b9d1-a4ea34aedce3}">None</Single>
+            <Single Name="SetResetRef" Type="{233bc97c-69fe-4d29-b40e-a9a9b854044e}">None</Single>
+            <Single Name="PretendsToBeConnected" Type="bool">False</Single>
+            <Single Name="Id" Type="long">150</Single>
+          </Single>
+          <Single Name="Text" Type="{72f2b13f-5349-4a8a-bbe6-2bccf3f42179}" Method="IArchivable">
+            <Single Name="Bounds" Type="string">0, 0, 0, 0</Single>
+            <Null Name="ElementGroupId" />
+            <Single Name="Text" Type="string">dValorEncoderDuctosResfrSup02Entrada</Single>
+            <Single Name="Modifiable" Type="bool">True</Single>
+            <Single Name="Id" Type="long">151</Single>
+          </Single>
+          <Single Name="PageArea" Type="int">0</Single>
+          <Single Name="Bounds" Type="string">30, 17, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="OwningPageId" Type="long">-1</Single>
+          <Single Name="Id" Type="long">149</Single>
+        </Single>
+        <Single Type="{5ae2e111-ecff-4a21-b647-2d4da63f8db7}" Method="IArchivable">
+          <Single Name="Bounds" Type="string">-1, -25, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="SourcePinId" Type="long">247</Single>
+          <Single Name="DestPinId" Type="long">250</Single>
+          <Single Name="Id" Type="long">311</Single>
+        </Single>
+        <Single Type="{5ae2e111-ecff-4a21-b647-2d4da63f8db7}" Method="IArchivable">
+          <Single Name="Bounds" Type="string">-1, -25, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="SourcePinId" Type="long">244</Single>
+          <Single Name="DestPinId" Type="long">251</Single>
+          <Single Name="Id" Type="long">312</Single>
+        </Single>
+        <Single Type="{5ae2e111-ecff-4a21-b647-2d4da63f8db7}" Method="IArchivable">
+          <Single Name="Bounds" Type="string">-1, -25, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="SourcePinId" Type="long">303</Single>
+          <Single Name="DestPinId" Type="long">256</Single>
+          <Single Name="Id" Type="long">313</Single>
+        </Single>
+        <Single Type="{5ae2e111-ecff-4a21-b647-2d4da63f8db7}" Method="IArchivable">
+          <Single Name="Bounds" Type="string">-1, -25, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="SourcePinId" Type="long">306</Single>
+          <Single Name="DestPinId" Type="long">257</Single>
+          <Single Name="Id" Type="long">314</Single>
+        </Single>
+        <Single Type="{5ae2e111-ecff-4a21-b647-2d4da63f8db7}" Method="IArchivable">
+          <Single Name="Bounds" Type="string">-1, -25, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="SourcePinId" Type="long">263</Single>
+          <Single Name="DestPinId" Type="long">241</Single>
+          <Single Name="Id" Type="long">315</Single>
+        </Single>
+        <Single Type="{5ae2e111-ecff-4a21-b647-2d4da63f8db7}" Method="IArchivable">
+          <Single Name="Bounds" Type="string">-1, -25, 0, 0</Single>
+          <Null Name="ElementGroupId" />
+          <Single Name="SourcePinId" Type="long">274</Single>
+          <Single Name="DestPinId" Type="long">309</Single>
+          <Single Name="Id" Type="long">316</Single>
+        </Single>
+      </List2>
+    </Single>
+    <Null Name="ParameterInitializationMethodGenerator" />
+    <Single Name="RoutingPathTable" Type="{4b8bcc79-5980-4868-b49e-005a8148859b}" Method="IArchivable">
+      <Dictionary2 Name="InnerDictionary">
+        <Entry>
+          <Key>
+            <Single Type="{93c117eb-0884-403b-b01e-28b89f47e041}" Method="IArchivable">
+              <Single Name="ConnectionId" Type="long">62</Single>
+              <Single Name="StartPoint" Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                <Single Name="X" Type="int">11</Single>
+                <Single Name="Y" Type="int">6</Single>
+                <Single Name="IsJoint" Type="bool">False</Single>
+                <Single Name="Flags" Type="int">0</Single>
+              </Single>
+              <Single Name="Unroutable" Type="bool">False</Single>
+              <Null Name="CorrespondingPageId" />
+              <Single Name="Locked" Type="bool">False</Single>
+            </Single>
+          </Key>
+          <Value>
+            <Single Type="{584effbc-813e-443a-bf78-ad9c8d49db41}" Method="IArchivable">
+              <List2 Name="InnerList">
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">11</Single>
+                  <Single Name="Y" Type="int">6</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">68</Single>
+                </Single>
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">13</Single>
+                  <Single Name="Y" Type="int">6</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">65</Single>
+                </Single>
+              </List2>
+            </Single>
+          </Value>
+        </Entry>
+        <Entry>
+          <Key>
+            <Single Type="{93c117eb-0884-403b-b01e-28b89f47e041}" Method="IArchivable">
+              <Single Name="ConnectionId" Type="long">66</Single>
+              <Single Name="StartPoint" Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                <Single Name="X" Type="int">10</Single>
+                <Single Name="Y" Type="int">7</Single>
+                <Single Name="IsJoint" Type="bool">False</Single>
+                <Single Name="Flags" Type="int">0</Single>
+              </Single>
+              <Single Name="Unroutable" Type="bool">False</Single>
+              <Null Name="CorrespondingPageId" />
+              <Single Name="Locked" Type="bool">False</Single>
+            </Single>
+          </Key>
+          <Value>
+            <Single Type="{584effbc-813e-443a-bf78-ad9c8d49db41}" Method="IArchivable">
+              <List2 Name="InnerList">
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">10</Single>
+                  <Single Name="Y" Type="int">7</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">68</Single>
+                </Single>
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">13</Single>
+                  <Single Name="Y" Type="int">7</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">65</Single>
+                </Single>
+              </List2>
+            </Single>
+          </Value>
+        </Entry>
+        <Entry>
+          <Key>
+            <Single Type="{93c117eb-0884-403b-b01e-28b89f47e041}" Method="IArchivable">
+              <Single Name="ConnectionId" Type="long">70</Single>
+              <Single Name="StartPoint" Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                <Single Name="X" Type="int">10</Single>
+                <Single Name="Y" Type="int">12</Single>
+                <Single Name="IsJoint" Type="bool">False</Single>
+                <Single Name="Flags" Type="int">0</Single>
+              </Single>
+              <Single Name="Unroutable" Type="bool">False</Single>
+              <Null Name="CorrespondingPageId" />
+              <Single Name="Locked" Type="bool">False</Single>
+            </Single>
+          </Key>
+          <Value>
+            <Single Type="{584effbc-813e-443a-bf78-ad9c8d49db41}" Method="IArchivable">
+              <List2 Name="InnerList">
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">10</Single>
+                  <Single Name="Y" Type="int">12</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">68</Single>
+                </Single>
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">13</Single>
+                  <Single Name="Y" Type="int">12</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">65</Single>
+                </Single>
+              </List2>
+            </Single>
+          </Value>
+        </Entry>
+        <Entry>
+          <Key>
+            <Single Type="{93c117eb-0884-403b-b01e-28b89f47e041}" Method="IArchivable">
+              <Single Name="ConnectionId" Type="long">74</Single>
+              <Single Name="StartPoint" Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                <Single Name="X" Type="int">11</Single>
+                <Single Name="Y" Type="int">13</Single>
+                <Single Name="IsJoint" Type="bool">False</Single>
+                <Single Name="Flags" Type="int">0</Single>
+              </Single>
+              <Single Name="Unroutable" Type="bool">False</Single>
+              <Null Name="CorrespondingPageId" />
+              <Single Name="Locked" Type="bool">False</Single>
+            </Single>
+          </Key>
+          <Value>
+            <Single Type="{584effbc-813e-443a-bf78-ad9c8d49db41}" Method="IArchivable">
+              <List2 Name="InnerList">
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">11</Single>
+                  <Single Name="Y" Type="int">13</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">68</Single>
+                </Single>
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">13</Single>
+                  <Single Name="Y" Type="int">13</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">65</Single>
+                </Single>
+              </List2>
+            </Single>
+          </Value>
+        </Entry>
+        <Entry>
+          <Key>
+            <Single Type="{93c117eb-0884-403b-b01e-28b89f47e041}" Method="IArchivable">
+              <Single Name="ConnectionId" Type="long">75</Single>
+              <Single Name="StartPoint" Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                <Single Name="X" Type="int">26</Single>
+                <Single Name="Y" Type="int">6</Single>
+                <Single Name="IsJoint" Type="bool">False</Single>
+                <Single Name="Flags" Type="int">0</Single>
+              </Single>
+              <Single Name="Unroutable" Type="bool">False</Single>
+              <Null Name="CorrespondingPageId" />
+              <Single Name="Locked" Type="bool">False</Single>
+            </Single>
+          </Key>
+          <Value>
+            <Single Type="{584effbc-813e-443a-bf78-ad9c8d49db41}" Method="IArchivable">
+              <List2 Name="InnerList">
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">26</Single>
+                  <Single Name="Y" Type="int">6</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">68</Single>
+                </Single>
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">29</Single>
+                  <Single Name="Y" Type="int">6</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">65</Single>
+                </Single>
+              </List2>
+            </Single>
+          </Value>
+        </Entry>
+        <Entry>
+          <Key>
+            <Single Type="{93c117eb-0884-403b-b01e-28b89f47e041}" Method="IArchivable">
+              <Single Name="ConnectionId" Type="long">152</Single>
+              <Single Name="StartPoint" Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                <Single Name="X" Type="int">26</Single>
+                <Single Name="Y" Type="int">17</Single>
+                <Single Name="IsJoint" Type="bool">False</Single>
+                <Single Name="Flags" Type="int">0</Single>
+              </Single>
+              <Single Name="Unroutable" Type="bool">False</Single>
+              <Null Name="CorrespondingPageId" />
+              <Single Name="Locked" Type="bool">False</Single>
+            </Single>
+          </Key>
+          <Value>
+            <Single Type="{584effbc-813e-443a-bf78-ad9c8d49db41}" Method="IArchivable">
+              <List2 Name="InnerList">
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">26</Single>
+                  <Single Name="Y" Type="int">17</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">68</Single>
+                </Single>
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">29</Single>
+                  <Single Name="Y" Type="int">17</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">65</Single>
+                </Single>
+              </List2>
+            </Single>
+          </Value>
+        </Entry>
+        <Entry>
+          <Key>
+            <Single Type="{93c117eb-0884-403b-b01e-28b89f47e041}" Method="IArchivable">
+              <Single Name="ConnectionId" Type="long">311</Single>
+              <Single Name="StartPoint" Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                <Single Name="X" Type="int">9</Single>
+                <Single Name="Y" Type="int">23</Single>
+                <Single Name="IsJoint" Type="bool">False</Single>
+                <Single Name="Flags" Type="int">0</Single>
+              </Single>
+              <Single Name="Unroutable" Type="bool">False</Single>
+              <Null Name="CorrespondingPageId" />
+              <Single Name="Locked" Type="bool">False</Single>
+            </Single>
+          </Key>
+          <Value>
+            <Single Type="{584effbc-813e-443a-bf78-ad9c8d49db41}" Method="IArchivable">
+              <List2 Name="InnerList">
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">9</Single>
+                  <Single Name="Y" Type="int">23</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">68</Single>
+                </Single>
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">16</Single>
+                  <Single Name="Y" Type="int">23</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">65</Single>
+                </Single>
+              </List2>
+            </Single>
+          </Value>
+        </Entry>
+        <Entry>
+          <Key>
+            <Single Type="{93c117eb-0884-403b-b01e-28b89f47e041}" Method="IArchivable">
+              <Single Name="ConnectionId" Type="long">315</Single>
+              <Single Name="StartPoint" Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                <Single Name="X" Type="int">29</Single>
+                <Single Name="Y" Type="int">23</Single>
+                <Single Name="IsJoint" Type="bool">False</Single>
+                <Single Name="Flags" Type="int">0</Single>
+              </Single>
+              <Single Name="Unroutable" Type="bool">False</Single>
+              <Null Name="CorrespondingPageId" />
+              <Single Name="Locked" Type="bool">False</Single>
+            </Single>
+          </Key>
+          <Value>
+            <Single Type="{584effbc-813e-443a-bf78-ad9c8d49db41}" Method="IArchivable">
+              <List2 Name="InnerList">
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">29</Single>
+                  <Single Name="Y" Type="int">23</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">68</Single>
+                </Single>
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">34</Single>
+                  <Single Name="Y" Type="int">23</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">65</Single>
+                </Single>
+              </List2>
+            </Single>
+          </Value>
+        </Entry>
+        <Entry>
+          <Key>
+            <Single Type="{93c117eb-0884-403b-b01e-28b89f47e041}" Method="IArchivable">
+              <Single Name="ConnectionId" Type="long">316</Single>
+              <Single Name="StartPoint" Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                <Single Name="X" Type="int">29</Single>
+                <Single Name="Y" Type="int">34</Single>
+                <Single Name="IsJoint" Type="bool">False</Single>
+                <Single Name="Flags" Type="int">0</Single>
+              </Single>
+              <Single Name="Unroutable" Type="bool">False</Single>
+              <Null Name="CorrespondingPageId" />
+              <Single Name="Locked" Type="bool">False</Single>
+            </Single>
+          </Key>
+          <Value>
+            <Single Type="{584effbc-813e-443a-bf78-ad9c8d49db41}" Method="IArchivable">
+              <List2 Name="InnerList">
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">29</Single>
+                  <Single Name="Y" Type="int">34</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">68</Single>
+                </Single>
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">34</Single>
+                  <Single Name="Y" Type="int">34</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">65</Single>
+                </Single>
+              </List2>
+            </Single>
+          </Value>
+        </Entry>
+        <Entry>
+          <Key>
+            <Single Type="{93c117eb-0884-403b-b01e-28b89f47e041}" Method="IArchivable">
+              <Single Name="ConnectionId" Type="long">312</Single>
+              <Single Name="StartPoint" Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                <Single Name="X" Type="int">11</Single>
+                <Single Name="Y" Type="int">24</Single>
+                <Single Name="IsJoint" Type="bool">False</Single>
+                <Single Name="Flags" Type="int">0</Single>
+              </Single>
+              <Single Name="Unroutable" Type="bool">False</Single>
+              <Null Name="CorrespondingPageId" />
+              <Single Name="Locked" Type="bool">False</Single>
+            </Single>
+          </Key>
+          <Value>
+            <Single Type="{584effbc-813e-443a-bf78-ad9c8d49db41}" Method="IArchivable">
+              <List2 Name="InnerList">
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">11</Single>
+                  <Single Name="Y" Type="int">24</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">68</Single>
+                </Single>
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">16</Single>
+                  <Single Name="Y" Type="int">24</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">65</Single>
+                </Single>
+              </List2>
+            </Single>
+          </Value>
+        </Entry>
+        <Entry>
+          <Key>
+            <Single Type="{93c117eb-0884-403b-b01e-28b89f47e041}" Method="IArchivable">
+              <Single Name="ConnectionId" Type="long">313</Single>
+              <Single Name="StartPoint" Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                <Single Name="X" Type="int">11</Single>
+                <Single Name="Y" Type="int">29</Single>
+                <Single Name="IsJoint" Type="bool">False</Single>
+                <Single Name="Flags" Type="int">0</Single>
+              </Single>
+              <Single Name="Unroutable" Type="bool">False</Single>
+              <Null Name="CorrespondingPageId" />
+              <Single Name="Locked" Type="bool">False</Single>
+            </Single>
+          </Key>
+          <Value>
+            <Single Type="{584effbc-813e-443a-bf78-ad9c8d49db41}" Method="IArchivable">
+              <List2 Name="InnerList">
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">11</Single>
+                  <Single Name="Y" Type="int">29</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">68</Single>
+                </Single>
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">16</Single>
+                  <Single Name="Y" Type="int">29</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">65</Single>
+                </Single>
+              </List2>
+            </Single>
+          </Value>
+        </Entry>
+        <Entry>
+          <Key>
+            <Single Type="{93c117eb-0884-403b-b01e-28b89f47e041}" Method="IArchivable">
+              <Single Name="ConnectionId" Type="long">314</Single>
+              <Single Name="StartPoint" Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                <Single Name="X" Type="int">11</Single>
+                <Single Name="Y" Type="int">30</Single>
+                <Single Name="IsJoint" Type="bool">False</Single>
+                <Single Name="Flags" Type="int">0</Single>
+              </Single>
+              <Single Name="Unroutable" Type="bool">False</Single>
+              <Null Name="CorrespondingPageId" />
+              <Single Name="Locked" Type="bool">False</Single>
+            </Single>
+          </Key>
+          <Value>
+            <Single Type="{584effbc-813e-443a-bf78-ad9c8d49db41}" Method="IArchivable">
+              <List2 Name="InnerList">
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">11</Single>
+                  <Single Name="Y" Type="int">30</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">68</Single>
+                </Single>
+                <Single Type="{b3e42b54-b8f2-45d3-825d-747f82f244a0}" Method="IArchivable">
+                  <Single Name="X" Type="int">16</Single>
+                  <Single Name="Y" Type="int">30</Single>
+                  <Single Name="IsJoint" Type="bool">False</Single>
+                  <Single Name="Flags" Type="int">65</Single>
+                </Single>
+              </List2>
+            </Single>
+          </Value>
+        </Entry>
+      </Dictionary2>
+    </Single>
+    <Single Name="AutoSizeCanvas" Type="bool">True</Single>
+    <Single Name="CanvasWidth" Type="int">51</Single>
+    <Single Name="CanvasHeight" Type="int">38</Single>
+    <Null Name="EditorConfiguration" />
+    <Single Name="AreElementsSpaceOptimized" Type="bool">True</Single>
+  </Single>
+  <Single Name="Interface" Type="{a9ed5b7e-75c5-4651-af16-d2c27e98cb94}" Method="IArchivable">
+    <Single Name="TextDocument" Type="{f3878285-8e4f-490b-bb1b-9acbb7eb04db}" Method="IArchivable">
+      <Single Name="TextBlobForSerialisation" Type="string">PROGRAM EncoderModulo02
+VAR
+	HSCMainEncoResfrSup02: HSCMain_TM3;
+	HSCMainEncoGuilhotina02: HSCMain_TM3;
+END_VAR
+</Single>
+      <Single Name="LineInfoPersistence" Type="string">c6e97a5d-2eba-4dc2-8701-4583ddb06f48_Decl_LineIds</Single>
+    </Single>
+  </Single>
+  <Single Name="UniqueIdGenerator" Type="string">316</Single>
+  <Single Name="POULevel" Type="{8e575c5b-1d37-49c6-941b-5c0ec7874787}">Standard</Single>
+  <List Name="ChildObjectGuids" Type="System.Collections.ArrayList" />
+  <Single Name="AddAttributeSubsequent" Type="bool">False</Single>
+</Single>

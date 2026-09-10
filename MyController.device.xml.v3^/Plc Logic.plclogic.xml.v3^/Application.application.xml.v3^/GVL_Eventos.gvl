@@ -1,0 +1,109 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "963439fe-29f2-4ed7-9c80-06ce947e6454",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	///-------------- Disjuntores -------------
+	bDisjGeralOn: BOOL;
+	bDisjGeralOff: BOOL;
+	bDisjResistOn: BOOL;
+	bDisjResistOff: BOOL;
+	///------- Comandos Mesa de Operação -------
+	bMaquinaOperacaoStandby: BOOL;
+	bMaquinaOperacaoHabilitada: BOOL;
+	bEmergencia09On: BOOL;
+	bEmergencia09Off: BOOL;
+	b01ResetEmergencia: BOOL;
+	///--- Comandos Mesa de Operação Manual ---
+	bMaquinaEmManual: BOOL;
+	bMaquinaEmAutoma: BOOL;
+	bEmergencia10On: BOOL;
+	bEmergencia10Off: BOOL;
+	b02ResetEmergencia: BOOL;
+	///------ Comandos Mesa de Entrada ------
+	bEmergencia01On: BOOL;
+	bEmergencia01Off: BOOL;
+	bEmergencia02On: BOOL;
+	bEmergencia02Off: BOOL;
+	bConfirmaCarga: BOOL;
+	bAvancoMeEntOn: BOOL;
+	bAvancoMeEntOff: BOOL;
+	bRecuoMeEntOn: BOOL;
+	bRecuoMeEntOff: BOOL;
+	bGradeEntradaUp: BOOL;
+	bGradeEntradaDown: BOOL;
+	bEmergencia03On: BOOL;
+	bEmergencia03Off: BOOL;
+	bEmergencia04On: BOOL;
+	bEmergencia04Off: BOOL;
+	///------ Comandos do Resfriamento ------
+	bEmergencia05On: BOOL;
+	bEmergencia05Off: BOOL;
+	bAbreResfSup01: BOOL;
+	bFechaResfSup01: BOOL;
+	bAbreResfInf01: BOOL;
+	bFechaResfInf01: BOOL;
+	bAbreResfSup02: BOOL;
+	bFechaResfSup02: BOOL;
+	bAbreResfInf02: BOOL;
+	bFechaResfInf02: BOOL;
+	bEmergencia06On: BOOL;
+	bEmergencia06Off: BOOL;
+	bAvancoLimpVidroOn: BOOL;
+	bAvancoLimpVidroOff: BOOL;
+	bRecuoLimpVidroOn: BOOL;
+	bRecuoLimpVidroOff: BOOL;
+	///------- Comandos Mesa de Saida -------
+	bEmergencia07On: BOOL;
+	bEmergencia07Off: BOOL;
+	bAvancoMeSaiOn: BOOL;
+	bAvancoMeSaiOff: BOOL;
+	bRecuoMeSaiOn: BOOL;
+	bRecuoMeSaiOff: BOOL;
+	bGradeSaidaUp: BOOL;
+	bGradeSaidaDown: BOOL;
+	bEmergencia08On: BOOL;
+	bEmergencia08Off: BOOL;
+	///------ Comandos do Supervisório ------
+	bEnvioDeReceita: BOOL;
+	bHimIniciaCiclo: BOOL;
+	bHimFinalCiclo: BOOL;
+	bBtSairForno: BOOL;
+	bBtSairResfriamento: BOOL;
+	bBtAbrePortaEntrForno: BOOL;
+	bBtFechaPortaEntForno: BOOL;
+	bBtAbrePortaSaidaForno: BOOL;
+	bBtFechaPortaSaidForno: BOOL;
+	bBtForceConveccaoOn: BOOL;
+	bBtForceConveccaoOff: BOOL;
+	bBtSobeGuilhtinaManual: BOOL;
+	bBtDesceGuilhotinaManual: BOOL;
+	bBtSobeForno: BOOL;
+	bBtDesceForno: BOOL;
+	bResistenciaLigada: BOOL;
+	bResistenciaDesligada: BOOL;
+	bTesteAutoResistencia: BOOL;
+	bTesteAutoResistFim: BOOL;
+	bTesteAutoResistAbort: BOOL;
+	bProgrHorariaAtivada: BOOL;
+	bProgrHorariaDesativada: BOOL;
+	bProgrHorariaIniciadda: BOOL;
+	bBtLigaAquecimentoRampa: BOOL;
+	bBtLigaAquecimento: BOOL;
+	bBtDesligaAquecimento: BOOL;
+	bHomeDutosIniciado: BOOL;
+	bHomeDutosOK: BOOL;
+	bHomeGuilhotinaIniciado: BOOL;
+	bHomeGuilhotinaOK: BOOL;
+END_VAR

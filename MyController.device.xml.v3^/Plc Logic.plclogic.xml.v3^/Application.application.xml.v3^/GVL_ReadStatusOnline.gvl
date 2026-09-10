@@ -1,0 +1,113 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "7c2127e6-bc37-41f5-a3bd-a7deca86692c",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	/// LEITURA	
+	xOperacaoManual: BOOL;
+	xOperacaoAutoma: BOOL;
+	xOperacaoHabilitada: BOOL;
+	xOperacaoStandBy: BOOL;
+	xEmergencia: BOOL;
+	xBtEmergenciaAcionado: BOOL;
+	xResistenciasLigadas: BOOL;
+	xHomeDuctosResfriadorInf01Ok: BOOL;
+	xHomeDuctosResfriadorSup01Ok: BOOL;
+	xHomeDuctosResfriadorInf02Ok: BOOL;
+	xHomeDuctosResfriadorSup02Ok: BOOL;
+	xHomeGuilhotina01Ok: BOOL;
+	xHomeGuilhotina01SupOk: BOOL;
+	xHomeGuilhotina01InfOk: BOOL;
+	xHomeGuilhotina02Ok: BOOL;
+	/// MAQUINA GERAL
+	uStatusOperacao: UINT;
+	uStatusInicioCiclo: UINT;
+	xMaquinaEmCiclo: BOOL;
+	xMaquinaEmEspera: BOOL;
+	/// AQUECIMENTO
+	uStatusAquecimento: INT;
+	uStatusSelAquecimento: INT;
+	///MESA DE ENTRADA
+	uStatusMesaEntrada: UINT;
+	xFimCarregamentoMesaEntrada: BOOL;
+	xRetornaMesaEntrada: BOOL;
+	xFimCargaMesaEntrada: BOOL;
+	xFimRetornoMesaEntrada: BOOL;
+	xCargaEmAutomatico: BOOL;
+	///MESA DO FORNO
+	uStatusMesaForno: UINT;
+	iTamanhoCargaAtualForno: INT;
+	iPosicaoCargaAtualForno: INT;
+	iTamanhoCargaContrato: INT;
+	iTamanhoCargaMaxForno: INT;
+	///Variáveis de Status da Movimentação do Forno	
+	xFornoVazio: BOOL;
+	xFornoCheio: BOOL;
+	xFornoEmCiclo: BOOL;
+	xFornoEmEspera: BOOL;
+	xFornoFinalizando: BOOL;
+	xCarregandoForno: BOOL;
+	xFornoCarregado: BOOL;
+	xDescarregandoForno: BOOL;
+	xRetornandoForno: BOOL;
+	xMesaFornoOn: BOOL;
+	// MESA PASSAGEM
+	xMesaPassagemOn: BOOL;
+	xFimDescargaMesaPass: BOOL;
+	///MESA DO RESFRIADOR
+	uStatusMesaResfriador: UINT;
+	iTamanhoCargaAtualResfriador: INT;
+	iPosicaoCargaAtualResfriador: INT;
+	///Variáveis de Status da Movimentação do Resfriador
+	xResfriadorCheio: BOOL;
+	xResfriadorVazio: BOOL;
+	xCarregandoResfriador: BOOL;
+	xResfriadorCarregado: BOOL;
+	xDescarregandoResfriador: BOOL;
+	xResfriadorEmCiclo: BOOL;
+	xMesaResfriadorOn: BOOL;
+	xPrimeiroEstagioResfriador: BOOL;
+	xSegundoEstagioResfriador: BOOL;
+	xTerceiroEstagioResfriador: BOOL;
+	///MESA DE SAIDA
+	uStatusMesaSaida: UINT;
+	xInicioDescargaMesaSaida: BOOL;
+	xFimDescargaMesaSaida: BOOL;
+	///VENTILADOR
+	///DUCTOS Inferior 01
+	uStatusDuctosResfriadorInf01: INT;
+	xReajustaAlturaDuctosInf01: BOOL;
+	///DUCTOS Superior 01
+	uStatusDuctosResfriadorSup01: INT;
+	xReajustaAlturaDuctosSup01: BOOL;
+	///DUCTOS Inferior 02
+	uStatusDuctosResfriadorInf02: INT;
+	xReajustaAlturaDuctosInf02: BOOL;
+	///DUCTOS Superior 02
+	uStatusDuctosResfriadorSup02: INT;
+	xReajustaAlturaDuctosSup02: BOOL;
+	///GUILHOTINA 01
+	uStatusGuilhotina01: INT;
+	///GUILHOTINA 01 SUPERIOR
+	uStatusGuilhotina01Sup: INT;
+	///GUILHOTINA 01 INFERIOR
+	uStatusGuilhotina01Inf: INT;
+	///GUILHOTINA 02
+	uStatusGuilhotina02: INT;
+	/// MESA BASCULANTE ENTRADA
+	iStatusBasculanteEntrada: INT;
+	///PRESSOSTATO
+	iPressaoDaRede: INT;
+	iPressaoDaMaquina: INT;
+END_VAR

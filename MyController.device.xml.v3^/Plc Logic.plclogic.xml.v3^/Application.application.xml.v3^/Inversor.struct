@@ -1,0 +1,30 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "508268bd-8b59-4ab2-89c3-0b9d0c2ab7c1",
+    "objectTypeGuid": "2db5746d-d284-4425-9f7f-2663a34b0ebc",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+TYPE Inversor :
+STRUCT
+	i_xAvanco: BOOL;
+	i_xRecuo: BOOL;
+	i_xReset: BOOL;
+	i_iFreqRef: INT;
+	i_SP5: UINT;
+	q_iCorrente: INT;
+	q_iFreqSaida: INT;
+	q_xPronto: BOOL;
+	q_xHabilitado: BOOL;
+	q_xOperando: BOOL;
+	q_xFalha: BOOL;
+END_STRUCT
+END_TYPE

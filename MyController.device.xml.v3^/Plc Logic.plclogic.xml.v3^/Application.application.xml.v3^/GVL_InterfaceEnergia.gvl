@@ -1,0 +1,178 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "87d2e431-000e-40b5-9c04-1eeded737ed8",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	/// 3000 
+	wCorrenteFaseA_MW0 AT %MW0: WORD;
+	/// 2999
+	wCorrenteFaseA_MW1 AT %MW1: WORD;
+	/// 3002
+	wCorrenteFaseB_MW0 AT %MW4: WORD;
+	/// 3001
+	wCorrenteFaseB_MW1 AT %MW5: WORD;
+	/// 3004
+	wCorrenteFaseC_MW0 AT %MW8: WORD;
+	/// 3003
+	wCorrenteFaseC_MW1 AT %MW9: WORD;
+	/// 3006
+	wCorrenteNeutro_MW0 AT %MW12: WORD;
+	/// 3005
+	wCorrenteNeutro_MW1 AT %MW13: WORD;
+	/// 3008
+	wCorrenteG_MW0 AT %MW16: WORD;
+	/// 3007
+	wCorrenteG_MW1 AT %MW17: WORD;
+	/// 3010
+	wCorrenteAvg_MW0 AT %MW20: WORD;
+	/// 3009
+	wCorrenteAvg_MW1 AT %MW21: WORD;
+	/// 3020
+	wTensaoAB_MW0 AT %MW40: WORD;
+	/// 3019
+	wTensaoAB_MW1 AT %MW41: WORD;
+	/// 3022
+	wTensaoBC_MW0 AT %MW44: WORD;
+	/// 3021
+	wTensaoBC_MW1 AT %MW45: WORD;
+	/// 3024
+	wTensaoCA_MW0 AT %MW48: WORD;
+	/// 3023
+	wTensaoCA_MW1 AT %MW49: WORD;
+	/// 3026
+	wTensaoAvgL_MW0 AT %MW52: WORD;
+	/// 3025
+	wTensaoAvgL_MW1 AT %MW53: WORD;
+	/// 3028
+	wTensaoAN_MW0 AT %MW56: WORD;
+	/// 3027
+	wTensaoAN_MW1 AT %MW57: WORD;
+	/// 3030
+	wTensaoBN_MW0 AT %MW60: WORD;
+	/// 3029
+	wTensaoBN_MW1 AT %MW61: WORD;
+	/// 3032
+	wTensaoCN_MW0 AT %MW64: WORD;
+	/// 3031
+	wTensaoCN_MW1 AT %MW65: WORD;
+	/// 3036
+	wTensaoAvgN_MW0 AT %MW72: WORD;
+	/// 3035
+	wTensaoAvgN_MW1 AT %MW73: WORD;
+	///3060
+	wPotenciaAtivaTotal_MW0 AT %MW120: WORD;
+	///3059
+	wPotenciaAtivaTotal_MW1 AT %MW121: WORD;
+	///3084
+	wFatorPotenciaTotal_MW0 AT %MW168: WORD;
+	///3083
+	wFatorPotenciaTotal_MW1 AT %MW169: WORD;
+	///3110
+	wFrequencia_MW0 AT %MW220: WORD;
+	///3109
+	wFrequencia_MW1 AT %MW221: WORD;
+	///3763
+	wUltimaDemanda_MW0 AT %MW300: WORD;
+	///3762
+	wUltimaDemanda_MW1 AT %MW301: WORD;
+	///3765
+	wAtualDemanda_MW0 AT %MW304: WORD;
+	///3764
+	wAtualDemanda_MW1 AT %MW305: WORD;
+	///3767
+	wPrevisaoDemanda_MW0 AT %MW308: WORD;
+	///3766
+	wPrevisaoDemanda_MW1 AT %MW309: WORD;
+	///3769
+	wPicoDemanda_MW0 AT %MW312: WORD;
+	///3768
+	wPicoDemanda_MW1 AT %MW313: WORD;
+	///3204	
+	wEnergiaAtivaAcumulada_MW0_High AT %MW500: WORD;
+	///3203
+	wEnergiaAtivaAcumulada_MW1_High AT %MW501: WORD;
+	///3206	
+	wEnergiaAtivaAcumulada_MW0_Low AT %MW504: WORD;
+	///3205	
+	wEnergiaAtivaAcumulada_MW1_Low AT %MW505: WORD;
+	///3220	
+	wEnergiaReativaAcumulada_MW0_High AT %MW510: WORD;
+	///3219
+	wEnergiaReativaAcumulada_MW1_High AT %MW511: WORD;
+	///3222	
+	wEnergiaReativaAcumulada_MW0_Low AT %MW514: WORD;
+	///3221
+	wEnergiaReativaAcumulada_MW1_Low AT %MW515: WORD;
+	///3236	
+	wEnergiaAparenteAcumulada_MW0_High AT %MW520: WORD;
+	///3235
+	wEnergiaAparenteAcumulada_MW1_High AT %MW521: WORD;
+	///3238	
+	wEnergiaAparenteAcumulada_MW0_Low AT %MW524: WORD;
+	///3237
+	wEnergiaAparenteAcumulada_MW1_Low AT %MW525: WORD;
+	/// Memórias Float
+	fCorrenteFaseA AT %MD0: REAL;
+	fCorrenteFaseB AT %MD2: REAL;
+	fCorrenteFaseC AT %MD4: REAL;
+	fCorrenteNeutro AT %MD6: REAL;
+	fCorrenteG AT %MD8: REAL;
+	fCorrenteAvg AT %MD10: REAL;
+	fTensaoAB AT %MD20: REAL;
+	fTensaoBC AT %MD22: REAL;
+	fTensaoCA AT %MD24: REAL;
+	fTensaoAvgLL AT %MD26: REAL;
+	fTensaoAN AT %MD28: REAL;
+	fTensaoBN AT %MD30: REAL;
+	fTensaoCN AT %MD32: REAL;
+	fTensaoAvgLN AT %MD36: REAL;
+	fPotenciaAtivaTotal AT %MD60: REAL;
+	fFatorPotenciaTotal AT %MD84: REAL;
+	fFrequencia AT %MD110: REAL;
+	fUltimaDemanda AT %MD150: REAL;
+	fAtualDemanda AT %MD152: REAL;
+	fPrevisaoDemanda AT %MD154: REAL;
+	fPicoDemanda AT %MD156: REAL;
+	///3204	
+	dEnergiaAtivaAcumulada_D_High AT %MD250: DINT;
+	///3206	
+	dEnergiaAtivaAcumulada_D_Low AT %MD252: DINT;
+	///3220	
+	dEnergiaReativaAcumulada_D_High AT %MD255: DINT;
+	///3222	
+	dEnergiaReativaAcumulada_D_Low AT %MD257: DINT;
+	///3236	
+	dEnergiaAparenteAcumulada_D_High AT %MD260: DINT;
+	///3238	
+	dEnergiaAparenteAcumulada_D_Low AT %MD262: DINT;
+	fEnergiaAtivaAcumulada: REAL;
+	fEnergiaReativaAcumulada: REAL;
+	fEnergiaAparenteAcumulada: REAL;
+	/// Valores Máximos
+	fCorrenteMaximaFaseA: REAL;
+	fCorrenteMaximaFaseB: REAL;
+	fCorrenteMaximaFaseC: REAL;
+	fCorrenteMaximaNeutro: REAL;
+	fCorrenteMaximaG: REAL;
+	fCorrenteMaximaAvg: REAL;
+	fTensaoMaximaAB: REAL;
+	fTensaoMaximaBC: REAL;
+	fTensaoMaximaCA: REAL;
+	fTensaoMaximaAvgL: REAL;
+	fTensaoMaximaAN: REAL;
+	fTensaoMaximaBN: REAL;
+	fTensaoMaximaCN: REAL;
+	fTensaoMaximaAvgN: REAL;
+	fPotenciaAtivaTotalMaxima: REAL;
+END_VAR

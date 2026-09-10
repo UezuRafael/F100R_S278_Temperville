@@ -1,0 +1,578 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "b9425208-fd75-4e81-855a-90bafeac81d7",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {},
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+//GVL TEMP - controle de temperatura
+
+//usar prefixo " TEMP. " ao chamar variaveis no programa (qualified_only)
+
+//PRAGMAS
+//{attribute 'qualified_only'}  //forÇa que seja utilizado o nome do GVL " TEMP. " ao chamar as variaveis no programa
+{attribute 'linkalways'} 	//compila variaveis e adiciona ao projeto mesmo se nao chamadas em nenhuma POU
+VAR_GLOBAL
+
+
+	//Controle de Temperatura
+	iCrtlTempStsTemp1		: UDINT := 0;	 //IHM - controle de temperatura - status do controlador de temperatura (SE_CTBX.ET_Result) - Temperatura 1
+	iCrtlTempStsTemp2		: UDINT := 0;	 //IHM - controle de temperatura - status do controlador de temperatura (SE_CTBX.ET_Result) - Temperatura 2
+	iCrtlTempStsTemp3		: UDINT := 0;	 //IHM - controle de temperatura - status do controlador de temperatura (SE_CTBX.ET_Result) - Temperatura 3
+	iCrtlTempStsTemp4		: UDINT := 0;	 //IHM - controle de temperatura - status do controlador de temperatura (SE_CTBX.ET_Result) - Temperatura 4
+	iCrtlTempStsTemp5		: UDINT := 0;
+    iCrtlTempStsTemp6		: UDINT := 0;
+    iCrtlTempStsTemp7		: UDINT := 0;
+    iCrtlTempStsTemp8		: UDINT := 0;
+    iCrtlTempStsTemp9		: UDINT := 0;
+    iCrtlTempStsTemp10		: UDINT := 0;
+    
+	iCrtlTempStsTemp11		: UDINT := 0;	 //IHM - controle de temperatura - status do controlador de temperatura (SE_CTBX.ET_Result) - Temperatura 1
+	iCrtlTempStsTemp12		: UDINT := 0;	 //IHM - controle de temperatura - status do controlador de temperatura (SE_CTBX.ET_Result) - Temperatura 2
+	iCrtlTempStsTemp13		: UDINT := 0;	 //IHM - controle de temperatura - status do controlador de temperatura (SE_CTBX.ET_Result) - Temperatura 3
+	iCrtlTempStsTemp14		: UDINT := 0;	 //IHM - controle de temperatura - status do controlador de temperatura (SE_CTBX.ET_Result) - Temperatura 4
+	iCrtlTempStsTemp15		: UDINT := 0;	 //IHM - controle de temperatura - status do controlador de temperatura (SE_CTBX.ET_Result) - Temperatura 5
+	iCrtlTempStsTemp16		: UDINT := 0;
+    iCrtlTempStsTemp17		: UDINT := 0;
+    iCrtlTempStsTemp18		: UDINT := 0;
+    iCrtlTempStsTemp19		: UDINT := 0;
+    iCrtlTempStsTemp20		: UDINT := 0;
+
+	iCrtlTempStsTemp21		: UDINT := 0;
+	iCrtlTempStsTemp22		: UDINT := 0;
+	iCrtlTempStsTemp23		: UDINT := 0;
+	iCrtlTempStsTemp24		: UDINT := 0;
+	iCrtlTempStsTemp25		: UDINT := 0;
+	iCrtlTempStsTemp26		: UDINT := 0;
+	iCrtlTempStsTemp27		: UDINT := 0;
+	iCrtlTempStsTemp28		: UDINT := 0;
+	iCrtlTempStsTemp29		: UDINT := 0;
+	iCrtlTempStsTemp30		: UDINT := 0;
+                      	                 
+	iCrtlTempStsTemp31		: UDINT := 0;
+	iCrtlTempStsTemp32		: UDINT := 0;
+	iCrtlTempStsTemp33		: UDINT := 0;
+	iCrtlTempStsTemp34		: UDINT := 0;
+	iCrtlTempStsTemp35		: UDINT := 0;
+	iCrtlTempStsTemp36		: UDINT := 0;
+	iCrtlTempStsTemp37		: UDINT := 0;
+	iCrtlTempStsTemp38		: UDINT := 0;
+	iCrtlTempStsTemp39		: UDINT := 0;
+	iCrtlTempStsTemp40		: UDINT := 0;
+                      	                 
+	iCrtlTempStsTemp41		: UDINT := 0;
+	iCrtlTempStsTemp42		: UDINT := 0;
+	iCrtlTempStsTemp43		: UDINT := 0;
+	iCrtlTempStsTemp44		: UDINT := 0;
+	iCrtlTempStsTemp45		: UDINT := 0;
+	iCrtlTempStsTemp46		: UDINT := 0;
+	iCrtlTempStsTemp47		: UDINT := 0;
+	iCrtlTempStsTemp48		: UDINT := 0;
+	iCrtlTempStsTemp49		: UDINT := 0;
+	iCrtlTempStsTemp50		: UDINT := 0;
+                      	                 
+	iCrtlTempStsTemp51		: UDINT := 0;
+	iCrtlTempStsTemp52		: UDINT := 0;
+	iCrtlTempStsTemp53		: UDINT := 0;
+	iCrtlTempStsTemp54		: UDINT := 0;
+	iCrtlTempStsTemp55		: UDINT := 0;
+	iCrtlTempStsTemp56		: UDINT := 0;
+	iCrtlTempStsTemp57		: UDINT := 0;
+	iCrtlTempStsTemp58		: UDINT := 0;
+	iCrtlTempStsTemp59		: UDINT := 0;
+	iCrtlTempStsTemp60		: UDINT := 0;
+                      	                 
+	iCrtlTempStsTemp61		: UDINT := 0;
+	iCrtlTempStsTemp62		: UDINT := 0;
+	iCrtlTempStsTemp63		: UDINT := 0;
+	iCrtlTempStsTemp64		: UDINT := 0;
+	iCrtlTempStsTemp65		: UDINT := 0;
+	iCrtlTempStsTemp66		: UDINT := 0;
+	iCrtlTempStsTemp67		: UDINT := 0;
+	iCrtlTempStsTemp68		: UDINT := 0;
+	iCrtlTempStsTemp69		: UDINT := 0;
+	iCrtlTempStsTemp70		: UDINT := 0;
+                      	                 
+	iCrtlTempStsTemp71		: UDINT := 0;
+	iCrtlTempStsTemp72		: UDINT := 0;
+	iCrtlTempStsTemp73		: UDINT := 0;
+	iCrtlTempStsTemp74		: UDINT := 0;
+	iCrtlTempStsTemp75		: UDINT := 0;
+	iCrtlTempStsTemp76		: UDINT := 0;
+	iCrtlTempStsTemp77		: UDINT := 0;
+	iCrtlTempStsTemp78		: UDINT := 0;
+	iCrtlTempStsTemp79		: UDINT := 0;
+	iCrtlTempStsTemp80		: UDINT := 0;
+                      	                 
+	iCrtlTempStsTemp81		: UDINT := 0;
+	iCrtlTempStsTemp82		: UDINT := 0;
+	iCrtlTempStsTemp83		: UDINT := 0;
+	iCrtlTempStsTemp84		: UDINT := 0;
+	iCrtlTempStsTemp85		: UDINT := 0;
+	iCrtlTempStsTemp86		: UDINT := 0;
+	iCrtlTempStsTemp87		: UDINT := 0;
+	iCrtlTempStsTemp88		: UDINT := 0;
+	iCrtlTempStsTemp89		: UDINT := 0;
+	iCrtlTempStsTemp90		: UDINT := 0;
+                      	                 
+	iCrtlTempStsTemp91		: UDINT := 0;
+	iCrtlTempStsTemp92		: UDINT := 0;
+	iCrtlTempStsTemp93		: UDINT := 0;
+	iCrtlTempStsTemp94		: UDINT := 0;
+	iCrtlTempStsTemp95		: UDINT := 0;
+	iCrtlTempStsTemp96		: UDINT := 0;
+	iCrtlTempStsTemp97		: UDINT := 0;
+	iCrtlTempStsTemp98		: UDINT := 0;
+	iCrtlTempStsTemp99		: UDINT := 0;
+	iCrtlTempStsTemp100		: UDINT := 0;
+                      	                 
+
+
+	rCrtlTempPotTemp1		: REAL := 0.0;	 //IHM - controle de temperatura - potencia / saida proporcional do controlador de temperatura - Temperatura 1
+	rCrtlTempPotTemp2		: REAL := 0.0;	 //IHM - controle de temperatura - potencia / saida proporcional do controlador de temperatura - Temperatura 2
+	rCrtlTempPotTemp3		: REAL := 0.0;	 //IHM - controle de temperatura - potencia / saida proporcional do controlador de temperatura - Temperatura 3
+	rCrtlTempPotTemp4		: REAL := 0.0;	 //IHM - controle de temperatura - potencia / saida proporcional do controlador de temperatura - Temperatura 4
+	rCrtlTempPotTemp5		: REAL := 0.0;	 
+	rCrtlTempPotTemp6		: REAL := 0.0;	 
+	rCrtlTempPotTemp7		: REAL := 0.0;	 
+	rCrtlTempPotTemp8		: REAL := 0.0;	 
+	rCrtlTempPotTemp9		: REAL := 0.0;	 
+	rCrtlTempPotTemp10		: REAL := 0.0;	 
+
+	rCrtlTempPotTemp11		: REAL := 0.0;	 
+	rCrtlTempPotTemp12		: REAL := 0.0;	 
+	rCrtlTempPotTemp13		: REAL := 0.0;	 
+	rCrtlTempPotTemp14		: REAL := 0.0;	 
+	rCrtlTempPotTemp15		: REAL := 0.0;	 
+	rCrtlTempPotTemp16		: REAL := 0.0;	 
+	rCrtlTempPotTemp17		: REAL := 0.0;	 
+	rCrtlTempPotTemp18		: REAL := 0.0;	 
+	rCrtlTempPotTemp19		: REAL := 0.0;	 
+	rCrtlTempPotTemp20		: REAL := 0.0;	 
+
+	rCrtlTempPotTemp21		: REAL := 0.0;	 
+	rCrtlTempPotTemp22		: REAL := 0.0;	 
+	rCrtlTempPotTemp23		: REAL := 0.0;	 
+	rCrtlTempPotTemp24		: REAL := 0.0;	 
+	rCrtlTempPotTemp25		: REAL := 0.0;	 
+	rCrtlTempPotTemp26		: REAL := 0.0;	 
+	rCrtlTempPotTemp27		: REAL := 0.0;	 
+	rCrtlTempPotTemp28		: REAL := 0.0;	 
+	rCrtlTempPotTemp29		: REAL := 0.0;	 
+	rCrtlTempPotTemp30		: REAL := 0.0;	 
+
+	rCrtlTempPotTemp31		: REAL := 0.0;	 
+	rCrtlTempPotTemp32		: REAL := 0.0;	 
+	rCrtlTempPotTemp33		: REAL := 0.0;	 
+	rCrtlTempPotTemp34		: REAL := 0.0;	 
+	rCrtlTempPotTemp35		: REAL := 0.0;	 
+	rCrtlTempPotTemp36		: REAL := 0.0;	 
+	rCrtlTempPotTemp37		: REAL := 0.0;	 
+	rCrtlTempPotTemp38		: REAL := 0.0;	 
+	rCrtlTempPotTemp39		: REAL := 0.0;	 
+	rCrtlTempPotTemp40		: REAL := 0.0;	 
+
+	rCrtlTempPotTemp41		: REAL := 0.0;	 
+	rCrtlTempPotTemp42		: REAL := 0.0;	 
+	rCrtlTempPotTemp43		: REAL := 0.0;	 
+	rCrtlTempPotTemp44		: REAL := 0.0;	 
+	rCrtlTempPotTemp45		: REAL := 0.0;	 
+	rCrtlTempPotTemp46		: REAL := 0.0;	 
+	rCrtlTempPotTemp47		: REAL := 0.0;	 
+	rCrtlTempPotTemp48		: REAL := 0.0;	 
+	rCrtlTempPotTemp49		: REAL := 0.0;	 
+	rCrtlTempPotTemp50		: REAL := 0.0;	 
+
+	rCrtlTempPotTemp51		: REAL := 0.0;	 
+	rCrtlTempPotTemp52		: REAL := 0.0;	 
+	rCrtlTempPotTemp53		: REAL := 0.0;	 
+	rCrtlTempPotTemp54		: REAL := 0.0;	 
+	rCrtlTempPotTemp55		: REAL := 0.0;	 
+	rCrtlTempPotTemp56		: REAL := 0.0;	 
+	rCrtlTempPotTemp57		: REAL := 0.0;	 
+	rCrtlTempPotTemp58		: REAL := 0.0;	 
+	rCrtlTempPotTemp59		: REAL := 0.0;	 
+	rCrtlTempPotTemp60		: REAL := 0.0;	 
+
+	rCrtlTempPotTemp61		: REAL := 0.0;	 
+	rCrtlTempPotTemp62		: REAL := 0.0;	 
+	rCrtlTempPotTemp63		: REAL := 0.0;	 
+	rCrtlTempPotTemp64		: REAL := 0.0;	 
+	rCrtlTempPotTemp65		: REAL := 0.0;	 
+	rCrtlTempPotTemp66		: REAL := 0.0;	 
+	rCrtlTempPotTemp67		: REAL := 0.0;	 
+	rCrtlTempPotTemp68		: REAL := 0.0;	 
+	rCrtlTempPotTemp69		: REAL := 0.0;	 
+	rCrtlTempPotTemp70		: REAL := 0.0;	 
+
+	rCrtlTempPotTemp71		: REAL := 0.0;	 
+	rCrtlTempPotTemp72		: REAL := 0.0;	 
+	rCrtlTempPotTemp73		: REAL := 0.0;	 
+	rCrtlTempPotTemp74		: REAL := 0.0;	 
+	rCrtlTempPotTemp75		: REAL := 0.0;	 
+	rCrtlTempPotTemp76		: REAL := 0.0;	 
+	rCrtlTempPotTemp77		: REAL := 0.0;	 
+	rCrtlTempPotTemp78		: REAL := 0.0;	 
+	rCrtlTempPotTemp79		: REAL := 0.0;	 
+	rCrtlTempPotTemp80		: REAL := 0.0;	 
+
+	rCrtlTempPotTemp81		: REAL := 0.0;	 
+	rCrtlTempPotTemp82		: REAL := 0.0;	 
+	rCrtlTempPotTemp83		: REAL := 0.0;	 
+	rCrtlTempPotTemp84		: REAL := 0.0;	 
+	rCrtlTempPotTemp85		: REAL := 0.0;	 
+	rCrtlTempPotTemp86		: REAL := 0.0;	 
+	rCrtlTempPotTemp87		: REAL := 0.0;	 
+	rCrtlTempPotTemp88		: REAL := 0.0;	 
+	rCrtlTempPotTemp89		: REAL := 0.0;	 
+	rCrtlTempPotTemp90		: REAL := 0.0;	 
+
+	rCrtlTempPotTemp91		: REAL := 0.0;	 
+	rCrtlTempPotTemp92		: REAL := 0.0;	 
+	rCrtlTempPotTemp93		: REAL := 0.0;	 
+	rCrtlTempPotTemp94		: REAL := 0.0;	 
+	rCrtlTempPotTemp95		: REAL := 0.0;	 
+	rCrtlTempPotTemp96		: REAL := 0.0;	 
+	rCrtlTempPotTemp97		: REAL := 0.0;	 
+	rCrtlTempPotTemp98		: REAL := 0.0;	 
+	rCrtlTempPotTemp99		: REAL := 0.0;	 
+	rCrtlTempPotTemp100		: REAL := 0.0;	 
+
+	                        	                 
+	xAutoTuneTempGeral		: BOOL := FALSE; //IHM - controle de temperatura - executa autotunnig - Temperatura 1
+	xAutoTuneTemp1			: BOOL := FALSE; //IHM - controle de temperatura - executa autotunnig - Temperatura 1
+	xAutoTuneTemp2			: BOOL := FALSE; //IHM - controle de temperatura - executa autotunnig - Temperatura 2
+	xAutoTuneTemp3			: BOOL := FALSE; //IHM - controle de temperatura - executa autotunnig - Temperatura 3
+	xAutoTuneTemp4			: BOOL 	:= FALSE; //IHM - controle de temperatura - executa autotunnig - Temperatura 4
+	xAutoTuneTemp5			: BOOL 	:= FALSE;
+	xAutoTuneTemp6			: BOOL 	:= FALSE;
+	xAutoTuneTemp7			: BOOL 	:= FALSE;
+	xAutoTuneTemp8			: BOOL 	:= FALSE;
+	xAutoTuneTemp9			: BOOL 	:= FALSE;
+	xAutoTuneTemp10			: BOOL 	:= FALSE;
+	xAutoTuneTemp11			: BOOL 	:= FALSE;
+	xAutoTuneTemp12			: BOOL 	:= FALSE;
+	xAutoTuneTemp13			: BOOL 	:= FALSE;
+	xAutoTuneTemp14			: BOOL 	:= FALSE;
+	xAutoTuneTemp15			: BOOL 	:= FALSE;
+	xAutoTuneTemp16			: BOOL 	:= FALSE;
+	xAutoTuneTemp17			: BOOL 	:= FALSE;
+	xAutoTuneTemp18			: BOOL 	:= FALSE;
+	xAutoTuneTemp19			: BOOL 	:= FALSE;
+	xAutoTuneTemp20			: BOOL 	:= FALSE;
+	xAutoTuneTemp21			: BOOL 	:= FALSE;
+	xAutoTuneTemp22			: BOOL 	:= FALSE;
+	xAutoTuneTemp23			: BOOL 	:= FALSE;
+	xAutoTuneTemp24			: BOOL 	:= FALSE;
+	xAutoTuneTemp25			: BOOL 	:= FALSE;
+	xAutoTuneTemp26			: BOOL 	:= FALSE;
+	xAutoTuneTemp27			: BOOL 	:= FALSE;
+	xAutoTuneTemp28			: BOOL 	:= FALSE;
+	xAutoTuneTemp29			: BOOL 	:= FALSE;
+	xAutoTuneTemp30			: BOOL 	:= FALSE;
+	xAutoTuneTemp31			: BOOL 	:= FALSE;
+	xAutoTuneTemp32			: BOOL 	:= FALSE;
+	xAutoTuneTemp33			: BOOL 	:= FALSE;
+	xAutoTuneTemp34			: BOOL 	:= FALSE;
+	xAutoTuneTemp35			: BOOL 	:= FALSE;
+	xAutoTuneTemp36			: BOOL 	:= FALSE;
+	xAutoTuneTemp37			: BOOL 	:= FALSE;
+	xAutoTuneTemp38			: BOOL 	:= FALSE;
+	xAutoTuneTemp39			: BOOL 	:= FALSE;
+	xAutoTuneTemp40			: BOOL 	:= FALSE;
+	xAutoTuneTemp41			: BOOL 	:= FALSE;
+	xAutoTuneTemp42			: BOOL 	:= FALSE;
+	xAutoTuneTemp43			: BOOL 	:= FALSE;
+	xAutoTuneTemp44			: BOOL 	:= FALSE;
+	xAutoTuneTemp45			: BOOL 	:= FALSE;
+	xAutoTuneTemp46			: BOOL 	:= FALSE;
+	xAutoTuneTemp47			: BOOL 	:= FALSE;
+	xAutoTuneTemp48			: BOOL 	:= FALSE;
+	xAutoTuneTemp49			: BOOL 	:= FALSE;
+	xAutoTuneTemp50			: BOOL 	:= FALSE;
+	xAutoTuneTemp51			: BOOL 	:= FALSE;
+	xAutoTuneTemp52			: BOOL 	:= FALSE;
+	xAutoTuneTemp53			: BOOL 	:= FALSE;
+	xAutoTuneTemp54			: BOOL 	:= FALSE;
+	xAutoTuneTemp55			: BOOL 	:= FALSE;
+	xAutoTuneTemp56			: BOOL 	:= FALSE;
+	xAutoTuneTemp57			: BOOL 	:= FALSE;
+	xAutoTuneTemp58			: BOOL 	:= FALSE;
+	xAutoTuneTemp59			: BOOL 	:= FALSE;
+	xAutoTuneTemp60			: BOOL 	:= FALSE;
+	xAutoTuneTemp61			: BOOL 	:= FALSE;
+	xAutoTuneTemp62			: BOOL 	:= FALSE;
+	xAutoTuneTemp63			: BOOL 	:= FALSE;
+	xAutoTuneTemp64			: BOOL 	:= FALSE;
+	xAutoTuneTemp65			: BOOL 	:= FALSE;
+	xAutoTuneTemp66			: BOOL 	:= FALSE;
+	xAutoTuneTemp67			: BOOL 	:= FALSE;
+	xAutoTuneTemp68			: BOOL 	:= FALSE;
+	xAutoTuneTemp69			: BOOL 	:= FALSE;
+	xAutoTuneTemp70			: BOOL 	:= FALSE;
+	xAutoTuneTemp71			: BOOL 	:= FALSE;
+	xAutoTuneTemp72			: BOOL 	:= FALSE;
+	xAutoTuneTemp73			: BOOL 	:= FALSE;
+	xAutoTuneTemp74			: BOOL 	:= FALSE;
+	xAutoTuneTemp75			: BOOL 	:= FALSE;
+	xAutoTuneTemp76			: BOOL 	:= FALSE;
+	xAutoTuneTemp77			: BOOL 	:= FALSE;
+	xAutoTuneTemp78			: BOOL 	:= FALSE;
+	xAutoTuneTemp79			: BOOL 	:= FALSE;
+	xAutoTuneTemp80			: BOOL 	:= FALSE;
+	xAutoTuneTemp81			: BOOL 	:= FALSE;
+	xAutoTuneTemp82			: BOOL 	:= FALSE;
+	xAutoTuneTemp83			: BOOL 	:= FALSE;
+	xAutoTuneTemp84			: BOOL 	:= FALSE;
+	xAutoTuneTemp85			: BOOL 	:= FALSE;
+	xAutoTuneTemp86			: BOOL 	:= FALSE;
+	xAutoTuneTemp87			: BOOL 	:= FALSE;
+	xAutoTuneTemp88			: BOOL 	:= FALSE;
+	xAutoTuneTemp89			: BOOL 	:= FALSE;
+	xAutoTuneTemp90			: BOOL 	:= FALSE;
+	xAutoTuneTemp91			: BOOL 	:= FALSE;
+	xAutoTuneTemp92			: BOOL 	:= FALSE;
+	xAutoTuneTemp93			: BOOL 	:= FALSE;
+	xAutoTuneTemp94			: BOOL 	:= FALSE;
+	xAutoTuneTemp95			: BOOL 	:= FALSE;
+	xAutoTuneTemp96			: BOOL 	:= FALSE;
+	xAutoTuneTemp97			: BOOL 	:= FALSE;
+	xAutoTuneTemp98			: BOOL 	:= FALSE;
+	xAutoTuneTemp99			: BOOL 	:= FALSE;
+	xAutoTuneTemp100		: BOOL 	:= FALSE;
+                            	                 
+	xAutoTuneAtivoTemp1		: BOOL := FALSE; //IHM - controle de temperatura - autotunnig ativo - Temperatura 1
+	xAutoTuneAtivoTemp2		: BOOL := FALSE; //IHM - controle de temperatura - autotunnig ativo - Temperatura 2
+	xAutoTuneAtivoTemp3		: BOOL := FALSE; //IHM - controle de temperatura - autotunnig ativo - Temperatura 3
+	xAutoTuneAtivoTemp4		: BOOL := FALSE; //IHM - controle de temperatura - autotunnig ativo - Temperatura 4
+	xAutoTuneAtivoTemp5		: BOOL := FALSE;
+	xAutoTuneAtivoTemp6		: BOOL := FALSE;
+	xAutoTuneAtivoTemp7		: BOOL := FALSE;
+	xAutoTuneAtivoTemp8		: BOOL := FALSE;
+	xAutoTuneAtivoTemp9		: BOOL := FALSE;
+	xAutoTuneAtivoTemp10	: BOOL := FALSE;
+
+	xAutoTuneAtivoTemp11	: BOOL := FALSE;
+	xAutoTuneAtivoTemp12	: BOOL := FALSE;
+	xAutoTuneAtivoTemp13	: BOOL := FALSE;
+	xAutoTuneAtivoTemp14	: BOOL := FALSE;
+	xAutoTuneAtivoTemp15	: BOOL := FALSE;
+	xAutoTuneAtivoTemp16	: BOOL := FALSE;
+	xAutoTuneAtivoTemp17	: BOOL := FALSE;
+	xAutoTuneAtivoTemp18	: BOOL := FALSE;
+	xAutoTuneAtivoTemp19	: BOOL := FALSE;
+	xAutoTuneAtivoTemp20	: BOOL := FALSE;
+
+	xAutoTuneAtivoTemp21	: BOOL := FALSE;
+	xAutoTuneAtivoTemp22	: BOOL := FALSE;
+	xAutoTuneAtivoTemp23	: BOOL := FALSE;
+	xAutoTuneAtivoTemp24	: BOOL := FALSE;
+	xAutoTuneAtivoTemp25	: BOOL := FALSE;
+	xAutoTuneAtivoTemp26	: BOOL := FALSE;
+	xAutoTuneAtivoTemp27	: BOOL := FALSE;
+	xAutoTuneAtivoTemp28	: BOOL := FALSE;
+	xAutoTuneAtivoTemp29	: BOOL := FALSE;
+	xAutoTuneAtivoTemp30	: BOOL := FALSE;
+
+	xAutoTuneAtivoTemp31	: BOOL := FALSE;
+	xAutoTuneAtivoTemp32	: BOOL := FALSE;
+	xAutoTuneAtivoTemp33	: BOOL := FALSE;
+	xAutoTuneAtivoTemp34	: BOOL := FALSE;
+	xAutoTuneAtivoTemp35	: BOOL := FALSE;
+	xAutoTuneAtivoTemp36	: BOOL := FALSE;
+	xAutoTuneAtivoTemp37	: BOOL := FALSE;
+	xAutoTuneAtivoTemp38	: BOOL := FALSE;
+	xAutoTuneAtivoTemp39	: BOOL := FALSE;
+	xAutoTuneAtivoTemp40	: BOOL := FALSE;
+
+	xAutoTuneAtivoTemp41	: BOOL := FALSE;
+	xAutoTuneAtivoTemp42	: BOOL := FALSE;
+	xAutoTuneAtivoTemp43	: BOOL := FALSE;
+	xAutoTuneAtivoTemp44	: BOOL := FALSE;
+	xAutoTuneAtivoTemp45	: BOOL := FALSE;
+	xAutoTuneAtivoTemp46	: BOOL := FALSE;
+	xAutoTuneAtivoTemp47	: BOOL := FALSE;
+	xAutoTuneAtivoTemp48	: BOOL := FALSE;
+	xAutoTuneAtivoTemp49	: BOOL := FALSE;
+	xAutoTuneAtivoTemp50	: BOOL := FALSE;
+
+	xAutoTuneAtivoTemp51	: BOOL := FALSE;
+	xAutoTuneAtivoTemp52	: BOOL := FALSE;
+	xAutoTuneAtivoTemp53	: BOOL := FALSE;
+	xAutoTuneAtivoTemp54	: BOOL := FALSE;
+	xAutoTuneAtivoTemp55	: BOOL := FALSE;
+	xAutoTuneAtivoTemp56	: BOOL := FALSE;
+	xAutoTuneAtivoTemp57	: BOOL := FALSE;
+	xAutoTuneAtivoTemp58	: BOOL := FALSE;
+	xAutoTuneAtivoTemp59	: BOOL := FALSE;
+	xAutoTuneAtivoTemp60	: BOOL := FALSE;
+
+	xAutoTuneAtivoTemp61	: BOOL := FALSE;
+	xAutoTuneAtivoTemp62	: BOOL := FALSE;
+	xAutoTuneAtivoTemp63	: BOOL := FALSE;
+	xAutoTuneAtivoTemp64	: BOOL := FALSE;
+	xAutoTuneAtivoTemp65	: BOOL := FALSE;
+	xAutoTuneAtivoTemp66	: BOOL := FALSE;
+	xAutoTuneAtivoTemp67	: BOOL := FALSE;
+	xAutoTuneAtivoTemp68	: BOOL := FALSE;
+	xAutoTuneAtivoTemp69	: BOOL := FALSE;
+	xAutoTuneAtivoTemp70	: BOOL := FALSE;
+
+	xAutoTuneAtivoTemp71	: BOOL := FALSE;
+	xAutoTuneAtivoTemp72	: BOOL := FALSE;
+	xAutoTuneAtivoTemp73	: BOOL := FALSE;
+	xAutoTuneAtivoTemp74	: BOOL := FALSE;
+	xAutoTuneAtivoTemp75	: BOOL := FALSE;
+	xAutoTuneAtivoTemp76	: BOOL := FALSE;
+	xAutoTuneAtivoTemp77	: BOOL := FALSE;
+	xAutoTuneAtivoTemp78	: BOOL := FALSE;
+	xAutoTuneAtivoTemp79	: BOOL := FALSE;
+	xAutoTuneAtivoTemp80	: BOOL := FALSE;
+
+	xAutoTuneAtivoTemp81	: BOOL := FALSE;
+	xAutoTuneAtivoTemp82	: BOOL := FALSE;
+	xAutoTuneAtivoTemp83	: BOOL := FALSE;
+	xAutoTuneAtivoTemp84	: BOOL := FALSE;
+	xAutoTuneAtivoTemp85	: BOOL := FALSE;
+	xAutoTuneAtivoTemp86	: BOOL := FALSE;
+	xAutoTuneAtivoTemp87	: BOOL := FALSE;
+	xAutoTuneAtivoTemp88	: BOOL := FALSE;
+	xAutoTuneAtivoTemp89	: BOOL := FALSE;
+	xAutoTuneAtivoTemp90	: BOOL := FALSE;
+
+	xAutoTuneAtivoTemp91	: BOOL := FALSE;
+	xAutoTuneAtivoTemp92	: BOOL := FALSE;
+	xAutoTuneAtivoTemp93	: BOOL := FALSE;
+	xAutoTuneAtivoTemp94	: BOOL := FALSE;
+	xAutoTuneAtivoTemp95	: BOOL := FALSE;
+	xAutoTuneAtivoTemp96	: BOOL := FALSE;
+	xAutoTuneAtivoTemp97	: BOOL := FALSE;
+	xAutoTuneAtivoTemp98	: BOOL := FALSE;
+	xAutoTuneAtivoTemp99	: BOOL := FALSE;
+	xAutoTuneAtivoTemp100	: BOOL := FALSE;
+
+
+	                        	
+	iAutoTuneStsTemp1		: INT := 0;		//IHM - controle de temperatura - status do autotunning (SE_CTBX.ET_StatusAutoTune) - Temperatura 1
+	iAutoTuneStsTemp2		: INT := 0;		//IHM - controle de temperatura - status do autotunning (SE_CTBX.ET_StatusAutoTune) - Temperatura 2
+	iAutoTuneStsTemp3		: INT := 0;		//IHM - controle de temperatura - status do autotunning (SE_CTBX.ET_StatusAutoTune) - Temperatura 3
+	iAutoTuneStsTemp4		: INT := 0;		//IHM - controle de temperatura - status do autotunning (SE_CTBX.ET_StatusAutoTune) - Temperatura 4
+	iAutoTuneStsTemp5		: INT := 0;
+	iAutoTuneStsTemp6		: INT := 0;
+	iAutoTuneStsTemp7		: INT := 0;
+	iAutoTuneStsTemp8		: INT := 0;
+	iAutoTuneStsTemp9		: INT := 0;
+	iAutoTuneStsTemp10		: INT := 0;
+	
+	iAutoTuneStsTemp11		: INT := 0;
+	iAutoTuneStsTemp12		: INT := 0;
+	iAutoTuneStsTemp13		: INT := 0;
+	iAutoTuneStsTemp14		: INT := 0;
+	iAutoTuneStsTemp15		: INT := 0;
+	iAutoTuneStsTemp16		: INT := 0;
+	iAutoTuneStsTemp17		: INT := 0;
+	iAutoTuneStsTemp18		: INT := 0;
+	iAutoTuneStsTemp19		: INT := 0;
+	iAutoTuneStsTemp20		: INT := 0;
+	
+	iAutoTuneStsTemp21		: INT := 0;
+	iAutoTuneStsTemp22		: INT := 0;
+	iAutoTuneStsTemp23		: INT := 0;
+	iAutoTuneStsTemp24		: INT := 0;
+	iAutoTuneStsTemp25		: INT := 0;
+	iAutoTuneStsTemp26		: INT := 0;
+	iAutoTuneStsTemp27		: INT := 0;
+	iAutoTuneStsTemp28		: INT := 0;
+	iAutoTuneStsTemp29		: INT := 0;
+	iAutoTuneStsTemp30		: INT := 0;
+	
+	iAutoTuneStsTemp31		: INT := 0;
+	iAutoTuneStsTemp32		: INT := 0;
+	iAutoTuneStsTemp33		: INT := 0;
+	iAutoTuneStsTemp34		: INT := 0;
+	iAutoTuneStsTemp35		: INT := 0;
+	iAutoTuneStsTemp36		: INT := 0;
+	iAutoTuneStsTemp37		: INT := 0;
+	iAutoTuneStsTemp38		: INT := 0;
+	iAutoTuneStsTemp39		: INT := 0;
+	iAutoTuneStsTemp40		: INT := 0;
+	
+	iAutoTuneStsTemp41		: INT := 0;
+	iAutoTuneStsTemp42		: INT := 0;
+	iAutoTuneStsTemp43		: INT := 0;
+	iAutoTuneStsTemp44		: INT := 0;
+	iAutoTuneStsTemp45		: INT := 0;
+	iAutoTuneStsTemp46		: INT := 0;
+	iAutoTuneStsTemp47		: INT := 0;
+	iAutoTuneStsTemp48		: INT := 0;
+	iAutoTuneStsTemp49		: INT := 0;
+	iAutoTuneStsTemp50		: INT := 0;
+	
+	iAutoTuneStsTemp51		: INT := 0;
+	iAutoTuneStsTemp52		: INT := 0;
+	iAutoTuneStsTemp53		: INT := 0;
+	iAutoTuneStsTemp54		: INT := 0;
+	iAutoTuneStsTemp55		: INT := 0;
+	iAutoTuneStsTemp56		: INT := 0;
+	iAutoTuneStsTemp57		: INT := 0;
+	iAutoTuneStsTemp58		: INT := 0;
+	iAutoTuneStsTemp59		: INT := 0;
+	iAutoTuneStsTemp60		: INT := 0;
+	
+	iAutoTuneStsTemp61		: INT := 0;
+	iAutoTuneStsTemp62		: INT := 0;
+	iAutoTuneStsTemp63		: INT := 0;
+	iAutoTuneStsTemp64		: INT := 0;
+	iAutoTuneStsTemp65		: INT := 0;
+	iAutoTuneStsTemp66		: INT := 0;
+	iAutoTuneStsTemp67		: INT := 0;
+	iAutoTuneStsTemp68		: INT := 0;
+	iAutoTuneStsTemp69		: INT := 0;
+	iAutoTuneStsTemp70		: INT := 0;
+	
+	iAutoTuneStsTemp71		: INT := 0;
+	iAutoTuneStsTemp72		: INT := 0;
+	iAutoTuneStsTemp73		: INT := 0;
+	iAutoTuneStsTemp74		: INT := 0;
+	iAutoTuneStsTemp75		: INT := 0;
+	iAutoTuneStsTemp76		: INT := 0;
+	iAutoTuneStsTemp77		: INT := 0;
+	iAutoTuneStsTemp78		: INT := 0;
+	iAutoTuneStsTemp79		: INT := 0;
+	iAutoTuneStsTemp80		: INT := 0;
+	
+	iAutoTuneStsTemp81		: INT := 0;
+	iAutoTuneStsTemp82		: INT := 0;
+	iAutoTuneStsTemp83		: INT := 0;
+	iAutoTuneStsTemp84		: INT := 0;
+	iAutoTuneStsTemp85		: INT := 0;
+	iAutoTuneStsTemp86		: INT := 0;
+	iAutoTuneStsTemp87		: INT := 0;
+	iAutoTuneStsTemp88		: INT := 0;
+	iAutoTuneStsTemp89		: INT := 0;
+	iAutoTuneStsTemp90		: INT := 0;
+	
+	iAutoTuneStsTemp91		: INT := 0;
+	iAutoTuneStsTemp92		: INT := 0;
+	iAutoTuneStsTemp93		: INT := 0;
+	iAutoTuneStsTemp94		: INT := 0;
+	iAutoTuneStsTemp95		: INT := 0;
+	iAutoTuneStsTemp96		: INT := 0;
+	iAutoTuneStsTemp97		: INT := 0;
+	iAutoTuneStsTemp98		: INT := 0;
+	iAutoTuneStsTemp99		: INT := 0;
+	iAutoTuneStsTemp100		: INT := 0;
+	
+	//Alarmes de temperatura
+	xAlmTermopar				: ARRAY [1..100] OF BOOL := [FALSE, FALSE, FALSE, FALSE]; // Alarme - termopar aberto ou em curto, sem leitura - ver codigo status do módulo de temperatura
+	xCrtlTemperatura			: ARRAY [1..100] OF BOOL := [FALSE, FALSE, FALSE, FALSE]; // Alarme - Erro no bloco de controle de temperatura 
+	xTemperaturaAlta			: ARRAY [1..100] OF BOOL := [FALSE, FALSE, FALSE, FALSE]; // Alarme - temperatura excessiva
+	xTemperaturaBaixa			: ARRAY [1..100] OF BOOL := [FALSE, FALSE, FALSE, FALSE]; // Alarme - temperatura muito abaixo do valor programado
+	
+END_VAR

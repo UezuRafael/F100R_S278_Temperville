@@ -1,0 +1,51 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "974ba589-4d8c-4742-bdc8-605259d0e049",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	AlmMotor: ARRAY[1..25] OF BOOL;
+	AlmValvAberta: ARRAY[1..12] OF BOOL;
+	AlmValvFechada: ARRAY[1..12] OF BOOL;
+	AlmGeral: ARRAY[1..12] OF BOOL;
+	AlmEncoder: ARRAY[1..12] OF BOOL;
+	AlmMotorParado: ARRAY[1..25] OF BOOL;
+	xAlarmeSsrSuperiorAberto: ARRAY[1..60] OF BOOL;
+	xAlarmeSsrSuperiorFechado: ARRAY[1..60] OF BOOL;
+	xAlarmeSsrInferiorAberto: ARRAY[1..60] OF BOOL;
+	xAlarmeSsrInferiorFechado: ARRAY[1..60] OF BOOL;
+	xAlarmeResistRompidaSuperior: ARRAY[1..60] OF BOOL;
+	xAlarmeResistRompidaInferior: ARRAY[1..60] OF BOOL;
+	xAlarmeResistForceInferior: ARRAY[1..60] OF BOOL;
+	xAlarmeResistForceSuperior: ARRAY[1..60] OF BOOL;
+	xFalhaForcadaInferior: ARRAY[1..60] OF BOOL;
+	xFalhaForcadaSuperior: ARRAY[1..60] OF BOOL;
+	xAlarmesTestesResistenciasInferiores: ARRAY[1..60] OF BOOL;
+	xAlarmesTestesResistenciasSuperiores: ARRAY[1..60] OF BOOL;
+	AlmTermoparAbertoSuperior: ARRAY[1..60] OF BOOL;
+	AlmTermoparAbertoInferior: ARRAY[1..60] OF BOOL;
+	AlmTemperaturaExcedeuSuperior: ARRAY[1..60] OF BOOL;
+	AlmTemperaturaExcedeuInferior: ARRAY[1..60] OF BOOL;
+	xAlarmeSsr01ConvecEntAberto: BOOL;
+	xAlarmeSsr01ConvecEntFechado: BOOL;
+	xAlarmeSsr02ConvecEntAberto: BOOL;
+	xAlarmeSsr02ConvecEntFechado: BOOL;
+	xAlarmeSsr03ConvecEntAberto: BOOL;
+	xAlarmeSsr03ConvecEntFechado: BOOL;
+	xAlarmeSsr01ConvecSaiAberto: BOOL;
+	xAlarmeSsr01ConvecSaiFechado: BOOL;
+	xAlarmeSsr02ConvecSaiAberto: BOOL;
+	xAlarmeSsr02ConvecSaiFechado: BOOL;
+	xAlarmeSsr03ConvecSaiAberto: BOOL;
+	xAlarmeSsr03ConvecSaiFechado: BOOL;
+END_VAR

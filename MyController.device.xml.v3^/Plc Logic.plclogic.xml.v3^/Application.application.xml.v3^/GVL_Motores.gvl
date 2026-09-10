@@ -1,0 +1,59 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "1eba87bf-ac38-42a6-9cbd-0acecb7144e7",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	uAmperagemMotorMesaEntrada: UINT;
+	iFrequenciaMotorMesaEntrada: INT;
+	uAmperagemMotorMesaForno: UINT;
+	iFrequenciaMotorMesaForno: INT;
+	uAmperagemMotorMesaPassagem: UINT;
+	iFrequenciaMotorMesaPassagem: INT;
+	uAmperagemMotorMesaResfriamento: UINT;
+	iFrequenciaMotorMesaResfriamento: INT;
+	uAmperagemMotorMesaSaida: UINT;
+	iFrequenciaMotorMesaSaida: INT;
+	uAmperagemMotorDutosResfriadorInf01: UINT;
+	iFrequenciaMotorDutosResfriadorInf01: INT;
+	uAmperagemMotorDutosResfriadorSup01: UINT;
+	iFrequenciaMotorDutosResfriadorSup01: INT;
+	uAmperagemMotorDutosResfriadorInf02: UINT;
+	iFrequenciaMotorDutosResfriadorInf02: INT;
+	uAmperagemMotorDutosResfriadorSup02: UINT;
+	iFrequenciaMotorDutosResfriadorSup02: INT;
+	uAmperagemMotorGuilhotina01: UINT;
+	iFrequenciaMotorGuilhotina01: INT;
+	uAmperagemMotorGuilhotina01Sup: UINT;
+	iFrequenciaMotorGuilhotina01Sup: INT;
+	uAmperagemMotorGuilhotina01Inf: UINT;
+	iFrequenciaMotorGuilhotina01Inf: INT;
+	uAmperagemMotorGuilhotina02: UINT;
+	iFrequenciaMotorGuilhotina02: INT;
+	uAmperagemMotorLimpResfr02: UINT;
+	iFrequenciaMotorLimpResfr02: INT;
+	uAmperagemMotorCaixaForno: UINT;
+	iFrequenciaMotorCaixaForno: INT;
+	uAmperagemMotorVentConvec: UINT;
+	iFrequenciaMotorVentConvec: INT;
+	uAmperagemMotorVentConvecSai: UINT;
+	iFrequenciaMotorVentConvecSai: INT;
+	uAmperagemMotorVentilador01: UINT;
+	iFrequenciaMotorVentilador01: INT;
+	uAmperagemMotorVentilador02: UINT;
+	iFrequenciaMotorVentilador02: INT;
+	uAmperagemMotorVentilador03: UINT;
+	iFrequenciaMotorVentilador03: INT;
+	uAmperagemMotorVentilador04: UINT;
+	iFrequenciaMotorVentilador04: INT;
+END_VAR

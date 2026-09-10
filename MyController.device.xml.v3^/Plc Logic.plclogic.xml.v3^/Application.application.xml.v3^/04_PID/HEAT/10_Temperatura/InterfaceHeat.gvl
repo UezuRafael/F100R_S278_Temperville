@@ -1,0 +1,130 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "db621991-aa32-4176-bda9-98a2658c202c",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {},
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+//GVL IHM
+//variaveis gerais entre IHM e CLP
+//usar prefixo "IHM." ao chamar variaveis no programa (qualified_only)
+//parametos retentivos ver PersistentVars
+
+
+//PRAGMAS
+{attribute 'qualified_only'}  //forca que seja utilizado o nome do GVL "IHM." ao chamar as variaveis no programa
+{attribute 'linkalways'} //compila variaveis e adiciona ao projeto mesmo se nao chamadas em nenhuma POU
+VAR_GLOBAL
+
+	xReset						: BOOL := FALSE; 	// IHM comando reset
+	
+	//parametros de controle de temperatura - habilitacao
+	P_xHabTemp1		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 1
+	P_xHabTemp2  	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 2
+	P_xHabTemp3		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 3
+	P_xHabTemp4		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp5		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp6		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp7		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp8		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp9		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp10	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp11		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 1
+	P_xHabTemp12  	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 2
+	P_xHabTemp13		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 3
+	P_xHabTemp14		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp15		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp16		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp17		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp18		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp19		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp20	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp21		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 1
+	P_xHabTemp22  	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 2
+	P_xHabTemp23		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 3
+	P_xHabTemp24		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp25		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp26		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp27		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp28		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp29		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp30	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp31		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 1
+	P_xHabTemp32  	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 2
+	P_xHabTemp33		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 3
+	P_xHabTemp34		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp35		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp36		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp37		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp38		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp39		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp40	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp41		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 1
+	P_xHabTemp42  	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 2
+	P_xHabTemp43		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 3
+	P_xHabTemp44		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp45		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp46		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp47		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp48		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp49		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp50	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp51		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 1
+	P_xHabTemp52  	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 2
+	P_xHabTemp53		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 3
+	P_xHabTemp54		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp55		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp56		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp57		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp58		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp59		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp60	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp61		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 1
+	P_xHabTemp62  	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 2
+	P_xHabTemp63		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 3
+	P_xHabTemp64		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp65		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp66		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp67		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp68		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp69		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp70	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp71		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 1
+	P_xHabTemp72  	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 2
+	P_xHabTemp73		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 3
+	P_xHabTemp74		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp75		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp76		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp77		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp78		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp79		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp80	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp81		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 1
+	P_xHabTemp82  	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 2
+	P_xHabTemp83		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 3
+	P_xHabTemp84		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp85		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp86		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp87		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp88		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp89		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp90	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp91		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 1
+	P_xHabTemp92  	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 2
+	P_xHabTemp93		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 3
+	P_xHabTemp94		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp95		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp96		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp97		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp98		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp99		: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+	P_xHabTemp100	: BOOL := FALSE; 	//IHM parametro - habilita aquecimento - controle de temperatura 4
+
+ 	
+END_VAR

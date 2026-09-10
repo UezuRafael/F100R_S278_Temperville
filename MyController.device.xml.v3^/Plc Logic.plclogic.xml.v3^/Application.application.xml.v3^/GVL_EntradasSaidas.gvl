@@ -1,0 +1,675 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "34a24537-53c9-40de-b1d2-4ccf0415ef49",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	///ENTRADAS LÓGICAS
+	///Encoder
+	InputEncoderA_MeFor: BOOL;
+	InputEncoderB_MeFor: BOOL;
+	InputEncoderA_MeRes: BOOL;
+	InputEncoderB_MeRes: BOOL;
+	InputEncoderA_DuResSup01: BOOL;
+	InputEncoderB_DuResSup01: BOOL;
+	InputEncoderA_DuResInf01: BOOL;
+	InputEncoderB_DuResInf01: BOOL;
+	InputEncoderA_DuResSup02: BOOL;
+	InputEncoderB_DuResSup02: BOOL;
+	InputEncoderA_DuResInf02: BOOL;
+	InputEncoderB_DuResInf02: BOOL;
+	InputEncoderA_GuiRes01: BOOL;
+	InputEncoderB_GuiRes01: BOOL;
+	InputEncoderA_GuiRes02: BOOL;
+	InputEncoderB_GuiRes02: BOOL;
+	dValorEncoderFornoEntrada: DINT;
+	dValorEncoderResfrEntrada: DINT;
+	dValorEncoderDuctosResfrSup01Entrada: DINT;
+	dValorEncoderDuctosResfrInf01Entrada: DINT;
+	dValorEncoderDuctosResfrSup02Entrada: DINT;
+	dValorEncoderDuctosResfrInf02Entrada: DINT;
+	dValorEncoderGuilhoResfr01Entrada: DINT;
+	dValorEncoderGuilhoResfr02Entrada: DINT;
+
+	dValorEncoderGuilhoResfr01SupEntrada: DINT;
+	dValorEncoderGuilhoResfr01InfEntrada: DINT;
+	
+	// Segurança Motor CC
+
+	xChCircuitoEmergenciaCC	: BOOL ;	
+	xChHabDesabCircuitoCC	: BOOL ;
+
+/// Mesa de Controle
+	xBtIniciaCiclo: BOOL;
+	xBtFinalizaCiclo: BOOL;
+	xBtCalaAlarme: BOOL;
+	xBtEmergencia: BOOL;
+	xChAutomaticoManual: BOOL;
+	///xChStandByOperacao:BOOL;
+	xBtReinicia: BOOL;
+	xBt01Emergencia: BOOL;
+	xBt02Emergencia: BOOL;
+	xBt03Emergencia: BOOL;
+	xBt04Emergencia: BOOL;
+	xBt05Emergencia: BOOL;
+	xBt06Emergencia: BOOL;
+	xBt07Emergencia: BOOL;
+	xBt08Emergencia: BOOL;
+	xBt09Emergencia: BOOL;
+	xBt10Emergencia: BOOL;
+	xBt01CalaAlarme: BOOL;
+	xBt02CalaAlarme: BOOL;
+	xReleSeguranca: BOOL;
+	xQgeralMotores: BOOL;
+	///Mesa de Entrada
+	xSensorEntrada: BOOL;
+	xSensorEntrada01: BOOL;
+	xSensorEntrada02: BOOL;
+	xSensorEntrada03: BOOL;
+	xSensorEntrada04: BOOL;
+	xSensorEntrada05: BOOL;
+	xSensorEntrada06: BOOL;
+	xSensorEntrada07: BOOL;
+	xSensorEntrada08: BOOL;
+	xSensorEntrada09: BOOL;
+	xSensorEntrada10: BOOL;
+	xBtHabilitaCarregamento: BOOL;
+	xChAvancaMesaEntrada: BOOL;
+	xChRecuaMesaEntrada: BOOL;
+	xBtGradeEntrada: BOOL;
+	xSensorGradeEntradaUp: BOOL;
+	xSensorGradeEntradaDown: BOOL;
+	xMotorEntradaOn: BOOL;
+	///Basculante
+	xBtAvancMesaBascul: BOOL;
+	xBtRecuoMesaBascul: BOOL;
+	xS01PistPneumRecuado: BOOL;
+	xS02PistPneumAvancad: BOOL;
+	xS03PistHidraulRecuado: BOOL;
+	xS04PistHidraulAvancad: BOOL;
+	xS05NivelaSubida: BOOL;
+	xS06NivelaDescida: BOOL;
+	///Mesa do Forno
+	xSensorPortaEntrada: BOOL;
+	xSensorPortaEntradaAberta: BOOL;
+	xSensorPortaEntradaFechada: BOOL;
+	xSensorPortaSaida: BOOL;
+	xSensorPortaSaidaAberta: BOOL;
+	xSensorPortaSaidaFechada: BOOL;
+	xFcSegCalco01: BOOL;
+	xFcSegCalco02: BOOL;
+	xFcSegCalco03: BOOL;
+	xFcSegCalco04: BOOL;
+	xFcAbertoCaixaForno: BOOL;
+	xFcFechadoCaixaForno: BOOL;
+	xMotorFornoOn: BOOL;
+	
+	//Ventilador Passagem
+	xResetVentilador01 : BOOL;
+	xRefUpVentiladorPassagem : BOOL;
+	xRefDownVentiladorPassagem : BOOL;
+	//Guilhotina Passagem Inferior
+	xFcMaximoGuiPassagemInf : BOOL;
+	xFcMinimoGuiPassagemInf : BOOL;
+	//Guilhotina Passagem Superior
+	xFcMaximoGuiPassagemSup : BOOL;
+	xFcMinimoGuiPassagemSup : BOOL;
+	
+	///Mesa do Resfriador
+	xFcLimMaxLimpaResfriador02: BOOL;
+	xFcLimMinLimpaResfriador02: BOOL;
+	xChAvancoLimpaResfriador02: BOOL;
+	xChRecuoLimpaResfriador02: BOOL;
+	xMotorResfriadorOn: BOOL;
+	///Mesa de Saída
+	xChAvancaMesaSaida: BOOL;
+	xChRecuaMesaSaida: BOOL;
+	xSensorDesligaMesaSaida: BOOL;
+	xBtGradeSaida: BOOL;
+	xSensorGradeSaidaUp: BOOL;
+	xSensorGradeSaidaDown: BOOL;
+	xMotorSaidaOn: BOOL;
+	///Resfriador Inferior 01
+	xSensorAbertoResfriadorInf01: BOOL;
+	xSensorFechadoResfriadorInf01: BOOL;
+	xSensorEncoderResfriadorInf01: BOOL;
+	xChAbreDuctosResfriadorInf01: BOOL;
+	xFcMinimoSegResfriadorInf01: BOOL;
+	xFcMaximoSegResfriadorInf01: BOOL;
+	///Resfriador Superior 01
+	xSensorAbertoResfriadorSup01: BOOL;
+	xSensorFechadoResfriadorSup01: BOOL;
+	xSensorEncoderResfriadorSup01: BOOL;
+	xChAbreDuctosResfriadorSup01: BOOL;
+	xFcMinimoSegResfriadorSup01: BOOL;
+	xFcMaximoSegResfriadorSup01: BOOL;
+	xValvulaVeneziana: BOOL;
+	xMotorResfridorSup01Abre: BOOL;
+	xMotorResfridorSup01Fecha: BOOL;
+	///Resfriador Inferior 02
+	xSensorAbertoResfriadorInf02: BOOL;
+	xSensorFechadoResfriadorInf02: BOOL;
+	xSensorEncoderResfriadorInf02: BOOL;
+	xChAbreDuctosResfriadorInf02: BOOL;
+	xFcMinimoSegResfriadorInf02: BOOL;
+	xFcMaximoSegResfriadorInf02: BOOL;
+	xMotorResfridorInf02Abre: BOOL;
+	xMotorResfridorInf02Fecha: BOOL;
+	///Resfriador Superior 02
+	xSensorAbertoResfriadorSup02: BOOL;
+	xSensorFechadoResfriadorSup02: BOOL;
+	xSensorEncoderResfriadorSup02: BOOL;
+	xChAbreDuctosResfriadorSup02: BOOL;
+	xFcMinimoSegResfriadorSup02: BOOL;
+	xFcMaximoSegResfriadorSup02: BOOL;
+	xMotorResfridorSup02Abre: BOOL;
+	xMotorResfridorSup02Fecha: BOOL;
+	///Guilhotina 01
+	xSensorPositivoGuilhotina01: BOOL;
+	xSensorZeroGuilhotina01: BOOL;
+	xSensorNegativoGuilhotina01: BOOL;
+	xSensorEncoderGuilhotina01: BOOL;
+	xMotorGuilhotina01Sobe: BOOL;
+	xMotorGuilhotina01Desce: BOOL;
+	
+	xSensorAbertoGuilhotina01Sup: BOOL;
+	xSensorFechadoGuilhotina01Sup: BOOL;
+	xMotorGuilhotina01SupAbre: BOOL;
+	xMotorGuilhotina01SupFecha: BOOL;
+
+	xSensorAbertoGuilhotina01Inf: BOOL;
+	xSensorFechadoGuilhotina01Inf: BOOL;
+	xMotorGuilhotina01InfAbre: BOOL;
+	xMotorGuilhotina01InfFecha: BOOL;
+	
+	///Guilhotina 02
+	xSensorPositivoGuilhotina02: BOOL;
+	xSensorZeroGuilhotina02: BOOL;
+	xSensorNegativoGuilhotina02: BOOL;
+	xSensorEncoderGuilhotina02: BOOL;
+	xMotorGuilhotina02Sobe: BOOL;
+	xMotorGuilhotina02Desce: BOOL;
+	/// Retorno Reles Estado Sólido
+	xRetornoSsrInferior: ARRAY[1..60] OF BOOL;
+	xRetornoSsrSuperior: ARRAY[1..60] OF BOOL;
+	xRetornoSsr01ConveccaoEnt: BOOL;
+	xRetornoSsr02ConveccaoEnt: BOOL;
+	xRetornoSsr03ConveccaoEnt: BOOL;
+	xRetornoSsr01ConveccaoSai: BOOL;
+	xRetornoSsr02ConveccaoSai: BOOL;
+	xRetornoSsr03ConveccaoSai: BOOL;
+	/// Retorno Rele Resistências Rompidas
+	xResistRompidaInferior: ARRAY[1..60] OF BOOL;
+	xResistRompidaSuperior: ARRAY[1..60] OF BOOL;
+	/// Amperagem Resistências
+	iAmperagemInferior: ARRAY[1..60] OF UINT;
+	iAmperagemSuperior: ARRAY[1..60] OF UINT;
+	/// Nobreak
+	xSaidaNobreakOk: BOOL;
+	/// Pressostato Rede Alimnetação de Ar Comprimido
+	xPressaoBaixaMediaRede: BOOL;
+	xPressaoMediaAltaRede: BOOL;
+	/// Disjuntores
+	xDisjResistOff: BOOL;
+	xDisjResistOn: BOOL;
+	xDisjGeralOff: BOOL;
+	xDisjGeralOn: BOOL;
+
+	/// Entradas Fisicas
+	///TM262L10MESE8T - 0.1
+	xM0_1_DI0: BOOL;
+	xM0_1_DI1: BOOL;
+	xM0_1_DI2: BOOL;
+	xM0_1_DI3: BOOL;
+	///TM3XHSC202 - 0.2
+	xM0_2_DI0: BOOL;
+	xM0_2_DI1: BOOL;
+	xM0_2_DI2: BOOL;
+	xM0_2_DI3: BOOL;
+	xM0_2_DI4: BOOL;
+	xM0_2_DI5: BOOL;
+	xM0_2_DI6: BOOL;
+	xM0_2_DI7: BOOL;
+	xM0_2_DI8: BOOL;
+	xM0_2_DI9: BOOL;
+	///TM3XHSC202 - 0.3
+	xM0_3_DI0: BOOL;
+	xM0_3_DI1: BOOL;
+	xM0_3_DI2: BOOL;
+	xM0_3_DI3: BOOL;
+	xM0_3_DI4: BOOL;
+	xM0_3_DI5: BOOL;
+	xM0_3_DI6: BOOL;
+	xM0_3_DI7: BOOL;
+	xM0_3_DI8: BOOL;
+	xM0_3_DI9: BOOL;
+
+	///TM3DM24K - 0.4
+	xM0_4_DI0: BOOL;
+	xM0_4_DI1: BOOL;
+	xM0_4_DI2: BOOL;
+	xM0_4_DI3: BOOL;
+	xM0_4_DI4: BOOL;
+	xM0_4_DI5: BOOL;
+	xM0_4_DI6: BOOL;
+	xM0_4_DI7: BOOL;
+	xM0_4_DI8: BOOL;
+	xM0_4_DI9: BOOL;
+	xM0_4_DI10: BOOL;
+	xM0_4_DI11: BOOL;
+	xM0_4_DI12: BOOL;
+	xM0_4_DI13: BOOL;
+	xM0_4_DI14: BOOL;
+	xM0_4_DI15: BOOL;
+	xM0_4_DI16: BOOL;
+	xM0_4_DI17: BOOL;
+	xM0_4_DI18: BOOL;
+	xM0_4_DI19: BOOL;
+	xM0_4_DI20: BOOL;
+	xM0_4_DI21: BOOL;
+	xM0_4_DI22: BOOL;
+	xM0_4_DI23: BOOL;
+	xM0_4_DI24: BOOL;
+	xM0_4_DI25: BOOL;
+	xM0_4_DI26: BOOL;
+	xM0_4_DI27: BOOL;
+	xM0_4_DI28: BOOL;
+	xM0_4_DI29: BOOL;
+	xM0_4_DI30: BOOL;
+	xM0_4_DI31: BOOL;
+	
+	///TM3DM24R - 3.1
+	xM3_1_DI0: BOOL;
+	xM3_1_DI1: BOOL;
+	xM3_1_DI2: BOOL;
+	xM3_1_DI3: BOOL;
+	xM3_1_DI4: BOOL;
+	xM3_1_DI5: BOOL;
+	xM3_1_DI6: BOOL;
+	xM3_1_DI7: BOOL;
+	xM3_1_DI8: BOOL;
+	xM3_1_DI9: BOOL;
+	xM3_1_DI10: BOOL;
+	xM3_1_DI11: BOOL;
+	xM3_1_DI12: BOOL;
+	xM3_1_DI13: BOOL;
+	xM3_1_DI14: BOOL;
+	xM3_1_DI15: BOOL;
+	
+	///TM3DI32K - 3.2
+	xM3_2_DI0: BOOL;
+	xM3_2_DI1: BOOL;
+	xM3_2_DI2: BOOL;
+	xM3_2_DI3: BOOL;
+	xM3_2_DI4: BOOL;
+	xM3_2_DI5: BOOL;
+	xM3_2_DI6: BOOL;
+	xM3_2_DI7: BOOL;
+	xM3_2_DI8: BOOL;
+	xM3_2_DI9: BOOL;
+	xM3_2_DI10: BOOL;
+	xM3_2_DI11: BOOL;
+	xM3_2_DI12: BOOL;
+	xM3_2_DI13: BOOL;
+	xM3_2_DI14: BOOL;
+	xM3_2_DI15: BOOL;
+	xM3_2_DI16: BOOL;
+	xM3_2_DI17: BOOL;
+	xM3_2_DI18: BOOL;
+	xM3_2_DI19: BOOL;
+	xM3_2_DI20: BOOL;
+	xM3_2_DI21: BOOL;
+	xM3_2_DI22: BOOL;
+	xM3_2_DI23: BOOL;
+	xM3_2_DI24: BOOL;
+	xM3_2_DI25: BOOL;
+	xM3_2_DI26: BOOL;
+	xM3_2_DI27: BOOL;
+	xM3_2_DI28: BOOL;
+	xM3_2_DI29: BOOL;
+	xM3_2_DI30: BOOL;
+	xM3_2_DI31: BOOL;
+	
+	///TM3DI32K - 4.1
+	xM4_1_DI0: BOOL;
+	xM4_1_DI1: BOOL;
+	xM4_1_DI2: BOOL;
+	xM4_1_DI3: BOOL;
+	xM4_1_DI4: BOOL;
+	xM4_1_DI5: BOOL;
+	xM4_1_DI6: BOOL;
+	xM4_1_DI7: BOOL;
+	xM4_1_DI8: BOOL;
+	xM4_1_DI9: BOOL;
+	xM4_1_DI10: BOOL;
+	xM4_1_DI11: BOOL;
+	xM4_1_DI12: BOOL;
+	xM4_1_DI13: BOOL;
+	xM4_1_DI14: BOOL;
+	xM4_1_DI15: BOOL;
+	xM4_1_DI16: BOOL;
+	xM4_1_DI17: BOOL;
+	xM4_1_DI18: BOOL;
+	xM4_1_DI19: BOOL;
+	xM4_1_DI20: BOOL;
+	xM4_1_DI21: BOOL;
+	xM4_1_DI22: BOOL;
+	xM4_1_DI23: BOOL;
+	xM4_1_DI24: BOOL;
+	xM4_1_DI25: BOOL;
+	xM4_1_DI26: BOOL;
+	xM4_1_DI27: BOOL;
+	xM4_1_DI28: BOOL;
+	xM4_1_DI29: BOOL;
+	xM4_1_DI30: BOOL;
+	xM4_1_DI31: BOOL;
+	
+	///TM3DI32K - 4.2
+	xM4_2_DI0: BOOL;
+	xM4_2_DI1: BOOL;
+	xM4_2_DI2: BOOL;
+	xM4_2_DI3: BOOL;
+	xM4_2_DI4: BOOL;
+	xM4_2_DI5: BOOL;
+	xM4_2_DI6: BOOL;
+	xM4_2_DI7: BOOL;
+	xM4_2_DI8: BOOL;
+	xM4_2_DI9: BOOL;
+	xM4_2_DI10: BOOL;
+	xM4_2_DI11: BOOL;
+	xM4_2_DI12: BOOL;
+	xM4_2_DI13: BOOL;
+	xM4_2_DI14: BOOL;
+	xM4_2_DI15: BOOL;
+	xM4_2_DI16: BOOL;
+	xM4_2_DI17: BOOL;
+	xM4_2_DI18: BOOL;
+	xM4_2_DI19: BOOL;
+	xM4_2_DI20: BOOL;
+	xM4_2_DI21: BOOL;
+	xM4_2_DI22: BOOL;
+	xM4_2_DI23: BOOL;
+	xM4_2_DI24: BOOL;
+	xM4_2_DI25: BOOL;
+	xM4_2_DI26: BOOL;
+	xM4_2_DI27: BOOL;
+	xM4_2_DI28: BOOL;
+	xM4_2_DI29: BOOL;
+	xM4_2_DI30: BOOL;
+	xM4_2_DI31: BOOL;
+	
+	ImgTesteEntradas: ARRAY[1..168] OF BOOL;
+	ImgEncoder: ARRAY[1..12] OF DINT;
+	///SAÍDAS LÓGICAS
+	/// Mesa de Controle
+	xLedMaqEmCiclo: BOOL;
+	xLedRestart: BOOL;
+	xLedMaqEmEspera: BOOL;
+	///Mesa de Entrada
+	xValvulaGradeEntrada: BOOL;
+	xLedCargaForno: BOOL;
+	xMotorMesaEntradaAvanco: BOOL;
+	xMotorMesaEntradaRecuo: BOOL;
+	///Basculante
+	xValvulaAbreBraco: BOOL;
+	xValvulaFechBraco: BOOL;
+	xValvulaAvancPneum: BOOL;
+	xValvulaRecuaPneum: BOOL;
+	xValvulaAvancHidra: BOOL;
+	xValvulaRecuoHidra: BOOL;
+	///Mesa do Forno
+	xValvPortaEntradaForno: BOOL;
+	xValvPortaSaidaForno: BOOL;
+	xAbreCaixaForno: BOOL;
+	xFechaCaixaForno: BOOL;
+	xValvulaConveccao: BOOL;
+	xDesabFalhInvMesaForno: BOOL;
+	xMotorMesaFornoAvanco: BOOL;
+	xMotorMesaFornoRecuo: BOOL;
+	xLedMotFornoStop: BOOL;
+	xValvulaScanner: BOOL;
+	///Mesa do Passagem
+	xMotorMesaPassAvanco: BOOL;
+	xMotorMesaPassRecuo: BOOL;
+	///Mesa do Resfriador
+	xMotorMesaResfriadorAvanco: BOOL;
+	xMotorMesaResfriadorRecuo: BOOL;
+	///Mesa de Saída
+	xValvulaGradeSaida: BOOL;
+	xMotorMesaSaidaAvanco: BOOL;
+	xMotorMesaSaidaRecuo: BOOL;
+	///Resfriador
+	xValvulaDamperDifusor: BOOL;
+	/// Limpa Resfriador
+	xAvancoLimpaResfriador02: BOOL;
+	xRecuoLimpaResfriador02: BOOL;
+	/// Ventilador 01
+	xMotorVentilador01: BOOL;
+	/// Ventilador 02
+	xMotorVentilador02: BOOL;
+	/// Ventilador 03
+	xMotorVentilador03: BOOL;
+	/// Conveccção Entrada
+	xMotorConveccaoEnt: BOOL;
+	/// Conveccção Saída
+	xMotorConveccaoSai: BOOL;
+	/// Rele Estado Sólido
+	xReleSsrInferior: ARRAY[1..50] OF BOOL;
+	xReleSsrSuperior: ARRAY[1..50] OF BOOL;
+	xReleSsrConveccaoEnt: BOOL;
+	xReleSsrConveccaoSai: BOOL;
+	xBloqAbertCxFornoTemper: BOOL;
+	xAlarmeLuminoso: BOOL;
+	xAlarmeSonoro: BOOL;
+	xVentiladoresPainel: BOOL;
+	xVentiladoresSsr: BOOL;
+	xMotorBombaHidraulica: BOOL;
+	/// Coluna Sinalização
+	xSinalSonoro: BOOL;
+	xSinalLumVerd: BOOL;
+	xSinalLumAmar: BOOL;
+	xSinalLumVerm: BOOL;
+	///Saidas Fisicas
+	///TM262L10MESE8T - 0.1
+	xM0_1_DQ0: BOOL;
+	xM0_1_DQ1: BOOL;
+	xM0_1_DQ2: BOOL;
+	xM0_1_DQ3: BOOL;
+	///TM3XHSC202 - 0.2
+	xM0_2_DQ0: BOOL;
+	xM0_2_DQ1: BOOL;
+	xM0_2_DQ2: BOOL;
+	xM0_2_DQ3: BOOL;
+	xM0_2_DQ4: BOOL;
+	xM0_2_DQ5: BOOL;
+	xM0_2_DQ6: BOOL;
+	xM0_2_DQ7: BOOL;
+	///TM3XHSC202 - 0.3
+	xM0_3_DQ0: BOOL;
+	xM0_3_DQ1: BOOL;
+	xM0_3_DQ2: BOOL;
+	xM0_3_DQ3: BOOL;
+	xM0_3_DQ4: BOOL;
+	xM0_3_DQ5: BOOL;
+	xM0_3_DQ6: BOOL;
+	xM0_3_DQ7: BOOL;
+
+	///TM3DM24R - 3.1
+	xM3_1_DQ0: BOOL;
+	xM3_1_DQ1: BOOL;
+	xM3_1_DQ2: BOOL;
+	xM3_1_DQ3: BOOL;
+	xM3_1_DQ4: BOOL;
+	xM3_1_DQ5: BOOL;
+	xM3_1_DQ6: BOOL;
+	xM3_1_DQ7: BOOL;
+	
+	///TM3DQ32TK - 3.3
+	xM3_3_DQ0: BOOL;
+	xM3_3_DQ1: BOOL;
+	xM3_3_DQ2: BOOL;
+	xM3_3_DQ3: BOOL;
+	xM3_3_DQ4: BOOL;
+	xM3_3_DQ5: BOOL;
+	xM3_3_DQ6: BOOL;
+	xM3_3_DQ7: BOOL;
+	xM3_3_DQ8: BOOL;
+	xM3_3_DQ9: BOOL;
+	xM3_3_DQ10: BOOL;
+	xM3_3_DQ11: BOOL;
+	xM3_3_DQ12: BOOL;
+	xM3_3_DQ13: BOOL;
+	xM3_3_DQ14: BOOL;
+	xM3_3_DQ15: BOOL;
+	xM3_3_DQ16: BOOL;
+	xM3_3_DQ17: BOOL;
+	xM3_3_DQ18: BOOL;
+	xM3_3_DQ19: BOOL;
+	xM3_3_DQ20: BOOL;
+	xM3_3_DQ21: BOOL;
+	xM3_3_DQ22: BOOL;
+	xM3_3_DQ23: BOOL;
+	xM3_3_DQ24: BOOL;
+	xM3_3_DQ25: BOOL;
+	xM3_3_DQ26: BOOL;
+	xM3_3_DQ27: BOOL;
+	xM3_3_DQ28: BOOL;
+	xM3_3_DQ29: BOOL;
+	xM3_3_DQ30: BOOL;
+	xM3_3_DQ31: BOOL;
+	
+	///TM3DQ32TK - 4.3
+	xM4_3_DQ0: BOOL;
+	xM4_3_DQ1: BOOL;
+	xM4_3_DQ2: BOOL;
+	xM4_3_DQ3: BOOL;
+	xM4_3_DQ4: BOOL;
+	xM4_3_DQ5: BOOL;
+	xM4_3_DQ6: BOOL;
+	xM4_3_DQ7: BOOL;
+	xM4_3_DQ8: BOOL;
+	xM4_3_DQ9: BOOL;
+	xM4_3_DQ10: BOOL;
+	xM4_3_DQ11: BOOL;
+	xM4_3_DQ12: BOOL;
+	xM4_3_DQ13: BOOL;
+	xM4_3_DQ14: BOOL;
+	xM4_3_DQ15: BOOL;
+	xM4_3_DQ16: BOOL;
+	xM4_3_DQ17: BOOL;
+	xM4_3_DQ18: BOOL;
+	xM4_3_DQ19: BOOL;
+	xM4_3_DQ20: BOOL;
+	xM4_3_DQ21: BOOL;
+	xM4_3_DQ22: BOOL;
+	xM4_3_DQ23: BOOL;
+	xM4_3_DQ24: BOOL;
+	xM4_3_DQ25: BOOL;
+	xM4_3_DQ26: BOOL;
+	xM4_3_DQ27: BOOL;
+	xM4_3_DQ28: BOOL;
+	xM4_3_DQ29: BOOL;
+	xM4_3_DQ30: BOOL;
+	xM4_3_DQ31: BOOL;
+
+	///TM3DQ32TK - 4.4
+	xM4_4_DQ0: BOOL;
+	xM4_4_DQ1: BOOL;
+	xM4_4_DQ2: BOOL;
+	xM4_4_DQ3: BOOL;
+	xM4_4_DQ4: BOOL;
+	xM4_4_DQ5: BOOL;
+	xM4_4_DQ6: BOOL;
+	xM4_4_DQ7: BOOL;
+	xM4_4_DQ8: BOOL;
+	xM4_4_DQ9: BOOL;
+	xM4_4_DQ10: BOOL;
+	xM4_4_DQ11: BOOL;
+	xM4_4_DQ12: BOOL;
+	xM4_4_DQ13: BOOL;
+	xM4_4_DQ14: BOOL;
+	xM4_4_DQ15: BOOL;
+	xM4_4_DQ16: BOOL;
+	xM4_4_DQ17: BOOL;
+	xM4_4_DQ18: BOOL;
+	xM4_4_DQ19: BOOL;
+	xM4_4_DQ20: BOOL;
+	xM4_4_DQ21: BOOL;
+	xM4_4_DQ22: BOOL;
+	xM4_4_DQ23: BOOL;
+	xM4_4_DQ24: BOOL;
+	xM4_4_DQ25: BOOL;
+	xM4_4_DQ26: BOOL;
+	xM4_4_DQ27: BOOL;
+	xM4_4_DQ28: BOOL;
+	xM4_4_DQ29: BOOL;
+	xM4_4_DQ30: BOOL;
+	xM4_4_DQ31: BOOL;
+	
+	
+	ForceTesteSaidas: ARRAY[1..124] OF BOOL;
+	///ENTRADAS ANALÓGICAS
+	bStatus00Mth0: BYTE;
+	bStatus01Mth0: BYTE;
+	bStatus00Mth1: BYTE;
+	bStatus01Mth1: BYTE;
+	bStatus00Mth2: BYTE;
+	bStatus01Mth2: BYTE;
+	bStatus00Mth3: BYTE;
+	bStatus01Mth3: BYTE;
+	bStatus00Mth4: BYTE;
+	bStatus01Mth4: BYTE;
+	bStatus00Mth5: BYTE;
+	bStatus01Mth5: BYTE;
+	bStatus00Mth6: BYTE;
+	bStatus01Mth6: BYTE;
+	bStatus00Mth7: BYTE;
+	bStatus01Mth7: BYTE;
+	bStatus00Mth8: BYTE;
+	bStatus01Mth8: BYTE;
+	bStatus00Mth9: BYTE;
+	bStatus01Mth9: BYTE;
+	TermoparInferior: ARRAY[1..50] OF INT;
+	TermoparSuperior: ARRAY[1..50] OF INT;
+	Termopar01Painel: INT;
+	Termopar02Painel: INT;
+	TermoparConveccaoEnt: INT;
+	TermoparConveccaoSai: INT;
+	/// 4-20mA
+	iValorLeituraPressaoRede: INT;
+	/// 4-20mA
+	iValorLeituraPressaoMaq: INT;
+	/// 4-20mA
+	iValorTemperTermocamera: INT;
+	/// Manometro Difusor
+	iValorLeituraPressaoDifusor01: INT;
+	iValorLeituraPressaoDifusor02: INT;
+	/// Sensor de Vibração dos Ventiladores
+	iValorLeituraSensorVibraV01: INT;
+	iValorLeituraSensorVibraV02: INT;
+	iValorLeituraSensorVibraV03: INT;
+	
+	iFrequenciaSaidaVentilador01	: INT ;
+	
+	///SAIDAS ANALÓGICAS
+	iAnaFreqRefVentilador01			: INT ;
+	
+	xMotorOscilaResfr02Sup	: BOOL ;
+	xMotorOscilaResfr02Inf	: BOOL ;
+	
+	xSensorOscilaResfr02Sup	: BOOL;
+	xKaMotorOscilaResfr02Sup: BOOL;
+	
+	xSensorOscilaResfr02Inf	: BOOL;
+	xKaMotorOscilaResfr02Inf: BOOL;
+END_VAR

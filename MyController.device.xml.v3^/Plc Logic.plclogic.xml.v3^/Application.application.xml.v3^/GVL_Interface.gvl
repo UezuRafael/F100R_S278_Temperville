@@ -1,0 +1,513 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "fbee3821-ae72-4965-b457-7eca05adac11",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	xInicioPrimeiroEstagio: BOOL;
+	xInicioSegundoEstagio: BOOL;
+	xFimTrocaEstagiosResfriador: BOOL;
+	xEspessuraVidroFino: BOOL;
+	xEspessuraVidroGrosso: BOOL;
+	xEspessuraVidroFinoResfriador: BOOL;
+	iVelocidadeCargaMesaEntrada: INT;
+	iVelocidadeCargaMesaForno: INT;
+	iVelocidadeVaiVemMesaForno: INT;
+	iVelocidadeDescargaMesaForno: INT;
+	iVelocidadeCargaMesaPass: INT;
+	iVelocidadeVaiVemMesaPass: INT;
+	iVelocidadeDescargaMesaPass: INT;
+	iVelocidadeCargaMesaResfriador: INT;
+	iVelocidadeVaiVemMesaResfriador: INT;
+	iVelocidadeDescargaMesaResfriador: INT;
+	iVelociadeCargaMesadeSaida: INT;
+	xBtRecAjustaAlturaDuctosInf01: BOOL;
+	xBtRecAjustaAlturaDuctosSup01: BOOL;
+	xBtRecAjustaAlturaDuctosInf02: BOOL;
+	xBtRecAjustaAlturaDuctosSup02: BOOL;
+	xBtRecAjustaGuilhotina01: BOOL;
+	xBtRecAjustaGuilhotina01Sup: BOOL;
+	xBtRecAjustaGuilhotina01Inf: BOOL;
+	xBtRecAjustaGuilhotina02: BOOL;
+	/// relógio
+	/// Programação Horaria
+	xDataHoraProgOk: BOOL;
+	xStatusAtvProgHoraria: BOOL;
+	///Aquecimento
+	xIniciaAquecimentoRec: BOOL;
+	xAuxiliarLigaResistenciasInferiores: BOOL;
+	xAuxiliarLigaResistenciasSuperiores: BOOL;
+	xCmdIniciaCiclo: BOOL;
+	xCmFinalizaCiclo: BOOL;
+	rDegrauSubida: REAL;
+	///rSetPointTemperatura: REAL;
+	xExecutaPid: BOOL;
+	rSetPointTemperaturaInferior: ARRAY[1..60] OF REAL;
+	rSetPointTemperaturaSuperior: ARRAY[1..60] OF REAL;
+	TermoparLogicoInferior: ARRAY[1..60] OF INT;
+	TermoparLogicoSuperior: ARRAY[1..60] OF INT;
+	TermoparAbertoInferior: ARRAY[1..60] OF BOOL;
+	TermoparAbertoSuperior: ARRAY[1..60] OF BOOL;
+	TermoparAbertoLogicoInf: ARRAY[1..60] OF BOOL;
+	TermoparAbertoLogicoSup: ARRAY[1..60] OF BOOL;
+	Termopar01PainelAberto: BOOL;
+	Termopar02PainelAberto: BOOL;
+	TermoparConvecEntAberto: BOOL;
+	TermoparConvecSaiAberto: BOOL;
+	AlmTermoparAbertoLogicoInf: ARRAY[1..60] OF BOOL;
+	AlmTermoparAbertoLogicoSup: ARRAY[1..60] OF BOOL;
+	AlmTemperaturaExcedeuLogicoInf: ARRAY[1..60] OF BOOL;
+	AlmTemperaturaExcedeuLogicoSup: ARRAY[1..60] OF BOOL;
+	LigaInfPorAquecimentoReceita: BOOL;
+	LigaSupPorAquecimentoReceita: BOOL;
+	LigaInfPorAquecimentoRampa: BOOL;
+	LigaSupPorAquecimentoRampa: BOOL;
+	xIniciaPausaResistencias: BOOL;
+	xFimTempoPausaResistInf: BOOL;
+	xFimTempoPausaResistSup: BOOL;
+	xFimTempoPausa02ResistSup: BOOL;
+	iTemperaturaPirometroInferior: INT;
+	iTemperaturaPirometroSuperior: INT;
+	iTemperaturaPirometroPainel: INT;
+	rSetTemperaturaInferiorGeralAux: REAL;
+	rSetTemperaturaSuperiorGeralAux: REAL;
+	rSetPorcentagemInferiorGeralAux: REAL;
+	rSetPorcentagemSuperiorGeralAux: REAL;
+	///----------- Imagens -> 03_Geral/B_Imagens---------------
+	xMotorEntradaLigado: BOOL;
+	xMotorFornoLigado: BOOL;
+	xMotorResfriadorLigado: BOOL;
+	xMotorPassagemLigado: BOOL;
+	xMotorSaidaLigado: BOOL;
+	xMotorDifusorInf01Ligado: BOOL;
+	xMotorDifusorSup01Ligado: BOOL;
+	xMotorDifusorInf02Ligado: BOOL;
+	xMotorDifusorSup02Ligado: BOOL;
+	xMotorGuilhotina01Ligado: BOOL;
+	xMotorGuilhotina01SupLigado: BOOL;
+	xMotorGuilhotina01InfLigado: BOOL;
+	xMotorGuilhotina02Ligado: BOOL;
+	xMotorLimpResfr02Ligado: BOOL;
+	xMotorCaixaFornoLigado: BOOL;
+	xMotorVentilador01Ligado: BOOL;
+	xMotorVentilador02Ligado: BOOL;
+	xMotorVentilador03Ligado: BOOL;
+	xMotorVentilador04Ligado: BOOL;
+	xMotorBombaHidrLigado: BOOL;
+	xMotorVentConvecEntLigado: BOOL;
+	xMotorVentConvecSaiLigado: BOOL;
+	xInvMesaEntradaHabilitado: BOOL;
+	xInvMesaFornoHabilitado: BOOL;
+	xInvMesaResfriadorHabilitado: BOOL;
+	xInvMesaSaidaHabilitado: BOOL;
+	xInvDuctosInf01Habilitado: BOOL;
+	xInvDuctosSup01Habilitado: BOOL;
+	xInvDuctosInf02Habilitado: BOOL;
+	xInvDuctosSup02Habilitado: BOOL;
+	xInvGuilhotina01Habilitado: BOOL;
+	xInvGuilhotina02Habilitado: BOOL;
+	xInvVentilador01Habilitado: BOOL;
+	xInvVentilador02Habilitado: BOOL;
+	xInvVentilador03Habilitado: BOOL;
+	xInvVentilador04Habilitado: BOOL;
+	xInvVentConvecHabilitado: BOOL;
+	xMotorMesaEntradaDirecao: BOOL;
+	xMotorMesaFornoDirecao: BOOL;
+	xMotorMesaResfriadorDirecao: BOOL;
+	xMotorMesaSaidaDirecao: BOOL;
+	xMotorDifusorInf01Direcao: BOOL;
+	xMotorDifusorSup01Direcao: BOOL;
+	xMotorDifusorInf02Direcao: BOOL;
+	xMotorDifusorSup02Direcao: BOOL;
+	xMotorGuilhotina01Direcao: BOOL;
+	xMotorGuilhotina02Direcao: BOOL;
+	xMotorLimpResfr02Direcao: BOOL;
+	xMotorCaixaFornoDirecao: BOOL;
+	///----------- Alarmes -> 03_Geral/C_Alarmes---------------
+	xAlarmePortaEntradaFornoAberta: BOOL;
+	xAlarmePortaEntradaFornoFechada: BOOL;
+	xAlarmePortaSaidaFornoAberta: BOOL;
+	xAlarmePortaSaidaFornoFechada: BOOL;
+	xAlarmePortaEntradaForno: BOOL;
+	xAlarmePortaSaidaForno: BOOL;
+	xAlarmeValvulaGradeSaidaUp: BOOL;
+	xAlarmeValvulaGradeSaidaDown: BOOL;
+	xAlarmeValvulaGradeEntradaUp: BOOL;
+	xAlarmeValvulaGradeEntradaDown: BOOL;
+	xAlarmeValvulaGradeSaida: BOOL;
+	xAlarmeValvulaGradeEntrada: BOOL;
+	xAlarmePressaoArRede: BOOL;
+	xAlarmePressaoArBaixaRede: BOOL;
+	xAlarmePressaoArAltaRede: BOOL;
+	xAlarmePressaoArRedeSom: BOOL;
+	xAlarmePressaoArMaq: BOOL;
+	xAlarmePressaoArBaixaMaq: BOOL;
+	xAlarmePressaoArAltaMaq: BOOL;
+	xAlarmePressaoArMaqSom: BOOL;
+	xAlmNobreak: BOOL;
+	xAlmNobreakSom: BOOL;
+	xAlmDisjGeral: BOOL;
+	xAlmDisjGeralSom: BOOL;
+	xAlmDisjResist: BOOL;
+	xAlmDisjResistSom: BOOL;
+	xLimpVidroForaPosicao: BOOL;
+	xLimpVidroForaPosicaoSon: BOOL;
+	xAlarmeEncoderCanalA_MeForno: BOOL;
+	xAlarmeEncoderCanalB_MeForno: BOOL;
+	xAlarmeGeralEncoderMeForno: BOOL;
+	xAlarmeSonoroEncoderMeForno: BOOL;
+	xAlarmeEncoderCanalA_MeResfriador: BOOL;
+	xAlarmeEncoderCanalB_MeResfriador: BOOL;
+	xAlarmeGeralEncoderMeResfriador: BOOL;
+	xAlarmeSonoroEncoderMeResfriador: BOOL;
+	xAlarmeEncoderCanalA_DuResfriadorSup01: BOOL;
+	xAlarmeEncoderCanalB_DuResfriadorSup01: BOOL;
+	xAlarmeGeralEncoderDuResfriadorSup01: BOOL;
+	xAlarmeSonoroEncoderDuResfriadorSup01: BOOL;
+	xAlarmeEncoderCanalA_DuResfriadorInf01: BOOL;
+	xAlarmeEncoderCanalB_DuResfriadorInf01: BOOL;
+	xAlarmeGeralEncoderDuResfriadorInf01: BOOL;
+	xAlarmeSonoroEncoderDuResfriadorInf01: BOOL;
+	xAlarmeEncoderCanalA_DuResfriadorSup02: BOOL;
+	xAlarmeEncoderCanalB_DuResfriadorSup02: BOOL;
+	xAlarmeGeralEncoderDuResfriadorSup02: BOOL;
+	xAlarmeSonoroEncoderDuResfriadorSup02: BOOL;
+	xAlarmeEncoderCanalA_DuResfriadorInf02: BOOL;
+	xAlarmeEncoderCanalB_DuResfriadorInf02: BOOL;
+	xAlarmeGeralEncoderDuResfriadorInf02: BOOL;
+	xAlarmeSonoroEncoderDuResfriadorInf02: BOOL;
+	xAlarmeEncoderCanalA_GuiResfriador01: BOOL;
+	xAlarmeEncoderCanalB_GuiResfriador01: BOOL;
+	xAlarmeGeralEncoderGuiResfriador01: BOOL;
+	xAlarmeGeralEncoderGuiResfriadorSup01: BOOL;
+	xAlarmeGeralEncoderGuiResfriadorInf01: BOOL;
+	xAlarmeSonoroEncoderGuiResfriador01: BOOL;
+	xAlarmeEncoderCanalA_GuiResfriador02: BOOL;
+	xAlarmeEncoderCanalB_GuiResfriador02: BOOL;
+	xAlarmeGeralEncoderGuiResfriador02: BOOL;
+	xAlarmeSonoroEncoderGuiResfriador02: BOOL;
+	xAlarmeMeFornoParado: BOOL;
+	xAlarmeMeFornoParadoSom: BOOL;
+	xAlarmeMeResfrParado: BOOL;
+	xAlarmeMeResfrParadoSom: BOOL;
+	xFalhaMotorEntrada: BOOL;
+	xFalhaMotorForno: BOOL;
+	xFalhaMotorPassagem: BOOL;
+	xFalhaMotorResfriador: BOOL;
+	xFalhaMotorSaida: BOOL;
+	xFalhaMotorDifusorInf01: BOOL;
+	xFalhaMotorDifusorSup01: BOOL;
+	xFalhaMotorDifusorInf02: BOOL;
+	xFalhaMotorDifusorSup02: BOOL;
+	xFalhaMotorGuilhotina01: BOOL;
+	xFalhaMotorGuilhotina01Sup: BOOL;
+	xFalhaMotorGuilhotina01Inf: BOOL;
+	xFalhaMotorGuilhotina02: BOOL;
+	xFalhaMotorLimpResfr02: BOOL;
+	xFalhaMotorCaixaForno: BOOL;
+	xFalhaMotorVentilador01: BOOL;
+	xFalhaMotorVentilador02: BOOL;
+	xFalhaMotorVentilador03: BOOL;
+	xFalhaMotorVentilador04: BOOL;
+	xFalhaMotorVentConvecEnt: BOOL;
+	xFalhaMotorVentConvecSai: BOOL;
+	xAlarmeMotorEntrada: BOOL;
+	xAlarmeMotorForno: BOOL;
+	xAlarmeMotorPass: BOOL;
+	xAlarmeMotorResfriador: BOOL;
+	xAlarmeMotorSaida: BOOL;
+	xAlarmeMotorDifusorInf01: BOOL;
+	xAlarmeMotorDifusorSup01: BOOL;
+	xAlarmeMotorDifusorInf02: BOOL;
+	xAlarmeMotorDifusorSup02: BOOL;
+	xAlarmeMotorGuilhotina01: BOOL;
+	xAlarmeMotorGuilhotina01Sup: BOOL;
+	xAlarmeMotorGuilhotina01Inf: BOOL;
+	xAlarmeMotorGuilhotina02: BOOL;
+	xAlarmeMotorLimpResfr02: BOOL;
+	xAlarmeMotorCaixaForno: BOOL;
+	xAlarmeMotorVentilador01: BOOL;
+	xAlarmeMotorVentilador02: BOOL;
+	xAlarmeMotorVentilador03: BOOL;
+	xAlarmeMotorVentilador04: BOOL;
+	xAlarmeMotorBombaHidraulica: BOOL;
+	xAlarmeMotorVentConvecEnt: BOOL;
+	xAlarmeMotorVentConvecSai: BOOL;
+	xAlarmeEncoderForno: BOOL;
+	xAlarmeEncoderResfriador: BOOL;
+	xAlarmeEncoderDuctosResf: BOOL;
+	xAlarmeEncoderGuilhotina: BOOL;
+	xAlarmesResistenciasGeralInferior: ARRAY[1..60] OF BOOL;
+	xAlarmesResistenciasGeralSuperior: ARRAY[1..60] OF BOOL;
+	xAlarmesResistenciasGeralInferiorSon: ARRAY[1..60] OF BOOL;
+	xAlarmesResistenciasGeralSuperiorSon: ARRAY[1..60] OF BOOL;
+	xTesteResistenciaInferiorOk: ARRAY[1..60] OF BOOL;
+	xTesteResistenciaSuperiorOk: ARRAY[1..60] OF BOOL;
+	xTesteResistenciaInferiorFlh: ARRAY[1..60] OF BOOL;
+	xTesteResistenciaSuperiorFlh: ARRAY[1..60] OF BOOL;
+	xAlarmeSsrConvecEntAberto: BOOL;
+	xAlarmeSsrConvecEntFechado: BOOL;
+	xAlarmeSsrConvecSaiAberto: BOOL;
+	xAlarmeSsrConvecSaiFechado: BOOL;
+	xAlarmesTermopares: BOOL;
+	xAlarmesTermoparesSon: BOOL;
+	xAlmTermoparAbertoConvecEntSin : BOOL;
+	xAlmTermoparAbertoConvecEntSon	: BOOL;
+	xAlmTemperExcedeuConvecEntSin	: BOOL ;
+	xAlmTemperExcedeuConvecEntSon	: BOOL;
+	xAlmTermoparAbertoConvecSaiSin : BOOL;
+	xAlmTermoparAbertoConvecSaiSon	: BOOL;
+	xAlmTemperExcedeuConvecSaiSin	: BOOL ;
+	xAlmTemperExcedeuConvecSaiSon	: BOOL;
+	xAlarmesSSr: BOOL;
+	xAlarmesSSrSon: BOOL;
+	xAlarmesMotores: BOOL;
+	xAlarmesMotoresSon: BOOL;
+	xAlmSomSemEnergia: BOOL;
+	wErroMotorId: ARRAY[1..60] OF WORD;
+	bResetAlmGeral: BOOL;
+	xBotaoResetaDrives: BOOL;
+	xPause: BOOL;
+	xRestart: BOOL;
+	xReceitaEnviadaEventos: BOOL;
+	xSairResfriamentoEventos: BOOL;
+	xBtLigaResRampa: BOOL;
+	xBtLigaResCiclo: BOOL;
+	xBtDeslResCiclo: BOOL;
+	
+	xAlarmeSsrConvecEntSin	: BOOL;
+	xAlarmeSsrConvecEntSon	: BOOL ;
+	xAlarmeSsrConvecSaiSin	: BOOL;
+	xAlarmeSsrConvecSaiSon	: BOOL ;
+	/// Teste de Resistências
+	xExecutandoTesteResistencias: BOOL;
+	xPausaEmergencia: BOOL;
+	xPausaEmergenciaTof: BOOL;
+	///MesaEntrada	
+	xIniciaCargaMesaEntrada: BOOL;
+	xCargaFornoEmAutomatico: BOOL;
+	xCarregamentoHabilitado: BOOL;
+	/// MesaForno
+	xIniciaCargaForno: BOOL;
+	xRecargaForno: BOOL;
+	xDelayCargaForno: BOOL;
+	xPortaEntradaForno: BOOL;
+	xPortaSaidaForno: BOOL;
+	xAvancMesaForno: BOOL;
+	xRecuaMesaResfriador: BOOL;
+	xAvancoMesaForno: BOOL;
+	xRecuoMesaForno: BOOL;
+	xLigaConveccaoForno: BOOL;
+	xValvulaConveccaoLigada: BOOL;
+	xSairForno: BOOL;
+	xFornoComCarga: BOOL;
+	xFornoEmCicloComCarga: BOOL;
+	xPausaHabilitaTesteEncoder: BOOL;
+	iVelocidadeMesaForno: INT;
+	xExecutaMovMesaForno: BOOL;
+	McMoveVelocityMesaFornoBusy: BOOL;
+	xDesligaMotorFornoTempBaixa: BOOL;
+	xTempoPausaRoletesOn: BOOL;
+	xLedStart: BOOL;
+	xAutoResetMotorForno: BOOL;
+	// Mesa Passagem
+	xLigaCargaPassagem: BOOL;
+	xAvancoMesaPassagem: BOOL;
+	xRecuoMesaPassagem: BOOL;
+	xIniciaCargaPassagem: BOOL;
+	///MesaResfriador
+	xCancelaCargaResfriamento: BOOL;
+	xLigaCargaResfriador: BOOL;
+	xIniciaCargaResfriador: BOOL;
+	xDesceGradeMesaSaida: BOOL;
+	xAvancandMesaResfriador: BOOL;
+	xRecuandoMesaResfriador: BOOL;
+	xPulsoTrocaParamResfriador: BOOL;
+	xSomDescarga: BOOL;
+	xDesabJogMesaSaida: BOOL;
+	xAbreVenezVentPass: BOOL;
+	xFechVenezVentPass: BOOL;
+	xPassandoTempera: BOOL;
+	xAvancoMesaResfriador: BOOL;
+	xRecuoMesaResfriador: BOOL;
+	///Dutos Resfriador Inferior 01
+	xDuctosInf01EmHome: BOOL;
+	xDuctosInf01EmAjuste: BOOL;
+	xAjusteAlturaDuctosInf01OK: BOOL;
+	xLigaSegEstagDuctosInf01: BOOL;
+	xLigaTerEstagDuctosInf01: BOOL;
+	///Dutos Resfriador Superior 01
+	xDuctosSup01EmHome: BOOL;
+	xDuctosSup01EmAjuste: BOOL;
+	xAjusteAlturaDuctosSup01OK: BOOL;
+	xLigaSegEstagDuctosSup01: BOOL;
+	xLigaTerEstagDuctosSup01: BOOL;
+	xPausaMesaResfrimento: BOOL;
+	///Dutos Resfriador Inferior 02
+	xDuctosInf02EmHome: BOOL;
+	xDuctosInf02EmAjuste: BOOL;
+	xAjusteAlturaDuctosInf02OK: BOOL;
+	xLigaSegEstagDuctosInf02: BOOL;
+	xLigaTerEstagDuctosInf02: BOOL;
+	///Dutos Resfriador Superior 02
+	xDuctosSup02EmHome: BOOL;
+	xDuctosSup02EmAjuste: BOOL;
+	xAjusteAlturaDuctosSup02OK: BOOL;
+	xLigaSegEstagDuctosSup02: BOOL;
+	xLigaTerEstagDuctosSup02: BOOL;
+	xDesceAutoFimCiclo: BOOL;
+	xPausaResfrChAbreSupAcionanda: BOOL;
+	/// Guilhotina 01
+	xGuilhotina01EmHome: BOOL;
+	xGuilhotina01EmAjuste: BOOL;
+	xAjusteAlturaGuilhotina01OK: BOOL;
+	/// Guilhotina 01 Superior
+	xGuilhotina01SupEmHome: BOOL;
+	xGuilhotina01SupEmAjuste: BOOL;
+	xAjusteAlturaGuilhotina01SupOK: BOOL;
+	/// Guilhotina 01 Inferior
+	xGuilhotina01InfEmHome: BOOL;
+	xGuilhotina01InfEmAjuste: BOOL;
+	xAjusteAlturaGuilhotina01InfOK: BOOL;
+	/// Guilhotina 02
+	xGuilhotina02EmHome: BOOL;
+	xGuilhotina02EmAjuste: BOOL;
+	xAjusteAlturaGuilhotina02OK: BOOL;
+	/// Ventilador 01
+	xDesligaVentilador01: BOOL;
+	xPrimeiroEstagioVentilador01: BOOL;
+	xSegundoEstagioVentilador01: BOOL;
+	xTerceiroEstagioVentilador01: BOOL;
+	xVelocidadeVentilador01Ok: BOOL;
+	xLigaVent01FimForno: BOOL;
+	xDesligaFimVentilador01: BOOL;
+	xFechaVenezVentPassV01: BOOL;
+	iVelocidadeStbVent01Pass: INT;
+	/// Ventilador 02
+	xDesligaVentilador02: BOOL;
+	xPrimeiroEstagioVentilador02: BOOL;
+	xSegundoEstagioVentilador02: BOOL;
+	xTerceiroEstagioVentilador02: BOOL;
+	xVelocidadeVentilador02Ok: BOOL;
+	xLigaVent02FimForno: BOOL;
+	xDesligaFimVentilador02: BOOL;
+	xFechaVenezVentPassV02: BOOL;
+	iVelocidadeStbVent02Pass: INT;
+	/// Ventilador 03
+	xDesligaVentilador03: BOOL;
+	xPrimeiroEstagioVentilador03: BOOL;
+	xSegundoEstagioVentilador03: BOOL;
+	xTerceiroEstagioVentilador03: BOOL;
+	xVelocidadeVentilador03Ok: BOOL;
+	xLigaVent03FimForno: BOOL;
+	xDesligaFimVentilador03: BOOL;
+	/// Ventilador 04
+	xDesligaVentilador04: BOOL;
+	xPrimeiroEstagioVentilador04: BOOL;
+	xSegundoEstagioVentilador04: BOOL;
+	xTerceiroEstagioVentilador04: BOOL;
+	xVelocidadeVentilador04Ok: BOOL;
+	xLigaVent04FimForno: BOOL;
+	xDesligaFimVentilador04: BOOL;
+	xBufferValvulaDamperDifusor: BOOL;
+	/// Caixa do Forno
+	xAlertaSomCxForno: BOOL;
+	/// Resistencia
+	xSaidaReleRampaPatamarInf: ARRAY[1..60] OF BOOL;
+	xSaidaReleRampaPatamarSup: ARRAY[1..60] OF BOOL;
+	xResistenciaInferior: ARRAY[1..60] OF BOOL;
+	xResistenciaSuperior: ARRAY[1..60] OF BOOL;
+	xResetErro: BOOL;
+	/// Resistencias Convecção
+	xRetornoSsrConveccaoEnt: BOOL;
+	xRetornoSsrConveccaoSai: BOOL;
+	///---------------------------------
+	xSetTempStandyByInicio: BOOL;
+	xStartCargaForno: BOOL;
+	xFimDescForIniStdBy: BOOL;
+	///Nobreak
+	xStatusNobreak: BOOL;
+	xNobreakDesabilitado: BOOL;
+	/// Energia
+	xSomSemEnergia: BOOL;
+	dSomaReceitaClp: DINT;
+	xBloqueioCargaEnvioRec: BOOL;
+	xTempoDesligaResistQ: BOOL;
+	/// Encoder
+	///Mesa Forno
+	xRunEncoMForno: BOOL;
+	xErrEncoMForno: BOOL;
+	xPresetEncoMForno: BOOL;
+	///Mesa Resfriamento
+	xRunEncoMResfr: BOOL;
+	xErrEncoMResfr: BOOL;
+	xPresetEncoMResfr: BOOL;
+	/// Resfriador - Dutos Superior
+	xRunEncoResfrSup02: BOOL;
+	xErrEncoResfrSup02: BOOL;
+	xPresetEncoResfrSup02: BOOL;
+	/// Resfriador - Dutos Inferior
+	xRunEncoResfrInf02: BOOL;
+	xErrEncoResfrInf02: BOOL;
+	xPresetEncoResfrInf02: BOOL;
+	/// Guilhotina Resfriador
+	xRunEncoGuilhotina02: BOOL;
+	xErrEncoGuilhortina02: BOOL;
+	xPresetEncoGuilhotina02: BOOL;
+	/// Mesa Passagem
+	xRunEncoMPassagem : BOOL;
+	xErrEncoMPassagem : BOOL;
+	xPressetEncoMPassagem : BOOL;
+	/// Passagem - Dutos Superior
+	xRunEncoResfrSup01: BOOL;
+	xErrEncoResfrSup01: BOOL;
+	xPresetEncoResfrSup01: BOOL;
+	/// Passagem - Dutos Inferior
+	xRunEncoResfrInf01: BOOL;
+	xErrEncoResfrInf01: BOOL;
+	xPresetEncoResfrInf01: BOOL;
+	/// Guilhotina Passagem
+	xRunEncoGuilhotina01: BOOL;
+	xErrEncoGuilhortina01: BOOL;
+	xPresetEncoGuilhotina01: BOOL;
+	/// Passagem - Guilhotina Superior
+	xRunEncoGuilhotina01Sup: BOOL;
+	xErrEncoGuilhortina01Sup: BOOL;
+	xPresetEncoGuilhotina01Sup: BOOL;
+	/// Passagem - Guilhotina Inferior
+	xRunEncoGuilhotina01Inf: BOOL;
+	xErrEncoGuilhortina01Inf: BOOL;
+	xPresetEncoGuilhotina01Inf: BOOL;
+	
+	xPulsoOperacaoManual: BOOL;
+	xPulsoOperacaoAutoma: BOOL;
+	xTonOperacaoManual: BOOL;
+	xTonOperacaoAutoma: BOOL;
+	xTofOperacaoManual: BOOL;
+	xTofOperacaoAutoma: BOOL;
+	
+	iNumResistencias:INT;
+	
+	xResetPid:BOOL;
+	
+	xAutoHomeResfInf02	: BOOL ;
+	xAutoHomeResfSup02	: BOOL ;
+	xAutoHomeGuilho01	: BOOL ;
+	xAutoHomeGuilho02	: BOOL ;
+	
+		xForceDut : BOOL ;
+		
+			xAlarmeMotorOscilaSup02: BOOL ;
+	xAlarmeMotorOscilaInf02: BOOL;
+
+END_VAR

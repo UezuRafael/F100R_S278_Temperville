@@ -1,0 +1,167 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "c83c9727-20f9-487f-b580-a9c63e1d2c4c",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	Index: INT;
+	xAlternaSetor: BOOL;
+	TB01: blink;
+	/// Resistências Inferiores	
+	ControleInferiorSetor01: PidPwm_ONOFF;
+	ControleInferiorSetor02: PidPwm_ONOFF;
+	ControleInferiorSetor03: PidPwm_ONOFF;
+	ControleInferiorSetor04: PidPwm_ONOFF;
+	ControleInferiorSetor05: PidPwm_ONOFF;
+	ControleInferiorSetor06: PidPwm_ONOFF;
+	ControleInferiorSetor07: PidPwm_ONOFF;
+	ControleInferiorSetor08: PidPwm_ONOFF;
+	ControleInferiorSetor09: PidPwm_ONOFF;
+	ControleInferiorSetor10: PidPwm_ONOFF;
+	ControleInferiorSetor11: PidPwm_ONOFF;
+	ControleInferiorSetor12: PidPwm_ONOFF;
+	ControleInferiorSetor13: PidPwm_ONOFF;
+	ControleInferiorSetor14: PidPwm_ONOFF;
+	ControleInferiorSetor15: PidPwm_ONOFF;
+	ControleInferiorSetor16: PidPwm_ONOFF;
+	ControleInferiorSetor17: PidPwm_ONOFF;
+	ControleInferiorSetor18: PidPwm_ONOFF;
+	ControleInferiorSetor19: PidPwm_ONOFF;
+	ControleInferiorSetor20: PidPwm_ONOFF;
+	ControleInferiorSetor21: PidPwm_ONOFF;
+	ControleInferiorSetor22: PidPwm_ONOFF;
+	ControleInferiorSetor23: PidPwm_ONOFF;
+	ControleInferiorSetor24: PidPwm_ONOFF;
+	ControleInferiorSetor25: PidPwm_ONOFF;
+	ControleInferiorSetor26: PidPwm_ONOFF;
+	ControleInferiorSetor27: PidPwm_ONOFF;
+	ControleInferiorSetor28: PidPwm_ONOFF;
+	ControleInferiorSetor29: PidPwm_ONOFF;
+	ControleInferiorSetor30: PidPwm_ONOFF;
+	ControleInferiorSetor31: PidPwm_ONOFF;
+	ControleInferiorSetor32: PidPwm_ONOFF;
+	ControleInferiorSetor33: PidPwm_ONOFF;
+	ControleInferiorSetor34: PidPwm_ONOFF;
+	ControleInferiorSetor35: PidPwm_ONOFF;
+	ControleInferiorSetor36: PidPwm_ONOFF;
+	ControleInferiorSetor37: PidPwm_ONOFF;
+	ControleInferiorSetor38: PidPwm_ONOFF;
+	ControleInferiorSetor39: PidPwm_ONOFF;
+	ControleInferiorSetor40: PidPwm_ONOFF;
+	ControleInferiorSetor41: PidPwm_ONOFF;
+	ControleInferiorSetor42: PidPwm_ONOFF;
+	ControleInferiorSetor43: PidPwm_ONOFF;
+	ControleInferiorSetor44: PidPwm_ONOFF;
+	ControleInferiorSetor45: PidPwm_ONOFF;
+	ControleInferiorSetor46: PidPwm_ONOFF;
+	ControleInferiorSetor47: PidPwm_ONOFF;
+	ControleInferiorSetor48: PidPwm_ONOFF;
+	ControleInferiorSetor49: PidPwm_ONOFF;
+	ControleInferiorSetor50: PidPwm_ONOFF;
+
+	rTermoparInferiorLeitura: ARRAY[1..60] OF REAL;
+	rTermoparInferiorControle: ARRAY[1..60] OF REAL;
+	rTemperaturaInferiorSetor: ARRAY[1..60] OF REAL;
+	xRrsInferiorSetor: ARRAY[1..60] OF BOOL;
+	xLigaDeslResInferiores: BOOL;
+	xLigaDesligaInfG01: BOOL;
+	xLigaDesligaInfG02: BOOL;
+	/// Resistências Superiores	
+	ControleSuperiorSetor01: PidPwm_ONOFF;
+	ControleSuperiorSetor02: PidPwm_ONOFF;
+	ControleSuperiorSetor03: PidPwm_ONOFF;
+	ControleSuperiorSetor04: PidPwm_ONOFF;
+	ControleSuperiorSetor05: PidPwm_ONOFF;
+	ControleSuperiorSetor06: PidPwm_ONOFF;
+	ControleSuperiorSetor07: PidPwm_ONOFF;
+	ControleSuperiorSetor08: PidPwm_ONOFF;
+	ControleSuperiorSetor09: PidPwm_ONOFF;
+	ControleSuperiorSetor10: PidPwm_ONOFF;
+	ControleSuperiorSetor11: PidPwm_ONOFF;
+	ControleSuperiorSetor12: PidPwm_ONOFF;
+	ControleSuperiorSetor13: PidPwm_ONOFF;
+	ControleSuperiorSetor14: PidPwm_ONOFF;
+	ControleSuperiorSetor15: PidPwm_ONOFF;
+	ControleSuperiorSetor16: PidPwm_ONOFF;
+	ControleSuperiorSetor17: PidPwm_ONOFF;
+	ControleSuperiorSetor18: PidPwm_ONOFF;
+	ControleSuperiorSetor19: PidPwm_ONOFF;
+	ControleSuperiorSetor20: PidPwm_ONOFF;
+	ControleSuperiorSetor21: PidPwm_ONOFF;
+	ControleSuperiorSetor22: PidPwm_ONOFF;
+	ControleSuperiorSetor23: PidPwm_ONOFF;
+	ControleSuperiorSetor24: PidPwm_ONOFF;
+	ControleSuperiorSetor25: PidPwm_ONOFF;
+	ControleSuperiorSetor26: PidPwm_ONOFF;
+	ControleSuperiorSetor27: PidPwm_ONOFF;
+	ControleSuperiorSetor28: PidPwm_ONOFF;
+	ControleSuperiorSetor29: PidPwm_ONOFF;
+	ControleSuperiorSetor30: PidPwm_ONOFF;
+	ControleSuperiorSetor31: PidPwm_ONOFF;
+	ControleSuperiorSetor32: PidPwm_ONOFF;
+	ControleSuperiorSetor33: PidPwm_ONOFF;
+	ControleSuperiorSetor34: PidPwm_ONOFF;
+	ControleSuperiorSetor35: PidPwm_ONOFF;
+	ControleSuperiorSetor36: PidPwm_ONOFF;
+	ControleSuperiorSetor37: PidPwm_ONOFF;
+	ControleSuperiorSetor38: PidPwm_ONOFF;
+	ControleSuperiorSetor39: PidPwm_ONOFF;
+	ControleSuperiorSetor40: PidPwm_ONOFF;
+	ControleSuperiorSetor41: PidPwm_ONOFF;
+	ControleSuperiorSetor42: PidPwm_ONOFF;
+	ControleSuperiorSetor43: PidPwm_ONOFF;
+	ControleSuperiorSetor44: PidPwm_ONOFF;
+	ControleSuperiorSetor45: PidPwm_ONOFF;
+	ControleSuperiorSetor46: PidPwm_ONOFF;
+	ControleSuperiorSetor47: PidPwm_ONOFF;
+	ControleSuperiorSetor48: PidPwm_ONOFF;
+	ControleSuperiorSetor49: PidPwm_ONOFF;
+	ControleSuperiorSetor50: PidPwm_ONOFF;
+	
+	
+	rTermoparSuperiorLeitura: ARRAY[1..60] OF REAL;
+	rTermoparSuperiorControle: ARRAY[1..60] OF REAL;
+	rTemperaturaSuperiorSetor: ARRAY[1..60] OF REAL;
+	xRrsSuperiorSetor: ARRAY[1..60] OF BOOL;
+	xLigaDeslResSuperiores: BOOL;
+	xLigaDesligaSupG01: BOOL;
+	xLigaDesligaSupG02: BOOL;
+	xResistenciaInferiorPausa: BOOL;
+	xResistenciaSuperiorPausa01: BOOL;
+	xResistenciaSuperiorPausa02: BOOL;
+	xLigaResistenciaInferior: BOOL;
+	xLigaResistenciaSuperior: BOOL;
+	TemporizaPausaResistInferior: Temporizador;
+	TemporizaPausaResistSuperior: Temporizador;
+	TempoInicioPausa02ResistSuperior: TON;
+	TemporizaPausa02ResistSuperior: Temporizador;
+	xIniciaPausaResistInf: BOOL;
+	xIniciaPausaResistSup: BOOL;
+	xIniciaTempoPausaResistSup: BOOL;
+	xIniciaPausa02ResistSup: BOOL;
+	xHabilitaBlocosControle: BOOL;
+	xHabilitaBlocosControleInferior: BOOL;
+	xHabilitaBlocosControleSuperior: BOOL;
+	///-------- Teste PID ------------
+	rPidSaida: REAL;
+	rPwmEntrada: REAL;
+	PID: FB_PID;
+	PWM: FB_PWM;
+	xHabilitaControle: BOOL;
+	rGanhoPorporcionaKp: REAL;
+	rGanhoIntegralKi: REAL;
+	rGanhoDerivativoKd: REAL;
+	
+	
+	xReleSsrSuperiorRampa74: BOOL;
+END_VAR

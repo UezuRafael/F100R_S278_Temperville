@@ -1,0 +1,115 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "3e499e0b-ec2c-4fb0-88cb-641899d4c837",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	iHabilitaEscritaReceita: INT;
+	iEscreverReceita: INT;
+	iReceitaEscritaOk: INT;
+	iReceitaEscritaFalha: INT;
+	/// 1: Indica que a receita esta carregada e válida 0:Sem Receita Carregada 
+	xReceitaCarregadaOk: BOOL;
+	sRecNomedaReceita: STRING;
+	iRecEspessuraVidro: INT;
+	rRecTemperaturaInferiorGeral: REAL;
+	rRecTemperaturaSuperiorGeral: REAL;
+	rRecPorcentagemInferiorGeral: REAL;
+	rRecPorcentagemSuperiorGeral: REAL;
+	rRecTemperaturaInferior: ARRAY[1..50] OF REAL;
+	rRecTemperaturaSuperior: ARRAY[1..50] OF REAL;
+	rRecPorcentagemInferior: ARRAY[1..50] OF REAL;
+	rRecPorcentagemSuperior: ARRAY[1..50] OF REAL;
+	iRecTempoDelayCarga: INT;
+	iRecTempoPausaRoletes: INT;
+	iRecTempoAquecimForno: INT;
+	iRecTempoPosicaoForno: INT;
+	///////////////
+	iRecTempoVelocidadeForno: INT;
+	////////////
+	iRecVelocidade01Vaivem: INT;
+	//////////////
+	iRecVelocidade02Vaivem: INT;
+	//////////////
+	iRecVelocidade03Vaivem: INT;
+	//////////////
+	iRecVelocidadeCargaMesaForno: INT;
+	///////////
+	iRecVelocidadeDescargaMesaForno: INT;
+	/////////
+	iRecCorretorCargaMesaEntrada: INT;
+	////////////
+	iRecTempoPausaResistInf: INT;
+	iRecTempoPausaResistSup: INT;
+	iRecTempoPausa02ResistSup: INT;
+	iRecTempoInicioPausa02ResistSup: INT;
+	iRecTempoConveccao: INT;
+	iRecTempoResfriamento: INT;
+	iRecTempoTrocaEstagioResfriamento: INT;
+	iRecTempoTrocaEstagio02Resfriamento: INT;
+	iRecVelocidade01Ventilador01: INT;
+	iRecVelocidade02Ventilador01: INT;
+	iRecVelocidade03Ventilador01: INT;
+	iRecVelocidadeStbVentilador01: INT;
+	iRecVelocidade01Ventilador02: INT;
+	iRecVelocidade02Ventilador02: INT;
+	iRecVelocidade03Ventilador02: INT;
+	iRecVelocidadeStbVentilador02: INT;
+	iRecVelocidade01Ventilador03: INT;
+	iRecVelocidade02Ventilador03: INT;
+	iRecVelocidade03Ventilador03: INT;
+	iRecVelocidadeStbVentilador03: INT;
+	iRecVelocidade01Ventilador04: INT;
+	iRecVelocidade02Ventilador04: INT;
+	iRecVelocidade03Ventilador04: INT;
+	iRecVelocidadeStbVentilador04: INT;
+	iRecCorretorCargaMesaResfriador: INT;
+	///////////
+	iRecVelocidadeVaiVemResfriador: INT;
+	///////////////
+	iRecVelocidadeDescargaMesaResfriador: INT;
+	/////////
+	iRecCorretorCargaMesaSaida: INT;
+	//////////////
+	iRecAltura01ResfriadorInf01: INT;
+	iRecAltura02ResfriadorInf01: INT;
+	iRecAltura03ResfriadorInf01: INT;
+	iRecAltura01ResfriadorSup01: INT;
+	iRecAltura02ResfriadorSup01: INT;
+	iRecAltura03ResfriadorSup01: INT;
+	iRecVeneziana: INT;
+	iRecPassagem: INT;
+	iRecAltura01ResfriadorInf02: INT;
+	iRecAltura02ResfriadorInf02: INT;
+	iRecAltura03ResfriadorInf02: INT;
+	iRecAltura01ResfriadorSup02: INT;
+	iRecAltura02ResfriadorSup02: INT;
+	iRecAltura03ResfriadorSup02: INT;
+	iRecAlturaGhilhotina01: INT;
+	iRecAlturaGhilhotina01Sup: INT;
+	iRecAlturaGhilhotina01Inf: INT;
+	iRecAlturaGhilhotina02: INT;
+	iRecAjustaAlturaDuctosInf01: INT;
+	iRecAjustaAlturaDuctosSup01: INT;
+	iRecAjustaAlturaDuctosInf02: INT;
+	iRecAjustaAlturaDuctosSup02: INT;
+	iRecAjustaAlturaGuilho01: INT;
+	iRecAjustaAlturaGuilho02: INT;
+	dSomaReceitaSuperClp: DINT;
+	iHabilitaEscritaReceitaAquec: INT;
+	iReceitaAquecimEscritaOk: INT;
+	/// 1: Indica que a receita esta carregada e válida 0:Sem Receita Carregada 
+	xReceitaAqiecimCarregadaOk: BOOL;
+	iEscreverReceitaAquecim: INT;
+	rRecEmissividade: REAL;
+END_VAR

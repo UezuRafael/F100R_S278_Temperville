@@ -1,0 +1,46 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "9822709a-af79-41cf-903d-5f3c431dcfbb",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	xAbortaCicloForno: BOOL;
+	xBtHmiIniciaCiclo: BOOL;
+	xBtHmiFinalizaCiclo: BOOL;
+	xBtSairForno: BOOL;
+	xBtSairResfriamento: BOOL;
+	xBtAbortaCiclo: BOOL;
+	xBtAbrePortaEntradaForno: BOOL;
+	xBtAbrePortaSaidaForno: BOOL;
+	xBtForceConveccao: BOOL;
+	xBtSobeGuilhtina01Manual: BOOL;
+	xBtDesceGuilhotina01Manual: BOOL;
+	xBtSobeGuilhtina02Manual: BOOL;
+	xBtDesceGuilhotina02Manual: BOOL;
+	xBtSobeForno: BOOL;
+	xBtDesceForno: BOOL;
+	xBtLigaVentiPainelManual: BOOL;
+	xBtDuctosInf01Enable: BOOL;
+	xBtDuctosSup01Enable: BOOL;
+	xBtDuctosInf02Enable: BOOL;
+	xBtDuctosSup02Enable: BOOL;
+	xBtGuilhotina01Enable: BOOL;
+	xBtGuilhotina01SupEnable: BOOL;
+	xBtGuilhotina01InfEnable: BOOL;
+	xBtGuilhotina02Enable: BOOL;
+	xBtLigaAquecimentoRampa: BOOL;
+	xBtLigaAquecimento: BOOL;
+	xBtDesligaAquecimento: BOOL;
+	xBtSelAqueceRampaReceita: BOOL;
+	xBtSelAqueceRapidoLento: BOOL;
+END_VAR

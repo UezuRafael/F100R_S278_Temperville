@@ -1,0 +1,84 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "a0909783-8f19-48cc-aec0-51b2cedfdb87",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	iValorCanOpenInverMesaEntraState: INT;
+	iValorCanOpenInverMesaFornoState: INT;
+	iValorCanOpenInverMesaPassState: INT;
+	iValorCanOpenInverMesaResfrState: INT;
+	iValorCanOpenInverMesaSaidaState: INT;
+	iValorCanOpenInverDuctResfrSup01State: INT;
+	iValorCanOpenInverDuctResfrInf01State: INT;
+	iValorCanOpenInverDuctResfrSup02State: INT;
+	iValorCanOpenInverDuctResfrInf02State: INT;
+	iValorCanOpenInverGuilResfr01State: INT;
+	iValorCanOpenInverGuilResfr02State: INT;
+	iValorCanOpenInverLimpResfr02State: INT;
+	iValorCanOpenInverCaixaFornoState: INT;
+	iValorCanOpenInverVentila01State: INT;
+	iValorCanOpenInverVentila02State: INT;
+	iValorCanOpenInverVentila03State: INT;
+	iValorCanOpenInverVentila04State: INT;
+	iValorCanOpenInverConvecEntState: INT;
+	iValorCanOpenInverConvecSaiState: INT;
+
+	iValorCanOpenInverGuilResfr01SupState: INT;
+	iValorCanOpenInverGuilResfr01InfState: INT;
+
+
+	iCanOpenInverMesaEntraStateOk: BOOL;
+	iCanOpenInverMesaFornoStateOk: BOOL;
+	iCanOpenInverMesaPassStateOk: BOOL;
+	iCanOpenInverMesaResfrStateOk: BOOL;
+	iCanOpenInverMesaSaidaStateOk: BOOL;
+	iCanOpenInverDuctResfrSup01StateOk: BOOL;
+	iCanOpenInverDuctResfrInf01StateOk: BOOL;
+	iCanOpenInverDuctResfrSup02StateOk: BOOL;
+	iCanOpenInverDuctResfrInf02StateOk: BOOL;
+	iCanOpenInverGuilResfr01StateOk: BOOL;
+	iCanOpenInverGuilResfr02StateOk: BOOL;
+	iCanOpenInverLimpResfr02StateOk: BOOL;
+	iCanOpenInverCaixaFornoStateOk: BOOL;
+	iCanOpenInverVentila01StateOk: BOOL;
+	iCanOpenInverVentila02StateOk: BOOL;
+	iCanOpenInverVentila03StateOk: BOOL;
+	iCanOpenInverVentila04StateOk: BOOL;
+	iCanOpenInverConvecEntStateOk: BOOL;
+	iCanOpenInverConvecSaiStateOk: BOOL;
+
+	iCanOpenInverGuilResfr01SupStateOk: BOOL;
+	iCanOpenInverGuilResfr01InfStateOk: BOOL;
+
+	
+	xAlarmeCofInverMesaEntra: BOOL;
+	xAlarmeCofInverMesaForno: BOOL;
+	xAlarmeCofInverMesaPass: BOOL;
+	xAlarmeCofInverMesaResfr: BOOL;
+	xAlarmeCofInverMesaSaida: BOOL;
+	xAlarmeCofInverResfrSup01: BOOL;
+	xAlarmeCofInverResfrInf01: BOOL;
+	xAlarmeCofInverResfrSup02: BOOL;
+	xAlarmeCofInverResfrInf02: BOOL;
+	xAlarmeCofInverGuilho01: BOOL;
+	xAlarmeCofInverGuilho02: BOOL;
+	xAlarmeCofInverConvecEnt: BOOL; //Superior
+	xAlarmeCofInverConvecSai: BOOL; //Inferior
+	xAlarmeCofInverVentila03: BOOL;
+
+	xAlarmeCofInverGuilho01Sup: BOOL;
+	xAlarmeCofInverGuilho01Inf: BOOL;
+	xAlarmeCofInverCaixaForno: BOOL;
+	
+END_VAR

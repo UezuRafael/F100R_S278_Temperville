@@ -1,0 +1,42 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "1ef49f40-8d06-4e7d-b080-2750c3a0f687",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	/// Relógio em Tempo Real
+	uAnoRealTime: UINT;
+	uMesRealTime: UINT;
+	uDiaRealTime: UINT;
+	uHoraRealTime: UINT;
+	uMinutoRealTime: UINT;
+	uSegundoRealTime: UINT;
+	uMSegundoRealTime: UINT;
+	uDiaSemanaRealTime: UINT;
+	uDiaAnoRealTime: UINT;
+	/// Acerto do Relógio
+	BtAcertaRelogioPlc: BOOL;
+	uAcertoAno: UINT;
+	uAcertoMes: UINT;
+	uAcertoDia: UINT;
+	uAcertoHora: UINT;
+	uAcertoMinuto: UINT;
+	uAcertoSegundo: UINT;
+	uAcertoDiaSemana: UINT;
+	/// Programação Horaria
+	BtAtivaProgHorariaData: BOOL;
+	BtAtivaProgHorariaSemana: BOOL;
+	bStatusAtvProgData: BOOL;
+	bStatusAtvProgSemana: BOOL;
+
+END_VAR

@@ -1,0 +1,27 @@
+__METADATA__
+{
+  "v3Meta": {
+    "objectGuid": "ac0f971b-a3aa-4f90-b7bd-49e3cf03ccac",
+    "objectTypeGuid": "ffbfa93a-b94d-45fc-a329-229860183b1d",
+    "embeddedObjectTypeGuids": [
+      "a9ed5b7e-75c5-4651-af16-d2c27e98cb94"
+    ],
+    "properties": {
+      "_3S.CoDeSys.LanguageModelManager.BuildProperty": "<?xml version=\"1.0\" encoding=\"utf-8\"?><Single xml:space=\"preserve\" Type=\"{24568a24-c491-472c-a21f-ee5d33859fab}\" Method=\"IArchivable\"><Single Name=\"MemoryReserveForOnlineChange\" Type=\"int\">0</Single><Single Name=\"ExcludeFromBuild\" Type=\"bool\">False</Single><Single Name=\"External\" Type=\"bool\">False</Single><Single Name=\"EnableSystemCall\" Type=\"bool\">False</Single><Single Name=\"CompilerDefines\" Type=\"string\"></Single><Single Name=\"LinkAlways\" Type=\"bool\">False</Single><Array Name=\"Undefines\" Type=\"string\" /></Single>"
+    },
+    "subObjects": {}
+  }
+}
+__DECLARATION__
+VAR_GLOBAL
+	ImgMotor: ARRAY[1..25] OF BOOL;
+	ImgValvAberta: ARRAY[1..10] OF BOOL;
+	ImgValvFechada: ARRAY[1..10] OF BOOL;
+	ImgGeral: ARRAY[1..20] OF BOOL;
+	ImgRetornoSsrInferior: ARRAY[1..60] OF BOOL;
+	ImgRetornoSsrSuperior: ARRAY[1..60] OF BOOL;
+	ImgResistenciaInferior: ARRAY[1..60] OF BOOL;
+	ImgResistenciaSuperior: ARRAY[1..60] OF BOOL;
+	ImgResistenciaHabilitadaInferior: ARRAY[1..60] OF BOOL;
+	ImgResistenciaHabilitadaSuperior: ARRAY[1..60] OF BOOL;
+END_VAR
