@@ -15,7 +15,7 @@ __V3_META__
 __V3_CONTENT__
 <?xml version="1.0" encoding="utf-8"?>
 <Single xml:space="preserve" Type="{225bfe47-7336-4dbc-9419-4105a7c831fa}" Method="IArchivable">
-  <Single Name="UniqueIdGenerator" Type="string">7161</Single>
+  <Single Name="UniqueIdGenerator" Type="string">7455</Single>
   <Null Name="TypeList" />
   <Single Name="NeedsBusCycle" Type="bool">False</Single>
   <Single Name="Id" Type="{05ee0b98-6639-4276-bc32-b75578b819ef}" Method="IArchivable">
@@ -572,7 +572,7 @@ __V3_CONTENT__
                   <Single Name="Default" Type="string">Object Input1</Single>
                 </Single>
                 <Single Name="Identifier" Type="string">4000</Single>
-                <Single Name="Value" Type="string">[0, 10, 268500992, 259]</Single>
+                <Single Name="Value" Type="string">[4, 10, 268500992, 259]</Single>
                 <Single Name="Type" Type="string">ARRAY[0..3] OF DWORD</Single>
               </Single>
               <Single Name="ParamType" Type="string">std:ARRAY[0..3] OF DWORD</Single>
@@ -590,7 +590,7 @@ __V3_CONTENT__
                   <Single Name="Default" Type="string">Object Output1</Single>
                 </Single>
                 <Single Name="Identifier" Type="string">4001</Single>
-                <Single Name="Value" Type="string">[1, 5, 268566528, 259]</Single>
+                <Single Name="Value" Type="string">[5, 5, 268566528, 259]</Single>
                 <Single Name="Type" Type="string">ARRAY[0..3] OF DWORD</Single>
               </Single>
               <Single Name="ParamType" Type="string">std:ARRAY[0..3] OF DWORD</Single>
@@ -831,7 +831,7 @@ __V3_CONTENT__
                   <Single Name="Default" Type="string">Connection Id List</Single>
                 </Single>
                 <Single Name="Identifier" Type="string">5000</Single>
-                <Single Name="Value" Type="string">[259,0,0,0,0,0,0,0]</Single>
+                <Single Name="Value" Type="string">[259, 0, 0, 0, 0, 0, 0, 0]</Single>
                 <Single Name="Type" Type="string">ARRAY[0..7] OF WORD</Single>
               </Single>
               <Single Name="ParamType" Type="string">std:ARRAY[0..7] OF WORD</Single>
@@ -1283,6 +1283,456 @@ __V3_CONTENT__
                 <Single Name="Identifier" Type="string">6004</Single>
                 <Single Name="TypeName" Type="string">CHANNEL_MODULE</Single>
                 <Single Name="LmStructTypeGuid" Type="System.Guid">16529727-fdf3-5d8a-9719-9cd77f6c2607</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:CHANNEL_MODULE</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">6005</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7220</Single>
+                      <Single Name="EditorPositionId" Type="long">7221</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.Index</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">-1</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7222</Single>
+                      <Single Name="EditorPositionId" Type="long">7223</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.ParameterId</Single>
+                        <Single Name="Default" Type="string">ParameterId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ParameterId</Single>
+                      <Single Name="Value" Type="string">9999</Single>
+                      <Single Name="Type" Type="string">LWORD</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7224</Single>
+                      <Single Name="EditorPositionId" Type="long">7225</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.ParameterOffset</Single>
+                        <Single Name="Default" Type="string">ParameterOffset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ParameterOffset</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7226</Single>
+                      <Single Name="EditorPositionId" Type="long">7227</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.ObjectId</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7228</Single>
+                      <Single Name="EditorPositionId" Type="long">7229</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.Offset</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7230</Single>
+                      <Single Name="EditorPositionId" Type="long">7231</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.Length</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7218</Single>
+                <Single Name="EditorPositionId" Type="long">7219</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Input channel for bus coupler</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">6005</Single>
+                <Single Name="TypeName" Type="string">CHANNEL_MODULE</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">5952d646-8d43-5908-932f-21e647f49b41</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:CHANNEL_MODULE</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">6006</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7290</Single>
+                      <Single Name="EditorPositionId" Type="long">7291</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.Index</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7292</Single>
+                      <Single Name="EditorPositionId" Type="long">7293</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.ParameterId</Single>
+                        <Single Name="Default" Type="string">ParameterId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ParameterId</Single>
+                      <Single Name="Value" Type="string">34560</Single>
+                      <Single Name="Type" Type="string">LWORD</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7294</Single>
+                      <Single Name="EditorPositionId" Type="long">7295</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.ParameterOffset</Single>
+                        <Single Name="Default" Type="string">ParameterOffset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ParameterOffset</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7296</Single>
+                      <Single Name="EditorPositionId" Type="long">7297</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.ObjectId</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7298</Single>
+                      <Single Name="EditorPositionId" Type="long">7299</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.Offset</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7300</Single>
+                      <Single Name="EditorPositionId" Type="long">7301</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.Length</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7288</Single>
+                <Single Name="EditorPositionId" Type="long">7289</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Input 'IW0' of module 'DigModule02 [TM3DM24R/G]'</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">6006</Single>
+                <Single Name="TypeName" Type="string">CHANNEL_MODULE</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">014058ed-e9d8-521b-982a-9d653737dd3c</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:CHANNEL_MODULE</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">6007</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7304</Single>
+                      <Single Name="EditorPositionId" Type="long">7305</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.Index</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7306</Single>
+                      <Single Name="EditorPositionId" Type="long">7307</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.ParameterId</Single>
+                        <Single Name="Default" Type="string">ParameterId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ParameterId</Single>
+                      <Single Name="Value" Type="string">34592</Single>
+                      <Single Name="Type" Type="string">LWORD</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7308</Single>
+                      <Single Name="EditorPositionId" Type="long">7309</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.ParameterOffset</Single>
+                        <Single Name="Default" Type="string">ParameterOffset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ParameterOffset</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7310</Single>
+                      <Single Name="EditorPositionId" Type="long">7311</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.ObjectId</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">5</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7312</Single>
+                      <Single Name="EditorPositionId" Type="long">7313</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.Offset</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7314</Single>
+                      <Single Name="EditorPositionId" Type="long">7315</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.Length</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">1</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7302</Single>
+                <Single Name="EditorPositionId" Type="long">7303</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Output 'QB0' of module 'DigModule02 [TM3DM24R/G]'</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">6007</Single>
+                <Single Name="TypeName" Type="string">CHANNEL_MODULE</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">c4f5b35e-9545-5971-bf69-78b81a1b05bb</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:CHANNEL_MODULE</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">6008</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7374</Single>
+                      <Single Name="EditorPositionId" Type="long">7375</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.Index</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">1</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7376</Single>
+                      <Single Name="EditorPositionId" Type="long">7377</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.ParameterId</Single>
+                        <Single Name="Default" Type="string">ParameterId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ParameterId</Single>
+                      <Single Name="Value" Type="string">34048</Single>
+                      <Single Name="Type" Type="string">LWORD</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7378</Single>
+                      <Single Name="EditorPositionId" Type="long">7379</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.ParameterOffset</Single>
+                        <Single Name="Default" Type="string">ParameterOffset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ParameterOffset</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7380</Single>
+                      <Single Name="EditorPositionId" Type="long">7381</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.ObjectId</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7382</Single>
+                      <Single Name="EditorPositionId" Type="long">7383</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.Offset</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">6</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7384</Single>
+                      <Single Name="EditorPositionId" Type="long">7385</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.Length</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7372</Single>
+                <Single Name="EditorPositionId" Type="long">7373</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Input 'ID0' of module 'DigModule03 [TM3DI32K]'</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">6008</Single>
+                <Single Name="TypeName" Type="string">CHANNEL_MODULE</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">b78e51f0-9f0a-510b-8736-378536569d2b</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:CHANNEL_MODULE</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">6009</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7444</Single>
+                      <Single Name="EditorPositionId" Type="long">7445</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.Index</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7446</Single>
+                      <Single Name="EditorPositionId" Type="long">7447</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.ParameterId</Single>
+                        <Single Name="Default" Type="string">ParameterId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ParameterId</Single>
+                      <Single Name="Value" Type="string">36640</Single>
+                      <Single Name="Type" Type="string">LWORD</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7448</Single>
+                      <Single Name="EditorPositionId" Type="long">7449</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.ParameterOffset</Single>
+                        <Single Name="Default" Type="string">ParameterOffset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ParameterOffset</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7450</Single>
+                      <Single Name="EditorPositionId" Type="long">7451</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.ObjectId</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">5</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7452</Single>
+                      <Single Name="EditorPositionId" Type="long">7453</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.Offset</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">1</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7454</Single>
+                      <Single Name="EditorPositionId" Type="long">7455</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">localStrings</Single>
+                        <Single Name="Identifier" Type="string">CHANNEL_MODULE.Length</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7442</Single>
+                <Single Name="EditorPositionId" Type="long">7443</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Output 'QD0' of module 'DigModule04 [TM3DQ32TK]'</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">6009</Single>
+                <Single Name="TypeName" Type="string">CHANNEL_MODULE</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">dece5cd2-c980-5d8e-aa45-ef5b671745f1</Single>
               </Single>
               <Single Name="ParamType" Type="string">localTypes:CHANNEL_MODULE</Single>
             </Single>
@@ -3975,6 +4425,1446 @@ __V3_CONTENT__
                 <Single Name="Identifier" Type="string">10015</Single>
                 <Single Name="TypeName" Type="string">FlagBridge</Single>
                 <Single Name="LmStructTypeGuid" Type="System.Guid">f1cb5c8d-bef1-52b4-998f-d5bc4b96a80b</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10016</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7164</Single>
+                      <Single Name="EditorPositionId" Type="long">7165</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">-1</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7166</Single>
+                      <Single Name="EditorPositionId" Type="long">7167</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7168</Single>
+                      <Single Name="EditorPositionId" Type="long">7169</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">30</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7170</Single>
+                      <Single Name="EditorPositionId" Type="long">7171</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7172</Single>
+                      <Single Name="EditorPositionId" Type="long">7173</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">100</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7174</Single>
+                      <Single Name="EditorPositionId" Type="long">7175</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7162</Single>
+                <Single Name="EditorPositionId" Type="long">7163</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10016</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">71037dbe-16d7-5d96-ac91-ed436d5c0286</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10017</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7178</Single>
+                      <Single Name="EditorPositionId" Type="long">7179</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">-1</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7180</Single>
+                      <Single Name="EditorPositionId" Type="long">7181</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7182</Single>
+                      <Single Name="EditorPositionId" Type="long">7183</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">30</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7184</Single>
+                      <Single Name="EditorPositionId" Type="long">7185</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7186</Single>
+                      <Single Name="EditorPositionId" Type="long">7187</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">101</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7188</Single>
+                      <Single Name="EditorPositionId" Type="long">7189</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">1</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7176</Single>
+                <Single Name="EditorPositionId" Type="long">7177</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10017</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">1d8244d7-3761-5d86-afd1-ff277f7f24ce</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10018</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7192</Single>
+                      <Single Name="EditorPositionId" Type="long">7193</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">-1</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7194</Single>
+                      <Single Name="EditorPositionId" Type="long">7195</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7196</Single>
+                      <Single Name="EditorPositionId" Type="long">7197</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">30</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7198</Single>
+                      <Single Name="EditorPositionId" Type="long">7199</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7200</Single>
+                      <Single Name="EditorPositionId" Type="long">7201</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">102</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7202</Single>
+                      <Single Name="EditorPositionId" Type="long">7203</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7190</Single>
+                <Single Name="EditorPositionId" Type="long">7191</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10018</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">e9f09ee5-67bf-5f87-85fa-11ae347c29f0</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10019</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7206</Single>
+                      <Single Name="EditorPositionId" Type="long">7207</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">-1</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7208</Single>
+                      <Single Name="EditorPositionId" Type="long">7209</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7210</Single>
+                      <Single Name="EditorPositionId" Type="long">7211</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">30</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7212</Single>
+                      <Single Name="EditorPositionId" Type="long">7213</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7214</Single>
+                      <Single Name="EditorPositionId" Type="long">7215</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">103</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7216</Single>
+                      <Single Name="EditorPositionId" Type="long">7217</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">3</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7204</Single>
+                <Single Name="EditorPositionId" Type="long">7205</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10019</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">ef69247a-a3a7-55ee-afdd-0a04f3b845fd</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10020</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7234</Single>
+                      <Single Name="EditorPositionId" Type="long">7235</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7236</Single>
+                      <Single Name="EditorPositionId" Type="long">7237</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7238</Single>
+                      <Single Name="EditorPositionId" Type="long">7239</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7240</Single>
+                      <Single Name="EditorPositionId" Type="long">7241</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7242</Single>
+                      <Single Name="EditorPositionId" Type="long">7243</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">1000</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7244</Single>
+                      <Single Name="EditorPositionId" Type="long">7245</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7232</Single>
+                <Single Name="EditorPositionId" Type="long">7233</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10020</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">c1c93d0e-a880-53da-aabc-4af557f92d39</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10021</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7248</Single>
+                      <Single Name="EditorPositionId" Type="long">7249</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7250</Single>
+                      <Single Name="EditorPositionId" Type="long">7251</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7252</Single>
+                      <Single Name="EditorPositionId" Type="long">7253</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7254</Single>
+                      <Single Name="EditorPositionId" Type="long">7255</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7256</Single>
+                      <Single Name="EditorPositionId" Type="long">7257</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">1001</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7258</Single>
+                      <Single Name="EditorPositionId" Type="long">7259</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">1</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7246</Single>
+                <Single Name="EditorPositionId" Type="long">7247</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10021</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">cb935ce4-e0ba-5f5c-81e7-ddab85954c45</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10022</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7262</Single>
+                      <Single Name="EditorPositionId" Type="long">7263</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7264</Single>
+                      <Single Name="EditorPositionId" Type="long">7265</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7266</Single>
+                      <Single Name="EditorPositionId" Type="long">7267</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7268</Single>
+                      <Single Name="EditorPositionId" Type="long">7269</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7270</Single>
+                      <Single Name="EditorPositionId" Type="long">7271</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">1002</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7272</Single>
+                      <Single Name="EditorPositionId" Type="long">7273</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7260</Single>
+                <Single Name="EditorPositionId" Type="long">7261</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10022</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">cfd5ff99-cf2d-5bca-a326-649c44f5e6d5</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10023</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7276</Single>
+                      <Single Name="EditorPositionId" Type="long">7277</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7278</Single>
+                      <Single Name="EditorPositionId" Type="long">7279</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7280</Single>
+                      <Single Name="EditorPositionId" Type="long">7281</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7282</Single>
+                      <Single Name="EditorPositionId" Type="long">7283</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7284</Single>
+                      <Single Name="EditorPositionId" Type="long">7285</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">1003</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7286</Single>
+                      <Single Name="EditorPositionId" Type="long">7287</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">3</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7274</Single>
+                <Single Name="EditorPositionId" Type="long">7275</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10023</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">f2d74a43-1675-57f9-968e-ca4d35d41277</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10024</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7318</Single>
+                      <Single Name="EditorPositionId" Type="long">7319</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">1</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7320</Single>
+                      <Single Name="EditorPositionId" Type="long">7321</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7322</Single>
+                      <Single Name="EditorPositionId" Type="long">7323</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7324</Single>
+                      <Single Name="EditorPositionId" Type="long">7325</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7326</Single>
+                      <Single Name="EditorPositionId" Type="long">7327</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">1000</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7328</Single>
+                      <Single Name="EditorPositionId" Type="long">7329</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7316</Single>
+                <Single Name="EditorPositionId" Type="long">7317</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10024</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">e2cfb573-c8b9-5c90-bd05-e161a6785894</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10025</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7332</Single>
+                      <Single Name="EditorPositionId" Type="long">7333</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">1</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7334</Single>
+                      <Single Name="EditorPositionId" Type="long">7335</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7336</Single>
+                      <Single Name="EditorPositionId" Type="long">7337</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7338</Single>
+                      <Single Name="EditorPositionId" Type="long">7339</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7340</Single>
+                      <Single Name="EditorPositionId" Type="long">7341</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">1001</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7342</Single>
+                      <Single Name="EditorPositionId" Type="long">7343</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">1</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7330</Single>
+                <Single Name="EditorPositionId" Type="long">7331</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10025</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">cb8312f1-6000-5824-9a34-472cb97c8b8c</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10026</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7346</Single>
+                      <Single Name="EditorPositionId" Type="long">7347</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">1</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7348</Single>
+                      <Single Name="EditorPositionId" Type="long">7349</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7350</Single>
+                      <Single Name="EditorPositionId" Type="long">7351</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7352</Single>
+                      <Single Name="EditorPositionId" Type="long">7353</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7354</Single>
+                      <Single Name="EditorPositionId" Type="long">7355</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">1002</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7356</Single>
+                      <Single Name="EditorPositionId" Type="long">7357</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7344</Single>
+                <Single Name="EditorPositionId" Type="long">7345</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10026</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">bcd25ba1-6f76-5757-a14c-7b4dcc16fb50</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10027</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7360</Single>
+                      <Single Name="EditorPositionId" Type="long">7361</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">1</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7362</Single>
+                      <Single Name="EditorPositionId" Type="long">7363</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7364</Single>
+                      <Single Name="EditorPositionId" Type="long">7365</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7366</Single>
+                      <Single Name="EditorPositionId" Type="long">7367</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7368</Single>
+                      <Single Name="EditorPositionId" Type="long">7369</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">1003</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7370</Single>
+                      <Single Name="EditorPositionId" Type="long">7371</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">3</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7358</Single>
+                <Single Name="EditorPositionId" Type="long">7359</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10027</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">852f9902-3cc4-5f4f-afea-04d5770df03a</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10028</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7388</Single>
+                      <Single Name="EditorPositionId" Type="long">7389</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7390</Single>
+                      <Single Name="EditorPositionId" Type="long">7391</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7392</Single>
+                      <Single Name="EditorPositionId" Type="long">7393</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7394</Single>
+                      <Single Name="EditorPositionId" Type="long">7395</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7396</Single>
+                      <Single Name="EditorPositionId" Type="long">7397</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">1000</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7398</Single>
+                      <Single Name="EditorPositionId" Type="long">7399</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">0</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7386</Single>
+                <Single Name="EditorPositionId" Type="long">7387</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10028</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">bb18e34e-68ae-55bb-b3ca-a740e215365b</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10029</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7402</Single>
+                      <Single Name="EditorPositionId" Type="long">7403</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7404</Single>
+                      <Single Name="EditorPositionId" Type="long">7405</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7406</Single>
+                      <Single Name="EditorPositionId" Type="long">7407</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7408</Single>
+                      <Single Name="EditorPositionId" Type="long">7409</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7410</Single>
+                      <Single Name="EditorPositionId" Type="long">7411</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">1001</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7412</Single>
+                      <Single Name="EditorPositionId" Type="long">7413</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">1</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7400</Single>
+                <Single Name="EditorPositionId" Type="long">7401</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10029</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">d3e7fdf3-ee1c-501d-980d-5b9d92e5c6d4</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10030</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7416</Single>
+                      <Single Name="EditorPositionId" Type="long">7417</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7418</Single>
+                      <Single Name="EditorPositionId" Type="long">7419</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7420</Single>
+                      <Single Name="EditorPositionId" Type="long">7421</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7422</Single>
+                      <Single Name="EditorPositionId" Type="long">7423</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7424</Single>
+                      <Single Name="EditorPositionId" Type="long">7425</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">1002</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7426</Single>
+                      <Single Name="EditorPositionId" Type="long">7427</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7414</Single>
+                <Single Name="EditorPositionId" Type="long">7415</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10030</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">e3d167c6-4bbb-5258-b871-2b1a2b63963f</Single>
+              </Single>
+              <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
+            </Single>
+            <Single Type="{8c994079-f3c6-4484-9643-9258628feecd}" Method="IArchivable">
+              <Single Name="Id" Type="uint">10031</Single>
+              <Single Name="DalaElement" Type="{87130527-d8a8-4a3f-a43d-fabaec05f356}" Method="IArchivable">
+                <Single Name="SubElements" Type="{45b6f676-61a0-4c78-a679-8c725851fa1e}" Method="IArchivable">
+                  <List2 Name="elements">
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7430</Single>
+                      <Single Name="EditorPositionId" Type="long">7431</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Index</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Index</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">INT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7432</Single>
+                      <Single Name="EditorPositionId" Type="long">7433</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">ObjectId</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">ObjectId</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7434</Single>
+                      <Single Name="EditorPositionId" Type="long">7435</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Offset</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Offset</Single>
+                      <Single Name="Value" Type="string">4</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7436</Single>
+                      <Single Name="EditorPositionId" Type="long">7437</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Length</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Length</Single>
+                      <Single Name="Value" Type="string">2</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7438</Single>
+                      <Single Name="EditorPositionId" Type="long">7439</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Flag</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Flag</Single>
+                      <Single Name="Value" Type="string">1003</Single>
+                      <Single Name="Type" Type="string">UINT</Single>
+                    </Single>
+                    <Single Type="{08a69302-82ff-4bf9-a55d-a6014ee63990}" Method="IArchivable">
+                      <Single Name="PositionId" Type="long">7440</Single>
+                      <Single Name="EditorPositionId" Type="long">7441</Single>
+                      <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                        <Single Name="Namespace" Type="string">local</Single>
+                        <Single Name="Identifier" Type="string">dummy</Single>
+                        <Single Name="Default" Type="string">Value</Single>
+                      </Single>
+                      <Single Name="Identifier" Type="string">Value</Single>
+                      <Single Name="Value" Type="string">3</Single>
+                      <Single Name="Type" Type="string">USINT</Single>
+                    </Single>
+                  </List2>
+                </Single>
+                <Single Name="PositionId" Type="long">7428</Single>
+                <Single Name="EditorPositionId" Type="long">7429</Single>
+                <Single Name="VisibleName" Type="{35cf7b1a-a4cd-490b-8ebe-385e61fcc6d9}" Method="IArchivable">
+                  <Single Name="Default" Type="string">Flag Bridge (for EtherNet/IP)</Single>
+                </Single>
+                <Single Name="Identifier" Type="string">10031</Single>
+                <Single Name="TypeName" Type="string">FlagBridge</Single>
+                <Single Name="LmStructTypeGuid" Type="System.Guid">b76975f7-4117-5700-8e75-98c00e350816</Single>
               </Single>
               <Single Name="ParamType" Type="string">localTypes:FlagBridge</Single>
             </Single>
